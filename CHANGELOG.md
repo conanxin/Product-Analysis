@@ -1,5 +1,60 @@
 # Changelog
 
+## P4 - Perplexity Review and Source Hardening
+
+**日期：** 2026-07-01
+**变更类型：** content-review / source-hardening
+**变更范围：** Perplexity 一文 + 模板 + README + CHANGELOG
+
+### 变更内容
+
+对 P3 产出的第一篇 AI 辅助产品分析进行人工复核与来源加固。
+
+#### 修改文件
+
+- `analyses/ai-assisted/2026-07-01-perplexity.md`：
+  - YAML front matter：`review_status: draft` → `reviewed`
+  - YAML front matter：增加 `reviewed_at` 和 `review_notes` 字段
+  - 增加「17. 人工复核结论」章节（17.1 复核结论 / 17.2 可信度分级 / 17.3 对后续 AI 分析的改进 / 17.4 后续需主动更新的点）
+  - 重写 Sources 区域，分为五组：Official / Quality Media / Infrastructure / News (中文转载) / Secondary
+  - 增加可信度分级表（高/中/低/待观察），明示哪些是事实哪些是推演
+  - 更新文末状态标注为 `reviewed`
+
+- `templates/product-analysis-template.md`：增加「17. 人工复核结论」占位章节（17.1/17.2/17.3）
+
+- `README.md`：AI 辅助分析索引中 Perplexity 状态从 `draft` 改为 `reviewed`
+
+#### 新增文件
+
+- `reports/P4-perplexity-review-and-source-hardening-report.md`
+
+### 保留
+
+- 9 篇旧文章、CHANGELOG 旧条目、`docs/`、`pic/`、`analyses/ai-assisted/2026-07-01-perplexity.md` 主体正文均未动
+- 主体叙述、机制分析、复盘判断保持原状；本轮仅做事实复核、来源加固、可信度分级
+
+### Sources 统计
+
+- 官方来源：3 个（perplexity.ai, /enterprise, AWS case study）
+- 高质量媒体：7 个（CNBC × 3, The Verge, MacRumors, Reuters, The Information）
+- 中文转载：12 个（new.qq.com / so.html5.qq.com，仅作补充）
+- 低置信源：1 个（SourceForge）
+- 总计：23 个 URL（从 P3 的 13 个增加 10 个，结构化分组）
+
+### P4 目标达成
+
+- [x] `review_status` 改为 `reviewed`
+- [x] `reviewed_at` 和 `review_notes` 加入 YAML
+- [x] Sources 分五组重写
+- [x] 17. 人工复核结论 章节加入（17.1/17.2/17.3/17.4）
+- [x] 可信度分级表（高/中/低/待观察）
+- [x] 模板增加「17. 人工复核结论」占位
+- [x] README 状态同步
+- [x] CHANGELOG P4 记录
+- [x] P4 报告生成
+
+---
+
 ## P3 - First AI-Assisted Product Analysis: Perplexity
 
 **日期：** 2026-07-01
