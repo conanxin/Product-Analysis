@@ -167,15 +167,36 @@ analyses:
       high_risk_facts: partial
       reason: "P19 复核后：canva.com 30+ URL 仍 403 Datadome (official-url-access-limited)；主体产品机制来自 Wikipedia (Canva/Affinity/Perkins) reference 源 + Fortune 2025-08-22 + The Verge 2024 verified media；$42B 估值 (Wikipedia + Fortune 单独立媒体 + reference)；Affinity / Leonardo.AI 收购事件部分双源达成中-高；收购金额均未明确披露 → 低-中 partial；2B/220M/5,500 员工数据 Wikipedia 单源 → 低-中 partial；Canva 是私人公司/接近 IPO 候选/未 IPO"
 
+  - product: Webflow
+    file: analyses/ai-assisted/2026-07-01-webflow.md
+    category: visual-web-development
+    analysis_type: ai-assisted
+    created_at: 2026-07-01
+    review_status: draft
+    reviewed_at: null
+    source_url_verification_status: partial
+    tags:
+      - website-builder
+      - visual-development
+      - no-code
+      - cms
+      - ai-website-builder
+      - b2b-saas
+    one_line_insight: "Webflow 将视觉设计、CMS、托管、SEO、AEO、优化、企业协作和 AI 建站能力整合到同一个可视化平台，把网站建设从'设计稿交付开发'重构为可视化、可发布、可增长的 Web 生产系统。"
+    quality_notes:
+      product_mechanism: verified
+      high_risk_facts: partial
+      reason: "P20 source-hardening 主体产品功能 verified: 39 个 Webflow 官方 URL HTTP-200 verified (P11 以来最完整官方源覆盖); Wikipedia (Webflow) verified 200 reference 源;融资/估值/ARR/用户数/收购金额 仍 partial — Wikipedia 二手引用 Forbes / VentureBeat / Axios / TechCrunch 原报道 URL 未直接 HTTP 验证;Webflow 是私人公司/接近 IPO 候选/未 IPO;P21 待人工复核"
+
 summary:
-  total: 8
+  total: 9
   reviewed: 8
-  draft: 0
+  draft: 1
   verified: 0
-  partial: 8
+  partial: 9
   legacy_manual_analyses: 9
   legacy_今日复盘: 1
-  p_reports_total: 12
+  p_reports_total: 13
 
 status_transitions:
   - from: draft
@@ -209,6 +230,8 @@ by_category:
     products: [Notion]
   - category: design-ai-platform
     products: [Canva]
+  - category: visual-web-development
+    products: [Webflow]
 
 reading_paths:
   ai_product_path:
@@ -227,3 +250,7 @@ reading_paths:
     - Canva
     - Figma
     - Framer
+  web_production_path:
+    - Figma
+    - Framer
+    - Webflow

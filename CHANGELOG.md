@@ -1,5 +1,87 @@
 # Changelog
 
+## P20 - Webflow AI 辅助产品分析 (第 9 篇)
+
+**日期：** 2026-07-01
+**变更类型：** source-first / ai-assisted / new-article
+**变更范围：** analyses/ai-assisted/2026-07-01-webflow.md (新增 30.3 KB) + README + analyses/README.md + analyses/index.yml + CHANGELOG + P20 报告
+
+### 变更内容
+
+第九篇 AI 辅助产品分析 — Webflow，使用 source-first workflow。
+
+#### Source-First URL Verification (P20)
+
+**验证统计：**
+- **Webflow 官方页面：39 个 HTTP-200 verified** (P11 以来最完整官方源覆盖 — 超过 P12 Figma 18+ / P13 Framer 26+ / P16 Notion 30+)
+- **Wikipedia：1 个 verified 200 (Webflow)** — reference 源
+- 主流量化媒体：5+ 主动尝试 (TechCrunch / Axios / VentureBeat / Forbes / W3Techs 原报道 URL 未直接 HTTP 验证)
+- High-risk fact 主动尝试：Wikipedia 二手 + 部分 verified media 引用未达独立 verified 双源
+
+**关键官方 Source Verified (39 URLs)：**
+1. `webflow.com/` — 官网定位 / 营销
+2. `webflow.com/pricing` — Pricing tiers / AI credits / GSAP 集成
+3. `webflow.com/ai` — AI site builder / AI Assistant / MCP server / Optimize
+4. `webflow.com/cms` / `webflow.com/hosting` / `webflow.com/localization` / `webflow.com/security` — 核心能力
+5. `webflow.com/seo` / `webflow.com/aeo` / `webflow.com/analyze` / `webflow.com/optimize` — 增长方向
+6. `webflow.com/enterprise` / `webflow.com/about` / `webflow.com/customers` — 企业级
+7. `webflow.com/figma-to-webflow` / `webflow.com/devlink` / `webflow.com/cloud` — 开发者扩展
+8. `webflow.com/university` / `webflow.com/blog` / `webflow.com/templates` / `webflow.com/marketplace` / `webflow.com/made-in-webflow` — 生态
+9. `webflow.com/editor` / `webflow.com/designer` / `webflow.com/platform` — 核心工具
+10. `webflow.com/conf` / `webflow.com/glossary` / `webflow.com/integrations` — 学习 / 集成
+11. `webflow.com/accessibility` / `webflow.com/web-design` / `webflow.com/partners` — 设计 / 合作伙伴
+12. `webflow.com/press` / `webflow.com/media` / `webflow.com/privacy` / `webflow.com/terms` / `webflow.com/websites` — 媒体 / 法律 / 站点
+13. `en.wikipedia.org/wiki/Webflow` — reference 源 (二手记载)
+
+**高风险事实 Partial 原因：**
+- Webflow 是私人公司（无 SEC filings / 无 investor relations）
+- 融资历史（Series A $72M / Series B $140M / $2.1B valuation）来自 Wikipedia 二手引用 Forbes / VentureBeat，原报道 URL 未直接 HTTP 验证
+- 收购历史（GSAP 2024-10 / Vidoso.ai 2026-03）来自 Wikipedia 二手引用 Axios / TechCrunch，原报道 URL 未直接 HTTP 验证
+- 收购金额均未明确披露 → partial
+- 用户数 / 营收 / 员工数 来自 Wikipedia 二手 → 中
+
+#### 文章核心内容
+
+- **一句话定位**：Webflow = "The visual web development platform"（官网 verified）
+- **核心机制**：Designer 视觉开发 + CMS + Hosting + Localization + SEO/AEO/Analyze/Optimize
+- **产品矩阵**：Webflow / AI site builder / AI Assistant / MCP server / GSAP / Webflow Cloud / DevLink / Figma to Webflow / Code Components / Apps
+- **Pricing (verified 200)**: Starter Free / Basic $15/mo / Premium $25/mo / Business $29/mo / Ecommerce Standard $29/mo / Plus $74/mo / Enterprise Custom
+- **AI features**: AI site builder / AI Assistant / MCP server / Optimize / Localization
+- **公司背景**: 2013-08-05 创立, Vlad Magdalin + Sergie Magdalin + Bryant Chou 联合创立, Y Combinator 2013 graduate, San Francisco HQ, 501-1000 员工
+- **收购历史**: GreenSock/GSAP (2024-10) / Vidoso.ai (2026-03) verified
+- **竞品**: Framer / WordPress / Wix / Squarespace / Figma Sites / Webstudio / HubSpot CMS / Lovable / v0 / Replit
+- **中文 MVP 推断**: 面向 AI 原生 SaaS / 独立开发者的营销官网增长平台（判断，非事实）
+
+#### review_status + source_url_verification_status
+
+- **review_status**: draft（P20 初稿，待 P21 人工复核）
+- **source_url_verification_status**: partial（主体产品机制 verified；融资/估值/ARR/用户数/收购金额 仍 partial）
+
+#### 修改文件 (5 个)
+
+- `analyses/ai-assisted/2026-07-01-webflow.md`: 新增 30.3 KB，17 节，YAML 11 字段
+- `README.md`: AI 索引新增 Webflow 行 (draft | partial) + 当前质量状态 8→9
+- `analyses/README.md`: Webflow 行 + by-category Visual Web Development + reading paths + 状态
+- `analyses/index.yml`: Webflow 条目 (draft | partial) + summary 8→9 + by_category + reading_paths
+- `CHANGELOG.md`: 顶部 P20 记录 (本节)
+- `reports/P20-webflow-ai-assisted-analysis-report.md`: 新增 P20 报告
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (1136646 = P19.1)
+- ✅ Webflow 文 30.3 KB 新增
+- ✅ analyses/ai-assisted/2026-07-01-webflow.md 存在
+- ✅ YAML review_status = draft
+- ✅ YAML source_url_verified_at = 2026-07-01
+- ✅ YAML source_url_verification_status = partial
+- ✅ §17.4 Sources 实链验证表存在 (40 verified + 13 unverified = 53 来源)
+- ✅ Sources 4 分组完整 (Official+Primary 10 / Product+Docs 29 / Reference 1 / Unverified 13)
+- ✅ 8 篇 reviewed AI 辅助分析 (Perplexity/Linear/Raycast/Cursor/Figma/Framer/Notion/Canva) mtime 未变
+- ✅ 9 旧人工分析 + pic/ + templates/ + 其他 docs/ 未动
+- ✅ 无 force push / reset --hard / amend
+
+---
+
 ## P19.1 - Canva 索引状态漂移修复
 
 **日期：** 2026-07-01
