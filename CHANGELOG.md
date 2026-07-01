@@ -1,5 +1,98 @@
 # Changelog
 
+## P14 - Framer 人工复核与 YAML/Sources 规范修正
+
+**日期：** 2026-07-01
+**变更类型：** review / source-hardening / docs-only
+**变更范围：** analyses/ai-assisted/2026-07-01-framer.md (YAML 规范化 + lead / §8 / §16 [判断] 注释 + §17.1 / §17.3 / §17.4 P14 增量) + README + CHANGELOG + P14 报告
+
+### 变更内容
+
+第六篇 AI 辅助产品分析 — Framer 人工复核 + YAML/Sources 规范修正。状态从 `draft` 升级为 `reviewed`。
+
+#### YAML 规范化 (P14 核心变更)
+
+**P13 draft 问题**：source_urls 把 type/status/note 写在 URL 同一行：
+```yaml
+- https://www.framer.com/ (primary-official | verified)
+```
+
+**P14 修正**：
+```yaml
+- https://www.framer.com/
+- https://www.framer.com/pricing/
+- ...
+```
+
+- 29 个 URL 全部纯字符串，普通 YAML parser 可解析
+- 29 个 URL 中 26 个 framer.com/* + 2 founders 个人网站 + 1 中文转载
+- type / status / used_for / note 全部移到文末 Sources 表格 + §17.4 Sources 实链验证表
+
+#### review_status 升级
+
+- **before**: draft (P13 2026-07-01)
+- **after**: reviewed (P14 2026-07-01)
+- **source_url_verification_status**: 保持 partial (诚实评估)
+
+#### P14 source-hardening 增量 (1 verified source)
+
+- `macapp.so/framer-studio-po-jie` (200 verified 但 secondary) — Koen Bok + Jorn van Dijk 是 Sofa 创始人/设计总监 → Facebook → Podium → Framer 背景
+  - 类型：secondary-media-chinese
+  - 状态：unverified-http (二次引述，未找到原始英文 founders bio page)
+  - 用途：founders 背景补充 (partial 可靠度)
+
+#### P14 主动尝试 + 失败 (10+ URLs)
+
+- Meritech 投资者公告 (3 URL): 404/405
+- Atomico 投资者公告 (3 URL): 429
+- Accel 投资者公告 (2 URL): 404
+- TechCrunch / Bloomberg / CNBC / Reuters / Forbes (5+ URL): 401-404/403
+
+**P14 结论**：原始英文官方投资方公告 + 10+ 英文主流媒体报道 URL 全部未 HTTP 验证；严格按 P12 spec-required 第 17 条 + P14 spec-required 8 快速降权 → partial；不为了状态好看而升级。
+
+#### P14 主体轻量修订 (不重写)
+
+- **§1 一句话定位**: [判断] 注释 3 处（"AI website builder" 概括 / "目标用户" 描述 / "设计+上线" 价值）
+- **§8 交互与视觉设计**: AI agents Canvas 嵌入加 [事实 / 官方 demo] + [判断] 双层标注
+- **§16 今日复盘**: Framer 创新 / Product-Analysis 启发 加 [判断] 注释
+- **§17.1 当前状态**: 从 "未复核" 改为 "P14 人工复核完成" + review_status 升级说明
+- **§17.3 后续 AI 分析改进**: 新增 P14 5 条 (22 → 27 → 32 → 37 → 42 → 47 行内条目)
+  - 7. YAML source_urls 必须是纯 URL 列表
+  - 8. 私人公司融资/估值 high-risk 事实快速降权 → partial
+  - 9. 官方 blog/newsroom 是 announcement source = 高可信度
+  - 10. Founder personal website = secondary source
+  - 11. P14 source-hardening 与 P12 同源处理
+- **§17.4 Sources 实链验证表**: 新增 macapp.so + P14 主动尝试 10+ URLs 失败表
+
+#### 修改文件 (4 个)
+
+- `analyses/ai-assisted/2026-07-01-framer.md`: YAML 规范化 + 主体轻量修订 (不重写)
+- `README.md`: AI 索引 Framer 状态 draft → reviewed
+- `CHANGELOG.md`: 顶部 P14 记录 (本节)
+- `reports/P14-framer-review-and-yaml-source-normalization-report.md`: 新增 P14 报告
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (7b72404 = P13)
+- ✅ Framer 文 ~31 → ~33 KB (+1.6 KB source-hardening + [判断] 注释 + §17.3 P14 5 条)
+- ✅ analyses/ai-assisted/2026-07-01-framer.md 存在
+- ✅ YAML review_status = reviewed
+- ✅ YAML reviewed_at = 2026-07-01
+- ✅ YAML review_notes = P14 复核完整版
+- ✅ YAML source_url_verification_status = partial (原因清晰)
+- ✅ YAML 纯 URL 解析可验证 (29 URLs)
+- ✅ [判断] 注释 11 处 (避免营销口径被当事实)
+- ✅ §17.1 改为 P14 复核完成状态
+- ✅ §17.2 18 → 18 条 (无变化, 已是 P13 完善版)
+- ✅ §17.3 11 → 16 条 (P14 spec-required 5 条)
+- ✅ §17.4 Sources 实链验证表 新增 macapp.so + P14 主动尝试 10+ URL 失败表
+- ✅ Sources 4 分组 同步更新 (P14 未变动, 已是 P13 完善版)
+- ✅ Perplexity / Linear / Raycast / Cursor / Figma mtime 未变
+- ✅ 9 旧人工分析文章 + pic/ 未动
+- ✅ 无 force push / reset --hard / amend
+
+---
+
 ## P13 - Framer AI 辅助产品分析 (第 6 篇)
 
 **日期：** 2026-07-01
