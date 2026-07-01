@@ -75,7 +75,7 @@ Product-Analysis/
 | 日期 | 产品 | 文件 | 类型 | 关键词 | 核心观察 | 状态 | 来源状态 |
 |------|------|------|------|--------|----------|------|----------|
 | 2026-07-01 | Perplexity | `analyses/ai-assisted/2026-07-01-perplexity.md` | AI 辅助 | AI 搜索、答案引擎、引用、研究流程 | 将搜索结果页重构为带来源、可追问的答案流 | reviewed | partial |
-| 2026-07-01 | Linear | `analyses/ai-assisted/2026-07-01-linear.md` | AI 辅助 | issue tracking、project management、product development、B2B SaaS、collaboration | 将 issue tracking 从任务管理重构为高节奏产品研发工作流 | draft | partial |
+| 2026-07-01 | Linear | `analyses/ai-assisted/2026-07-01-linear.md` | AI 辅助 | issue tracking、project management、product development、B2B SaaS、collaboration | 将 issue tracking 从任务管理重构为高节奏产品研发工作流 | reviewed | partial |
 
 ---
 

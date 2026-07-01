@@ -1,5 +1,69 @@
 # Changelog
 
+## P6 - Linear Review and Source Status Upgrade
+
+**日期：** 2026-07-01
+**变更类型：** review + source-upgrade
+**变更范围：** Linear 全文 + README + CHANGELOG
+
+### 变更内容
+
+对 P5 产出的 Linear AI 辅助分析进行人工复核与来源升级。
+
+#### P6 升级
+
+- **找到 2 个新 verified URLs**：
+  - `https://linear.app/blog/series-b` (primary-official, 200) - Linear 官方 $35M Series B 公告
+  - `https://en.wikipedia.org/wiki/Linear_(software)` (reference, 200) - 公司/创始人 second source
+- **升级可信度**：
+  - $35M Series B (Accel 领投): 中→高 (Linear 官方 blog + TechCrunch 双源)
+  - 创始人 Tuomas Artman, Karri Saarinen: 中→高 (TC + Wikipedia 双源)
+- **review_status**: draft → reviewed
+- **增加**: reviewed_at + review_notes + source_url_verified_at
+- **source_url_verification_status 仍为 partial** (诚实评估):
+  - $82M 2025 轮仍单源依赖 TechCrunch
+  - 未找到 Bloomberg/Reuters 2025 报道
+  - COO Cristina Cordova 仍单源
+
+#### 修改文件
+
+- `analyses/ai-assisted/2026-07-01-linear.md`:
+  - YAML: review_status reviewed + reviewed_at + review_notes + 增加 2 URLs
+  - source_quality_notes 更新
+  - §17.1 由 draft 改为 reviewed
+  - §17.2 升级 Series B 与创始人可信度
+  - §17.4 增加 P6 阶段验证表
+  - Sources Product/Doc 区增加 2 URLs
+  - 文末 P6 轮次标注
+
+- `README.md`: AI 索引 Linear 状态 draft → reviewed
+
+#### 新增文件
+
+- `reports/P6-linear-review-and-source-upgrade-report.md`
+
+### 保留
+
+- 9 篇旧文章、CHANGELOG 旧条目、主体 1-16 节内容
+- Perplexity 文 mtime 未变
+- pic/
+
+### P6 目标达成
+
+- [x] 找到 Linear 官方 blog Series B 公告
+- [x] 找到 Wikipedia second source
+- [x] review_status draft → reviewed
+- [x] reviewed_at + review_notes 加入 YAML
+- [x] §17.1 改为 reviewed 状态描述
+- [x] §17.2 升级 2 条可信度
+- [x] §17.4 增加 P6 验证表
+- [x] Sources 区增加 2 URLs
+- [x] README 状态同步
+- [x] CHANGELOG P6 记录
+- [x] P6 报告生成
+
+---
+
 ## P5 - Second AI-Assisted Product Analysis: Linear
 
 **日期：** 2026-07-01
