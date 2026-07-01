@@ -1,5 +1,97 @@
 # Changelog
 
+## P9 - Cursor AI 辅助产品分析 (第 4 篇)
+
+**日期：** 2026-07-01
+**变更类型：** ai-assisted-analysis (新增第 4 篇)
+**变更范围：** analyses/ai-assisted/ + README + CHANGELOG + 新增 P9 报告
+
+### 变更内容
+
+第 4 篇 AI 辅助产品分析 — Cursor (AI coding agent / agentic coding IDE / Cloud Agent)。
+
+#### Source-first workflow (严格执行)
+
+- **官方页 + 官方 docs 12 子页 + 官方 blog 4 篇 + GitHub 主仓库 + Anysphere 双域名 + Wikipedia 双页 均 HTTP 200 verified (合计 ~38 URL)**
+- cursor.com 主页 / pricing / enterprise / blog / changelog / privacy / security / download / for-teams / contact-sales / dashboard/plugins / careers
+- docs.cursor.com welcome / agent / tab / composer / chat / context / models / mcp / background-agents / rules / cli / integrations/github / cloud-agent / cloud-agent/mobile / agent/agents-window / enterprise/organization-groups / plugins / automate / context/semantic-search / account/pricing / account/teams/dashboard
+- blog: composer-2-technical-report / ios-mobile-app / reward-hacking-coding-benchmarks / design-mode
+- github.com/getcursor/cursor / anysphere.com / anysphere.inc
+- Wikipedia: en.wikipedia.org/wiki/Cursor_(code_editor) + en.wikipedia.org/wiki/Anysphere
+
+#### 关键融资/估值事实 (Wikipedia 作为 reference 源)
+
+- 2022 创立:由 MIT 学生 Michael Truell / Sualeh Asif / Arvid Lunnemark / Aman Sanger 创立 (Wikipedia + 官方双源)
+- 2023-10: $8M seed from OpenAI Startup Fund (Wikipedia verified)
+- 2024-mid: $60M Series A at $400M 估值 (Wikipedia verified, original TechCrunch URL 未直接 HTTP 验证)
+- 2024-11: TechCrunch 报道 Benchmark / Index Ventures 抬价至 ~$2.5B
+- 2024-12: $100M Series B at $2.6B 估值 (Wikipedia verified)
+- 2025-06-05: $900M Series C led by Thrive Capital, $9.9B post-money
+- 2025-11-13: $2.3B Series D co-led by Accel + Coatue, $29.3B 估值, Google / Nvidia 跟投
+- ARR 里程碑: $100M (Jan 2025) → $500M (June 2025) → $1B (after Nov 2025) → $3B (May 2026)
+- 2026-06-16: SpaceX 宣布以 $60B 收购 Anysphere,**pending/expected Q3 2026 close** (明示为"未完成交易")
+
+#### source_url_verification_status = partial 的诚实评估
+
+按 source-quality-checklist 严格标准,融资/估值/ARR 事实:
+- 主源:Wikipedia (已 verified, reference 类别)
+- 次源:TechCrunch / The Information / Bloomberg / Reuters / Forbes 原报道 URL **未直接 HTTP 验证**
+- 严格按 P8.1 §17.3 必写 1 条:"Wikipedia + 官方" = reference + primary-official,**不等于**"两个独立 verified media"
+- 故标 partial,不是失败,是诚实评估
+
+#### review_status = draft
+
+- 包含大量个人推断 (§14 中文 MVP / §15 项目启发 6 条)
+- 待 P10 人工复核 → reviewed (类似 P8 review 模式)
+
+#### 关键产品功能 (官方 verified)
+
+- Tab 多 token 补全 / Chat with codebase / Composer 多文件编辑 / Agent / Cloud Agent / Background Agent
+- MCP (Model Context Protocol) 工具协议 / Codebase Indexing / Semantic Search
+- Composer 2 / Composer 2.5 自研编码模型
+- 多模型支持:OpenAI (GPT-5.5) / Anthropic (Opus 4.8) / Google (Gemini 3.1 Pro) / xAI (Grok 4.3) / Cursor (Composer 2.5)
+- Cursor for iOS (2026-06-29 public beta, all paid plans)
+- Design Mode (2026-06-05) / Cursor Automations (2026-06-18)
+- Cursor CLI / Bugbot code review / Cursor 2.0 (2025-10)
+
+#### 定价 (官方 verified)
+
+- Hobby: Free
+- Pro / Pro+ / Ultra: $20/月
+- Teams: $40/用户/月 (含 SAML/OIDC SSO + team marketplace + 共享 agent context)
+- Enterprise: Custom (SCIM + audit log + AI code tracking API)
+
+#### 关键事件
+
+- 2025-04 "Sam"事件:AI help-desk 虚构登录策略,致用户取消,Wikipedia 引用 [10]
+- 2025-09 "CopyPasta 许可证攻击"安全事件:HiddenLayer 报告提示注入风险
+- 2026-06-16 SpaceX 宣布 $60B 收购 Anysphere (pending/expected Q3 2026)
+
+### 修改文件
+
+- `analyses/ai-assisted/2026-07-01-cursor.md`:新增 27.2 KB 文章(YAML 11 字段 + 17 章节 + Sources ~40 URL)
+- `README.md`:AI 索引新增 Cursor 行(状态 draft + partial)
+- `CHANGELOG.md`:顶部 P9 记录(本节)
+- `reports/P9-cursor-ai-assisted-analysis-report.md`:新增 P9 报告
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (2bf4b26 = P8.1)
+- ✅ Cursor 文章 27.2 KB 存在
+- ✅ YAML 11 字段齐
+- ✅ review_status = draft
+- ✅ source_url_verification_status = partial
+- ✅ source_url_verified_at = 2026-07-01
+- ✅ 17 章节全产出 (§1-§17)
+- ✅ §17.1 明确说"AI 辅助初稿,待人工复核"
+- ✅ §17.2 26 条可信度分级(高/中/低/待观察)
+- ✅ §17.3 11 条 spec 必写项 (含 P8.1 5 条)
+- ✅ §17.4 Sources 实链验证 ~40 URL (含 inferred/paywalled 标记)
+- ✅ Perplexity / Linear / Raycast mtime 未变
+- ✅ 9 旧人工分析文章 + pic/ 未动
+
+---
+
 ## P8 - Raycast 人工复核与状态升级
 
 **日期：** 2026-07-01
