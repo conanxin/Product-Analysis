@@ -1,5 +1,90 @@
 # Changelog
 
+## P19 - Canva 人工复核与索引状态同步
+
+**日期：** 2026-07-01
+**变更类型：** review / source-hardening / index-sync / docs-only
+**变更范围：** analyses/ai-assisted/2026-07-01-canva.md (YAML 状态 + 17.1/17.2/17.3/17.4 P19 增量) + README + analyses/README.md + analyses/index.yml + CHANGELOG + P19 报告
+
+### 变更内容
+
+第八篇 AI 辅助产品分析 — Canva 人工复核 + 索引状态同步。状态从 `draft` 升级为 `reviewed`。
+
+#### review_status 升级
+
+- **before**: draft (P18 2026-07-01)
+- **after**: reviewed (P19 2026-07-01)
+- **reviewed_at**: 2026-07-01
+- **source_url_verification_status**: 保持 partial（诚实评估，canva.com 仍 403 Datadome）
+
+#### P19 复验证结果 (P18 后)
+
+- **canva.com/* 30+ URL 仍 403 Datadome** (官方 source-first workflow 受限)
+- **Wikipedia (Canva/Affinity/Perkins) 仍 200 verified** (3 个 reference 源)
+- **Fortune 2025-08-22 仍 200 verified** ($42B 估值 / employee share sale)
+- **The Verge 2024 仍 200 verified** (Leonardo.AI 收购)
+- **TechCrunch/Reuters/CNBC/Bloomberg/FT 原报道 URL 仍 404/401/403** (15+ URL 主动尝试)
+
+P19 主动尝试以上 URL 后，确认 5 verified sources 不变，跨独立 verified 媒体双源仍未达成。诚实评估保持 partial。
+
+#### 高风险事实最终措辞 (P19 调整)
+
+- **Canva 是私人公司 / 接近 IPO 候选 / 未 IPO** — 中-高 (Fortune + Wikipedia 双源部分达成，AFR 404)
+- **$42B valuation (2025-08) 来自 employee share sale** — 中 (Wikipedia + Fortune 单独立媒体)
+- **2025 营收 US$4 billion** — 低-中 (Wikipedia reference 单源)
+- **220 million users** — 低-中 (Wikipedia reference 单源)
+- **5,500 员工 (2024)** — 低-中 (Wikipedia reference 单源)
+- **Affinity 收购 (2024)** — 中 (Wikipedia 双源，金额未明确披露)
+- **Leonardo.AI 收购 (2024-07)** — 中-高 (Wikipedia + The Verge 双源部分达成，金额未明确披露)
+- **Simtheory + Ortto 收购 (2026-02)** — 中 (Wikipedia 二手引用 TechCrunch，原报道 URL 404)
+
+#### 主体轻量修订 (不重写)
+
+- **§1 一句话定位**: 去掉 "verified-by-Wikipedia" 表述，改为 "Wikipedia reference 公开记载"
+- **§17.1 当前状态**: 改为 P19 复核完成状态
+- **§17.2 可信度分级**: 重新校准 (高 → 中, 中-高 → 中 / 中-低)
+- **§17.3 后续 AI 分析改进**: 8 → 14 条 (P19 新增 6 条 canva.com blocked / Wikipedia reference / 收购金额教训)
+- **§17.4 Sources 实链验证**: 新增 5+ Unverified URL (Affinity TechCrunch/Reuters/FT 等) + P19 复验证表 (11 URL 状态 P18 vs P19 对比)
+
+#### 索引文件同步 (跨文件)
+
+- **analyses/index.yml**: Canva `draft → reviewed` + `summary: reviewed 7→8, draft 1→0, p_reports_total 11→12`
+- **analyses/README.md**: Canva `draft → reviewed` + 质量状态表同步 (reviewed 8 + draft 0)
+- **README.md**: Canva `draft → reviewed` + 质量状态表 + 下一步计划 + 最后更新
+- **CHANGELOG.md**: 顶部 P19 记录 (本节)
+
+#### 修改文件 (5 个)
+
+- `analyses/ai-assisted/2026-07-01-canva.md`: YAML 状态 + §17.1/17.2/17.3/17.4 P19 增量
+- `analyses/index.yml`: Canva draft→reviewed + summary 8 reviewed
+- `analyses/README.md`: Canva draft→reviewed + 质量状态 8
+- `README.md`: Canva draft→reviewed + 质量状态 8 + 下一步计划
+- `CHANGELOG.md`: 顶部 P19 记录
+- `reports/P19-canva-review-and-index-status-sync-report.md`: 新增 P19 报告
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (0e0a2fa = P18)
+- ✅ Canva 文 ~35.3 → ~38 KB (+2.7 KB source-hardening)
+- ✅ analyses/ai-assisted/2026-07-01-canva.md 存在
+- ✅ YAML review_status = reviewed (P19 升级)
+- ✅ YAML reviewed_at = 2026-07-01
+- ✅ YAML review_notes = P19 复核完整版
+- ✅ source_url_verification_status = partial (原因清晰)
+- ✅ §1 去掉 "verified-by-Wikipedia" 表述
+- ✅ §17.1 改为 P19 复核完成状态
+- ✅ §17.2 重新校准可信度分级 (中/中-高/低-中 替代 高/中-高)
+- ✅ §17.3 8 → 14 条 (P19 spec-required 6 条)
+- ✅ §17.4 Sources 实链验证表 新增 6+ Unverified URL + P19 复验证表
+- ✅ analyses/index.yml Canva draft→reviewed (Python yaml.safe_load 验证)
+- ✅ analyses/README.md Canva draft→reviewed + 质量状态 8
+- ✅ README.md Canva draft→reviewed + 质量状态 8 + 下一步计划
+- ✅ 7 篇 AI 辅助分析 (Perplexity/Linear/Raycast/Cursor/Figma/Framer/Notion) mtime 未变
+- ✅ 9 旧人工分析 + pic/ + templates/ + 其他 docs/ 未动
+- ✅ 无 force push / reset --hard / amend
+
+---
+
 ## P18 - Canva AI 辅助产品分析 (第 8 篇)
 
 **日期：** 2026-07-01

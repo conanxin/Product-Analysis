@@ -45,14 +45,14 @@
 
 | 维度 | 数值 | 说明 |
 |------|------|------|
-| AI 辅助分析 | 8 | 7 reviewed + 1 draft |
-| reviewed | 7 | 人工复核完成 |
-| draft | 1 | Canva (待 P19 人工复核) |
+| AI 辅助分析 | 8 | 全部 reviewed |
+| reviewed | 8 | 人工复核完成 |
+| draft | 0 | — |
 | verified | 0 | 严格标准下未达成 |
 | partial | 8 | 主体产品机制 verified；高风险事实 partial |
 | 旧人工分析 (legacy) | 9 | 根目录 legacy notes |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
-| P 报告累计 | 11 | 1 legacy + 8 AI + 1 索引 + 1 review |
+| P 报告累计 | 12 | 1 legacy + 8 AI + 1 索引 + 2 review |
 
 **说明**：
 - `partial` 不是失败，而是表示部分**高风险事实**（融资、估值、收入、收购、IPO、用户量、合作金额、价格变化、发布时间线、法律诉讼）仍未达到双源 verified 标准。

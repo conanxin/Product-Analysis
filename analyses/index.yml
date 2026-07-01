@@ -151,8 +151,8 @@ analyses:
     category: design-ai-platform
     analysis_type: ai-assisted
     created_at: 2026-07-01
-    review_status: draft
-    reviewed_at: null
+    review_status: reviewed
+    reviewed_at: 2026-07-01
     source_url_verification_status: partial
     tags:
       - design-tools
@@ -165,17 +165,17 @@ analyses:
     quality_notes:
       product_mechanism: partial
       high_risk_facts: partial
-      reason: "P18 主动尝试 30+ canva.com/* 官方 URL 全部 403 Datadome bot protection (标 official-url-access-limited)；主体产品功能主要来自 Wikipedia (Canva/Affinity/Perkins) reference 源 verified 200 + Fortune 2025-08-22 + The Verge 2024 verified media；融资/估值/营收/用户数/收购金额等高风险事实 Wikipedia 单源 + verified media 单源未跨双独立 verified；可考虑 P19 复核查 canva.com URL 变化"
+      reason: "P19 复核后：canva.com 30+ URL 仍 403 Datadome (official-url-access-limited)；主体产品机制来自 Wikipedia (Canva/Affinity/Perkins) reference 源 + Fortune 2025-08-22 + The Verge 2024 verified media；$42B 估值 (Wikipedia + Fortune 单独立媒体 + reference)；Affinity / Leonardo.AI 收购事件部分双源达成中-高；收购金额均未明确披露 → 低-中 partial；2B/220M/5,500 员工数据 Wikipedia 单源 → 低-中 partial；Canva 是私人公司/接近 IPO 候选/未 IPO"
 
 summary:
   total: 8
-  reviewed: 7
-  draft: 1
+  reviewed: 8
+  draft: 0
   verified: 0
   partial: 8
   legacy_manual_analyses: 9
   legacy_今日复盘: 1
-  p_reports_total: 11
+  p_reports_total: 12
 
 status_transitions:
   - from: draft

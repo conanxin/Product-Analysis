@@ -128,9 +128,10 @@ Product-Analysis/
 - [x] P16: 新增 Notion AI 辅助分析 (第 7 篇, draft | partial)
 - [x] P17: Notion 人工复核 → reviewed (P17 source-hardening +3 verified: introducing-notion-ai / releases / Wikipedia)
 - [x] P18: 新增 Canva AI 辅助分析 (第 8 篇, draft | partial;canva.com 30+ URL 403 Datadome;Wikipedia 二手 + Fortune 2025-08-22 + The Verge 2024 verified)
+- [x] P19: Canva 人工复核 → reviewed (P19 复验证状态;canva.com 仍 403 Datadome;5 verified sources 不变)
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 
 ---
 
-*最后更新：2026-07-01 (P18 新增 Canva AI 辅助分析 - 第 8 篇 AI 辅助分析,draft | partial;canva.com 30+ URL 全部 403 Datadome;Wikipedia (Canva/Affinity/Perkins) reference 源 + Fortune 2025-08-22 + The Verge 2024 verified media;$42B 估值 2025-08 双源部分达成)*
+*最后更新：2026-07-01 (P19 Canva 人工复核 → reviewed;P19 复验证 canva.com 仍 403 Datadome;5 verified sources (3 Wikipedia + 2 verified media) 不变;高风险事实 $42B 估值/4B 营收/220M 用户/收购金额 部分达成中-中低;Canva 是私人公司/接近 IPO 候选/未 IPO)*
