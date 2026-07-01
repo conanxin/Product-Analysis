@@ -188,15 +188,36 @@ analyses:
       high_risk_facts: partial
       reason: "P21 复核后：42 个 Webflow 官方 URL HTTP-200 verified (39 product pages + 3 blog posts: GSAP/Vidoso.ai/AI site builder) + W3Techs verified 200 + Wikipedia (Webflow) reference 源 verified 200。主体产品机制 verified (高可信度)。融资/估值/ARR/用户数/收购金额 仍 partial — Wikipedia reference cites Forbes/VentureBeat/Axios/TechCrunch，底层媒体原文 URL P21 尝试验证但 404/403/429，未直接 HTTP verified。收购金额均未披露 / undisclosed。Webflow 是私人公司/未 IPO。"
 
+  - product: Replit
+    file: analyses/ai-assisted/2026-07-01-replit.md
+    category: ai-cloud-development
+    analysis_type: ai-assisted
+    created_at: 2026-07-01
+    review_status: draft
+    reviewed_at: null
+    source_url_verification_status: partial
+    tags:
+      - ai-coding
+      - cloud-ide
+      - agentic-workflow
+      - app-builder
+      - deployment
+      - b2b-saas
+    one_line_insight: "Replit 将浏览器 IDE、云端运行环境、部署、数据库、模板社区和 AI Agent 结合到同一个工作台，把软件开发从'本地编码'重构为'用自然语言在云端生成、运行和发布应用'的工作流。"
+    quality_notes:
+      product_mechanism: verified
+      high_risk_facts: partial
+      reason: "P22 source-first workflow：75 个 source URLs verified 200 (41 Replit 官方主站 + 33 docs.replit.com + 8 replit.com/blog + 1 Wikipedia 主体 + 1 Amjad Masad + 11 英文媒体含 Pulse 2.0 + SaaStr)。主体产品机制 verified 高可信度（Browser IDE / Agent 4 / Pricing / Deployments / Database / Object Storage / Auth / Payments / Teams / Enterprise / MCP / Skills / Figma-to-app / Claude-to-app）。融资/估值/ARR/用户量 partial — Pulse 2.0 + SaaStr verified 200 直接英文媒体 + Wikipedia reference，但 Reuters/Forbes/Bloomberg/TechCrunch/Wired/Tom's Hardware 直接 URL 401/403/404，无法双独立主流媒体 verified。$250M Series C vs Series D 在 Pulse 2.0 vs SaaStr 存在轮次字母分歧。Replit 是私人公司 / 未 IPO。ARR $2.8M → $150M 来自 Pulse 2.0 + SaaStr 二次引用公司方说法。a16z $4.5M seed 2018 由 CNBC verified 200 + Wikipedia reference 双源支撑。Microsoft Azure 合作 2025-07 由 Wikipedia reference (文字 verified 200) 支撑。数据库删除事件 2025-07 由 Wikipedia + 404 Media + SaaStr 多源 verified 200 支撑。AI Darwin Awards 提名 2025 由 Wikipedia + 404 Media 双源 verified 200 支撑。中文 Replit MVP / Agent 真实可用性属判断。"
+
 summary:
-  total: 9
+  total: 10
   reviewed: 9
-  draft: 0
+  draft: 1
   verified: 0
-  partial: 9
+  partial: 10
   legacy_manual_analyses: 9
   legacy_今日复盘: 1
-  p_reports_total: 14
+  p_reports_total: 15
 
 status_transitions:
   - from: draft
@@ -232,6 +253,8 @@ by_category:
     products: [Canva]
   - category: visual-web-development
     products: [Webflow]
+  - category: ai-cloud-development
+    products: [Replit]
 
 reading_paths:
   ai_product_path:
@@ -254,3 +277,6 @@ reading_paths:
     - Figma
     - Framer
     - Webflow
+  ai_app_builder_path:
+    - Cursor
+    - Replit

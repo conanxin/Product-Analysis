@@ -15,6 +15,7 @@
 | Notion | ai-workspace | [2026-07-01-notion.md](ai-assisted/2026-07-01-notion.md) | reviewed | partial | 文档 + 数据库 + 知识库 + 项目 + Calendar + Mail + AI 整合为可组合的信息工作台 |
 | Canva | design-ai-platform | [2026-07-01-canva.md](ai-assisted/2026-07-01-canva.md) | reviewed | partial | 模板 + 视觉编辑器 + 品牌资产 + 企业协作 + AI 生成整合为大众化内容生产平台 |
 | Webflow | visual-web-development | [2026-07-01-webflow.md](ai-assisted/2026-07-01-webflow.md) | reviewed | partial | 视觉设计 + CMS + 托管 + SEO/AEO + 优化 + AI 建站整合为可视化 Web 生产系统 |
+| Replit | ai-cloud-development | [2026-07-01-replit.md](ai-assisted/2026-07-01-replit.md) | draft | partial | 浏览器 IDE + 云端运行时 + 部署 + 数据库 + AI Agent 结合为从想法到上线的云端应用工作台 |
 
 ## 2. 按产品类型分组
 
@@ -45,15 +46,18 @@
 ### Visual Web Development
 - **Webflow** — Designer 视觉开发 + CMS + Hosting + Localization + SEO/AEO + AI site builder + GSAP (动画) + Webflow Cloud + DevLink + Figma to Webflow
 
+### AI Cloud Development
+- **Replit** — Browser IDE + Cloud Runtime + Deployments (autoscale/static/reserved VM/scheduled/private) + SQL Database + Object Storage + Auth + Payments + Replit Agent 4 + Templates/Gallery + Teams/Enterprise + MCP/Skills + Figma-to-app + Claude-to-app + Microsoft Azure 合作
+
 ## 3. 当前质量状态
 
 | 维度 | 数值 | 说明 |
 |------|------|------|
-| AI 辅助分析 | 9 | 全部 reviewed |
+| AI 辅助分析 | 10 | 9 reviewed + 1 draft |
 | reviewed | 9 | 人工复核完成 |
-| draft | 0 | — |
+| draft | 1 | Replit (待 P23 复核) |
 | verified | 0 | 严格标准下未达成 |
-| partial | 9 | 主体产品机制 verified；高风险事实 partial |
+| partial | 10 | 主体产品机制 verified；高风险事实 partial |
 | 旧人工分析 (legacy) | 9 | 根目录 legacy notes |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
 | P 报告累计 | 14 | 1 legacy + 9 AI + 1 索引 + 2 review + 1 P21 review |
@@ -70,7 +74,15 @@
 
 | 候选 | 类型 | 优先 | 备注 |
 |------|------|------|------|
-| Replit | AI coding + hosting | 中 | 私人 AI coding / hosting 公司，有私募融资报道 |
+| ~~Replit~~ | AI coding + hosting | 已分析 | ~~私人 AI coding / hosting 公司，有私募融资报道~~ P22 draft |
+| Coda | workspace | 中 | 与 Notion 重叠 |
+| Obsidian | knowledge management | 中 | 私人但产品差异化 |
+| Tana | knowledge management | 中 | 私人但产品差异化 |
+| Arc | browser | 中 | 私人，浏览器赛道 |
+| Claude Code | ai-coding | 中 | Anthropic 拥有，但与 Cursor 重叠 |
+| Lovable | AI website builder | 中 | 与 Framer 直接竞争 |
+| v0 | AI coding | 中 | 私人 |
+| Adobe Express | design + AI | 低 | 与 Figma 竞争，数据敏感 |
 | Coda | workspace | 中 | 与 Notion 重叠 |
 | Obsidian | knowledge management | 中 | 私人但产品差异化 |
 | Tana | knowledge management | 中 | 私人但产品差异化 |
@@ -106,6 +118,12 @@
 1. **Figma** → **Framer** → **Webflow**
    - 理解设计协作 → 理解 AI website builder → 理解 visual web development
 
+### AI App Builder 路线
+1. **Cursor** → **Replit**
+   - 理解 AI 改变代码工作流 → 理解 AI 改变从想法到部署的工作流
+2. **Replit** → **Lovable** / **v0** (尚未写)
+   - 理解云端全栈 AI app builder → 理解 AI 生成 UI 的不同路径
+
 ### 跨产品对比路线
 1. **Cursor** vs **Figma** (Dev Mode)
    - AI 改变代码 vs AI 改变设计
@@ -115,6 +133,8 @@
    - AI workspace vs 传统 docs / database / 本地笔记
 4. **Canva** vs **Adobe Creative Cloud** / **Figma** (未对比)
    - 大众化设计 vs专业设计 vs 设计协作
+5. **Replit** vs **Cursor** / **Lovable** / **v0** / **Bolt.new** / **GitHub Codespaces** / **Vercel**
+   - 云端全栈 AI app builder vs 本地 IDE + AI / AI UI 生成 / 浏览器 IDE / 部署平台
 
 ## 6. 状态流转
 
