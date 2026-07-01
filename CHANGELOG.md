@@ -1,5 +1,101 @@
 # Changelog
 
+## P17 - Notion 人工复核与索引状态升级
+
+**日期：** 2026-07-01
+**变更类型：** review / source-hardening / index-sync / docs-only
+**变更范围：** analyses/ai-assisted/2026-07-01-notion.md (YAML 状态 + 17.1/17.2/17.3/17.4 P17 增量) + README + analyses/README.md + analyses/index.yml + CHANGELOG + P17 报告
+
+### 变更内容
+
+第七篇 AI 辅助产品分析 — Notion 人工复核 + 索引状态同步。状态从 `draft` 升级为 `reviewed`。
+
+#### review_status 升级
+
+- **before**: draft (P16 2026-07-01)
+- **after**: reviewed (P17 2026-07-01)
+- **reviewed_at**: 2026-07-01
+- **source_url_verification_status**: 保持 partial（诚实评估）
+
+#### P17 source-hardening 增量 (3 verified sources)
+
+1. `notion.com/blog/introducing-notion-ai` (200 verified) — Ivan Zhao 2022-11-16 官方 blog：Notion AI private alpha 首次 announcement
+2. `notion.com/releases` (200 verified) — 官方 releases 页面
+3. `en.wikipedia.org/wiki/Notion_(productivity_software)` (200 verified) — Wikipedia 二手记载：Notion 2013 成立、Series A $50M (2020) Index / Series C $275M (2021) Coatue+Sequoia $10B / Cron 收购 2022-06 / Skiff 收购 2024-02 / 20M 用户 / Notion AI 2022-11-16 / Notion Calendar 2024-01-17 / Notion Mail 2025-04 / Forbes AI 50 (2025-04)
+
+#### 双源部分达成 (Wikipedia + 官方 blog)
+
+- Notion AI 发布 2022-11-16 — Wikipedia + 官方 blog 双源 → high (从 partial 升)
+- Skiff 收购事件 2024-02-09 — Wikipedia + thurrott.com 双源 → 中-高 (从 partial 升)
+
+#### 仍 partial (P17 验证努力后未突破)
+
+- Series A $50M / Index Ventures 2020-01 / 估值 $2B — Wikipedia 单源
+- Series C $275M / Coatue + Sequoia 2021-10 / 估值 $10B / 20M 用户 — Wikipedia 单源
+- Cron 收购 2022-06-09 / Automate.io 收购 2021-09 — Wikipedia 单源
+- Notion Calendar 2024-01-17 / Notion Mail 2025-04 — Wikipedia 单源
+- Forbes "AI 50" 2025-04 入选 — Wikipedia 标 "non-primary source needed"
+- CNBC: $500M ARR — Wikipedia 引用但 CNBC 原报道 URL 404
+- TechCrunch: AI agents hub 2026-05-13 — Wikipedia 引用但 TechCrunch 原报道 URL 404
+- 收购金额 (Skiff / Cron / Automate.io) — Notion 官方未找到具体金额 announcement
+
+#### 主体轻量修订 (不重写)
+
+- **§1 一句话定位**: 保持 [判断] 注释 (已含)
+- **§8 交互与视觉设计**: 保持 AI 双层标注 (已含)
+- **§16 今日复盘**: 标 [判断] 注释 (P17 新增：Framer 创新 / Product-Analysis 启发 显式标判断)
+- **§17.1 当前状态**: 改为 P17 复核完成状态 + source-hardening 增量
+- **§17.2 可信度分级**: 16 → 28 条 (P17 新增 12 条 Wikipedia 记载事实分级)
+- **§17.3 后续 AI 分析改进**: 7 → 12 条 (P17 spec-required 5 条新增)
+- **§17.4 Sources 实链验证表**: 新增 3 verified sources (introducing-notion-ai / releases / Wikipedia) + P17 结论
+
+#### 索引文件同步 (跨文件)
+
+- **`analyses/index.yml`**: Notion `draft → reviewed` + `summary: reviewed 6→7, draft 1→0, p_reports_total 9→10`
+- **`analyses/README.md`**: Notion `draft → reviewed` + 质量状态表同步 (reviewed 7 + draft 0) + 候选列表修正
+- **`README.md`**: Notion `draft → reviewed` + 质量状态表 (reviewed 6→7, draft 1→0) + 下一步计划 + 最后更新
+- **`CHANGELOG.md`**: 顶部 P17 记录 (本节)
+
+#### 候选列表修正 (P17 spec-required Step 9)
+
+- **Canva**: 修正为 "私人公司 / 潜在 IPO 候选 (Fortune 2025-08-22 估值 $42B)"，不再是 "公开公司"
+- **Webflow**: 修正为 "私人 website builder / SaaS 公司"，不再是 "公开公司"
+- **Replit**: 修正为 "私人 AI coding / hosting 公司，有私募融资报道"，不再是 "公开 (2024 IPO)"
+
+仅在活跃索引 (analyses/README.md) 修正，历史 P16 report 保留不动。
+
+#### 修改文件 (5 个)
+
+- `analyses/ai-assisted/2026-07-01-notion.md`: YAML 状态 + §17.1/17.2/17.3/17.4 P17 增量
+- `analyses/index.yml`: Notion draft→reviewed + summary 6→7 reviewed
+- `analyses/README.md`: Notion draft→reviewed + 质量状态 + 候选列表
+- `README.md`: Notion draft→reviewed + 质量状态 + 下一步计划
+- `CHANGELOG.md`: 顶部 P17 记录
+- `reports/P17-notion-review-and-index-sync-report.md`: 新增 P17 报告
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (c682263 = P16)
+- ✅ Notion 文 37.9 → 39.7 KB (+1.8 KB source-hardening)
+- ✅ analyses/ai-assisted/2026-07-01-notion.md 存在
+- ✅ YAML review_status = reviewed (P17 升级)
+- ✅ YAML reviewed_at = 2026-07-01
+- ✅ YAML review_notes = P17 复核完整版
+- ✅ YAML source_url_verification_status = partial (原因清晰)
+- ✅ YAML 35 source_urls 纯 URL 列表 (Python yaml.safe_load 验证)
+- ✅ §17.1 改为 P17 复核完成状态
+- ✅ §17.2 16 → 28 条 (P17 新增 12 条 Wikipedia 记载事实分级)
+- ✅ §17.3 7 → 12 条 (P17 spec-required 5 条)
+- ✅ §17.4 Sources 实链验证表 新增 3 verified + P17 结论
+- ✅ analyses/index.yml Notion draft→reviewed (Python yaml.safe_load 验证)
+- ✅ analyses/README.md Notion draft→reviewed + 质量状态 7 + 候选列表修正
+- ✅ README.md Notion draft→reviewed + 质量状态 7 + 下一步计划
+- ✅ 6 篇 AI 辅助分析 (Perplexity/Linear/Raycast/Cursor/Figma/Framer) mtime 未变
+- ✅ 9 旧人工分析 + pic/ + templates/ + 其他 docs/ 未动
+- ✅ 无 force push / reset --hard / amend
+
+---
+
 ## P16 - Notion AI 辅助产品分析 (第 7 篇)
 
 **日期：** 2026-07-01

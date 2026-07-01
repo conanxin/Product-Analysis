@@ -130,8 +130,8 @@ analyses:
     category: ai-workspace
     analysis_type: ai-assisted
     created_at: 2026-07-01
-    review_status: draft
-    reviewed_at: null
+    review_status: reviewed
+    reviewed_at: 2026-07-01
     source_url_verification_status: partial
     tags:
       - productivity
@@ -144,17 +144,17 @@ analyses:
     quality_notes:
       product_mechanism: verified
       high_risk_facts: partial
-      reason: "private-company financing/valuation/ARR/user-number facts (Series C $275M, $10B+ valuation, ARR) remain partial; Skiff acquisition (2024-02) verified via thurrott.com but no second independent verified source; not yet human-reviewed"
+      reason: "P17 复核后：主体产品机制 32 官方页 + developers.notion.com + thurrott.com + Wikipedia reference 源 verified；Notion 2013 成立 / Series A $50M (2020) / Series C $275M (2021) / Skiff 2024-02 收购 / Notion AI 2022-11-16 发布 等在 Wikipedia 二手记载中双源部分达成；但 CNBC $500M ARR / TechCrunch / Forbes 原报道 URL 404 未 HTTP 验证；主体融资/估值/ARR/收购金额仍 partial"
 
 summary:
   total: 7
-  reviewed: 6
-  draft: 1
+  reviewed: 7
+  draft: 0
   verified: 0
   partial: 7
   legacy_manual_analyses: 9
   legacy_今日复盘: 1
-  p_reports_total: 9
+  p_reports_total: 10
 
 status_transitions:
   - from: draft
