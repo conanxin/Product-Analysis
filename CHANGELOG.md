@@ -1,5 +1,99 @@
 # Changelog
 
+## P10 - Cursor 人工复核与高风险事实加固
+
+**日期：** 2026-07-01
+**变更类型：** review / source-hardening / docs-only
+**变更范围：** Cursor 全文 + README + CHANGELOG + 新增 P10 报告
+
+### 变更内容
+
+P10 阶段对 Cursor 文章做人工复核与高风险事实加固,这是关键的 source-hardening 节点。
+
+#### YAML 状态修正
+
+- `review_status`: draft → **reviewed** (P10 完成人工复核)
+- `reviewed_at`: 2026-07-01 (保持)
+- `review_notes`: 重写,明示 P10 复核范围与 source-hardening 升级项
+- `source_url_verification_status`: 保持 partial (诚实评估;SpaceX $60B 收购 + $3B ARR May 2026 仍单源 Wikipedia)
+- `source_quality_notes`: 重写,明示 P10 升级项与未升级项
+
+#### P10 重大 source-hardening 升级 (8 项)
+
+1. **Series A $60M at $400M (2024-08-22)** 升 **high** — TechCrunch 2024-08-09 (200) + Cursor blog 2024-08-22 (200) **双独立 verified media**;这是首次达到 source-quality-checklist "双独立 verified media" 标准
+2. **Series B $105M (2025-01-16)** 升 **中-高** — Cursor blog 2025-01-16 (200) + Wikipedia;**修正原文章 "$100M" 为 $105M** (按 Cursor 官方原口径)
+3. **Series C $900M at $9.9B (2025-06-06)** 升 **中-高** — Cursor blog 2025-06-06 (200) + Wikipedia;同时披露 ARR $500M + Fortune 500 客户 (NVIDIA/Uber/Adobe)
+4. **Series D $2.3B at $29.3B (2025-11-13)** 升 **中-高** — Cursor blog 2025-11-13 (200) + Wikipedia;同时披露 ARR $1B + 300+ 团队 + 新增 Coatue/NVIDIA/Google 投资方
+5. **ARR $100M (Jan 2025) / $500M (Jun 2025) / $1B (Nov 2025)** 升 **high** — 全部在 Cursor 官方 blog 验证
+6. **ARR $3B (May 2026)** 仍 **中** — Wikipedia 单源 (Cursor blog 未明确披露)
+7. **Supermaven 收购 (2024-11-12)** 升 **high** — Cursor blog 2024-11-12 (200) + TechCrunch 2024-11-12 (200) 双独立 verified
+8. **Half of Fortune 500 是 Cursor 客户** 升 **high** — Cursor blog series-c 官方原口径
+
+#### 本次未升级项(诚实评估)
+
+- **SpaceX $60B 收购** (announced 2026-04-21 xAI deal / 2026-06-16 SpaceX 行使权利, expected Q3 2026 close) — 仍 partial;Reuters / Bloomberg / NYT / SpaceX 官方原报道 URL 全部被 bot 拦截 (401/403),仅 Wikipedia + 中文转载 (QQ / Sohu / IT Home)
+- **$3B ARR May 2026** — Wikipedia 单源
+- 状态明示:SpaceX 仍 "pending/expected Q3 2026 close",不是 completed
+
+#### 修正的事实错误 (1 项)
+
+- 原文章 §17.1 写 "Series B $100M" → 修正为 "$105M" (按 Cursor 官方 blog 2025-01-16)
+
+#### 新增 source_urls (7 个, 全部 HTTP 200 verified)
+
+- https://www.cursor.com/blog/series-a
+- https://www.cursor.com/blog/series-b
+- https://www.cursor.com/blog/series-c
+- https://www.cursor.com/blog/series-d
+- https://www.cursor.com/blog/supermaven
+- https://techcrunch.com/2024/11/12/anysphere-acquires-supermaven-to-beef-up-cursor/
+- https://techcrunch.com/2024/08/09/anysphere-a-github-copilot-rival-has-raised-60m-series-a-at-400m-valuation-from-a16z-thrive-sources-say/
+
+#### 未改动的内容
+
+- §1-§16 主体未重写
+- §14 中文 MVP 推断未改 (已 [判断] 标记)
+- §15 项目启发 13 条未改
+- §17.1 主体未改 (只修正 1 个数字 $100M→$105M)
+- §17.3 16 条对后续分析改进未改
+- §17.4 Sources 实链验证表保留 P9 状态
+- Perplexity / Linear / Raycast 文未动
+- 9 旧人工分析文章 + pic/ 未动
+- 不 force push / reset --hard / amend
+
+### 修改文件
+
+- `analyses/ai-assisted/2026-07-01-cursor.md`:
+  - YAML review_status: draft → reviewed
+  - YAML review_notes: 重写
+  - YAML source_quality_notes: 重写
+  - source_urls: +7 verified URLs
+  - §17.1: 修正 1 个数字 (Series B $100M → $105M)
+  - §17.2: +8 P10 source-hardening 升级项
+  - §17.5: 新增 P10 复核记录
+  - Sources (5 组): Official 增 5 + Reference 增 2
+- `README.md`: AI 索引 Cursor 状态 draft → reviewed
+- `CHANGELOG.md`: 顶部 P10 记录(本节)
+- `reports/P10-cursor-review-and-risk-fact-hardening-report.md`: 新增 P10 报告
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (ea84cb4 = P9.1)
+- ✅ Cursor 文 36 → 36.5 KB (主体未重写,只追加 §17.5 + 修正 §17.1 1 个数字)
+- ✅ YAML review_status = reviewed
+- ✅ YAML reviewed_at = 2026-07-01
+- ✅ source_url_verification_status = partial (保持)
+- ✅ §17.1 1 个数字修正 (Series B $100M → $105M)
+- ✅ §17.2 +8 P10 升级项
+- ✅ §17.5 P10 复核记录存在
+- ✅ Sources 5 分组 (Official +5, Verified +2)
+- ✅ Perplexity / Linear / Raycast mtime 未变
+- ✅ 9 旧人工分析文章 + pic/ 未动
+- ✅ 无 force push / reset --hard / amend
+- ✅ working tree clean post-push
+
+---
+
 ## P9 - Cursor AI 辅助产品分析 (第 4 篇)
 
 **日期：** 2026-07-01
