@@ -1,5 +1,43 @@
 # Changelog
 
+## P22.1 - Replit YAML Duplicate Key Fix
+
+**日期：** 2026-07-01
+**变更类型：** yaml-fix / docs-only
+**变更范围：** analyses/ai-assisted/2026-07-01-replit.md (修订) + CHANGELOG + P22.1 报告
+
+### 变更内容
+
+修复 Replit YAML front matter 中重复的 `source_quality_notes` 字段。
+
+#### P22.1 修复
+
+**问题：** P22 提交的 Replit 文章 YAML front matter 中出现两个 `source_quality_notes:` 字段（line 94 + line 103）。PyYAML `yaml.safe_load` 会以后者覆盖前者，导致前面 1306 字符的详细 source-quality 说明被静默丢弃，只保留后面 70 字符的 "⚠️ 注意" 备注。
+
+**修复：** 删除第二个重复字段 `source_quality_notes: | ⚠️ 注意...` 整段。
+
+**保留：** 第一个字段的详细 source-quality 说明（1306 字符），包括 主体产品机制 verified / Wikipedia verified / 高质量媒体 verified / 高风险事实 partial / Replit 私人公司未 IPO / Agent 真实可用性 partial / 中文 MVP 属判断 等 P22 关键 source-quality 结论。
+
+**未修改：**
+- Replit 正文主体
+- README.md
+- analyses/README.md
+- analyses/index.yml
+- 其他 AI 分析文章 (Perplexity / Linear / Raycast / Cursor / Figma / Framer / Notion / Canva / Webflow)
+- 旧人工分析文章 (1.Product-Hunt.md 至 9.OpenROV.md)
+- pic/
+- templates/
+
+#### YAML 验证 (修复后)
+
+- `source_quality_notes` 字段出现次数: 2 → 1
+- yaml.safe_load 可解析
+- `review_status`: draft (未变)
+- `reviewed_at`: null (未变)
+- `source_url_verification_status`: partial (未变)
+- `source_urls`: 75 个纯 URL 字符串 (未变)
+- `source_quality_notes` 内容包含 P22 详细 source-quality 说明 (1306 字符)
+
 ## P22 - Replit AI-Assisted Product Analysis
 
 **日期：** 2026-07-01
