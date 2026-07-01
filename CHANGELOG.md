@@ -1,5 +1,77 @@
 # Changelog
 
+## P21 - Webflow Review and Index Status Sync
+
+**日期：** 2026-07-01
+**变更类型：** review / source-hardening / index-sync
+**变更范围：** analyses/ai-assisted/2026-07-01-webflow.md (修订) + README + analyses/README.md + analyses/index.yml + CHANGELOG + P21 报告
+
+### 变更内容
+
+对 Webflow AI 辅助分析进行 P21 人工复核，将 review_status 从 draft 升为 reviewed。
+
+#### Source-Hardening (P21)
+
+**新增 verified 来源 (4 个)：**
+1. `webflow.com/blog/webflow-acquires-gsap` (200) — GSAP 收购事实官方公告
+2. `webflow.com/blog/webflow-acquires-vidoso` (200) — Vidoso.ai 收购事实官方公告
+3. `webflow.com/blog/ai-site-builder` (200) — AI site builder 功能官方博客
+4. `w3techs.com/technologies/details/cm-webflow` (200) — Webflow usage statistics 独立数据源
+
+**尝试但未成功的媒体 URL (4 个)：**
+- `techcrunch.com/2026/03/12/webflow-buys-vidoso-ai` → 404
+- `axios.com/2024/10/15/webflow-acquires-gsap` → 403
+- `venturebeat.com/2021/01/13/webflow-140m-2-1b-valuation` → 429
+- `forbes.com/webflow-series-a-72m` → 404
+
+**修正 Wikipedia reference vs direct verified media 边界：**
+- P20 文章中 "Forbes / VentureBeat / Axios / TechCrunch verified 引用" 修正为 "Wikipedia reference cites Forbes / VentureBeat / Axios / TechCrunch"
+- 明确标注底层媒体原文 URL P21 尝试验证但 404/403/429，未直接 HTTP verified
+- Wikipedia 是 reference source，不是 high-quality-media-verified
+
+#### 收购事实和收购金额拆开验证
+
+| 收购 | 事实可信度 | 金额 |
+|------|----------|------|
+| GSAP (2024-10) | 中-高 (Webflow official blog verified 200 + Wikipedia reference cites Axios) | 未披露 / undisclosed |
+| Vidoso.ai (2026-03) | 中-高 (Webflow official blog verified 200 + Wikipedia reference cites TechCrunch) | 未披露 / undisclosed |
+
+#### review_status + source_url_verification_status
+
+- **review_status**: draft → reviewed
+- **source_url_verification_status**: partial (保持；融资/估值/ARR/用户数/收购金额仍 partial)
+
+#### 修改文件 (6 个)
+
+- `analyses/ai-assisted/2026-07-01-webflow.md`: YAML review_status draft→reviewed + reviewed_at + review_notes + source_urls 新增 4 个 + source_quality_notes 更新 + §1 Wikipedia 引用修正 + §8 GSAP 引用修正 + §14 [判断]/[推断] 标注 + §16 P21 结论 + §17 全面重写 (17.1/17.2/17.3/17.4) + Sources 区更新
+- `README.md`: Webflow 行 draft→reviewed + 质量状态 reviewed 8→9 draft 1→0 + P21 计划标 [x] + 最后更新
+- `analyses/README.md`: Webflow 行 draft→reviewed + 质量状态 reviewed 8→9 draft 1→0
+- `analyses/index.yml`: Webflow 条目 review_status draft→reviewed + reviewed_at + quality_notes.reason 更新 + summary reviewed 8→9 draft 1→0 + p_reports_total 13→14
+- `CHANGELOG.md`: 顶部 P21 记录
+- `reports/P21-webflow-review-and-index-status-sync-report.md`: 新增 P21 报告
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (302a061 = P20)
+- ✅ YAML review_status = reviewed
+- ✅ YAML reviewed_at = 2026-07-01
+- ✅ YAML review_notes 存在且语义正确
+- ✅ YAML source_urls 44 个纯 URL 字符串 (P20 的 40 + P21 新增 4)
+- ✅ YAML source_url_verification_status = partial
+- ✅ §17.1 已从 draft 改为人工复核完成状态
+- ✅ §17.2 可信度分级已同步更新 (收购事实/收购金额拆开)
+- ✅ §17.3 包含 Wikipedia reference vs direct verified media 教训
+- ✅ §17.4 Sources 新增 4 个 P21 verified 来源
+- ✅ Sources 区新增 High-Quality Data Sources 分组
+- ✅ 正文不得写 Webflow 是公开公司或已 IPO
+- ✅ 正文已修正 Wikipedia reference 和媒体 direct verified 的边界
+- ✅ §14 中文 MVP 推断标注 [判断] / [推断]
+- ✅ 8 篇 reviewed AI 辅助分析 mtime 未变
+- ✅ 9 旧人工分析 + pic/ + templates/ + 其他 docs/ 未动
+- ✅ 无 force push / reset --hard / amend
+
+---
+
 ## P20 - Webflow AI 辅助产品分析 (第 9 篇)
 
 **日期：** 2026-07-01

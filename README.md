@@ -82,7 +82,7 @@ Product-Analysis/
 | 2026-07-01 | Framer | `analyses/ai-assisted/2026-07-01-framer.md` | AI 辅助 | website-builder、design-tools、ai-website-builder、cms、no-code、b2b-saas | 将设计画布、CMS、发布和 AI agent 工作流结合为 AI 建站平台 | reviewed | partial |
 | 2026-07-01 | Notion | `analyses/ai-assisted/2026-07-01-notion.md` | AI 辅助 | productivity、workspace、docs、database、knowledge-management、ai-workspace | 将文档、数据库、知识库、项目管理、日历、邮件和 AI agent 能力整合为可组合的信息工作台 | reviewed | partial |
 | 2026-07-01 | Canva | `analyses/ai-assisted/2026-07-01-canva.md` | AI 辅助 | design-tools、ai-design、templates、visual-suite、creator-tools、b2b-saas | 将模板、视觉编辑器、品牌资产、企业协作和 AI 生成能力整合为大众化内容生产平台 | reviewed | partial |
-| 2026-07-01 | Webflow | `analyses/ai-assisted/2026-07-01-webflow.md` | AI 辅助 | website-builder、visual-development、no-code、cms、ai-website-builder、b2b-saas | 将视觉设计、CMS、托管、SEO/AEO、优化和 AI 建站能力整合为可视化 Web 生产系统 | draft | partial |
+| 2026-07-01 | Webflow | `analyses/ai-assisted/2026-07-01-webflow.md` | AI 辅助 | website-builder、visual-development、no-code、cms、ai-website-builder、b2b-saas | 将视觉设计、CMS、托管、SEO/AEO、优化和 AI 建站能力整合为可视化 Web 生产系统 | reviewed | partial |
 
 ---
 
@@ -112,9 +112,9 @@ Product-Analysis/
 |------|---:|------|
 | 旧人工分析 (legacy) | 9 | legacy-note（根目录） |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
-| AI 辅助分析 | 9 | 8 reviewed + 1 draft |
-| - reviewed | 8 | 人工复核完成 |
-| - draft | 1 | Webflow (待 P21 复核) |
+| AI 辅助分析 | 9 | 9 reviewed |
+| - reviewed | 9 | 人工复核完成 |
+| - draft | 0 | — |
 | - verified | 0 | 严格标准下未达成 |
 | - partial | 9 | 主体产品功能 verified；高风险事实 partial |
 
@@ -131,10 +131,10 @@ Product-Analysis/
 - [x] P18: 新增 Canva AI 辅助分析 (第 8 篇, draft | partial;canva.com 30+ URL 403 Datadome;Wikipedia 二手 + Fortune 2025-08-22 + The Verge 2024 verified)
 - [x] P19: Canva 人工复核 → reviewed (P19 复验证状态;canva.com 仍 403 Datadome;5 verified sources 不变)
 - [x] P19.1: 修复 P19 索引漂移 (Canva 行状态对齐 - draft → reviewed;当前质量状态 7→8 reviewed)
-- [x] P20: 新增 Webflow AI 辅助分析 (第 9 篇, draft | partial;39 个 webflow.com 官方 URL 200 verified;Wikipedia (Webflow) reference 源 verified)
+- [x] P21: 人工复核 Webflow 文章 (draft → reviewed;新增 3 个 Webflow official blog posts + 1 个 W3Techs verified;修正 Wikipedia reference vs direct verified media 边界;收购金额未披露 / undisclosed)
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 
 ---
 
-*最后更新：2026-07-01 (P20 新增 Webflow AI 辅助分析 - 第 9 篇 AI 辅助分析,draft | partial;39 个 webflow.com 官方 URL 200 verified - P11 以来最完整官方源覆盖;Wikipedia (Webflow) 二手 reference 源 + VentureBeat / Forbes / Axios / TechCrunch 二手引用;GSAP 2024-10 收购 + Vidoso.ai 2026-03 收购 verified;Series B $2.1B valuation 中-高)*
+*最后更新：2026-07-01 (P21 人工复核 Webflow 文章 — draft → reviewed;新增 3 个 Webflow official blog posts verified 200 + 1 个 W3Techs verified 200;修正 Wikipedia reference vs direct verified media 边界 — Wikipedia reference cites Forbes/VentureBeat/Axios/TechCrunch，底层媒体原文 URL P21 尝试验证但 404/403/429;收购金额均未披露 / undisclosed;9 篇 AI 辅助分析全部 reviewed | partial)*

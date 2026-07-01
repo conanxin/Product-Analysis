@@ -14,7 +14,7 @@
 | Framer | ai-website-builder | [2026-07-01-framer.md](ai-assisted/2026-07-01-framer.md) | reviewed | partial | 设计画布 + CMS + 发布 + SEO + 模板 + AI agent 重构为 AI 建站平台 |
 | Notion | ai-workspace | [2026-07-01-notion.md](ai-assisted/2026-07-01-notion.md) | reviewed | partial | 文档 + 数据库 + 知识库 + 项目 + Calendar + Mail + AI 整合为可组合的信息工作台 |
 | Canva | design-ai-platform | [2026-07-01-canva.md](ai-assisted/2026-07-01-canva.md) | reviewed | partial | 模板 + 视觉编辑器 + 品牌资产 + 企业协作 + AI 生成整合为大众化内容生产平台 |
-| Webflow | visual-web-development | [2026-07-01-webflow.md](ai-assisted/2026-07-01-webflow.md) | draft | partial | 视觉设计 + CMS + 托管 + SEO/AEO + 优化 + AI 建站整合为可视化 Web 生产系统 |
+| Webflow | visual-web-development | [2026-07-01-webflow.md](ai-assisted/2026-07-01-webflow.md) | reviewed | partial | 视觉设计 + CMS + 托管 + SEO/AEO + 优化 + AI 建站整合为可视化 Web 生产系统 |
 
 ## 2. 按产品类型分组
 
@@ -49,14 +49,14 @@
 
 | 维度 | 数值 | 说明 |
 |------|------|------|
-| AI 辅助分析 | 9 | 8 reviewed + 1 draft |
-| reviewed | 8 | 人工复核完成 |
-| draft | 1 | Webflow (待 P21 人工复核) |
+| AI 辅助分析 | 9 | 全部 reviewed |
+| reviewed | 9 | 人工复核完成 |
+| draft | 0 | — |
 | verified | 0 | 严格标准下未达成 |
 | partial | 9 | 主体产品机制 verified；高风险事实 partial |
 | 旧人工分析 (legacy) | 9 | 根目录 legacy notes |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
-| P 报告累计 | 13 | 1 legacy + 9 AI + 1 索引 + 2 review |
+| P 报告累计 | 14 | 1 legacy + 9 AI + 1 索引 + 2 review + 1 P21 review |
 
 **说明**：
 - `partial` 不是失败，而是表示部分**高风险事实**（融资、估值、收入、收购、IPO、用户量、合作金额、价格变化、发布时间线、法律诉讼）仍未达到双源 verified 标准。

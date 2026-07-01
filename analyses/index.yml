@@ -172,8 +172,8 @@ analyses:
     category: visual-web-development
     analysis_type: ai-assisted
     created_at: 2026-07-01
-    review_status: draft
-    reviewed_at: null
+    review_status: reviewed
+    reviewed_at: 2026-07-01
     source_url_verification_status: partial
     tags:
       - website-builder
@@ -186,17 +186,17 @@ analyses:
     quality_notes:
       product_mechanism: verified
       high_risk_facts: partial
-      reason: "P20 source-hardening 主体产品功能 verified: 39 个 Webflow 官方 URL HTTP-200 verified (P11 以来最完整官方源覆盖); Wikipedia (Webflow) verified 200 reference 源;融资/估值/ARR/用户数/收购金额 仍 partial — Wikipedia 二手引用 Forbes / VentureBeat / Axios / TechCrunch 原报道 URL 未直接 HTTP 验证;Webflow 是私人公司/接近 IPO 候选/未 IPO;P21 待人工复核"
+      reason: "P21 复核后：42 个 Webflow 官方 URL HTTP-200 verified (39 product pages + 3 blog posts: GSAP/Vidoso.ai/AI site builder) + W3Techs verified 200 + Wikipedia (Webflow) reference 源 verified 200。主体产品机制 verified (高可信度)。融资/估值/ARR/用户数/收购金额 仍 partial — Wikipedia reference cites Forbes/VentureBeat/Axios/TechCrunch，底层媒体原文 URL P21 尝试验证但 404/403/429，未直接 HTTP verified。收购金额均未披露 / undisclosed。Webflow 是私人公司/未 IPO。"
 
 summary:
   total: 9
-  reviewed: 8
-  draft: 1
+  reviewed: 9
+  draft: 0
   verified: 0
   partial: 9
   legacy_manual_analyses: 9
   legacy_今日复盘: 1
-  p_reports_total: 13
+  p_reports_total: 14
 
 status_transitions:
   - from: draft
