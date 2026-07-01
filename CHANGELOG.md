@@ -1,5 +1,40 @@
 # Changelog
 
+## P2 - Product Hunt Legacy Review
+
+**日期：** 2026-07-01
+**变更类型：** 内容补充
+**变更范围：** 1.Product-Hunt.md 末尾追加复盘章节
+
+### 变更内容
+
+为 `1.Product-Hunt.md` 追加"今日复盘"章节，从旧框架（特点/问题/设想）升级为 14 维度分析框架。
+
+#### 复盘内容
+
+- 一句话重新定位
+- 真正解决的问题（三类用户）
+- 核心机制拆解（7 机制 × 4 维度表）
+- 信息架构分析
+- 社区机制分析（4 个"为什么"）
+- 早期笔记中判断准确的地方
+- 早期笔记中可以深化的地方
+- 如果我来重做一个中文 Product Hunt
+- 可迁移到我自己项目的启发
+- 小结
+
+#### 新增报告
+
+- `reports/P2-product-hunt-legacy-review-report.md`
+
+### 保留
+
+- `1.Product-Hunt.md` 原始正文（YAML metadata + 特点/问题/设想）完全未改
+- `pic/` 目录及所有图片未动
+- 其他 8 篇旧文章未动
+
+---
+
 ## P1 - Product Analysis Archive Structure
 
 **日期：** 2026-07-01
