@@ -1,5 +1,68 @@
 # Changelog
 
+## P7 - Raycast AI 辅助产品分析
+
+**日期：** 2026-07-01
+**变更类型：** ai-assisted-analysis (新增第 3 篇)
+**变更范围：** analyses/ai-assisted/ + README + CHANGELOG + 新增 P7 报告
+
+### 变更内容
+
+第 3 篇 AI 辅助产品分析 — Raycast (命令面板 / 扩展平台 / AI 工作流)。
+
+#### Source-first workflow
+
+- **官方页 22 个全 HTTP 200 verified**:raycast.com 主站 + /about + /pricing + /ai + /store + /teams + /enterprise + /pro + /changelog + manual.raycast.com + developers.raycast.com + /api-reference + 10 篇 blog
+- **GitHub 官方仓库**:github.com/raycast/extensions (56k+ stars) verified (200)
+- **TechCrunch 3 篇 verified**:
+  - 2022 Series A $19M (Accel)
+  - 2024 Series B $100M (Coatue, $1B 估值)
+  - 2023 AI 功能发布
+- **Wikipedia verified** (200):en.wikipedia.org/wiki/Raycast
+- **关键事实双源**:Series A $19M (TC+blog) / Series B $100M (TC+blog) / 创始人 (TC+Wikipedia+blog) / AI 功能发布 (TC+blog)
+- **降权的辅助来源**:Product Hunt 主域名 403 (bot 防护);Bloomberg / Reuters 主域名 403/401 (bot 防护)
+
+#### 文章结构
+
+- 17 节全产出 (§1-§17)
+- §14 "如果我来重做" — 中文语境 MVP 分析 (Tauri + 中文 Snippets + 微信/飞书命令 + 本地 LLM)
+- §15 "对 Product-Analysis 项目的启发" — 6 条
+- §17.1-17.4 人工复核结论齐
+
+#### review_status
+
+- **draft** (AI 初稿,待人工复核)
+- 与 Linear / Perplexity 的 `reviewed` 不同 — Raycast 含更多个人推断(§14 中文 MVP、§15 启发),保留 draft 给人工审视
+
+#### source_url_verification_status
+
+- **partial** — 主体产品事实 27 URL 全 verified;但 Series A/B 融资信息主要依赖 TechCrunch 单一媒体 + Raycast 官方 blog 自述(非独立验证),按 source-quality-checklist 诚实标注 partial
+
+### 修改文件
+
+- `analyses/ai-assisted/2026-07-01-raycast.md`:新增 16.2 KB 文章(YAML 11 字段 + 17 章节 + Sources 28 行)
+- `README.md`:AI 索引新增 Raycast 行(状态 draft + partial)
+- `CHANGELOG.md`:顶部 P7 记录(本节)
+- `reports/P7-raycast-ai-assisted-analysis-report.md`:新增 P7 报告
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (8062089 = P6.1)
+- ✅ Raycast 文章 16.2 KB 存在
+- ✅ YAML 11 字段齐
+- ✅ review_status = draft
+- ✅ source_url_verification_status = partial
+- ✅ source_url_verified_at = 2026-07-01
+- ✅ 17 章节全产出 (§1-§17)
+- ✅ §17.1 明确说"AI 辅助初稿,待人工复核"
+- ✅ §17.2 11 条可信度分级(高/中/低/待观察)
+- ✅ §17.4 Sources 实链验证 28 条 URL
+- ✅ README draft + partial 列齐
+- ✅ Perplexity / Linear mtime 未变
+- ✅ 9 旧人工分析文章 + pic/ 未动
+
+---
+
 ## P6.1 - Linear Reuters URL Verification
 
 **日期：** 2026-07-01
