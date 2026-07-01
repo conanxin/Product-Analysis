@@ -63,10 +63,20 @@ Product-Analysis/
 │   └── ai-product-analysis-prompt.md    # AI 分析提示词模板
 ├── analyses/                      # AI 辅助分析结果
 │   └── ai-assisted/
-│       └── README.md              # AI 分析区说明
+│       ├── README.md              # AI 分析区说明
+│       └── 2026-07-01-perplexity.md    # 第1篇 AI 辅助分析
+├── reports/                       # 每轮任务报告
 ├── [1-9]*.md                      # 旧人工分析（legacy manual analysis）
 └── pic/                           # 旧文章图片（勿移动）
 ```
+
+## AI 辅助分析索引
+
+| 日期 | 产品 | 文件 | 类型 | 关键词 | 核心观察 | 状态 |
+|------|------|------|------|--------|----------|------|
+| 2026-07-01 | Perplexity | `analyses/ai-assisted/2026-07-01-perplexity.md` | AI 辅助 | AI 搜索、答案引擎、引用、研究流程 | 将搜索结果页重构为带来源、可追问的答案流 | draft |
+
+---
 
 - `根目录旧文章` = legacy manual analysis，保留原貌，仅在顶部增加 metadata
 - `analyses/ai-assisted/` = 新 AI 分析文章

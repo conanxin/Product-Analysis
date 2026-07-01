@@ -1,5 +1,58 @@
 # Changelog
 
+## P3 - First AI-Assisted Product Analysis: Perplexity
+
+**日期：** 2026-07-01
+**变更类型：** 新增内容
+**变更范围：** AI 辅助产品分析首篇
+
+### 变更内容
+
+新增第一篇 AI 辅助产品分析，使用 `templates/product-analysis-template.md` 结构。
+
+#### 新增文件
+
+- `analyses/ai-assisted/2026-07-01-perplexity.md` — Perplexity 全 16 维度分析
+- `reports/P3-perplexity-ai-assisted-analysis-report.md` — P3 报告
+
+#### 修改文件
+
+- `README.md` — 新增"AI 辅助分析索引"小节
+- `CHANGELOG.md` — 顶部增加 P3 记录
+
+### 文章覆盖
+
+- 16 维度全分析（一句话定位 / 目标用户 / 核心场景 / 解决的问题 / 首页 / 用户路径 / IA / 交互 / 内容增长 / 商业模式 / 竞品 / 优点 / 问题 / 重做 / 启发 / 复盘）
+- 公开 sources 列表（13 个 URL + 来源类型）
+- 明确区分事实 / 推断 / 判断
+
+### 状态
+
+- 文章状态：`review_status: draft`（等待人工复核）
+- 区分证据强弱：在文中用 `[事实]` `[事实+判断]` `[判断]` 标注
+
+### P3 目标达成
+
+- [x] 按模板产出第 1 篇 AI 辅助分析
+- [x] 公开资料检索（13 个来源）
+- [x] 区分事实 / 推断 / 判断
+- [x] README 增加 AI 分析索引
+- [x] CHANGELOG 增加 P3 记录
+- [x] 生成 P3 报告
+
+---
+
+## P2.5 - Add P1 Archive Upgrade Report
+
+**日期：** 2026-07-01
+**变更类型：** reports-only
+**变更范围：** 补齐 P1 报告入库
+
+- 将 `reports/P1-archive-upgrade-report.md` 纳入 git 跟踪
+- commit: `P2.5: add P1 archive upgrade report`
+
+---
+
 ## P2 - Product Hunt Legacy Review
 
 **日期：** 2026-07-01
