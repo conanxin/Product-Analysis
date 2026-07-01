@@ -1,5 +1,93 @@
 # Changelog
 
+## P15 - AI 分析索引与质量仪表板
+
+**日期：** 2026-07-01
+**变更类型：** docs-only / index / dashboard
+**变更范围：** 新增 analyses/README.md + analyses/index.yml + docs/review-status-guide.md + README.md 质量状态小节 + CHANGELOG.md 顶部 P15 记录 + P15 报告
+
+### 变更内容
+
+P15 是不新增产品分析文章的任务，目的是建立 AI 辅助分析的索引、质量评判标准与质量仪表板，让仓库从 6 篇独立文章变成结构化产品分析体系。
+
+#### 新增文件 (3 个)
+
+1. **`analyses/index.yml`** (2.9 KB) — 结构化索引 (机器可读)
+   - 6 篇 AI 辅助分析的元数据
+   - 产品 / 文件 / 日期 / 状态 / 来源状态 / 标签 / commit / reviewed_at / report
+   - summary (total / reviewed / draft / verified / partial)
+   - status_transitions (状态流转)
+2. **`analyses/README.md`** (3.5 KB) — 人工可读索引
+   - 目录结构
+   - 6 篇 AI 辅助分析表格 (与 index.yml 同步)
+   - 质量状态汇总
+   - 状态流转说明
+   - 维护说明
+3. **`docs/review-status-guide.md`** (3.4 KB) — review_status 流转指南
+   - 双重状态系统 (review_status + source_url_verification_status)
+   - draft → reviewed 升级标准 (7 条)
+   - partial → verified 升级标准 (5 条)
+   - 高风险事实判定 (10 类)
+   - partial 状态详解 (4 个典型场景)
+   - 当前项目状态汇总
+   - 升级路径示例 (Perplexity / Figma / Framer)
+
+#### README.md 修改 (3 处)
+
+1. **添加 "如何新增一篇 AI 产品分析"** - 第 6 步同步更新 analyses/index.yml 与 analyses/README.md
+2. **新增 "当前质量状态" 小节** - 表格 + 链接到 analyses/README.md / analyses/index.yml / docs/review-status-guide.md
+3. **最后更新**: P14 → **P15**
+
+#### 未变更
+
+- ✅ **未新增产品分析文章** (P15 是 docs-only 任务)
+- ✅ **未修改 6 篇 AI 辅助分析文章** (Perplexity / Linear / Raycast / Cursor / Figma / Framer 主体未动)
+- ✅ **未修改 9 篇旧人工分析文章** (根目录 legacy notes 未动)
+- ✅ **未动 pic/ 目录**
+- ✅ **未动 templates/ 目录**
+- ✅ **未动其他 docs/ 现有文件** (ai-assisted-analysis-workflow.md / product-analysis-framework.md / source-quality-checklist.md 未动)
+
+#### 仓库结构变化
+
+```
+Product-Analysis/
+├── README.md (修改: 新增质量状态小节)
+├── CHANGELOG.md (修改: 顶部 P15 记录)
+├── analyses/ (新增 README.md + index.yml)
+│   ├── README.md ✨ 新增
+│   ├── index.yml ✨ 新增
+│   └── ai-assisted/
+│       ├── README.md (未动)
+│       └── 6 篇 AI 辅助分析 (未动)
+├── docs/ (新增 review-status-guide.md)
+│   ├── review-status-guide.md ✨ 新增
+│   ├── ai-assisted-analysis-workflow.md (未动)
+│   ├── product-analysis-framework.md (未动)
+│   └── source-quality-checklist.md (未动)
+├── templates/ (未动)
+├── reports/ (新增 P15 报告)
+│   └── P15-ai-analysis-index-and-quality-dashboard-report.md ✨ 新增
+├── 9 篇旧人工分析 (未动)
+└── pic/ (未动)
+```
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (74fda7a = P14)
+- ✅ analyses/README.md 存在
+- ✅ analyses/index.yml 存在
+- ✅ docs/review-status-guide.md 存在
+- ✅ README.md 包含 analyses/README.md 链接
+- ✅ README.md 包含 "当前质量状态" 小节
+- ✅ analyses/index.yml 包含 6 篇 AI 分析
+- ✅ analyses/README.md 包含 6 篇 AI 分析表格
+- ✅ docs/review-status-guide.md 解释 reviewed vs partial
+- ✅ CHANGELOG.md 顶部有 P15 记录
+- ✅ 6 篇 AI 辅助分析文章 + 9 篇旧人工分析 + pic/ + templates/ + 其他 docs/ 未动
+- ✅ 无 force push / reset --hard / amend
+
+---
+
 ## P14 - Framer 人工复核与 YAML/Sources 规范修正
 
 **日期：** 2026-07-01

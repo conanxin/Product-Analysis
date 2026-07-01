@@ -97,17 +97,35 @@ Product-Analysis/
 3. **生成分析** — 使用 `templates/ai-product-analysis-prompt.md` 提示词，让 AI 分析产品
 4. **整理成文** — 按 `templates/product-analysis-template.md` 的结构输出 Markdown
 5. **放置文件** — 存入 `analyses/ai-assisted/YYYY-MM-DD-product-name.md`
-6. **回填索引** — 在本文"当前内容索引"表格中补充一条记录
+6. **回填索引** — 在本文"当前内容索引"表格中补充一条记录，同时更新 [analyses/index.yml](analyses/index.yml) 与 [analyses/README.md](analyses/README.md)
 
 ---
+
+## 当前质量状态
+
+> 更完整的 AI 分析索引与质量状态见：[analyses/README.md](analyses/README.md) 与 [analyses/index.yml](analyses/index.yml)
+
+| 类型 | 数量 | 状态 |
+|------|---:|------|
+| 旧人工分析 (legacy) | 9 | legacy-note（根目录） |
+| 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
+| AI 辅助分析 | 6 | 全部 reviewed |
+| - reviewed | 6 | 人工复核完成 |
+| - draft | 0 | — |
+| - verified | 0 | 严格标准下未达成 |
+| - partial | 6 | 主体产品功能 verified；高风险事实 partial |
+
+**说明**：partial 是严格质量标准下的合理结果，不是失败。详细评判标准见 [docs/review-status-guide.md](docs/review-status-guide.md)。
 
 ## 下一步计划
 
 - [ ] 为旧文章补充"今日复盘"章节（用新框架重新审视旧观察）
 - [ ] 增加更多 AI 产品分析案例
+- [x] 建立 analyses/README.md + analyses/index.yml 产品数据库
+- [x] 建立 docs/review-status-guide.md 质量评判指南
 - [ ] 未来可升级为 GitHub Pages 产品分析站
-- [ ] 未来可增加产品数据库 `index.yml`
+- [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 
 ---
 
-*最后更新：2026-07-01 (P14 Framer 人工复核 → reviewed;P14 source-hardening +1 二级源 (macapp.so);P14 YAML 规范化 (source_urls 纯 URL 列表);融资/估值/创始人 仍 partial - Meritech/Atomico/Accel + 10+ 英文原报道 URL 401-429/404-405)*
+*最后更新：2026-07-01 (P15 AI 分析索引与质量仪表板;新增 analyses/README.md + analyses/index.yml + docs/review-status-guide.md;未新增产品分析文章, 未修改旧人工文章正文, 未动 pic/)*
