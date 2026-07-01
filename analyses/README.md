@@ -1,48 +1,96 @@
-# Analyses 索引
+# Analyses / 产品分析索引
 
 本目录是 Product-Analysis 仓库的 AI 辅助产品分析索引。
 
-## 目录结构
+## 1. AI 辅助分析总览
 
-```
-analyses/
-├── README.md                # 本文件 - 索引与质量状态
-├── index.yml                # 结构化索引 (机器可读)
-├── ai-assisted/             # AI 辅助产品分析文章
-│   ├── README.md            # AI 辅助分析目录说明
-│   ├── 2026-07-01-perplexity.md
-│   ├── 2026-07-01-linear.md
-│   ├── 2026-07-01-raycast.md
-│   ├── 2026-07-01-cursor.md
-│   ├── 2026-07-01-figma.md
-│   └── 2026-07-01-framer.md
-└── (旧人工分析位于根目录)
-```
+| 产品 | 分类 | 文件 | 状态 | 来源状态 | 一句话洞察 |
+|------|------|------|------|----------|------------|
+| Perplexity | ai-search | [2026-07-01-perplexity.md](ai-assisted/2026-07-01-perplexity.md) | reviewed | partial | 搜索 + 引用 + 对话答案重构为可追问的答案引擎 |
+| Linear | product-development | [2026-07-01-linear.md](ai-assisted/2026-07-01-linear.md) | reviewed | partial | 极快交互 + 清晰信息架构重构为高节奏产品开发系统 |
+| Raycast | productivity-launcher | [2026-07-01-raycast.md](ai-assisted/2026-07-01-raycast.md) | reviewed | partial | 启动器 → 可扩展开发者命令面板 + Extensions Store + AI |
+| Cursor | ai-coding | [2026-07-01-cursor.md](ai-assisted/2026-07-01-cursor.md) | reviewed | partial | 编辑器 + 补全 + 聊天 + agentic + 云端 background agent 合并为同一 IDE |
+| Figma | design-collaboration | [2026-07-01-figma.md](ai-assisted/2026-07-01-figma.md) | reviewed | partial | 设计编辑器 + 协作 + 设计系统 + Dev Mode + Config 2025 五产品线 |
+| Framer | ai-website-builder | [2026-07-01-framer.md](ai-assisted/2026-07-01-framer.md) | reviewed | partial | 设计画布 + CMS + 发布 + SEO + 模板 + AI agent 重构为 AI 建站平台 |
 
-## AI 辅助产品分析索引 (6 篇)
+## 2. 按产品类型分组
 
-| # | 产品 | 文件 | 日期 | 状态 | 来源状态 | 报告 |
-|---|------|------|------|------|---------|------|
-| 1 | Perplexity | [2026-07-01-perplexity.md](ai-assisted/2026-07-01-perplexity.md) | 2026-07-01 | reviewed | partial | [P4](../reports/P4-perplexity-review-and-source-hardening-report.md) |
-| 2 | Linear | [2026-07-01-linear.md](ai-assisted/2026-07-01-linear.md) | 2026-07-01 | reviewed | partial | [P6](../reports/P6-linear-review-and-source-upgrade-report.md) |
-| 3 | Raycast | [2026-07-01-raycast.md](ai-assisted/2026-07-01-raycast.md) | 2026-07-01 | reviewed | partial | [P8](../reports/P8-raycast-review-and-status-upgrade-report.md) |
-| 4 | Cursor | [2026-07-01-cursor.md](ai-assisted/2026-07-01-cursor.md) | 2026-07-01 | reviewed | partial | [P10](../reports/P10-cursor-review-and-risk-fact-hardening-report.md) |
-| 5 | Figma | [2026-07-01-figma.md](ai-assisted/2026-07-01-figma.md) | 2026-07-01 | reviewed | partial | [P12](../reports/P12-figma-review-and-public-company-fact-hardening-report.md) |
-| 6 | Framer | [2026-07-01-framer.md](ai-assisted/2026-07-01-framer.md) | 2026-07-01 | reviewed | partial | [P14](../reports/P14-framer-review-and-yaml-source-normalization-report.md) |
+### AI Search / Answer Engine
+- **Perplexity** — 搜索 + 引用 + 对话式答案
 
-## 质量状态
+### Product Development / Workflow
+- **Linear** — issue tracking + 极快交互 + 高节奏产品开发
+
+### Productivity / Command Layer
+- **Raycast** — 启动器 + Extensions Store + AI 命令面板
+
+### AI Coding
+- **Cursor** — IDE + 补全 + 聊天 + agentic + 云端 background agent
+
+### Design Collaboration
+- **Figma** — 设计编辑器 + 实时协作 + 设计系统 + Dev Mode + Config 2025 五大产品线
+
+### AI Website Builder
+- **Framer** — 设计画布 + CMS + 发布 + SEO + 模板 + AI agent
+
+## 3. 当前质量状态
 
 | 维度 | 数值 | 说明 |
 |------|------|------|
 | AI 辅助分析 | 6 | 全部 reviewed |
-| reviewed | 6 | 已人工复核 |
-| draft | 0 | - |
+| reviewed | 6 | 人工复核完成 |
+| draft | 0 | — |
 | verified | 0 | 严格标准下未达成 |
-| partial | 6 | 主体产品功能 verified, 高风险事实 partial |
-| 旧人工分析 | 9 | 仓库根目录 legacy notes |
-| 旧文今日复盘 | 1 | Product Hunt (P2) |
+| partial | 6 | 主体产品机制 verified；高风险事实 partial |
+| 旧人工分析 (legacy) | 9 | 根目录 legacy notes |
+| 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
+| P 报告累计 | 8 | 1 legacy + 6 AI + 1 索引 |
 
-## 状态流转
+**说明**：
+- `partial` 不是失败，而是表示部分**高风险事实**（融资、估值、收入、收购、IPO、用户量、合作金额、价格变化、发布时间线、法律诉讼）仍未达到双源 verified 标准。
+- 主体产品机制大多已由官方 sources verified。
+- 私人公司（Framer）无 SEC/IR/Wikipedia 时，官网是主体功能事实源，但融资/估值/创始人必须主动降级。
+- 公开公司 IPO 早期（Figma）Datadome 401 拦截是常见处境。
+
+详细评判标准见 [docs/review-status-guide.md](../docs/review-status-guide.md) 和 [docs/source-quality-checklist.md](../docs/source-quality-checklist.md)。
+
+## 4. 下一步分析候选
+
+| 候选 | 类型 | 优先 | 备注 |
+|------|------|------|------|
+| Notion | productivity + AI | 中 | 私人但中文生态大 |
+| Webflow | website builder | 高 | 公开有 IR，verified 可期 |
+| Canva | design + AI | 高 | 公开公司，verified 可期 |
+| Adobe Express | design + AI | 低 | 与 Figma 竞争，数据敏感 |
+| Tana | knowledge management | 中 | 私人但产品差异化 |
+| Obsidian | knowledge management | 中 | 私人但产品差异化 |
+| Arc | browser | 中 | 私人，浏览器赛道 |
+| Claude Code | ai-coding | 中 | 公开 (Anthropic)，但与 Cursor 重叠 |
+| Lovable | AI website builder | 中 | 与 Framer 直接竞争 |
+| v0 | AI coding | 中 | 私人 |
+| Replit | AI coding + hosting | 高 | 公开 (2024 IPO)，有 IR |
+
+## 5. 推荐阅读路径
+
+### AI 产品路线
+1. **Perplexity** → **Cursor**
+   - 理解 AI 改变搜索的工作流 → 理解 AI 改变代码工作流
+
+### 产品研发工具路线
+1. **Linear** → **Raycast** → **Cursor**
+   - 理解产品研发协作 → 理解个人工作流命令面板 → 理解代码工作流
+
+### 设计 / 建站路线
+1. **Figma** → **Framer**
+   - 理解设计协作 → 理解设计即上线
+
+### 跨产品对比路线
+1. **Cursor** vs **Figma** (Dev Mode)
+   - AI 改变代码 vs AI 改变设计
+2. **Framer** vs **Webflow** (尚未写)
+   - AI website builder vs 专业 website builder
+
+## 6. 状态流转
 
 ```
 draft → reviewed → partial-to-verified
@@ -50,23 +98,20 @@ draft → reviewed → partial-to-verified
 
 | 状态 | 含义 | 转换条件 |
 |------|------|---------|
-| **draft** | AI 初稿, 待人工复核 | 写入 analyses/ai-assisted/, YAML review_status: draft |
-| **reviewed** | 已人工复核, 可作为参考资料 | 通过 source-quality-checklist 主体审查, 人工复核后 P 报告归档 |
-| **partial** | review_status=reviewed + source_url_verification_status=partial | 主体产品功能 verified, 高风险事实 (融资/估值/收购/收入/法律) 缺乏双独立 verified 媒体 |
-| **verified** | review_status=reviewed + source_url_verification_status=verified | 高风险事实满足 source-quality-checklist v1.0 最低要求, 双独立 verified 高质量媒体 |
+| **draft** | AI 初稿, 待人工复核 | YAML 默认值, P 报告归档后人工复核 |
+| **reviewed** | 已人工复核, 可作为参考资料 | 通过 source-quality-checklist 主体审查, 人工完成 P 报告 |
+| **partial** | reviewed + source_url_verification_status=partial | 主体产品功能 verified, 高风险事实缺乏双独立 verified 媒体 |
+| **verified** | reviewed + source_url_verification_status=verified | 高风险事实满足 source-quality-checklist v1.0 最低要求, 双独立 verified 高质量媒体 |
 
-**重要**: partial 不是失败, 是严格质量标准下的诚实评估。
-
-详见 [docs/review-status-guide.md](../docs/review-status-guide.md) 和 [docs/source-quality-checklist.md](../docs/source-quality-checklist.md)。
-
-## 维护说明
+## 7. 维护说明
 
 1. **新增 AI 辅助分析**: 在 `analyses/ai-assisted/` 下创建 `YYYY-MM-DD-product-name.md`, 同步更新 `analyses/index.yml` 和根 `README.md` 的"AI 辅助分析索引"表格。
 2. **人工复核升级**: 修改 `review_status: draft → reviewed`, 同步更新 `analyses/index.yml`。
 3. **来源状态升级**: 满足 source-quality-checklist 最低要求后, 修改 `source_url_verification_status: partial → verified`。
 4. **旧人工分析**: 不在 AI 辅助分析索引中, 保留根目录原位。
+5. **index.yml 准确性**: 每篇 P 报告完成后, 检查 `analyses/index.yml` 是否与文章 YAML 一致。
 
-## 关联文件
+## 8. 关联文件
 
 - [README.md](../README.md) — 仓库主入口
 - [docs/source-quality-checklist.md](../docs/source-quality-checklist.md) — 来源质量标准
