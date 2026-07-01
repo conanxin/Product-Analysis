@@ -78,7 +78,7 @@ Product-Analysis/
 | 2026-07-01 | Linear | `analyses/ai-assisted/2026-07-01-linear.md` | AI 辅助 | issue tracking、project management、product development、B2B SaaS、collaboration | 将 issue tracking 从任务管理重构为高节奏产品研发工作流 | reviewed | partial |
 | 2026-07-01 | Raycast | `analyses/ai-assisted/2026-07-01-raycast.md` | AI 辅助 | productivity、launcher、keyboard-driven、developer-tools、extensions-platform、ai-product | 把命令面板从单点工具重构为可扩展的开发者工作流操作系统 | reviewed | partial |
 | 2026-07-01 | Cursor | `analyses/ai-assisted/2026-07-01-cursor.md` | AI 辅助 | ai-coding、developer-tools、ide、agentic-workflow、productivity、llm-product | 把代码编辑器重构为 AI 协作的 agentic coding IDE,实现 Tab/Chat/Composer/Agent/Cloud Agent 统一工作流 | reviewed | partial |
-| 2026-07-01 | Figma | `analyses/ai-assisted/2026-07-01-figma.md` | AI 辅助 | design-tools、collaboration、design-systems、dev-mode、ai-design、b2b-saas | 将设计工具从本地文件软件重构为多人协作、设计系统和开发交付基础设施 | draft | partial |
+| 2026-07-01 | Figma | `analyses/ai-assisted/2026-07-01-figma.md` | AI 辅助 | design-tools、collaboration、design-systems、dev-mode、ai-design、b2b-saas | 将设计工具从本地文件软件重构为多人协作、设计系统和开发交付基础设施 | reviewed | partial |
 
 ---
 
@@ -109,4 +109,4 @@ Product-Analysis/
 
 ---
 
-*最后更新：2026-07-01 (新增 Figma AI 辅助分析 P11,draft | partial)*
+*最后更新：2026-07-01 (P12 Figma 人工复核 → reviewed;P12 source-hardening +7 官方URL;Config 2025 修订为 5 款产品 + Config 2026 五项升级 + Weave 收购官方 confirmed;员工数 1886 弃用 → Newsroom 1,600+ 替代;IPO/Adobe 终止 仍 partial - Reuters Datadome)*

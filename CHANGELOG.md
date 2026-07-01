@@ -1,5 +1,88 @@
 # Changelog
 
+## P12 - Figma 人工复核与公开公司事实加固
+
+**日期：** 2026-07-01
+**变更类型：** review / source-hardening / docs-only
+**变更范围：** analyses/ai-assisted/2026-07-01-figma.md (YAML + lead + §3 + §17.1 + §17.2 + §17.3 + §17.4 + Sources 3 分组) + README + CHANGELOG + P12 报告
+
+### 变更内容
+
+对第五篇 AI 辅助产品分析 — Figma 进行人工复核与高风险事实加固。状态从 `draft` 升级为 `reviewed`。
+
+#### Source-hardening 增量 (P12 新增 7 verified URLs)
+
+1. `figma.com/newsroom/` (200 verified) — **Q1 2025 Figma at a glance 官方原文**: 1,600+ 员工 / 2/3 月活非设计师 / 85% 月活非美国 / 50%+ 营收非美国
+2. `figma.com/blog/config-2025-recap/` (200) — Dylan Field 2025-05-07 官方 announcement: Config 2025 五款产品 (Make/Sites/Grid/Draw/Buzz) — **P11 误漏 Grid, P12 补**
+3. `figma.com/blog/config-2026-recap/` (200) — 官方 2026-06-24 announcement: Config 2026 五项 canvas 升级 (Code Layers / Figma Motion / Shaders / Generative Plugins / Weave 整合)
+4. `figma.com/blog/connecting-figma-and-weave/` (200) — Itay Schiff 2026-06-24 官方 announcement: 确认 "Figma has acquired Weavy...As Figma Weave"
+5. `config.figma.com/` (200) — Config conference 官方主页
+6. `weave.figma.com/` (200) — Figma Weave 产品独立站
+7. `efts.sec.gov/LATEST/search-index?q=%22Figma%22&forms=S-1` (200) — SEC EDGAR S-1 搜索 (P11 之前 500 错误, P12 重试成功)
+
+#### Reuters / Bloomberg / CNBC 原报道 URL 验证 (P12 新增尝试)
+
+| URL | 类型 | 状态 |
+|-----|------|------|
+| `reuters.com/business/figma-jumps-ai-push-boosts-software-design-spending-2026-02-19/` | Reuters Datadome | 401 |
+| `reuters.com/business/figma-shares-jump-ai-push/` | Reuters Datadome | 401 |
+| `reuters.com/markets/figma-ipo-2025-07-31` | Reuters Datadome | 401 |
+| `fastcompany.com/91329127/figma-config-2025-dylan-field` | Fast Company | 403 |
+
+**结论**: Reuters/Bloomberg/CNBC 原报道 URL 全部 Datadome-protected (与 P9 Cursor 401 模式一致);IPO/财务类事实严格按 source-quality-checklist 未达"双独立 verified media"门槛,保持 `partial` 状态 (诚实评估, 不是失败)。
+
+#### 重大事实修订
+
+1. **Config 2025 产品数量 4 → 5**: P11 文中 "Make/Sites/Buzz/Draw" 4 款, 实际官方 blog 原文有 **Grid** (从自由画布切换到结构化设计), P12 §3 表格 + §17.2 升级
+2. **员工数 1886 → 1,600+**: P11 误信 Wikipedia "员工 1886", P12 发现 figma.com/newsroom/ Q1 2025 官方明确 "Figma has over 1,600 employees globally", P12 弃用 P11 1886
+3. **Figma Weave 收购 date 2025-10 → 2026-06-24 Config 公告**: P11 文中 "Weavy 收购 2025-10" 来源不明, P12 官方 blog 明确 Itay Schiff 2026-06-24 announcement;具体收购日期与金额仍部分不公开
+4. **新增 Config 2026 五项升级**: Code Layers / Figma Motion / Shaders / Generative Plugins / Weave 整合, P11 完全遗漏, P12 补到 §3 表格 + §17.2
+
+#### §17.3 P12 新增 5 条 spec-required
+
+17. **公开公司事实要优先使用 SEC / IR / Reuters / CNBC** — Reuters Datadome 401 与 P9 Cursor 一致, 快速降权 → partial, 不浪费 30 分钟
+18. **官方 newsroom / blog 是 IPO 之外的事实金矿** — newsroom + Config blog 全部 200 verified, 后续分析必备
+19. **Wikipedia 招股书数据 vs Figma 官方 newsroom 优先用官方** — 员工数 P11 1886 vs P12 Newsroom 1,600+ 冲突, 优先官方
+20. **Config / 产品发布会事实 = 公司级官方 announcement** — 官方 blog 是 announcement source, 本身就是事实源, 不需要 Reuters/TechCrunch 独立确认
+21. **AI monetization / AI credits 是 partial 但不能高** — AI credit 定价模式 / AI 营收占比 是公开公司核心财务数据, 必须 figma.com/pricing + Q-财报 + earnings call 三件套
+
+#### review_status + source_url_verification_status
+
+- **review_status**: draft → **reviewed** ✅
+- **source_url_verification_status**: partial (保持; IPO/Adobe 终止 金融事实 Reuters Datadome 401 未突破)
+- **source_url_verified_at**: 2026-07-01 (P11 同日复核)
+
+#### 修改文件 (4 个)
+
+- `analyses/ai-assisted/2026-07-01-figma.md`: 多处修订 (YAML + lead + §3 + §17.1 + §17.2 + §17.3 + §17.4 + Sources 3 分组) 主体未重写, 只追加 + 修订高风险事实
+- `README.md`: AI 索引 Figma 状态 draft → reviewed
+- `CHANGELOG.md`: 顶部 P12 记录 (本节)
+- `reports/P12-figma-review-and-public-company-fact-hardening-report.md`: 新增 P12 报告
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (8e5a3a6 = P11)
+- ✅ Figma 文 49.8 → 59.4 KB (+9.6 KB source-hardening)
+- ✅ analyses/ai-assisted/2026-07-01-figma.md 存在
+- ✅ YAML review_status = reviewed
+- ✅ YAML reviewed_at = 2026-07-01
+- ✅ YAML review_notes = P12 复核版
+- ✅ source_url_verification_status = partial (原因清晰)
+- ✅ lead / §1 / §3 / §17.1 改写 (Config 2025 5 款 / Config 2026 5 项 / Weave 收购官方 confirmed / 员工数 1,600+)
+- ✅ §17.2 18 → 24 条可信度分级 (新增 Config 2026 五项 + Weave 收购升级 high + 员工数升级 high)
+- ✅ §17.3 11 → 16 条 (P12 spec-required 5 条)
+- ✅ §17.4 Sources 实链验证表 新增 7 verified URL
+- ✅ Sources 6 分组同步更新 (Official +6 / Investor-SEC +1 verified / Investor-SEC +4 unverified Reuters/Fast Company)
+- ✅ Perplexity mtime 未变 (11:41)
+- ✅ Linear mtime 未变 (12:57)
+- ✅ Raycast mtime 未变 (15:26)
+- ✅ Cursor mtime 未变 (16:03)
+- ✅ Figma mtime 改 (P12 source-hardening)
+- ✅ 9 旧人工分析文章 + pic/ 未动
+- ✅ 无 force push / reset --hard / amend
+
+---
+
 ## P11 - Figma AI 辅助产品分析 (第 5 篇)
 
 **日期：** 2026-07-01
