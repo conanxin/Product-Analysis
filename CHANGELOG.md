@@ -1,5 +1,69 @@
 # Changelog
 
+## P4.2 - Perplexity Verified Source Recovery
+
+**日期：** 2026-07-01
+**变更类型：** source-recovery / docs-only
+**变更范围：** Perplexity 一文 + README + CHANGELOG
+
+### 变更内容
+
+P4.1 中 6/7 高质量媒体 URL 为推定路径未能验证。P4.2 阶段主动检索与验证可访问原报道 URL。
+
+#### P4.2 验证结果
+
+- **3 个新 verified URL（HTTP 200 + 标题匹配）**：
+  - https://www.theverge.com/news/703037/perplexity-ai-web-browser-comet-launch (Comet 2025-07 推出)
+  - https://www.theverge.com/news/790419/perplexity-comet-available-everyone-free (Comet 2025-10 免费)
+  - https://www.businessinsider.com/perplexity-makes-200-ai-browser-free-to-battle-ai-slop-2025-10 (Comet 免费 + $200 Max 门槛)
+- **2 个 Datadome-protected (URL 真实但 bot 拦截)**:
+  - Reuters NYT 起诉 URL (HTTP 401 + x-datadome: protected)
+  - Reuters Microsoft Azure 协议 URL (HTTP 401)
+- **1 个 paywalled**: The Information 200 亿估值 (HTTP 403)
+- **6 个 inferred URL 被移除** (CNBC×3、Verge 推定、MacRumors 推定、Reuters 旧推定路径)
+
+#### 修改文件
+
+- `analyses/ai-assisted/2026-07-01-perplexity.md`:
+  - YAML source_urls 增 3 个 verified、替换 6 个 inferred、2 个 Reuters URL 保留(datadome 注释)
+  - source_quality_notes 记录 P4.2 恢复过程与仍为 partial 的原因
+  - Sources Quality Media 小节表格重写，每条加状态+备注
+  - §17.2 可信度分级：Comet 时间线保持高; 估值/Chrome/Azure 仍为低
+  - §17.5 验证表分 P4.1 与 P4.2 两阶段
+  - 文末状态标注增加 P4.2 轮次
+
+- `README.md`: AI 索引 Perplexity 状态仍为 `partial` (P4.2 后未升到 verified)
+
+#### 新增文件
+
+- `reports/P4.2-perplexity-verified-source-recovery-report.md`
+
+### 保留
+
+- 9 篇旧文章、CHANGELOG 旧条目、主体内容、1-16 章节主体未动
+- pic/ 未动
+- templates 未动
+- docs/source-quality-checklist.md 未动
+
+### P4.2 状态说明
+
+- `source_url_verification_status` 仍为 `partial`
+- 主体产品事实(Comet 推出/免费/商业模式)已有 3+ verified 源
+- 估值/Chrome 报价/Azure 协议仍主要依靠 paywalled 或 Datadome-protected 源
+- 估值与 Chrome 报价保持"低"可信度
+
+### P4.2 目标达成
+
+- [x] 主动检索与验证可访问的 verified 主体源
+- [x] 替换 P4.1 中标记的 6 个 inferred URL
+- [x] 在 YAML 中标注新的 source_url_verified_at 与 quality notes
+- [x] Sources 区每条 verified URL 有 type/status/used_for/note
+- [x] §17.5 验证表分两阶段
+- [x] 诚实评估仍为 partial 的原因
+- [x] P4.2 报告生成
+
+---
+
 ## P4.1 - Perplexity Source URL Verification
 
 **日期：** 2026-07-01
