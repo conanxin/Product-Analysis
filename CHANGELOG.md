@@ -1,5 +1,53 @@
 # Changelog
 
+## P19.1 - Canva 索引状态漂移修复
+
+**日期：** 2026-07-01
+**变更类型：** index-fix / docs-only
+**变更范围：** README.md + analyses/README.md + CHANGELOG + P19.1 报告
+
+### 变更内容
+
+P19 完成后人工复核发现索引状态漂移：
+- **Canva 文章 YAML**: reviewed | partial ✓ (P19 正确)
+- **analyses/index.yml**: Canva reviewed | partial, summary reviewed=8 draft=0 partial=8 ✓ (P19 正确)
+- **analyses/README.md**: Canva 行显示 draft | partial (与质量状态 reviewed=8 draft=0 自相矛盾) ❌
+- **README.md**: Canva 行显示 draft | partial，质量状态写 7 reviewed + 1 draft ❌
+
+P19.1 修复：人工可读索引与机器可读索引完全对齐。
+
+#### 修改文件 (4 个)
+
+- `README.md`:
+  - AI 索引 Canva 行: `draft | partial` → `reviewed | partial`
+  - 当前质量状态: `AI 辅助分析 8 | 7 reviewed + 1 draft` → `8 | 全部 reviewed`;`reviewed 7 → 8`;`draft 1 → 0`
+  - 下一步计划: 新增 P19.1 标 [x]
+  - 最后更新: P19 → P19.1
+- `analyses/README.md`:
+  - AI 辅助分析总览 Canva 行: `draft | partial` → `reviewed | partial`
+  - 当前质量状态: 保持 (已是正确版本)
+- `CHANGELOG.md`: 顶部 P19.1 记录 (本节)
+- `reports/P19.1-canva-index-status-drift-fix-report.md`: 新增 P19.1 报告
+
+#### 未修改
+
+- `analyses/ai-assisted/2026-07-01-canva.md` (Canva 文章正文 + YAML 不变)
+- `analyses/index.yml` (已正确)
+- 7 篇其他 AI 辅助分析文章 (Perplexity/Linear/Raycast/Cursor/Figma/Framer/Notion) 不变
+- 9 篇旧人工分析文章 + pic/ + templates/ 不动
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (8db1079 = P19)
+- ✅ Canva YAML: reviewed | partial (未改)
+- ✅ analyses/index.yml: Canva reviewed | partial, summary reviewed=8 draft=0 (未改)
+- ✅ analyses/README.md: Canva 行 reviewed | partial, 质量状态 reviewed=8 draft=0 ✓
+- ✅ README.md: Canva 行 reviewed | partial, 质量状态 reviewed=8 draft=0 ✓
+- ✅ 四处状态完全一致
+- ✅ 无 force push / reset --hard / amend
+
+---
+
 ## P19 - Canva 人工复核与索引状态同步
 
 **日期：** 2026-07-01

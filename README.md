@@ -81,7 +81,7 @@ Product-Analysis/
 | 2026-07-01 | Figma | `analyses/ai-assisted/2026-07-01-figma.md` | AI 辅助 | design-tools、collaboration、design-systems、dev-mode、ai-design、b2b-saas | 将设计工具从本地文件软件重构为多人协作、设计系统和开发交付基础设施 | reviewed | partial |
 | 2026-07-01 | Framer | `analyses/ai-assisted/2026-07-01-framer.md` | AI 辅助 | website-builder、design-tools、ai-website-builder、cms、no-code、b2b-saas | 将设计画布、CMS、发布和 AI agent 工作流结合为 AI 建站平台 | reviewed | partial |
 | 2026-07-01 | Notion | `analyses/ai-assisted/2026-07-01-notion.md` | AI 辅助 | productivity、workspace、docs、database、knowledge-management、ai-workspace | 将文档、数据库、知识库、项目管理、日历、邮件和 AI agent 能力整合为可组合的信息工作台 | reviewed | partial |
-| 2026-07-01 | Canva | `analyses/ai-assisted/2026-07-01-canva.md` | AI 辅助 | design-tools、ai-design、templates、visual-suite、creator-tools、b2b-saas | 将模板、视觉编辑器、品牌资产、企业协作和 AI 生成能力整合为大众化内容生产平台 | draft | partial |
+| 2026-07-01 | Canva | `analyses/ai-assisted/2026-07-01-canva.md` | AI 辅助 | design-tools、ai-design、templates、visual-suite、creator-tools、b2b-saas | 将模板、视觉编辑器、品牌资产、企业协作和 AI 生成能力整合为大众化内容生产平台 | reviewed | partial |
 
 ---
 
@@ -111,9 +111,9 @@ Product-Analysis/
 |------|---:|------|
 | 旧人工分析 (legacy) | 9 | legacy-note（根目录） |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
-| AI 辅助分析 | 8 | 7 reviewed + 1 draft |
-| - reviewed | 7 | 人工复核完成 |
-| - draft | 1 | Canva (待 P19 复核) |
+| AI 辅助分析 | 8 | 全部 reviewed |
+| - reviewed | 8 | 人工复核完成 |
+| - draft | 0 | — |
 | - verified | 0 | 严格标准下未达成 |
 | - partial | 8 | 主体产品功能 verified；高风险事实 partial |
 
@@ -129,9 +129,10 @@ Product-Analysis/
 - [x] P17: Notion 人工复核 → reviewed (P17 source-hardening +3 verified: introducing-notion-ai / releases / Wikipedia)
 - [x] P18: 新增 Canva AI 辅助分析 (第 8 篇, draft | partial;canva.com 30+ URL 403 Datadome;Wikipedia 二手 + Fortune 2025-08-22 + The Verge 2024 verified)
 - [x] P19: Canva 人工复核 → reviewed (P19 复验证状态;canva.com 仍 403 Datadome;5 verified sources 不变)
+- [x] P19.1: 修复 P19 索引漂移 (Canva 行状态对齐 - draft → reviewed;当前质量状态 7→8 reviewed)
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 
 ---
 
-*最后更新：2026-07-01 (P19 Canva 人工复核 → reviewed;P19 复验证 canva.com 仍 403 Datadome;5 verified sources (3 Wikipedia + 2 verified media) 不变;高风险事实 $42B 估值/4B 营收/220M 用户/收购金额 部分达成中-中低;Canva 是私人公司/接近 IPO 候选/未 IPO)*
+*最后更新：2026-07-01 (P19.1 索引漂移修复;P19 后 README/analyses/README.md 中 Canva 仍显示 draft 的索引漂移已修复;四处状态完全一致: Canva 文章 YAML / analyses/index.yml / README.md / analyses/README.md 全部 reviewed | partial)*

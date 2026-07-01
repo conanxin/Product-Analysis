@@ -13,7 +13,7 @@
 | Figma | design-collaboration | [2026-07-01-figma.md](ai-assisted/2026-07-01-figma.md) | reviewed | partial | 设计编辑器 + 协作 + 设计系统 + Dev Mode + Config 2025 五产品线 |
 | Framer | ai-website-builder | [2026-07-01-framer.md](ai-assisted/2026-07-01-framer.md) | reviewed | partial | 设计画布 + CMS + 发布 + SEO + 模板 + AI agent 重构为 AI 建站平台 |
 | Notion | ai-workspace | [2026-07-01-notion.md](ai-assisted/2026-07-01-notion.md) | reviewed | partial | 文档 + 数据库 + 知识库 + 项目 + Calendar + Mail + AI 整合为可组合的信息工作台 |
-| Canva | design-ai-platform | [2026-07-01-canva.md](ai-assisted/2026-07-01-canva.md) | draft | partial | 模板 + 视觉编辑器 + 品牌资产 + 企业协作 + AI 生成整合为大众化内容生产平台 |
+| Canva | design-ai-platform | [2026-07-01-canva.md](ai-assisted/2026-07-01-canva.md) | reviewed | partial | 模板 + 视觉编辑器 + 品牌资产 + 企业协作 + AI 生成整合为大众化内容生产平台 |
 
 ## 2. 按产品类型分组
 
