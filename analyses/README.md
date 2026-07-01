@@ -12,6 +12,7 @@
 | Cursor | ai-coding | [2026-07-01-cursor.md](ai-assisted/2026-07-01-cursor.md) | reviewed | partial | 编辑器 + 补全 + 聊天 + agentic + 云端 background agent 合并为同一 IDE |
 | Figma | design-collaboration | [2026-07-01-figma.md](ai-assisted/2026-07-01-figma.md) | reviewed | partial | 设计编辑器 + 协作 + 设计系统 + Dev Mode + Config 2025 五产品线 |
 | Framer | ai-website-builder | [2026-07-01-framer.md](ai-assisted/2026-07-01-framer.md) | reviewed | partial | 设计画布 + CMS + 发布 + SEO + 模板 + AI agent 重构为 AI 建站平台 |
+| Notion | ai-workspace | [2026-07-01-notion.md](ai-assisted/2026-07-01-notion.md) | draft | partial | 文档 + 数据库 + 知识库 + 项目 + Calendar + Mail + AI 整合为可组合的信息工作台 |
 
 ## 2. 按产品类型分组
 
@@ -33,18 +34,21 @@
 ### AI Website Builder
 - **Framer** — 设计画布 + CMS + 发布 + SEO + 模板 + AI agent
 
+### AI Workspace / Knowledge Management
+- **Notion** — block + database + wiki + project + Calendar + Mail + AI agent
+
 ## 3. 当前质量状态
 
 | 维度 | 数值 | 说明 |
 |------|------|------|
-| AI 辅助分析 | 6 | 全部 reviewed |
+| AI 辅助分析 | 7 | 6 reviewed + 1 draft |
 | reviewed | 6 | 人工复核完成 |
-| draft | 0 | — |
+| draft | 1 | Notion (待 P17 人工复核) |
 | verified | 0 | 严格标准下未达成 |
-| partial | 6 | 主体产品机制 verified；高风险事实 partial |
+| partial | 7 | 主体产品机制 verified；高风险事实 partial |
 | 旧人工分析 (legacy) | 9 | 根目录 legacy notes |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
-| P 报告累计 | 8 | 1 legacy + 6 AI + 1 索引 |
+| P 报告累计 | 9 | 1 legacy + 7 AI + 1 索引 |
 
 **说明**：
 - `partial` 不是失败，而是表示部分**高风险事实**（融资、估值、收入、收购、IPO、用户量、合作金额、价格变化、发布时间线、法律诉讼）仍未达到双源 verified 标准。
@@ -58,17 +62,17 @@
 
 | 候选 | 类型 | 优先 | 备注 |
 |------|------|------|------|
-| Notion | productivity + AI | 中 | 私人但中文生态大 |
 | Webflow | website builder | 高 | 公开有 IR，verified 可期 |
 | Canva | design + AI | 高 | 公开公司，verified 可期 |
-| Adobe Express | design + AI | 低 | 与 Figma 竞争，数据敏感 |
-| Tana | knowledge management | 中 | 私人但产品差异化 |
+| Replit | AI coding + hosting | 高 | 公开 (2024 IPO)，有 IR |
+| Coda | workspace | 中 | 与 Notion 重叠 |
 | Obsidian | knowledge management | 中 | 私人但产品差异化 |
+| Tana | knowledge management | 中 | 私人但产品差异化 |
 | Arc | browser | 中 | 私人，浏览器赛道 |
 | Claude Code | ai-coding | 中 | 公开 (Anthropic)，但与 Cursor 重叠 |
 | Lovable | AI website builder | 中 | 与 Framer 直接竞争 |
 | v0 | AI coding | 中 | 私人 |
-| Replit | AI coding + hosting | 高 | 公开 (2024 IPO)，有 IR |
+| Adobe Express | design + AI | 低 | 与 Figma 竞争，数据敏感 |
 
 ## 5. 推荐阅读路径
 
@@ -84,11 +88,17 @@
 1. **Figma** → **Framer**
    - 理解设计协作 → 理解设计即上线
 
+### Knowledge Workspace 路线
+1. **Notion** → Product-Analysis
+   - 理解 AI workspace → 理解产品研究 workspace
+
 ### 跨产品对比路线
 1. **Cursor** vs **Figma** (Dev Mode)
    - AI 改变代码 vs AI 改变设计
 2. **Framer** vs **Webflow** (尚未写)
    - AI website builder vs 专业 website builder
+3. **Notion** vs **Coda** / **Airtable** / **Obsidian** (未对比)
+   - AI workspace vs 传统 docs / database / 本地笔记
 
 ## 6. 状态流转
 

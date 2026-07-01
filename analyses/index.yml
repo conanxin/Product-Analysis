@@ -125,15 +125,36 @@ analyses:
       high_risk_facts: partial
       reason: "private-company financing/founder background facts (Series D $100M/$2B, Meritech+Atomico+Accel, Koen Bok + Jorn van Dijk) remain partial; 10+ English primary sources (Meritech/Atomico/Accel/TechCrunch/The Verge/Bloomberg/CNBC/Reuters) returned 401-429/404-405"
 
+  - product: Notion
+    file: analyses/ai-assisted/2026-07-01-notion.md
+    category: ai-workspace
+    analysis_type: ai-assisted
+    created_at: 2026-07-01
+    review_status: draft
+    reviewed_at: null
+    source_url_verification_status: partial
+    tags:
+      - productivity
+      - workspace
+      - docs
+      - database
+      - knowledge-management
+      - ai-workspace
+    one_line_insight: "Notion 将文档、数据库、知识库、项目管理、日历、邮件和 AI agent 能力整合到同一个 workspace，把个人与团队知识工作从'文件和工具集合'重构为可组合的信息操作系统。"
+    quality_notes:
+      product_mechanism: verified
+      high_risk_facts: partial
+      reason: "private-company financing/valuation/ARR/user-number facts (Series C $275M, $10B+ valuation, ARR) remain partial; Skiff acquisition (2024-02) verified via thurrott.com but no second independent verified source; not yet human-reviewed"
+
 summary:
-  total: 6
+  total: 7
   reviewed: 6
-  draft: 0
+  draft: 1
   verified: 0
-  partial: 6
+  partial: 7
   legacy_manual_analyses: 9
   legacy_今日复盘: 1
-  p_reports_total: 8
+  p_reports_total: 9
 
 status_transitions:
   - from: draft
@@ -163,6 +184,8 @@ by_category:
     products: [Figma]
   - category: ai-website-builder
     products: [Framer]
+  - category: ai-workspace
+    products: [Notion]
 
 reading_paths:
   ai_product_path:
@@ -175,3 +198,5 @@ reading_paths:
   design_and_website_path:
     - Figma
     - Framer
+  knowledge_workspace_path:
+    - Notion

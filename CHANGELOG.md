@@ -1,5 +1,86 @@
 # Changelog
 
+## P16 - Notion AI 辅助产品分析 (第 7 篇)
+
+**日期：** 2026-07-01
+**变更类型：** source-first / ai-assisted / new-article
+**变更范围：** analyses/ai-assisted/2026-07-01-notion.md (新增 27.4 KB) + README + analyses/README.md + analyses/index.yml + CHANGELOG + P16 报告
+
+### 变更内容
+
+第七篇 AI 辅助产品分析 — Notion，使用 source-first workflow。
+
+#### Source-First URL Verification (P16)
+
+**验证统计：**
+- Notion 官方页面：30 个 HTTP-200 verified (官网 / product / pricing / ai / enterprise / calendar / mail / sites / templates / marketplace / help / help/category/notion-ai / help/category/new-to-notion / security / customers / about / blog / wikis / projects / docs / teams / developers / integrations / changelog / search / mobile / download / desktop / web-clipper / contact-sales)
+- 开发者文档：1 个 HTTP-200 verified (developers.notion.com)
+- Verified media：1 个 HTTP-200 verified (thurrott.com — Notion acquires Skiff 2024-02)
+- 主流量化媒体：0 个 verified (TechCrunch / Forbes / Reuters / Bloomberg / CNBC 原始 URL 未直接 HTTP 验证)
+- High-risk fact 主动尝试：skiff 收购验证 thurrott.com 单源
+
+**关键官方 Source Verified：**
+1. `notion.com/` — 官网定位 "Your AI workspace"
+2. `notion.com/product` — Notion / Calendar / Mail / AI / Agents / AI Meeting Notes / Enterprise Search / Knowledge Base / Docs / Projects / Connections / Security
+3. `notion.com/pricing` — Free / Plus $10 / Business $20 / Enterprise; AI included in Plus+; LLM zero data retention in Enterprise
+4. `notion.com/ai` — Notion AI features
+5. `notion.com/help/category/notion-ai` — AI Meeting Notes / Notion MCP / Notion Agent / Research Mode / Enterprise Search
+6. `notion.com/help/category/new-to-notion` — Block / Database / Workspace 基础
+7. `notion.com/calendar` / `notion.com/mail` / `notion.com/sites` — Calendar / Mail / Sites 独立产品页
+8. `notion.com/enterprise` — Enterprise features (SCIM / SAML SSO / audit log / customer success manager)
+9. `developers.notion.com/` — Notion API / SDK
+10. `notion.com/security` / `notion.com/customers` — Security / Customers
+11. `thurrott.com/cloud/297641/notion-acquires-skiff` — Skiff 收购 (2024-02) 跨独立 verified 媒体
+
+**高风险事实 Partial 原因：**
+- Notion 是私人公司（无 SEC filings / 无 investor relations）
+- 官方 about 页面无公司历史 / 创始人 / 成立时间结构化信息
+- 融资历史 (Series C $275M / Sequoia + Index + Coatue) 来自中文转载 + 第三方汇总，无独立 verified 媒体双源
+- 估值 / ARR / 用户数 (数千万用户 / $10B+ 估值) 来自中文转载 + Forbes AI 50 二次引述，无原始 verified URL
+- Skiff 收购 (2024-02) 金额：Notion 官方未找到具体金额 announcement；thurrott.com 验证收购事件但未给金额；中文转载有金额但属二手
+
+#### 文章核心内容
+
+- **一句话定位**：Notion = "Your AI workspace"（官网 verified）
+- **核心机制**：Block model + Database + AI (Notion AI / Agent / AI Meeting Notes / Enterprise Search)
+- **产品矩阵**：Notion / Notion Calendar / Notion Mail / Notion AI / Agents / Forms / Sites / Marketplace
+- **Pricing**：Free $0 / Plus $10 / Business $20 / Enterprise Custom；AI included in Plus+；guests unlimited
+- **AI features**：Notion AI / Notion Agent / AI Meeting Notes / Research Mode / Enterprise Search / Connectors
+- **企业级**：SCIM / SAML SSO / audit log / LLM zero data retention (Enterprise)
+- **收购历史**：Skiff (2024-02) verified via thurrott.com；Cron / Automate.io / Flowdash 历史收购 partial
+- **竞品**：Evernote / Google Docs / Microsoft Loop / Confluence / Coda / Airtable / Asana / Trello / ClickUp / Obsidian / Tana / Slack Canvas
+- **中文 MVP 推断**：面向 AI 原生个人项目和小团队的知识工作台（判断，非事实）
+
+#### review_status + source_url_verification_status
+
+- **review_status**: draft（P16 初稿，待 P17 人工复核）
+- **source_url_verification_status**: partial（主体产品机制 verified；融资/估值/ARR/用户数/Skiff 收购金额 partial）
+
+#### 修改文件 (5 个)
+
+- `analyses/ai-assisted/2026-07-01-notion.md`: 新增 27.4 KB，17 节，YAML 11 字段
+- `README.md`: AI 索引新增 Notion 行 (draft | partial) + 当前质量状态 6→7
+- `analyses/README.md`: Notion 行 + by-category AI Workspace / Knowledge Management + reading paths + 状态
+- `analyses/index.yml`: Notion 条目 (draft | partial) + summary 6→7 + by_category + reading_paths
+- `CHANGELOG.md`: 顶部 P16 记录 (本节)
+- `reports/P16-notion-ai-assisted-analysis-report.md`: 新增 P16 报告
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (c4bb23d = P15 enrichment)
+- ✅ Notion 文 27.4 KB 新增
+- ✅ analyses/ai-assisted/2026-07-01-notion.md 存在
+- ✅ YAML review_status = draft
+- ✅ YAML source_url_verified_at = 2026-07-01
+- ✅ YAML source_url_verification_status = partial
+- ✅ §17.4 Sources 实链验证表存在 (32 + 8 = 40 个来源)
+- ✅ Sources 4 分组完整 (Official+Primary 15 / Product+Docs 16 / Verified Media 1 / Unverified 8)
+- ✅ 6 篇 reviewed AI 辅助分析 (Perplexity/Linear/Raycast/Cursor/Figma/Framer) mtime 未变
+- ✅ 9 旧人工分析 + pic/ + templates/ 未动
+- ✅ 无 force push / reset --hard / amend
+
+---
+
 ## P15 - AI 分析索引与质量仪表板
 
 **日期：** 2026-07-01

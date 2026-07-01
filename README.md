@@ -80,6 +80,7 @@ Product-Analysis/
 | 2026-07-01 | Cursor | `analyses/ai-assisted/2026-07-01-cursor.md` | AI 辅助 | ai-coding、developer-tools、ide、agentic-workflow、productivity、llm-product | 把代码编辑器重构为 AI 协作的 agentic coding IDE,实现 Tab/Chat/Composer/Agent/Cloud Agent 统一工作流 | reviewed | partial |
 | 2026-07-01 | Figma | `analyses/ai-assisted/2026-07-01-figma.md` | AI 辅助 | design-tools、collaboration、design-systems、dev-mode、ai-design、b2b-saas | 将设计工具从本地文件软件重构为多人协作、设计系统和开发交付基础设施 | reviewed | partial |
 | 2026-07-01 | Framer | `analyses/ai-assisted/2026-07-01-framer.md` | AI 辅助 | website-builder、design-tools、ai-website-builder、cms、no-code、b2b-saas | 将设计画布、CMS、发布和 AI agent 工作流结合为 AI 建站平台 | reviewed | partial |
+| 2026-07-01 | Notion | `analyses/ai-assisted/2026-07-01-notion.md` | AI 辅助 | productivity、workspace、docs、database、knowledge-management、ai-workspace | 将文档、数据库、知识库、项目管理、日历、邮件和 AI agent 能力整合为可组合的信息工作台 | draft | partial |
 
 ---
 
@@ -109,11 +110,11 @@ Product-Analysis/
 |------|---:|------|
 | 旧人工分析 (legacy) | 9 | legacy-note（根目录） |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
-| AI 辅助分析 | 6 | 全部 reviewed |
+| AI 辅助分析 | 7 | 6 reviewed + 1 draft |
 | - reviewed | 6 | 人工复核完成 |
-| - draft | 0 | — |
+| - draft | 1 | Notion (待 P17 复核) |
 | - verified | 0 | 严格标准下未达成 |
-| - partial | 6 | 主体产品功能 verified；高风险事实 partial |
+| - partial | 7 | 主体产品功能 verified；高风险事实 partial |
 
 **说明**：partial 是严格质量标准下的合理结果，不是失败。详细评判标准见 [docs/review-status-guide.md](docs/review-status-guide.md)。
 
@@ -123,9 +124,10 @@ Product-Analysis/
 - [ ] 增加更多 AI 产品分析案例
 - [x] 建立 analyses/README.md + analyses/index.yml 产品数据库
 - [x] 建立 docs/review-status-guide.md 质量评判指南
+- [x] P16: 新增 Notion AI 辅助分析 (第 7 篇, draft | partial)
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 
 ---
 
-*最后更新：2026-07-01 (P15 AI 分析索引与质量仪表板;新增 analyses/README.md + analyses/index.yml + docs/review-status-guide.md;未新增产品分析文章, 未修改旧人工文章正文, 未动 pic/)*
+*最后更新：2026-07-01 (P16 新增 Notion AI 辅助分析 - 第 7 篇 AI 辅助分析,draft | partial;30+ 官方URL verified;Skiff 收购 thurrott.com 200;融资/估值/ARR/用户数 partial - 中文转载+第三方汇总,无独立 verified 媒体双源)*
