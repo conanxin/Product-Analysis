@@ -1,5 +1,60 @@
 # Changelog
 
+## P5 - Second AI-Assisted Product Analysis: Linear
+
+**日期：** 2026-07-01
+**变更类型：** AI-assisted analysis + source-first
+**变更范围：** Linear 全文 + README + CHANGELOG
+
+### 变更内容
+
+产出第二篇 AI 辅助产品分析文章：Linear。严格执行 P4.1+P4.2 流程 — **先做 sources 收集与 URL 实链验证，再写文章**。
+
+#### 验证结果
+
+- **24 个 Linear 官方 URL verified (HTTP 200 + 标题匹配)**:
+  - 主站 / docs / changelog / method / pricing / enterprise / customers / security / integrations / about / blog / features / careers
+  - 8 个 docs 子页: projects / triage / inbox / teams / issue-relations / notifications / cycles / roadmaps / views / integrations
+- **3 个 TechCrunch 报道 verified**:
+  - 2019 A 轮 $4.2M (Sequoia 领投)
+  - 2025-06 $82M 融资 $1.25B 估值
+  - 2025-05 COO Cristina Cordova 访谈
+- **总 verified URLs: 27** （P4 Perplexity 为 4 verified，3 datadome-protected）
+
+#### 修改文件
+
+- `analyses/ai-assisted/2026-07-01-linear.md` (新增 16.8KB)
+- `README.md` — AI 辅助分析索引增加 Linear 一行（draft, partial）
+- `CHANGELOG.md` — 顶部增加 P5 记录
+
+#### 新增文件
+
+- `reports/P5-linear-ai-assisted-analysis-report.md`
+
+### P5 关键决策
+
+- **review_status: draft** (不升 reviewed — AI 初稿待人工复核)
+- **source_url_verification_status: partial** (诚实评估)
+  - 官方 + docs/method 主页 24 个 verified
+  - TechCrunch × 3 verified
+  - **但高风险事实 (融资/估值) 单源依赖 TC 一家** — 未找到第二家高质量媒体
+  - The Verge / Forbes / Business Insider 推定 URL 全部 404
+  - Bloomberg / Crunchbase / Product Hunt 被 bot 拦截
+  - 按 source-quality-checklist 最低要求，partial 是诚实评估
+
+### P5 目标达成
+
+- [x] 严格按 source-first 流程：先验证 URL 再写文章
+- [x] 主体来源齐全 (24 官方 + 3 高质量媒体)
+- [x] source_url_verification_status 在 YAML 中明示
+- [x] 17 章节完整（含 §17.1-17.4）
+- [x] review_status: draft (不升 reviewed)
+- [x] README 增加 Linear 一行
+- [x] CHANGELOG P5 记录
+- [x] P5 报告生成
+
+---
+
 ## P4.2 - Perplexity Verified Source Recovery
 
 **日期：** 2026-07-01
