@@ -1,5 +1,93 @@
 # Changelog
 
+## P11 - Figma AI 辅助产品分析 (第 5 篇)
+
+**日期：** 2026-07-01
+**变更类型：** ai-assisted-analysis (新增第 5 篇)
+**变更范围：** analyses/ai-assisted/ + README + CHANGELOG + 新增 P11 报告
+
+### 变更内容
+
+第 5 篇 AI 辅助产品分析 — Figma (公开公司 / 协作式设计平台 / Config 2025 五大 AI 产品线 / Dev Mode)。
+
+#### Source-first workflow (严格执行)
+
+- **Figma 官方页 + 官方 docs + Wikipedia + SEC EDGAR full-text search** 全部 HTTP 200 verified (合计 ~23 URL)
+- figma.com/ + /design/ + /figjam/ + /slides/ + /make/ + /sites/ + /buzz/ + /draw/ + /dev-mode/ + /pricing/ + /enterprise/ + /security/ + /developers/ + /blog/ + /ai/ + /release-notes/ + /design-systems/ + /developers/api
+- help.figma.com/
+- en.wikipedia.org/wiki/Figma + en.wikipedia.org/wiki/Dylan_Field
+- efts.sec.gov (Figma search + 10-K search)
+
+#### 关键事实双源验证
+
+- **Figma 官方原口径(高)**:产品功能 / 定价 / 设计系统 / Dev Mode / 创始人 (Wikipedia 双源) / Config 2025 五大产品线 / 总部 / 公开公司状态
+- **Wikipedia reference(中)**:2012 创立 / 2016 公开 / 2021 FigJam / 2022 Adobe $20B 收购 announced / 2023 Dev Mode / 2024 Slides / 2025 Config 4 大产品 + Weavy 收购 / 2025-07-31 IPO NYSE:FIG / 2025 营收 $1.06B / 员工 1886
+- **底层 TechCrunch / Reuters / CNBC 原报道 URL 未直接 HTTP 验证**(只通过 Wikipedia 引用 + 中文转载)
+- **Figma /community/ /plugins/ /trust/ /code-connect/ /components/ /variables/ /config-2026/ 路径 404 或 403**,降权
+- **investor.figma.com 403**,SEC 详情页 403 (bot-blocked)
+
+#### source_url_verification_status = partial 的诚实评估
+
+按 P11 spec-required 第 12 条 + 第 14 条:
+- 公开公司事实应优先用 SEC / IR / Reuters / CNBC 双源 — 本轮 Wikipedia 是单一 reference 源
+- IPO / 市值 / revenue guidance 等金融事实必须双源 — 本轮只 Wikipedia + 中文转载
+- 故标 partial,不是失败,是诚实评估
+
+#### review_status = draft
+
+- 包含大量 §14 中文 MVP 推断 + §15 项目启发 7 条 + §13 主要问题 8 条
+- 待 P12 人工复核 → reviewed (类似 P8 / P10 模式)
+
+#### 关键产品功能 (官方 verified)
+
+- Multiplayer collaboration (云端实时协作)
+- Components / Variants / Variables (设计系统)
+- Dev Mode (2023-06) / FigJam (2021) / Figma Slides (2024)
+- Config 2025 五大新产品: Sites / Make / Buzz / Draw (May 7, 2025)
+- Weavy 收购 (2025-10) → Figma Weave
+- 1000+ Plugins / Widgets 生态
+- 4 角色扩散:设计师 → PM → 工程师 → 企业管理
+
+#### 关键金融事实 (Wikipedia reference)
+
+- 2025-07-31 IPO NYSE:FIG 上市 (首日 +250%, 估值 $65B, IPO 价 $33)
+- 2022-09-15 Adobe 宣布 $20B 收购 → 2023 终止
+- 2025 营收 $1.06B / 运营亏损 -$1.29B / 1886 员工
+- 1300 万用户中 95% 财富 500 客户
+
+#### 定价 (官方 verified)
+
+- Starter: Free (3 files, 2 editors)
+- Professional: $15/editor/月
+- Organization: $45/editor/月
+- Enterprise: Custom (SSO/SCIM/audit log)
+
+### 修改文件
+
+- `analyses/ai-assisted/2026-07-01-figma.md`:新增 35.6 KB 文章(YAML 11 字段 + 17 章节 + Sources 6 分组)
+- `README.md`:AI 索引新增 Figma 行(状态 draft + partial)
+- `CHANGELOG.md`:顶部 P11 记录(本节)
+- `reports/P11-figma-ai-assisted-analysis-report.md`:新增 P11 报告
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (bc37dda = P10)
+- ✅ Figma 文章 35.6 KB 存在
+- ✅ YAML 11 字段齐
+- ✅ review_status = draft
+- ✅ source_url_verification_status = partial
+- ✅ source_url_verified_at = 2026-07-01
+- ✅ 17 章节全产出 (§1-§17)
+- ✅ §17.1 明确说"AI 辅助初稿,待人工复核"
+- ✅ §17.2 18 条可信度分级
+- ✅ §17.3 11 条 spec 必写项 (含 P11 spec-required 5 条)
+- ✅ §17.4 Sources 实链验证表存在
+- ✅ Sources 6 分组 (Official 19 / Doc 合并 / Investor-SEC 6 / Reference 3 / Secondary 6 / Unverified 9)
+- ✅ Perplexity / Linear / Raycast / Cursor mtime 未变
+- ✅ 9 旧人工分析文章 + pic/ 未动
+
+---
+
 ## P10 - Cursor 人工复核与高风险事实加固
 
 **日期：** 2026-07-01
