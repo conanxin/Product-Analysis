@@ -146,15 +146,36 @@ analyses:
       high_risk_facts: partial
       reason: "P17 复核后：主体产品机制 32 官方页 + developers.notion.com + thurrott.com + Wikipedia reference 源 verified；Notion 2013 成立 / Series A $50M (2020) / Series C $275M (2021) / Skiff 2024-02 收购 / Notion AI 2022-11-16 发布 等在 Wikipedia 二手记载中双源部分达成；但 CNBC $500M ARR / TechCrunch / Forbes 原报道 URL 404 未 HTTP 验证；主体融资/估值/ARR/收购金额仍 partial"
 
+  - product: Canva
+    file: analyses/ai-assisted/2026-07-01-canva.md
+    category: design-ai-platform
+    analysis_type: ai-assisted
+    created_at: 2026-07-01
+    review_status: draft
+    reviewed_at: null
+    source_url_verification_status: partial
+    tags:
+      - design-tools
+      - ai-design
+      - templates
+      - visual-suite
+      - creator-tools
+      - b2b-saas
+    one_line_insight: "Canva 将模板、设计编辑器、品牌资产、内容生产、协作、企业营销和 AI 生成能力整合到同一个 Visual Suite，把设计从专业软件能力扩展为大众化、组织化的内容生产平台。"
+    quality_notes:
+      product_mechanism: partial
+      high_risk_facts: partial
+      reason: "P18 主动尝试 30+ canva.com/* 官方 URL 全部 403 Datadome bot protection (标 official-url-access-limited)；主体产品功能主要来自 Wikipedia (Canva/Affinity/Perkins) reference 源 verified 200 + Fortune 2025-08-22 + The Verge 2024 verified media；融资/估值/营收/用户数/收购金额等高风险事实 Wikipedia 单源 + verified media 单源未跨双独立 verified；可考虑 P19 复核查 canva.com URL 变化"
+
 summary:
-  total: 7
+  total: 8
   reviewed: 7
-  draft: 0
+  draft: 1
   verified: 0
-  partial: 7
+  partial: 8
   legacy_manual_analyses: 9
   legacy_今日复盘: 1
-  p_reports_total: 10
+  p_reports_total: 11
 
 status_transitions:
   - from: draft
@@ -186,6 +207,8 @@ by_category:
     products: [Framer]
   - category: ai-workspace
     products: [Notion]
+  - category: design-ai-platform
+    products: [Canva]
 
 reading_paths:
   ai_product_path:
@@ -200,3 +223,7 @@ reading_paths:
     - Framer
   knowledge_workspace_path:
     - Notion
+  visual_communication_path:
+    - Canva
+    - Figma
+    - Framer

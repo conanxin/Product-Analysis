@@ -81,6 +81,7 @@ Product-Analysis/
 | 2026-07-01 | Figma | `analyses/ai-assisted/2026-07-01-figma.md` | AI 辅助 | design-tools、collaboration、design-systems、dev-mode、ai-design、b2b-saas | 将设计工具从本地文件软件重构为多人协作、设计系统和开发交付基础设施 | reviewed | partial |
 | 2026-07-01 | Framer | `analyses/ai-assisted/2026-07-01-framer.md` | AI 辅助 | website-builder、design-tools、ai-website-builder、cms、no-code、b2b-saas | 将设计画布、CMS、发布和 AI agent 工作流结合为 AI 建站平台 | reviewed | partial |
 | 2026-07-01 | Notion | `analyses/ai-assisted/2026-07-01-notion.md` | AI 辅助 | productivity、workspace、docs、database、knowledge-management、ai-workspace | 将文档、数据库、知识库、项目管理、日历、邮件和 AI agent 能力整合为可组合的信息工作台 | reviewed | partial |
+| 2026-07-01 | Canva | `analyses/ai-assisted/2026-07-01-canva.md` | AI 辅助 | design-tools、ai-design、templates、visual-suite、creator-tools、b2b-saas | 将模板、视觉编辑器、品牌资产、企业协作和 AI 生成能力整合为大众化内容生产平台 | draft | partial |
 
 ---
 
@@ -110,11 +111,11 @@ Product-Analysis/
 |------|---:|------|
 | 旧人工分析 (legacy) | 9 | legacy-note（根目录） |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
-| AI 辅助分析 | 7 | 全部 reviewed |
+| AI 辅助分析 | 8 | 7 reviewed + 1 draft |
 | - reviewed | 7 | 人工复核完成 |
-| - draft | 0 | — |
+| - draft | 1 | Canva (待 P19 复核) |
 | - verified | 0 | 严格标准下未达成 |
-| - partial | 7 | 主体产品功能 verified；高风险事实 partial |
+| - partial | 8 | 主体产品功能 verified；高风险事实 partial |
 
 **说明**：partial 是严格质量标准下的合理结果，不是失败。详细评判标准见 [docs/review-status-guide.md](docs/review-status-guide.md)。
 
@@ -126,9 +127,10 @@ Product-Analysis/
 - [x] 建立 docs/review-status-guide.md 质量评判指南
 - [x] P16: 新增 Notion AI 辅助分析 (第 7 篇, draft | partial)
 - [x] P17: Notion 人工复核 → reviewed (P17 source-hardening +3 verified: introducing-notion-ai / releases / Wikipedia)
+- [x] P18: 新增 Canva AI 辅助分析 (第 8 篇, draft | partial;canva.com 30+ URL 403 Datadome;Wikipedia 二手 + Fortune 2025-08-22 + The Verge 2024 verified)
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 
 ---
 
-*最后更新：2026-07-01 (P17 Notion 人工复核 → reviewed;P17 source-hardening +3 verified (introducing-notion-ai / releases / Wikipedia);Notion AI 发布 2022-11-16 双源 (Wikipedia + 官方 blog);融资/估值/ARR/用户数/收购金额 仍 partial - Wikipedia 是 reference 源,不是 high-quality-media-verified;Canva/Webflow/Replit 候选描述修正为私人公司)*
+*最后更新：2026-07-01 (P18 新增 Canva AI 辅助分析 - 第 8 篇 AI 辅助分析,draft | partial;canva.com 30+ URL 全部 403 Datadome;Wikipedia (Canva/Affinity/Perkins) reference 源 + Fortune 2025-08-22 + The Verge 2024 verified media;$42B 估值 2025-08 双源部分达成)*

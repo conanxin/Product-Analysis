@@ -1,5 +1,82 @@
 # Changelog
 
+## P18 - Canva AI 辅助产品分析 (第 8 篇)
+
+**日期：** 2026-07-01
+**变更类型：** source-first / ai-assisted / new-article
+**变更范围：** analyses/ai-assisted/2026-07-01-canva.md (新增 25.5 KB) + README + analyses/README.md + analyses/index.yml + CHANGELOG + P18 报告
+
+### 变更内容
+
+第八篇 AI 辅助产品分析 — Canva，使用 source-first workflow。
+
+#### Source-First URL Verification (P18)
+
+**验证统计：**
+- **canva.com 官方 URL：30+ 全部 403 (Datadome bot protection)** — P18 标为 official-url-access-limited
+- Wikipedia：3 个 verified 200 (Canva / Affinity_(software) / Melanie_Perkins)
+- Verified media：2 个 verified 200 (Fortune 2025-08-22 / The Verge 2024)
+- 主流量化媒体：0 个 verified (TechCrunch / Reuters / CNBC / Bloomberg / FT / WSJ 原报道 URL 401-404/403 未 HTTP 验证)
+- High-risk fact 主动尝试：Wikipedia 二手记载 + Fortune 单源 + The Verge 单源，跨独立 verified 媒体双源未达成
+
+**关键 Verified Source：**
+1. `en.wikipedia.org/wiki/Canva` (200) — 2013 成立 / 创始人 / 估值 / 营收 / 用户 / 员工 / 收购 / Visual Suite 2 / 100 语言
+2. `en.wikipedia.org/wiki/Affinity_(software)` (200) — Affinity 收购自 Serif 2024
+3. `en.wikipedia.org/wiki/Melanie_Perkins` (200) — 创始人背景
+4. `fortune.com/2025/08/22/...` (200) — $42B 估值 / employee share sale
+5. `theverge.com/2024/canva-leonardo-ai` (200) — Leonardo.AI 收购
+
+**高风险事实 Partial 原因：**
+- Canva 官方 canva.com 30+ URL 全部 403 Datadome bot-blocked (标 official-url-access-limited)
+- Wikipedia 是 reference 源（不是 high-quality-media-verified）
+- $42B 估值 (2025-08) Wikipedia + Fortune 双源部分达成
+- Affinity / Leonardo.AI 收购事件 Wikipedia + 部分 verified media 单源
+- 收购金额未明确披露 → partial
+- 2025 营收 $4B / 220M 用户 / 5,500 员工 → Wikipedia 单源
+
+#### 文章核心内容
+
+- **一句话定位**：Canva = 大众化设计与内容生产平台（template-first + visual suite）
+- **核心机制**：Template-first workflow + Magic Studio AI + Visual Suite 2 (Sheets/Code/chatbot/photo editor)
+- **产品矩阵**：Canva / Affinity (Photo/Designer/Publisher) / Leonardo.AI / Visual Suite 2 / Magic Studio
+- **2025 营收 $4B** (Wikipedia 二手)
+- **用户 220M** (Wikipedia 二手)
+- **估值历史**：A$6B (2020) → A$40B (2021) → US$26B (2022) → US$42B (2025-08 employee share sale, Fortune verified)
+- **收购历史**：Zeetings (2018) / Pixabay+Pexels (2019) / Kaleido (2021) / Affinity/Serif (2024) / Leonardo.AI (2024-07) / Simtheory+Ortto (2026-02)
+- **接近 IPO**：2025-06 AFR 报道“near IPO”（Wikipedia 二手，AFR 原报道 URL 404）
+- **竞品**：Adobe / Figma / Microsoft / Google / VistaCreate / CapCut / Picsart / Framer / Affinity / Leonardo.AI / Midjourney
+- **中文 MVP 推断**：面向小红书 / 公众号 / 电商小团队的 AI 品牌内容生产台（判断，非事实）
+
+#### review_status + source_url_verification_status
+
+- **review_status**: draft（P18 初稿，待 P19 人工复核）
+- **source_url_verification_status**: partial（canva.com 官方 403 Datadome；主体产品机制来自 Wikipedia 二手；融资/估值/营收/用户/收购金额仍 partial）
+
+#### 修改文件 (5 个)
+
+- `analyses/ai-assisted/2026-07-01-canva.md`: 新增 25.5 KB，17 节，YAML 11 字段
+- `README.md`: AI 索引新增 Canva 行 (draft | partial) + 当前质量状态 7→8
+- `analyses/README.md`: Canva 行 + by-category Design AI / Visual Communication + reading paths + 状态
+- `analyses/index.yml`: Canva 条目 (draft | partial) + summary 7→8 + by_category + reading_paths
+- `CHANGELOG.md`: 顶部 P18 记录 (本节)
+- `reports/P18-canva-ai-assisted-analysis-report.md`: 新增 P18 报告
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (3c0f385 = P17)
+- ✅ Canva 文 25.5 KB 新增
+- ✅ analyses/ai-assisted/2026-07-01-canva.md 存在
+- ✅ YAML review_status = draft
+- ✅ YAML source_url_verified_at = 2026-07-01
+- ✅ YAML source_url_verification_status = partial
+- ✅ §17.4 Sources 实链验证表存在 (5 verified + 17 official-url-access-limited + 10 unverified = 32 来源)
+- ✅ Sources 5 分组完整 (Official 7 / Product 17 / Verified Media 2 / Reference 3 / Unverified 3)
+- ✅ 7 篇 reviewed AI 辅助分析 (Perplexity/Linear/Raycast/Cursor/Figma/Framer/Notion) mtime 未变
+- ✅ 9 旧人工分析 + pic/ + templates/ + 其他 docs/ 未动
+- ✅ 无 force push / reset --hard / amend
+
+---
+
 ## P17 - Notion 人工复核与索引状态升级
 
 **日期：** 2026-07-01

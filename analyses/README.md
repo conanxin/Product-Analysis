@@ -13,6 +13,7 @@
 | Figma | design-collaboration | [2026-07-01-figma.md](ai-assisted/2026-07-01-figma.md) | reviewed | partial | 设计编辑器 + 协作 + 设计系统 + Dev Mode + Config 2025 五产品线 |
 | Framer | ai-website-builder | [2026-07-01-framer.md](ai-assisted/2026-07-01-framer.md) | reviewed | partial | 设计画布 + CMS + 发布 + SEO + 模板 + AI agent 重构为 AI 建站平台 |
 | Notion | ai-workspace | [2026-07-01-notion.md](ai-assisted/2026-07-01-notion.md) | reviewed | partial | 文档 + 数据库 + 知识库 + 项目 + Calendar + Mail + AI 整合为可组合的信息工作台 |
+| Canva | design-ai-platform | [2026-07-01-canva.md](ai-assisted/2026-07-01-canva.md) | draft | partial | 模板 + 视觉编辑器 + 品牌资产 + 企业协作 + AI 生成整合为大众化内容生产平台 |
 
 ## 2. 按产品类型分组
 
@@ -37,18 +38,21 @@
 ### AI Workspace / Knowledge Management
 - **Notion** — block + database + wiki + project + Calendar + Mail + AI agent
 
+### Design AI / Visual Communication
+- **Canva** — template-first + Brand Kit + Visual Suite 2 + Magic Studio + Affinity (专业设计) + Leonardo.AI (AI 生成)
+
 ## 3. 当前质量状态
 
 | 维度 | 数值 | 说明 |
 |------|------|------|
-| AI 辅助分析 | 7 | 全部 reviewed |
+| AI 辅助分析 | 8 | 7 reviewed + 1 draft |
 | reviewed | 7 | 人工复核完成 |
-| draft | 0 | — |
+| draft | 1 | Canva (待 P19 人工复核) |
 | verified | 0 | 严格标准下未达成 |
-| partial | 7 | 主体产品机制 verified；高风险事实 partial |
+| partial | 8 | 主体产品机制 verified；高风险事实 partial |
 | 旧人工分析 (legacy) | 9 | 根目录 legacy notes |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
-| P 报告累计 | 10 | 1 legacy + 7 AI + 1 索引 + 1 review |
+| P 报告累计 | 11 | 1 legacy + 8 AI + 1 索引 + 1 review |
 
 **说明**：
 - `partial` 不是失败，而是表示部分**高风险事实**（融资、估值、收入、收购、IPO、用户量、合作金额、价格变化、发布时间线、法律诉讼）仍未达到双源 verified 标准。
@@ -63,7 +67,6 @@
 | 候选 | 类型 | 优先 | 备注 |
 |------|------|------|------|
 | Webflow | website builder | 高 | 私人 website builder / SaaS 公司 |
-| Canva | design + AI | 高 | 私人公司 / 潜在 IPO 候选 (Fortune 2025-08-22 估值 $42B) |
 | Replit | AI coding + hosting | 中 | 私人 AI coding / hosting 公司，有私募融资报道 |
 | Coda | workspace | 中 | 与 Notion 重叠 |
 | Obsidian | knowledge management | 中 | 私人但产品差异化 |
@@ -92,6 +95,10 @@
 1. **Notion** → Product-Analysis
    - 理解 AI workspace → 理解产品研究 workspace
 
+### Visual Communication 路线
+1. **Canva** → **Figma** → **Framer**
+   - 理解大众化模板驱动 → 理解设计协作 → 理解设计即上线
+
 ### 跨产品对比路线
 1. **Cursor** vs **Figma** (Dev Mode)
    - AI 改变代码 vs AI 改变设计
@@ -99,6 +106,8 @@
    - AI website builder vs 专业 website builder
 3. **Notion** vs **Coda** / **Airtable** / **Obsidian** (未对比)
    - AI workspace vs 传统 docs / database / 本地笔记
+4. **Canva** vs **Adobe Creative Cloud** / **Figma** (未对比)
+   - 大众化设计 vs 专业设计 vs 设计协作
 
 ## 6. 状态流转
 
