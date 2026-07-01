@@ -1,5 +1,65 @@
 # Changelog
 
+## P6.1 - Linear Reuters URL Verification
+
+**日期：** 2026-07-01
+**变更类型：** source-verification / docs-only
+**变更范围：** Linear 全文 + CHANGELOG
+
+### 变更内容
+
+P6.1 阶段补查请求人提供的 Reuters 关于 Linear 2025 融资的候选 URL。
+
+#### 验证结果
+
+- URL: https://www.reuters.com/business/atlassian-competitor-linear-raises-funding-125-billion-valuation-2025-06-10/
+- HTTP 401 (Datadome bot 拦截) — 未能直接验证
+- web_search 未返回该标题
+- Wayback Machine 仅为通用 reuters.com
+- **结论：datadome-protected（URL 存在形式，但未 HTTP 验证）**
+
+#### 修改文件
+
+- `analyses/ai-assisted/2026-07-01-linear.md`:
+  - YAML source_urls 增加 1 条 datadome-protected URL
+  - §17.6 新增 P6.1 验证记录
+  - Sources Verified Media 表格加 1 URL（datadome 标记）
+  - 文末状态标注增加 P6.1 轮次
+
+- `CHANGELOG.md`：顶部 P6.1 记录
+
+#### 新增文件
+
+- `reports/P6.1-linear-reuters-url-verification-report.md`
+
+### 保持
+
+- `source_url_verification_status` 仍为 **partial** (诚实评估)
+- `review_status` 仍为 **reviewed** (不变)
+- README 状态仍为 `reviewed | partial` (不变)
+- Perplexity 文 mtime 未变
+- 9 篇旧文章 + pic/ 未动
+
+### P6.1 评估
+
+- Reuters URL 真实存在形式但 HTTP 不可达；与 Perplexity P4.1 对 Reuters URL 处理一致
+- $82M 2025 估值仍单源 TechCrunch
+- 未达成 verified 升级要求（需要 HTTP 200 + 标题匹配）
+- 保持 partial 是诚实评估的产物
+
+### P6.1 目标达成
+
+- [x] 验证请求人提供的 Reuters URL
+- [x] 标注 datadome-protected 状态
+- [x] 在 Linear 文章中加入该 URL（datadome 标记）
+- [x] §17.6 P6.1 验证记录
+- [x] Sources Verified Media 表格更新
+- [x] CHANGELOG P6.1 记录
+- [x] P6.1 报告生成
+- [x] 保持 source_url_verification_status: partial (诚实)
+
+---
+
 ## P6 - Linear Review and Source Status Upgrade
 
 **日期：** 2026-07-01
