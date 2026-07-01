@@ -1,5 +1,79 @@
 # Changelog
 
+## P13 - Framer AI 辅助产品分析 (第 6 篇)
+
+**日期：** 2026-07-01
+**变更类型：** source-first / ai-assisted / new-article
+**变更范围：** analyses/ai-assisted/2026-07-01-framer.md (新增 31KB) + README + CHANGELOG + P13 报告
+
+### 变更内容
+
+第六篇 AI 辅助产品分析 — Framer，使用 source-first workflow。
+
+#### Source-First URL Verification (P13)
+
+**验证统计：**
+- Framer 官方页面：24 个 HTTP-200 verified (官网 / pricing / AI / features/ai / CMS / enterprise / developers / blog / features / templates / marketplace / plugins / learn / agents / analytics / seo / localization / forms / hosting / contact / support / help / parts / status / showcase / community)
+- 主流量化媒体：5 个尝试（TechCrunch / The Verge / FastCompany / Crunchbase / Wikipedia）→ 全部 404/403
+- Secondary 来源：中文媒体转载（腾讯新闻）引述 $100M Series D / $2B valuation / Meritech+Atomico+Accel → 中文原文可验证，原始英文投资方公告 URL 未直接 HTTP 验证
+
+**关键官方 Source Verified：**
+1. `framer.com/` — "AI website builder for professional sites" / Framer 3.0 with Agents
+2. `framer.com/pricing/` — Free / Basic $10 / Pro $30 / Enterprise; site-based pricing; AI credits 500/1,000/3,000/mo; CDN 20 loc(Basic)/300+ loc(Pro)
+3. `framer.com/ai/` — AI models Petal 3.1 / Ember 4.7 / Horizon 2.1; Design/CMS/Code agents
+4. `framer.com/features/ai/` — External agents: Claude / Codex / Cursor / Terminal / Slack / GitHub PR
+5. `framer.com/cms/` — AI CMS agent; collections; content-canvas sync; on-page editing
+6. `framer.com/blog/` — "Introducing Framer 3.0 with Agents, Branching, and a new Community"; Academy: 320 articles / 256 creators / 18 categories / 7 styles
+7. `framer.com/enterprise/` — SSO / SCIM / Uptime guarantee / custom limits
+8. `framer.com/developers/` — Server API / Fetch / Components / Overrides / Auto-Sizing / Property Controls
+
+**高风险事实 Partial 原因：**
+- Framer 是私人公司（无 SEC filings / 无 investor relations / 无 Wikipedia 条目）
+- 官方 about/press/investors/changelog/privacy/terms 页面均不存在或 404
+- Founders 背景（Sofa → Facebook）：Koen Bok / Jorn van Dijk 个人网站 verified，但非官方 cofounder bio page
+- Series D $100M / $2B valuation：中文转载引述 Meritech/Atomico/Accel 公告，中文原文可读但原始投资方 URL 未直接 HTTP 验证
+
+#### 文章核心内容
+
+- **一句话定位**：AI website builder for professional sites（官网 verified）
+- **核心机制**：Design canvas + CMS + AI agents + Publishing + Templates 五大支柱
+- **AI agents**：Design agent (Petal/Ember/Horizon) + CMS agent + Code agent + External agents (Claude/Codex/Cursor)
+- **Pricing**：Free $0 / Basic $10 / Pro $30 / Enterprise Custom；site-based 限制；AI credits 按月
+- **竞品**：Webflow / Wix / Squarespace / WordPress / Figma Sites / Canva / Lovable/v0 等
+- **中文 MVP 推断**：面向 AI 原生个人项目和小团队的产品官网生成器（判断，非事实）
+
+#### review_status + source_url_verification_status
+
+- **review_status**: draft（P13 初稿，待 P14 人工复核）
+- **source_url_verification_status**: partial（诚实评估：主体产品功能 verified；融资/估值/创始人背景 partial）
+
+#### 修改文件 (4 个)
+
+- `analyses/ai-assisted/2026-07-01-framer.md`: 新增 31KB，17 节，YAML 11 字段
+- `README.md`: AI 索引新增 Framer 行 (draft / partial)
+- `CHANGELOG.md`: 顶部 P13 记录 (本节)
+- `reports/P13-framer-ai-assisted-analysis-report.md`: 新增 P13 报告
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (ed64243 = P12)
+- ✅ Framer 文 31KB 新增
+- ✅ analyses/ai-assisted/2026-07-01-framer.md 存在
+- ✅ YAML review_status = draft
+- ✅ YAML reviewed_at = 2026-07-01
+- ✅ YAML source_url_verification_status = partial
+- ✅ §17.4 Sources 实链验证表存在 (31 个来源)
+- ✅ Sources 4 分组完整 (Official+Primary 14 / Product+Docs 12 / Verified Media 2 / Secondary 1 / Unverified 11)
+- ✅ Perplexity mtime 未变 (11:41)
+- ✅ Linear mtime 未变 (12:57)
+- ✅ Raycast mtime 未变 (15:26)
+- ✅ Cursor mtime 未变 (16:03)
+- ✅ Figma mtime 未变 (P12 后)
+- ✅ 9 旧人工分析文章 + pic/ 未动
+- ✅ 无 force push / reset --hard / amend
+
+---
+
 ## P12 - Figma 人工复核与公开公司事实加固
 
 **日期：** 2026-07-01

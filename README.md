@@ -79,6 +79,7 @@ Product-Analysis/
 | 2026-07-01 | Raycast | `analyses/ai-assisted/2026-07-01-raycast.md` | AI 辅助 | productivity、launcher、keyboard-driven、developer-tools、extensions-platform、ai-product | 把命令面板从单点工具重构为可扩展的开发者工作流操作系统 | reviewed | partial |
 | 2026-07-01 | Cursor | `analyses/ai-assisted/2026-07-01-cursor.md` | AI 辅助 | ai-coding、developer-tools、ide、agentic-workflow、productivity、llm-product | 把代码编辑器重构为 AI 协作的 agentic coding IDE,实现 Tab/Chat/Composer/Agent/Cloud Agent 统一工作流 | reviewed | partial |
 | 2026-07-01 | Figma | `analyses/ai-assisted/2026-07-01-figma.md` | AI 辅助 | design-tools、collaboration、design-systems、dev-mode、ai-design、b2b-saas | 将设计工具从本地文件软件重构为多人协作、设计系统和开发交付基础设施 | reviewed | partial |
+| 2026-07-01 | Framer | `analyses/ai-assisted/2026-07-01-framer.md` | AI 辅助 | website-builder、design-tools、ai-website-builder、cms、no-code、b2b-saas | 将设计画布、CMS、发布和 AI agent 工作流结合为 AI 建站平台 | draft | partial |
 
 ---
 
@@ -109,4 +110,4 @@ Product-Analysis/
 
 ---
 
-*最后更新：2026-07-01 (P12 Figma 人工复核 → reviewed;P12 source-hardening +7 官方URL;Config 2025 修订为 5 款产品 + Config 2026 五项升级 + Weave 收购官方 confirmed;员工数 1886 弃用 → Newsroom 1,600+ 替代;IPO/Adobe 终止 仍 partial - Reuters Datadome)*
+*最后更新：2026-07-01 (新增 Framer AI 辅助分析 P13,draft | partial | 24 官方URL verified | 融资/估值 partial - 中文转载二次确认,英文原报道 404)*
