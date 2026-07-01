@@ -1,5 +1,73 @@
 # Changelog
 
+## P4.1 - Perplexity Source URL Verification
+
+**日期：** 2026-07-01
+**变更类型：** source-verification / docs-only
+**变更范围：** Perplexity 一文 + 模板 + docs + README + CHANGELOG
+
+### 变更内容
+
+对 P4 中添加的高质量媒体 URL 做实链验证，发现推定路径需修正。
+
+#### 验证结果
+
+- **仅 1 个主体来源被 HTTP 200 验证**：AWS 官方案例
+- **7 个 high-quality-media-verified (planned) URL 中 6 个未能验证**：
+  - CNBC × 3 为 404
+  - The Verge 路径返回 400
+  - MacRumors 返回 522（超时）
+  - The Information 被 Cloudflare 拦截
+  - Reuters 超时
+- **perplexity.ai 与 /enterprise**：timeout 未能取得正文但页面推定存在
+- **SourceForge**：被 Cloudflare 拦截
+
+#### 修改文件
+
+- `analyses/ai-assisted/2026-07-01-perplexity.md`：
+  - YAML 新增 `source_url_verified_at`, `source_url_verification_status: partial`, `source_quality_notes`
+  - Sources 中 “Quality Media” 小节所有 URL 状态改为 `unverified` 并附备注
+  - 新增 `§ 17.5 Sources 实链验证` 表格
+  - § 17.2 可信度分级表中估值/Chrome/Azure 三条从"中"降为"低"
+  - Sources 末尾说明重写，诚实评估“主要事实依据仍是中文转载”
+  - 文末状态标注增加 “P4.1 - Source URL Verification”轮次
+
+- `templates/product-analysis-template.md`：
+  - YAML front matter 示例增加 `source_url_verified_at` / `source_url_verification_status` / `source_quality_notes` 三字段
+  - 第 17 章增加 `17.4 Sources 实链验证` 子节
+
+- `README.md`：AI 辅助分析索引增加“来源状态”列；Perplexity 状态填 `partial`
+
+#### 新增文件
+
+- `docs/source-quality-checklist.md`：来源质量门禁（分级、最低要求、draft→reviewed→verified 条件、URL 验证流程、常见错误）
+- `reports/P4.1-perplexity-source-url-verification-report.md`
+
+### 保留
+
+- 9 篇旧文章、CHANGELOG 旧条目、主体内容、1-16 章节主体未动
+- pic/ 未动
+- templates 增加内容是追加不破坏原有结构
+
+### 诚实评估
+
+P4 阶段“高质量媒体为主来源”的声明是**高估**的。本轮 P4.1 修正了这一评估。中文转载（new.qq.com / so.html5.qq.com）是**目前唯一被明确验证可访问的报道载体**。P5 阶段需手动查实实际原报道 URL。
+
+### P4.1 目标达成
+
+- [x] 实链验证 10 个主体质量来源
+- [x] 替换 / 降级未验证 URL
+- [x] YAML 新增 3 个字段
+- [x] § 17.5 Sources 实链验证 表格
+- [x] 17.2 可信度分级同步调整
+- [x] 模板增加 17.4 占位 + YAML 字段
+- [x] docs/source-quality-checklist.md 新建
+- [x] README 增加来源状态列
+- [x] CHANGELOG P4.1 记录
+- [x] P4.1 报告生成
+
+---
+
 ## P4 - Perplexity Review and Source Hardening
 
 **日期：** 2026-07-01

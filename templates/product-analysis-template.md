@@ -5,7 +5,12 @@ tags: []
 source_urls: []
 analysis_type:
 created_at:
+reviewed_at:
 review_status:
+review_notes:
+source_url_verified_at:
+source_url_verification_status:
+source_quality_notes:
 one_line_insight:
 ---
 
@@ -239,6 +244,23 @@ one_line_insight:
 1. ...
 2. ...
 3. ...
+
+### 17.4 Sources 实链验证
+
+| URL | 类型 | 实链状态 | 备注 |
+|-----|------|----------|------|
+|  |  |  |  |
+
+**实链状态标记**：
+
+- **verified** (200) — HTTP 200，标题匹配
+- **paywalled-but-verified** — 标题可见，内容需订阅
+- **unverified (404)** — 未找到页面
+- **unverified (timeout)** — 超时未能访问
+- **paywalled (403)** — 被防抓取
+- **inferred (未验证)** — URL 为推定路径，未能实访
+
+参考 `docs/source-quality-checklist.md` 作为详细验证标准。
 
 ---
 
