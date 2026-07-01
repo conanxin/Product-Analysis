@@ -1,5 +1,86 @@
 # Changelog
 
+## P8 - Raycast 人工复核与状态升级
+
+**日期：** 2026-07-01
+**变更类型：** review / source-hardening / docs-only
+**变更范围：** Raycast 全文 + README + CHANGELOG + 新增 P8 报告
+
+### 变更内容
+
+P8 阶段对 Raycast 文章做人工复核，将 review_status 从 draft 升级为 reviewed。
+
+#### YAML 状态修正
+
+- `review_status`: draft → reviewed
+- `reviewed_at`: 2026-07-01 (保持)
+- `review_notes`: 更新为 P8 复核版（明示 P8 复核 + 判断部分保留为 judgment）
+- `source_url_verification_status`: 保持 partial（诚实评估，融资/估值仍单源 TC + 官方 blog 自述）
+- `source_quality_notes`: 更新为 P8 复核版（明示主体产品机制已 verified；融资/估值 partial；§14/§15 标记为 [判断]）
+
+#### 文章主体复核改动（只做 5 处明示性修改，未重写主体）
+
+1. **顶部引用（lead）** 增加 metaphor 明示：「本文使用"工作流操作系统"作为分析判断 / metaphor，非 Raycast 官方产品定位用语」
+2. **§1 一句话定位** 增加 [判断] 标记，明示「生产力操作系统前端」是分析 metaphor，非 Raycast 官方用语
+3. **§17.1 当前状态** 改为 P8 复核版，说明 review_status 升级、partial 保持、判断部分标记
+4. **§17.2 可信度分级表** 扩充至 18 条，按 spec 分级（产品定位 / 生态机制 / AI 价值 / 竞争定位 / 融资 / 平台 / 价格 / 推断 / 假设）
+5. **§17.5 P8 人工复核记录** 新增小节，记录本次复核的具体改动
+
+#### §17.2 新增的关键可信度结论
+
+- Raycast 是 macOS command bar / launcher / productivity platform：**高**（官方主页 + manual + docs）
+- Extension Store 是核心生态机制：**高**（官方 Store + GitHub extensions）
+- Raycast AI 是 Pro 价值的重要组成部分：**高**（官方 AI 页 + pricing 页）
+- Raycast AI 是 Pro 的「主要增长驱动」：**中**（官方口径不明确，使用频次无公开数据）
+- Windows 扩展仍处于 waitlist / early expansion signal：**中**（官方 blog/waitlist，不当成熟产品线）
+- 中文 Raycast 更适合先做 AI worker / Windows / 浏览器场景：**待观察**（个人判断，不是事实）
+
+#### 未改动的内容
+
+- 文章主体 §1-§16 整体未重写
+- §14 中文 MVP 推断（已 [判断] 标记）
+- §15 项目启发（已 [判断] 标记）
+- §17.4 Sources 实链验证表（保持 P7 状态：28 URL verified，P8 未重新验证）
+- 9 旧人工分析文章 + pic/ 未动
+- P5 Linear / P6 / P6.1 Linear / P4.2 / P4.1 / P4 Perplexity 历史文章未动
+
+### 修改文件
+
+- `analyses/ai-assisted/2026-07-01-raycast.md`:
+  - YAML review_status: draft → reviewed
+  - YAML review_notes: 更新
+  - YAML source_quality_notes: 更新
+  - 顶部 lead: 增加 metaphor 明示
+  - §1: 增加 [判断] 标记
+  - §17.1: 改为 P8 复核版
+  - §17.2: 扩充至 18 条
+  - §17.5: 新增 P8 复核记录
+  - 文末状态行：增加 P8 复核信息
+- `README.md`: AI 索引 Raycast 状态 draft → reviewed
+- `CHANGELOG.md`: 顶部 P8 记录（本节）
+- `reports/P8-raycast-review-and-status-upgrade-report.md`: 新增 P8 报告
+
+### 验证
+
+- ✅ 起始 HEAD = origin/master clean (154e28d = P7)
+- ✅ Raycast 文 16.2 → 25 → 25.5 KB (主体未重写，只追加复核记录)
+- ✅ YAML review_status = reviewed
+- ✅ YAML review_notes 已更新为 P8 版
+- ✅ YAML source_quality_notes 已更新为 P8 版
+- ✅ source_url_verification_status = partial (保持)
+- ✅ reviewed_at = 2026-07-01 (保持)
+- ✅ 顶部 lead 增加 metaphor 明示
+- ✅ §1 增加 [判断] 标记
+- ✅ §17.1 改为 P8 复核版
+- ✅ §17.2 扩充至 18 条可信度分级
+- ✅ §17.5 新增 P8 复核记录
+- ✅ 文末状态行增加 P8 复核信息
+- ✅ Perplexity / Linear mtime 未变
+- ✅ 9 旧人工分析文章 + pic/ 未动
+- ✅ working tree clean post-push
+
+---
+
 ## P7 - Raycast AI 辅助产品分析
 
 **日期：** 2026-07-01
