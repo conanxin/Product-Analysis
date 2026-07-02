@@ -1,5 +1,66 @@
 # Changelog
 
+## P28 - Obsidian AI-Assisted Product Analysis
+
+**日期：** 2026-07-02
+**变更类型：** new-analysis + index-sync + validation
+
+### 变更内容
+
+完成 P28 第十二篇 AI 辅助产品分析 Obsidian，使用 source-first workflow，状态为 draft | partial。
+
+#### 关键步骤
+
+1. **新文章：** `analyses/ai-assisted/2026-07-01-obsidian.md`
+   - 30 个 source_urls
+   - obsidian.md 官方页面 25+ HTTP-200 verified
+   - obsidian.md/blog/future-of-plugins/ (2026-05-12) verified — 4000+ plugins / 120M downloads
+   - obsidian.md/blog/cure53-tob-sync-audits/ (2026-05-13) verified — Sync 2020 launch / 安全审计
+   - 17 个章节完整
+   - review_status: draft
+   - source_url_verification_status: partial
+   - category: local-first-knowledge-base
+   - tags: note-taking, knowledge-management, markdown, local-first, plugins, personal-knowledge-base
+2. **同步索引：**
+   - README.md AI 辅助分析索引新增 Obsidian 行（draft | partial）
+   - README.md 当前质量状态 11 → 12（11 reviewed + 1 draft）
+   - README.md P28 todo
+   - analyses/README.md AI 总览新增 Obsidian 行
+   - analyses/README.md 新增 "Local-first Knowledge Base" 分类
+   - analyses/README.md 新增 "Knowledge Base 路线" 阅读路径
+   - analyses/README.md 当前质量状态 11 → 12
+   - analyses/README.md P 报告 18 → 19
+   - analyses/index.yml 新增 Obsidian 条目
+   - analyses/index.yml by_category 新增 local-first-knowledge-base
+   - analyses/index.yml reading_paths 新增 knowledge_base_path
+   - analyses/index.yml summary 更新
+3. **来源验证原则：**
+   - Obsidian 是私人公司 / bootstrapped / local-first / markdown-first / knowledge base 产品
+   - 不写 Obsidian 为公开公司或已 IPO
+   - 创始人（Shida Li / Erica Xu）→ partial（依赖 CSDN 二手记载）
+   - 收入 / ARR / 融资 / 估值 / 员工数 → partial（私人公司无公开数据）
+   - Wikipedia 被 blocking 策略拦截，不作为参考源
+4. **Validator：** `python3 scripts/verify_ai_analysis_index.py` → PASS
+   - analyses found: 12
+   - reviewed: 11
+   - draft: 1
+   - partial: 12
+   - verified: 0
+5. **不修改：** 旧 AI 分析文章（Perplexity/Linear/Raycast/Cursor/Figma/Framer/Notion/Canva/Webflow/Replit/Coda）、旧人工分析文章、pic/、scripts/、docs/、.github/
+6. **下一步：** P29 人工复核（draft → reviewed） + source-hardening
+
+#### 提交信息
+
+- commit message: P28: add Obsidian AI-assisted product analysis
+- 不 force push、不 reset --hard、不 amend
+- GitHub Actions CI: 自动运行 validator
+
+#### 报告路径
+
+- `reports/P28-obsidian-ai-assisted-analysis-report.md`
+
+---
+
 ## P27 - Coda Review and Index Status Sync
 
 **日期：** 2026-07-02

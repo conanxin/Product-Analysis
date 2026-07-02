@@ -281,20 +281,19 @@ analyses:
       后为 Superhuman Suite 组成部分 / 无 SEC filings。中文 Coda MVP / Coda Brain 真实可用性属判断。
 - product: Obsidian
   file: analyses/ai-assisted/2026-07-01-obsidian.md
-  category: knowledge-management
+  category: local-first-knowledge-base
   analysis_type: ai-assisted
   created_at: '2026-07-01'
   review_status: draft
   reviewed_at: null
   source_url_verification_status: partial
   tags:
-  - local-first
-  - markdown
   - note-taking
+  - knowledge-management
+  - markdown
+  - local-first
+  - plugins
   - personal-knowledge-base
-  - bidirectional-links
-  - plugin-ecosystem
-  - extensible-notes-app
   one_line_insight: Obsidian 将本地 Markdown 文件与双向链接、graph view 和插件生态结合，把笔记从"记录工具"重构为"个人知识操作系统"。
   quality_notes:
     product_mechanism: verified
@@ -367,7 +366,7 @@ by_category:
 - category: doc-database
   products:
   - Coda
-- category: knowledge-management
+- category: local-first-knowledge-base
   products:
   - Obsidian
 reading_paths:
@@ -396,6 +395,10 @@ reading_paths:
   - Cursor
   - Replit
   doc_as_app_path:
+  - Notion
+  - Coda
+  - Obsidian
+  knowledge_base_path:
   - Notion
   - Coda
   - Obsidian

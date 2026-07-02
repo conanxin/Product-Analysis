@@ -17,7 +17,7 @@
 | Webflow | visual-web-development | [2026-07-01-webflow.md](ai-assisted/2026-07-01-webflow.md) | reviewed | partial | 视觉设计 + CMS + 托管 + SEO/AEO + 优化 + AI 建站整合为可视化 Web 生产系统 |
 | Replit | ai-cloud-development | [2026-07-01-replit.md](ai-assisted/2026-07-01-replit.md) | reviewed | partial | 浏览器 IDE + 云端运行时 + 部署 + 数据库 + AI Agent 结合为从想法到上线的云端应用工作台 |
 | Coda | doc-database | [2026-07-01-coda.md](ai-assisted/2026-07-01-coda.md) | reviewed | partial | 文档 + 表格 + 公式 + 按钮 + 自动化 + Packs + AI 整合为 doc-as-app 工作台（被 Grammarly 收购，2025-10 Superhuman rebrand） |
-| Obsidian | knowledge-management | [2026-07-01-obsidian.md](ai-assisted/2026-07-01-obsidian.md) | draft | partial | 将本地 Markdown 文件与双向链接、graph view 和插件生态结合，把笔记从"记录工具"重构为"个人知识操作系统" |
+| Obsidian | local-first-knowledge-base | [2026-07-01-obsidian.md](ai-assisted/2026-07-01-obsidian.md) | draft | partial | 将本地 Markdown 文件与双向链接、graph view 和插件生态结合，把笔记从"记录工具"重构为"个人知识操作系统" |
 
 ## 2. 按产品类型分组
 
@@ -53,6 +53,9 @@
 
 ### Doc Database / App Doc
 - **Coda** — doc + table + formula + button + automation + Packs + Coda AI + Coda Brain；被 Grammarly 收购（2024-12 all-stock deal），为 AI-native productivity suite doc 引擎
+
+### Local-first Knowledge Base
+- **Obsidian** — local-first / markdown files / 双向链接 / graph view / plugin ecosystem (4000+ / 120M downloads) / Sync / Publish / Canvas / Mobile / Web Clipper / CLI；私人公司 / bootstrapped
 
 ## 3. 当前质量状态
 
@@ -110,6 +113,10 @@
 ### Doc-as-App 路线
 1. **Notion** → **Coda**
    - 理解 wiki-style workspace → 理解 doc-as-app 生产力平台
+
+### Knowledge Base 路线
+1. **Notion** → **Coda** → **Obsidian**
+   - 理解 AI workspace → 理解 doc-as-app → 理解 local-first markdown knowledge base
 
 ### Visual Communication 路线
 1. **Canva** → **Figma** → **Framer**
