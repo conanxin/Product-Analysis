@@ -86,7 +86,7 @@ Product-Analysis/
 | 2026-07-01 | Replit | `analyses/ai-assisted/2026-07-01-replit.md` | AI 辅助 | ai-coding、cloud-ide、agentic-workflow、app-builder、deployment、b2b-saas | 将浏览器 IDE、云端运行环境、部署和 AI Agent 结合为从想法到上线的云端应用工作台 | reviewed | partial |
 | 2026-07-01 | Coda | `analyses/ai-assisted/2026-07-01-coda.md` | AI 辅助 | productivity、docs、database、workflow、automation、ai-productivity | 将文档、表格、公式、按钮和自动化组合为可操作的 doc-as-app 工作台 | reviewed | partial |
 | 2026-07-01 | Obsidian | `analyses/ai-assisted/2026-07-01-obsidian.md` | AI 辅助 | local-first、markdown、note-taking、personal-knowledge-base、bidirectional-links、plugin-ecosystem | 将本地 Markdown 文件与双向链接、graph view 和插件生态结合，把笔记从"记录工具"重构为"个人知识操作系统" | reviewed | partial |
-| 2026-07-01 | Tana | `analyses/ai-assisted/2026-07-01-tana.md` | AI 辅助 | note-taking、knowledge-management、outliner、supertags、ai-agents、meeting-workflow、knowledge-graph、agentic-platform | Tana 把节点式大纲、Supertags、知识图谱、语音/会议输入和 AI agents 结合起来，将笔记从"记录信息"推进到"在上下文中组织、提取并执行工作"的 agentic 知识工作台；当前 tana.inc 已转向"agentic meeting platform"，原 outliner 单独保留为 Tana Outliner | draft | partial |
+| 2026-07-01 | Tana | `analyses/ai-assisted/2026-07-01-tana.md` | AI 辅助 | note-taking、knowledge-management、outliner、supertags、ai-agents、meeting-workflow、knowledge-graph、agentic-platform | Tana 把节点式大纲、Supertags、知识图谱、语音/会议输入和 AI agents 结合起来，将笔记从"记录信息"推进到"在上下文中组织、提取并执行工作"的 agentic 知识工作台；当前 tana.inc 已转向"agentic meeting platform"，原 outliner 单独保留为 Tana Outliner | reviewed | partial |
 
 ---
 
@@ -135,9 +135,9 @@ python3 scripts/verify_ai_analysis_index.py
 |------|---:|------|
 | 旧人工分析 (legacy) | 9 | legacy-note（根目录） |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
-| AI 辅助分析 | 13 | 12 reviewed + 1 draft |
-| - reviewed | 12 | 人工复核完成 |
-| - draft | 1 | — |
+| AI 辅助分析 | 13 | 13 reviewed + 0 draft |
+| - reviewed | 13 | 人工复核完成 |
+| - draft | 0 | — |
 | - verified | 0 | 严格标准下未达成 |
 | - partial | 13 | 主体产品功能 verified；高风险事实 partial |
 

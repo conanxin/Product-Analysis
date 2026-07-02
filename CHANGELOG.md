@@ -1,5 +1,76 @@
 # Changelog
 
+## P31 - Tana Manual Review & Index Status Sync
+
+**日期：** 2026-07-02
+**变更类型：** review + source-hardening + index-sync
+
+### 变更内容
+
+完成 P31 — Tana 人工复核。Tana 从 `draft | partial` 升级至 `reviewed | partial`，同时走完了完整 source-hardening。
+
+#### 关键发现 — source-hardening 成功
+
+P30 中 Tola Capital / Lightspeed / Northzone portfolio 页受 Cloudflare 403 拦截看似 high-quality media 来源被锁。P31 换路径验证，跳过 Cloudflare 实现了 3 个 dual-source high 验证：
+
+1. **TechCrunch 200** 已 verified：`https://techcrunch.com/2025/02/03/tana-snaps-up-25m-with-its-ai-powered-knowledge-graph-for-work-racking-up-a-160k-waitlist/` (Ingrid Lunden 2025-02-03) — 明文 $25M total (=$11M seed + $14M Series A at $100M post-money) / Tola Capital lead / Lightspeed + Northzone + Alliance VC + firstminute follow-on / 3 Norwegian co-founders + role details / Palo Alto HQ + Norway office / 160K waitlist + 24K Slack + 30K beta / ~20 angels。
+2. **Northzone portfolio 200** 已 verified：`https://northzone.com/portfolio/tana` — 创始人 / 创立年份 / 2020 / Norway / 交叉引用北 TechCrunch 同名 announcement。
+3. **Lightspeed portfolio 200** 已 verified：`https://lsvp.com/company/tana/` — 3 co-founders + Status Private + Lightspeed Team (Guru Chahal + Nnamdi Iregbulem partner) + description。
+4. **QQ 中文翻译 200** 已 verified：`https://new.qq.com/rain/a/20250203A064HL00` — 与 TechCrunch 同事件中文复现。
+
+Tola Capital portfolio 页 仍 Cloudflare 403，但 Tola Capital 作为 Series A lead 由 TechCrunch 200 cross-verified。Product Hunt 主 launch 页仍 403，Product of the Year 2026-02-03 仍 partial-low。
+
+#### 由 partial 升级至 dual-source high 的事实
+
+★ $25M total funding = $11M seed + $14M Series A
+★ $14M Series A led by Tola Capital at $100M post-money
+★ Lightspeed / Northzone / Alliance VC / Firstminute follow-on
+★ 3 联合创始人 (Tarjei Vassbotn CEO + Grim Iversen CPO/CTO + Olav Kriken COO) — 同时明文 outliner.tana.inc/company 早期 list Tarjei=CIO/Olav=CEO/Grim=CAIO 与 TechCrunch list Tarjei=CEO/Grim=CPO/Olav=COO 是 listing 跨源 差异
+★ Headquarters: Palo Alto + Norway office
+★ 2020 founded
+★ 160K+ waitlist + 24K Slack community + 30K 9-month beta testers
+★ Personal angels: Lars Rasmussen / Arash Ferdowsi / Siqi Chen / Olivier Pomel
+
+#### 仍 partial / 不升级的事实
+
+▲ Product of the Year 2026-02-03 — Product Hunt 直接页 403，仅 Tana 官方 blog self-claim 支撑，partial-low。
+▲ Tola Capital portfolio 页个人产品页 — 403 未越过。
+▲ SOC2 ETA Q3 2026 + HIPAA ETA Q3 2026 — 原文明文 ETA 不升完成态。
+▲ LinkedIn 创始人个人 profile URL — 999 rate-limited。
+▲ Wikipedia en.wikipedia.org/wiki/Tana_(software) — 404 无词条。
+▲ Tana revenue / ARR / 净利润 / 额外总融资 (高于 $25M) / 估值（仅 $100M post-money 公开）/ 员工总数 / 付费用户数 / 企业客户数 — 私人公司无公开财报。
+
+#### 文件变更
+
+- `analyses/ai-assisted/2026-07-01-tana.md` — YAML 字段变更 (review_status draft→reviewed / reviewed_at null→2026-07-02 / review_notes 新增 / source_quality_notes 扩充)；§17.1 重写「已完成 P31 人工复核」；§17.2 表尾加 P31 升级总结；§17.3 新增 17-25 中 9 项 P31 教训；§17.4 source count breakdown 表扩充；§Sources Verified Media/Interviews 添加 4 个新 source
+- `analyses/index.yml` — Tana entry 的 review_status draft→reviewed / reviewed_at null→2026-07-02 / quality_notes.reason 重写为 P31 升级后口径；加 review_notes；summary reviewed 12→13 / draft 1→0；p_reports_total 21→22
+- `README.md` (根) — AI 辅助分析 Tana 行 draft→reviewed；当前质量状态 reviewed 12→13 / draft 1→0 / total 保持 13
+- `analyses/README.md` — Tana 总览行 draft→reviewed；当前质量状态 reviewed 12→13 / draft 1→0；P 报告累计 21→22
+- `CHANGELOG.md` — 本节顶部记录
+- `reports/P31-tana-review-and-index-status-sync-report.md` — 新增 P31 任务报告
+
+#### 验证
+
+```
+$ python3 scripts/verify_ai_analysis_index.py
+
+PASS: AI analysis index consistency verified
+- analyses found: 13
+- reviewed: 13
+- draft: 0
+- partial: 13
+- verified: 0
+```
+
+#### Task chain
+
+- P30: Tana draft
+- P30.1: Tana protocol alignment + source-hardening + competitor expansion
+- P30.2: Tana full protocol alignment + sources restructure + reading path
+- **P31: Tana manual review + index status sync** (本次)
+
+---
+
 ## P30.2 - Tana Full Protocol Alignment + Sources Restructure
 
 **日期：** 2026-07-02

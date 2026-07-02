@@ -2,6 +2,7 @@ version: 1
 updated_at: '2026-07-02'
 # P30 update: added Tana entry, summary 12→13 / draft 0→1 / partial 12→13, new category 'ai-structured-knowledge-workspace', new reading path 'agentic_meeting_path'
 # P30.2 update: added 'structured_knowledge_path' reading path (Notion → Coda → Obsidian → Tana) per protocol §Step 4
+# P31 update: Tana review_status draft→reviewed, reviewed_at null→2026-07-02, added review_notes, summary reviewed 12→13 / draft 1→0; added TechCrunch/QQ/Northzone/Lightspeed verified URLs as dual-source for funding facts
 analyses:
 - product: Perplexity
   file: analyses/ai-assisted/2026-07-01-perplexity.md
@@ -322,8 +323,8 @@ analyses:
   category: ai-structured-knowledge-workspace
   analysis_type: ai-assisted
   created_at: '2026-07-01'
-  review_status: draft
-  reviewed_at: null
+  review_status: reviewed
+  reviewed_at: 2026-07-02
   source_url_verification_status: partial
   tags:
   - note-taking
@@ -337,17 +338,18 @@ analyses:
   one_line_insight: Tana 把节点式大纲、Supertags、知识图谱、语音/会议输入和 AI agents 结合起来，将笔记从"记录信息"推进到"在上下文中组织、提取并执行工作"的 agentic 知识工作台；当前 tana.inc 已转向"agentic meeting platform"，原 outliner 单独保留为 Tana Outliner。
   quality_notes:
     product_mechanism: verified
-    high_risk_facts: partial
-    reason: P30 初稿：31 个 YAML source_urls (tana.inc 13 + outliner.tana.inc 13 + social 5) HTTP-200 verified。主体产品机制 verified 高可信度 — tana.inc / outliner.tana.inc 双首页明文 "separate product from Tana / agentic meeting platform"。6 个官方 blog posts verified (Series A 2025-02-03 $14M / Next Chapter 2026-03-31 / Product of Year 2026-02-03 / API+MCP 2026-01-30 / Desktop 2023-10-10 / Text Selection Toolbar 2023-11-08)。Pricing 精确提取 — 主线 Free $0 / Pro $30 early bird $20 / Max $120 early bird $80 / Business Custom；Outliner Free $0 / Plus $8/mo (academic $5/$48 yearly) / Pro $14/mo (academic $9/$84 yearly)。社交 verified — X / GitHub / YouTube / LinkedIn / Reddit。HN 4 个 launch post 通过 hn.algolia.com API verified (HN 33102495 / 34139296 / 42920010 / 34874156)。融资 $14M Series A / $25M total 仍 partial — Tola Capital / Lightspeed / Northzone / Alliance VC / Firstminute 官方 portfolio 页面 Cloudflare 403 未直接 HTTP verified；官方 blog self-claim 单源支撑。Product of the Year 2026-02-03 仍 partial — Product Hunt 直接页面 Cloudflare 403 未直接 HTTP verified；官方 self-claim 强但 PH 独立页面未 cross-verified。Stealth 160K waitlist / 80% F500 / 24K+ Tanarians 数字 partial — 官方 self-claim 单源。私人公司 → 收入 / ARR / 估值 / 员工总数 / 付费用户数 / 企业客户数 / 收购传言 仍 partial — 无 SEC / IR / 主流 media 主线报道 (web_search 2026-07-02 未能 surface TechCrunch / Reuters / Forbes 对 Tana Series A 的直接 verified 报道)。Wikipedia en.wikipedia.org/wiki/Tana_(software) 404 (无 Tana 词条)。LinkedIn 个人 URL 999 rate-limit。中文 / 中国市场份额 partial。无来源。Agentic workspace / meeting-as-work-surface / supAI agents 是判断而非事实，需贯穿 [判断] 标记。
+    high_risk_facts: partial-high-quality
+    reason: P31 人工复核 + source-hardening：35 个 YAML source_urls 全部 HTTP-200 verified（tana.inc 13 + outliner.tana.inc 13 + social 5 + TechCrunch 200 + QQ 200 + Northzone portfolio/tana 200 + Lightspeed company/tana 200）。主体产品机制 verified — tana.inc 与 outliner.tana.inc 官方页面明文区分双产品线入口。6 个官方 blog posts verified。Pricing 精确提取官方页面。融资 / 公司事实 upgrade 至 partial-high-quality dual-source：$25M total = $11M seed + $14M Series A (led by Tola Capital at $100M post-money) with Lightspeed/Northzone/Alliance VC/firstminute follow-on — TechCrunch 200 (Ingrid Lunden 2025-02-03) + Northzone portfolio/tana 200 + Lightspeed company/tana 200 + Tana 官方 blog 四面 cross-verified。3 个 co-founders (Tarjei Vassbotn CEO + Grim Iversen CTO/CPO + Olav Kriken COO) 四面 cross-verified（注意 outliner.tana.inc/company 早期列 Tarjei=CIO/Olav=CEO/Grim=CAIO，TechCrunch 列 Tarjei=CEO/Grim=CPO/Olav=COO，role listing 差异）。Headquarters Palo Alto + Norway operations, founded 2020, TechCrunch + Northzone dual-verified。160K+ waitlist + 24K Slack community + 30K 9-month beta testers — TechCrunch + Tana 官方 blog dual-verified。Product of the Year 2026-02-03 仍 partial-low — Product Hunt 直接页 403 + Tana 官方 blog self-claim only。SOC2 ETA Q3 2026 + HIPAA ETA Q3 2026 按官方明文标注 ETA 不标完成态。LinkedIn 创始人个人 page 999 rate-limited,公司 page 200。Wikipedia en.wikipedia.org/wiki/Tana_(software) 404。私人公司 revenue / ARR / 净利润 / 额外总融资 (高于 $25M 总) / 估值（仅 $100M post-money 公开）/ 企业客户数 仍 partial。中文 Tana MVP 明文标为「产品假设，不作为事实」。Agentic workspace / meeting-as-work-surface / supAI agents 是判断而非事实，需贯穿 [判断] 标记。
+  review_notes: Tana draft reviewed in P31; product claims checked against tana.inc, outliner.tana.inc, official pricing, company/team, integrations, learn/changelog, Tana Outliner pages, official blog posts, community/social sources, TechCrunch article (Ingrid Lunden 2025-02-03), Northzone portfolio/tana (200), Lightspeed company/tana (200), QQ tech translation, and accessible secondary sources where available. Product mechanism is strongly supported by official Tana sources. Funding facts now dual-sourced; revenue, ARR, post-money valuation other than the disclosed $100M post-money Series A, employee count, customer count, user count, Product Hunt award verification, agent adoption, meeting count, and security/compliance completion status remain partial unless independently verified by at least two high-quality sources.
 summary:
   total: 13
-  reviewed: 12
-  draft: 1
+  reviewed: 13
+  draft: 0
   verified: 0
   partial: 13
   legacy_manual_analyses: 9
   legacy_今日复盘: 1
-  p_reports_total: 21
+  p_reports_total: 22
 status_transitions:
 - from: draft
   to: reviewed

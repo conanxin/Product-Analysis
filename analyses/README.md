@@ -18,7 +18,7 @@
 | Replit | ai-cloud-development | [2026-07-01-replit.md](ai-assisted/2026-07-01-replit.md) | reviewed | partial | 浏览器 IDE + 云端运行时 + 部署 + 数据库 + AI Agent 结合为从想法到上线的云端应用工作台 |
 | Coda | doc-database | [2026-07-01-coda.md](ai-assisted/2026-07-01-coda.md) | reviewed | partial | 文档 + 表格 + 公式 + 按钮 + 自动化 + Packs + AI 整合为 doc-as-app 工作台（被 Grammarly 收购，2025-10 Superhuman rebrand） |
 | Obsidian | local-first-knowledge-base | [2026-07-01-obsidian.md](ai-assisted/2026-07-01-obsidian.md) | reviewed | partial | 将本地 Markdown 文件与双向链接、graph view 和插件生态结合，把笔记从"记录工具"重构为"个人知识操作系统" |
-| Tana | ai-structured-knowledge-workspace | [2026-07-01-tana.md](ai-assisted/2026-07-01-tana.md) | draft | partial | Tana 把节点式大纲、Supertags、知识图谱、语音/会议输入和 AI agents 结合起来，将笔记从"记录信息"推进到"在上下文中组织、提取并执行工作"的 agentic 知识工作台；当前 tana.inc 已转向"agentic meeting platform"，原 outliner 单独保留为 Tana Outliner |
+| Tana | ai-structured-knowledge-workspace | [2026-07-01-tana.md](ai-assisted/2026-07-01-tana.md) | reviewed | partial | Tana 把节点式大纲、Supertags、知识图谱、语音/会议输入和 AI agents 结合起来，将笔记从"记录信息"推进到"在上下文中组织、提取并执行工作"的 agentic 知识工作台；当前 tana.inc 已转向"agentic meeting platform"，原 outliner 单独保留为 Tana Outliner |
 
 ## 2. 按产品类型分组
 
@@ -65,14 +65,14 @@
 
 | 维度 | 数值 | 说明 |
 |------|------|------|
-| AI 辅助分析 | 13 | 12 reviewed + 1 draft |
-| reviewed | 12 | 人工复核完成 |
-| draft | 1 | — |
+| AI 辅助分析 | 13 | 13 reviewed + 0 draft |
+| reviewed | 13 | 人工复核完成 |
+| draft | 0 | — |
 | verified | 0 | 严格标准下未达成 |
 | partial | 13 | 主体产品机制 verified；高风险事实 partial |
 | 旧人工分析 (legacy) | 9 | 根目录 legacy notes |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
-| P 报告累计 | 21 | 1 legacy + 10 AI + 1 索引 + 2 review + 1 P21 review + 1 P24 + 1 P25 + 1 P26 + 1 P27 + 1 P28 + 1 P30 |
+| P 报告累计 | 22 | 1 legacy + 10 AI + 1 索引 + 2 review + 1 P21 review + 1 P24 + 1 P25 + 1 P26 + 1 P27 + 1 P28 + 1 P30 + 1 P30.1 + 1 P30.2 + 1 P31 |
 
 **说明**：
 - `partial` 不是失败，而是表示部分**高风险事实**（融资、估值、收入、收购、IPO、用户量、合作金额、价格变化、发布时间线、法律诉讼）仍未达到双源 verified 标准。
