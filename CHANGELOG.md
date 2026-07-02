@@ -1,5 +1,40 @@
 # Changelog
 
+## P30.1 - Tana Protocol Alignment + Source-Hardening
+
+**日期：** 2026-07-02
+**变更类型：** source-hardening + protocol-alignment + competitor-expansion
+
+### 变更内容
+
+P30.1 接续 P30，根据用户后续补充的完整 P30 protocol（§11/§12/§13/§15 强调「至少」基线），扩充 Tana 文章。
+
+#### 关键变更
+
+1. **§11 竞品扩展 14 → 21 家**：
+   - Outliner 侧新增 **Heptabase**（"intelligent, visual knowledge base" / block-based / PDF + YouTube + Note whiteboard + cards / Readwise + Zotero / Heptabase CLI 与 Claude Code / Codex 集成）；**Anytype**（"safe haven for digital collaboration" / local-first + p2p + offline + on-device encryption / block-based editor + databases + templates + widget / open protocols）；**Capacities**（"studio for your mind" / connected objects / daily notes / meeting notes / saved links / AI 入口 / Pro + Believer plans）。全部 HTTP-200 verified（heptabase.com / anytype.io / capacities.io）。
+   - Meeting 侧新增 **Circleback**（"unbelievably good meeting notes" / AI notes + action items + automations + search / Y Combinator backed / 100+ languages / integrations）；**Slack AI**（slack.com/features/ai verified 200）；**Zoom AI Companion**（zoom.com/en/ai-assistant/ verified 200）；**Microsoft 365 Copilot**（microsoft.com/en-us/microsoft-copilot + learn.microsoft.com/en-us/microsoft-365/copilot/ verified 200）。
+   - §11.4 替代方案表更新，补充 Heptabase / Anytype / Capacities（PKM 替代）/ Circleback / Read.ai / Fathom（meeting 替代）/ Slack AI / Zoom AI Companion / Microsoft 365 Copilot（平台 AI）/ v0 / Lovable / Claude Code（AI 编排）。
+
+2. **§12 主要优点 7 → 8 条**：新增 *"Outliner 老社区 + 双线产品双融资结构"* — Tana Inc. 同时维护 Outliner 老用户与主线新用户两条独立商业化路径，对 PKM 独立工具与会议 AI 工具两条赛道形成对冲。
+
+3. **§13 主要问题 7 → 8 条**：新增 *"Meeting agent '会中执行' 的真实可靠性未亲验"* — botless meeting capture / Skills 自动产出 artifact 等没有第三方独立 verified 评测，对错误 transcribe / hallucination 的失败模式没有公开 verdict。
+
+4. **§15 对我自己项目的启发 6 → 7 条**：新增 *"Source-first + Source verification 是 AI 辅助分析的稳定器"* — Tana 分析中虽然很多第三方媒体 unavailable（Cloudflare 403 / paywall），但官方源仍然构成 main source；高风险事实明确 partial；这是 Product-Analysis 的 source-quality-checklist v1.0 与 source-hardening 方法在 P30 / P28(Obsidian) / P29(Obsidian 复核) 中的成功复用。
+
+5. **§17.1 显式确认 step**：添加首句 *"本文是 AI-assisted draft，尚未人工复核为 reviewed。下一步需要 P31 人工复核将 review_status 从 draft 升级为 reviewed。"* 即明确 P31 人工复核任务是必要后续动作，且不写"人工已复核通过"。
+
+#### 文件变更
+
+- `analyses/ai-assisted/2026-07-01-tana.md` — §11 / §12 / §13 / §15 / §17.1 更新；17 节 + Sources + 1,066 lines
+- `CHANGELOG.md` — 本节顶部记录
+
+### 验证
+
+- `python3 scripts/verify_ai_analysis_index.py` → PASS（13 / 12 / 1 / 13 / 0）
+
+---
+
 ## P30 - Tana AI Assisted Analysis & Index Sync
 
 **日期：** 2026-07-02
