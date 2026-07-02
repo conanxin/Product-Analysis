@@ -284,8 +284,8 @@ analyses:
   category: local-first-knowledge-base
   analysis_type: ai-assisted
   created_at: '2026-07-01'
-  review_status: draft
-  reviewed_at: null
+  review_status: reviewed
+  reviewed_at: '2026-07-02'
   source_url_verification_status: partial
   tags:
   - note-taking
@@ -298,19 +298,29 @@ analyses:
   quality_notes:
     product_mechanism: verified
     high_risk_facts: partial
-    reason: P28 初稿：主体产品机制 verified — obsidian.md 官网 25+ 页面 HTTP-200；官方 blog future-of-plugins
+    reason: P29 人工复核完成：主体产品机制 verified — obsidian.md 官网 25+ 页面 HTTP-200；官方 blog future-of-plugins
       (2026-05-12) verified — 4000+ plugins / 120M downloads；官方 blog cure53-tob-sync-audits
-      (2026-05-13) verified — Sync 2020 launch / 安全审计。创始人 / 收入 / ARR / 融资 / 估值 / 用户量
-      partial — 私人公司无公开数据 / 主流媒体 paywall。
+      (2026-05-13) verified — Sync 2020 launch / 安全审计；P29 补充 cnblogs ForestYe (2020-06-15)
+      二手支撑创始人身份。创始人 / 收入 / ARR / 融资 / 估值 / 员工数 / 用户总量 partial — 私人公司无公开数据；Wikipedia
+      被 blocking 策略拦截；主流媒体（The Verge / Wired / Ars Technica / TechCrunch）未在 P29 阶段找到独立
+      verified 报道。Obsidian 是私人公司 / bootstrapped / 无 SEC filings。
+  review_notes: Obsidian draft reviewed in P29; product claims checked against Obsidian
+    official pages, pricing, Sync, Publish, Canvas, Web Clipper, CLI, mobile, roadmap,
+    security/privacy/terms/license, docs/help, community plugins/themes, official
+    blog posts, and accessible secondary sources where available. Product mechanism
+    is strongly supported by official Obsidian sources; founder details, revenue,
+    ARR, financing, valuation, employee count, total user count, and broader community-scale
+    claims remain partial unless independently verified by at least two high-quality
+    sources.
 summary:
   total: 12
-  reviewed: 11
-  draft: 1
+  reviewed: 12
+  draft: 0
   verified: 0
   partial: 12
   legacy_manual_analyses: 9
   legacy_今日复盘: 1
-  p_reports_total: 19
+  p_reports_total: 20
 status_transitions:
 - from: draft
   to: reviewed

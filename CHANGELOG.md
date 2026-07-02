@@ -1,5 +1,53 @@
 # Changelog
 
+## P29 - Obsidian Review and Index Status Sync
+
+**日期：** 2026-07-02
+**变更类型：** review + source-hardening + index-sync + validation
+
+### 变更内容
+
+完成 P29 Obsidian 人工复核，将 draft 升级为 reviewed，并同步所有索引。
+
+#### 关键步骤
+
+1. **YAML 状态修正：** `analyses/ai-assisted/2026-07-01-obsidian.md`
+   - review_status: draft → reviewed
+   - reviewed_at: null → 2026-07-02
+   - source_url_verification_status: partial（保持）
+   - review_notes 替换为 P29 正式 reviewed 说明
+   - source_quality_notes 更新：P29 source-hardening 补充说明
+2. **Source-hardening：**
+   - 主动搜索 "Shida Li" "Erica Xu" 英文 primary source（Product Hunt / LinkedIn / 创始人采访）→ 未找到独立 verified 源
+   - 补充 cnblogs ForestYe (2020-06-15) 二手来源 → 创始人可信度从低升至中低
+   - 4000+ plugins / 120M downloads 复核：来自 obsidian.md/blog/future-of-plugins/ (2026-05-12) 单源，标注日期
+   - 主流媒体（The Verge / Wired / Ars Technica / TechCrunch）未找到 Obsidian 专项 verified 报道
+3. **§17 更新：**
+   - §17.1 当前状态：更新为 P29 人工复核完成
+   - §17.2 可信度分级：创始人从中低、发布时间从中低、plugin/downloads 从中高（新增 2 行）
+   - §17.3 改进方向：P28 5 条 + P29 补充 5 条 = 10 条
+   - §17.4 Sources 表：新增 cnblogs ForestYe 行
+4. **索引同步：**
+   - README.md：Obsidian 行 draft → reviewed；质量状态 11 reviewed + 1 draft → 12 reviewed + 0 draft；P28 todo checked
+   - analyses/README.md：Obsidian 行 draft → reviewed；质量状态同步；candidate list 标注 P29 reviewed
+   - analyses/index.yml：Obsidian 条目 review_status/reviewed_at/review_notes/quality_notes 更新；summary reviewed 11→12 / draft 1→0 / p_reports_total 19→20
+5. **Validator：** PASS (12 analyses, 12 reviewed, 0 draft, 12 partial, 0 verified)
+
+### 文件变更
+
+- `analyses/ai-assisted/2026-07-01-obsidian.md` — YAML 状态修正 + §17 更新 + source_urls 新增 1 条 (31 total)
+- `README.md` — Obsidian 行 + 质量状态 + P28 todo checked
+- `analyses/README.md` — Obsidian 行 + 质量状态 + candidate list
+- `analyses/index.yml` — Obsidian 条目 + summary
+- `CHANGELOG.md` — P29 entry
+- `reports/P29-obsidian-review-and-index-status-sync-report.md` — 新增
+
+### 验证
+
+- `python3 scripts/verify_ai_analysis_index.py` → PASS
+- 12 analyses, 12 reviewed, 0 draft, 12 partial, 0 verified
+
+
 ## P28 - Obsidian AI-Assisted Product Analysis
 
 **日期：** 2026-07-02

@@ -17,7 +17,7 @@
 | Webflow | visual-web-development | [2026-07-01-webflow.md](ai-assisted/2026-07-01-webflow.md) | reviewed | partial | 视觉设计 + CMS + 托管 + SEO/AEO + 优化 + AI 建站整合为可视化 Web 生产系统 |
 | Replit | ai-cloud-development | [2026-07-01-replit.md](ai-assisted/2026-07-01-replit.md) | reviewed | partial | 浏览器 IDE + 云端运行时 + 部署 + 数据库 + AI Agent 结合为从想法到上线的云端应用工作台 |
 | Coda | doc-database | [2026-07-01-coda.md](ai-assisted/2026-07-01-coda.md) | reviewed | partial | 文档 + 表格 + 公式 + 按钮 + 自动化 + Packs + AI 整合为 doc-as-app 工作台（被 Grammarly 收购，2025-10 Superhuman rebrand） |
-| Obsidian | local-first-knowledge-base | [2026-07-01-obsidian.md](ai-assisted/2026-07-01-obsidian.md) | draft | partial | 将本地 Markdown 文件与双向链接、graph view 和插件生态结合，把笔记从"记录工具"重构为"个人知识操作系统" |
+| Obsidian | local-first-knowledge-base | [2026-07-01-obsidian.md](ai-assisted/2026-07-01-obsidian.md) | reviewed | partial | 将本地 Markdown 文件与双向链接、graph view 和插件生态结合，把笔记从"记录工具"重构为"个人知识操作系统" |
 
 ## 2. 按产品类型分组
 
@@ -61,9 +61,9 @@
 
 | 维度 | 数值 | 说明 |
 |------|------|------|
-| AI 辅助分析 | 12 | 11 reviewed + 1 draft |
-| reviewed | 11 | 人工复核完成 |
-| draft | 1 | Obsidian 待人工复核 |
+| AI 辅助分析 | 12 | 12 reviewed + 0 draft |
+| reviewed | 12 | 人工复核完成 |
+| draft | 0 | — |
 | verified | 0 | 严格标准下未达成 |
 | partial | 12 | 主体产品机制 verified；高风险事实 partial |
 | 旧人工分析 (legacy) | 9 | 根目录 legacy notes |
@@ -84,7 +84,7 @@
 |------|------|------|------|
 | ~~Replit~~ | AI coding + hosting | 已分析 | ~~私人 AI coding / hosting 公司，有私募融资报道~~ P22 draft |
 | Coda | workspace | 中 | 与 Notion 重叠 |
-| ~~Obsidian~~ | knowledge management | 已分析 | ~~私人 / local-first / markdown / 双向链接 / 插件生态~~ P28 draft
+| ~~Obsidian~~ | knowledge management | 已分析 | ~~私人 / local-first / markdown / 双向链接 / 插件生态~~ P28 draft → P29 reviewed
 | Tana | knowledge management | 中 | 私人但产品差异化 |
 | Arc | browser | 中 | 私人，浏览器赛道 |
 | Claude Code | ai-coding | 中 | Anthropic 拥有，但与 Cursor 重叠 |
