@@ -137,7 +137,7 @@ Product-Analysis/
 - [x] P22.1: 修复 Replit YAML 重复 source_quality_notes 字段 (2 → 1)
 - [x] P23: 人工复核 Replit 文章 (draft → reviewed;§17.1 升级;§17.2 解决 $250M Series C vs $400M Series D 轮次字母分歧;§17.3 厘清 source count 口径;YAML review_status / reviewed_at / review_notes 同步)
 - [x] P23.1: 修复 Replit 复核后 README 质量状态漂移 (9 reviewed → 10 reviewed;AI 辅助分析 / reviewed / partial 三项同步;未改其他三处)
-- [x] P24: 新增 AI 分析索引一致性 + YAML 质量检查脚本 (scripts/verify_ai_analysis_index.py + docs/validation-workflow.md;检查 front matter 提取 / 重复 key / 必备字段 / source_urls 格式 / index.yml 解析 / article↔index 一致性 / summary count / README 质量状态 / 产品状态行;11 大类 ~80 子项;退出码 0=PASS 1=FAIL)
+- [x] P24: 新增 AI 分析索引一致性 + YAML 质量检查脚本 (scripts/verify_ai_analysis_index.py + docs/validation-workflow.md;11 大类检查;退出码 0=PASS 1=FAIL;首跑检出 9 项真实问题:3 YAML scan errors + 6 one_line_insight 引号不一致)
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 

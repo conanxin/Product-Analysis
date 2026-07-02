@@ -1,5 +1,32 @@
 # Changelog
 
+## P24.1 - Validation Script Output Format Revision
+
+**日期：** 2026-07-02
+**变更类型：** automation-refinement / docs-only
+
+### 变更内容
+
+P24 (70defde) 交付了初版验证脚本，P24.1 根据用户反馈修订：
+
+1. **输出格式** — 改为规范的 `PASS: AI analysis index validation passed` / `FAIL: AI analysis index validation failed` 格式 + 错误代码 `[CODE] message`
+2. **简化产品行检查** — 不再解析完整 Markdown 表格，改用稳健的字符串匹配（产品名存在 + 行含 expected status）
+3. **脚本精简** — 从 ~22 KB 缩减到 ~13 KB，移除 ANSI 颜色 / Report class 等非必要代码
+4. **docs/validation-workflow.md 重写** — 增加错误代码表、常见失败模式表、3 种工作流
+5. **README 质量状态检查修正** — 不检查 `total`（README 表格用 `AI 辅助分析` 而非 `total`）
+
+### 首次运行结果
+
+84 项检查 → 75 通过 / 9 失败（3 YAML scan errors + 6 one_line_insight 引号不一致）
+
+### 未修改
+
+- analyses/ai-assisted/*.md
+- analyses/index.yml
+- analyses/README.md
+- 旧人工分析文章
+- pic/
+
 ## P24 - AI Analysis Index Validation Script
 
 **日期：** 2026-07-02
