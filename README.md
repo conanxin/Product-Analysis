@@ -84,6 +84,7 @@ Product-Analysis/
 | 2026-07-01 | Canva | `analyses/ai-assisted/2026-07-01-canva.md` | AI 辅助 | design-tools、ai-design、templates、visual-suite、creator-tools、b2b-saas | 将模板、视觉编辑器、品牌资产、企业协作和 AI 生成能力整合为大众化内容生产平台 | reviewed | partial |
 | 2026-07-01 | Webflow | `analyses/ai-assisted/2026-07-01-webflow.md` | AI 辅助 | website-builder、visual-development、no-code、cms、ai-website-builder、b2b-saas | 将视觉设计、CMS、托管、SEO/AEO、优化和 AI 建站能力整合为可视化 Web 生产系统 | reviewed | partial |
 | 2026-07-01 | Replit | `analyses/ai-assisted/2026-07-01-replit.md` | AI 辅助 | ai-coding、cloud-ide、agentic-workflow、app-builder、deployment、b2b-saas | 将浏览器 IDE、云端运行环境、部署和 AI Agent 结合为从想法到上线的云端应用工作台 | reviewed | partial |
+| 2026-07-01 | Coda | `analyses/ai-assisted/2026-07-01-coda.md` | AI 辅助 | productivity、docs、database、workflow、automation、ai-productivity | 将文档、表格、公式、按钮和自动化组合为可操作的 doc-as-app 工作台 | draft | partial |
 
 ---
 
@@ -132,11 +133,11 @@ python3 scripts/verify_ai_analysis_index.py
 |------|---:|------|
 | 旧人工分析 (legacy) | 9 | legacy-note（根目录） |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
-| AI 辅助分析 | 10 | 全部 reviewed |
+| AI 辅助分析 | 11 | 10 reviewed + 1 draft |
 | - reviewed | 10 | 人工复核完成 |
-| - draft | 0 | — |
+| - draft | 1 | Coda（P26 初稿） |
 | - verified | 0 | 严格标准下未达成 |
-| - partial | 10 | 主体产品功能 verified；高风险事实 partial |
+| - partial | 11 | 主体产品功能 verified；高风险事实 partial |
 
 **说明**：partial 是严格质量标准下的合理结果，不是失败。详细评判标准见 [docs/review-status-guide.md](docs/review-status-guide.md)。
 
@@ -158,9 +159,10 @@ python3 scripts/verify_ai_analysis_index.py
 - [x] P23.1: 修复 Replit 复核后 README 质量状态漂移 (9 reviewed → 10 reviewed;AI 辅助分析 / reviewed / partial 三项同步;未改其他三处)
 - [x] P24: 新增 AI 分析索引一致性 + YAML 质量检查脚本 (scripts/verify_ai_analysis_index.py + docs/index-sync-validation.md;11 大类检查;首跑 9 项 FAIL 后修复 12 项真实问题后 PASS)
 - [x] P25: 接入 AI 分析索引一致性 GitHub Actions CI (.github/workflows/ai-analysis-index-check.yml;触发 push/pull_request/workflow_dispatch;安装 PyYAML + 运行脚本;不访问外部 URL)
+- [x] P26: 新增 Coda AI 辅助分析 (第十一篇 AI 分析;55 个 source URLs 实链验证;主体产品机制 verified;Grammarly 收购 primary-source verified;融资/估值/Superhuman rebrand partial — 私人公司/未 IPO/主流媒体 paywall/800+/600+ 数字不一致)
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 
 ---
 
-*最后更新：2026-07-02 (P25 接入 AI 分析索引一致性 GitHub Actions CI;1) .github/workflows/ai-analysis-index-check.yml 新建 - 触发 push/pull_request/workflow_dispatch;安装 PyYAML + 运行本地脚本;不访问外部 URL;2) docs/index-sync-validation.md 增加 §8 GitHub Actions CI 章节;3) README.md '如何校验索引一致性' 增加 CI 说明 + P25 todo;4) 未修改 scripts/verify_ai_analysis_index.py / analyses/ai-assisted/*.md / analyses/index.yml / analyses/README.md;5) 本地 python3 scripts/verify_ai_analysis_index.py 返回 PASS)*
+*最后更新：2026-07-02 (P26 新增第十一篇 AI 辅助产品分析 Coda;1) analyses/ai-assisted/2026-07-01-coda.md 新建 - 17 节正文 + 55 个 source URLs 实链验证;2) README.md AI 索引新增 Coda 行 + 质量状态 10→11 reviewed / 0→1 draft / 10→11 partial;3) analyses/README.md 同步新增 Coda 行 + 质量状态;4) analyses/index.yml 同步新增 Coda 条目 + summary 计数 11/10/1/11/0;5) CHANGELOG.md 顶部 P26 记录;6) 不修改 scripts/verify_ai_analysis_index.py / 旧人工分析文章 / pic/;7) python3 scripts/verify_ai_analysis_index.py 返回 PASS)*

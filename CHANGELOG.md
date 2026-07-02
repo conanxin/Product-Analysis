@@ -1,5 +1,109 @@
 # Changelog
 
+## P26 - Coda AI-Assisted Product Analysis
+
+**日期：** 2026-07-02
+**变更类型：** AI-assisted content + index sync
+
+### 变更内容
+
+新增第十一篇 AI 辅助产品分析 Coda，严格遵守 source-first workflow。
+
+#### 新增文件
+
+1. **analyses/ai-assisted/2026-07-01-coda.md** (new, 618 lines)
+   - 17 节正文 + 55 个 source_urls
+   - YAML front matter 使用 custom StrictSafeLoader 可解析
+   - review_status: draft
+   - source_url_verification_status: partial
+   - one_line_insight: Coda 将文档、表格、公式、按钮、自动化和应用集成组合成同一个 doc-as-app 工作台
+
+2. **reports/P26-coda-ai-assisted-analysis-report.md** (new)
+
+#### 修改文件
+
+1. **README.md**
+   - "AI 辅助分析索引" 表格新增 Coda 行
+   - "当前质量状态" 更新: 10 → 11 (AI 辅助分析) / 0 → 1 (draft) / 10 → 11 (partial)
+   - "下一步计划" 新增 P26 todo
+   - "最后更新" 改为 P26 记录
+
+2. **analyses/README.md**
+   - "AI 辅助分析总览" 表格新增 Coda 行
+   - "按产品类型分组" 新增 "Doc Database / App Doc" 分类
+   - "当前质量状态" 同步更新
+   - "下一步分析候选" 移除 Coda
+   - "推荐阅读路径" 新增 "Doc-as-App 路线"
+
+3. **analyses/index.yml**
+   - updated_at: 2026-07-01 → 2026-07-02
+   - 新增 Coda 条目（product / file / category / analysis_type / created_at / review_status / reviewed_at / source_url_verification_status / tags / one_line_insight / quality_notes）
+   - summary 更新: total 10→11 / draft 0→1 / partial 10→11 / p_reports_total 16→17
+   - by_category 新增 doc-database / Coda
+   - reading_paths 新增 doc_as_app_path: Notion → Coda
+
+4. **CHANGELOG.md** — 顶部 prepend P26 记录
+
+### Source-First Workflow
+
+P26 遵循 P22 起实行的 source-first 原则：
+1. 先收集并验证 Coda 相关 URL（55 个 source_urls 实链验证）
+2. 使用 Coda 官方 blog (coda.io/blog/about-coda/grammarly-acquires-coda) 作为 2024-12 Grammarly 收购的 primary source
+3. Wikipedia (Coda document editor / Grammarly) 作为 reference source
+4. Grammarly 官方产品页 (grammarly.com/coda) 作为 partner-official source
+5. 主流媒体 (Axios / TechCrunch / CNBC / Forbes / Fast Company / Bloomberg) paywall / 403 / 401 / 404 不可直接访问，因此融资 / 估值 / ARR / 用户量 / Superhuman rebrand 仍 partial
+
+### Source URL 实链验证结果
+
+| 类型 | 数量 | 状态 |
+|------|---:|------|
+| Coda 官方主页 / 产品 / Packs / 集成 / 安全 / Trust | 30+ | verified (200) |
+| Coda Blog（Grammarly 收购 / 高级功能 / Grammarly 案例） | 3 | verified (200) |
+| Coda 模板 / Packs 详情页 | 9 | verified (200) |
+| Grammarly 官方产品页（含 Coda 入口） | 7 | verified (200) |
+| Wikipedia 参考（Coda document editor / Grammarly） | 2 | verified (200) |
+| Cloudflare protected (coda.io/product/coda-brain / help.coda.io) | 2 | 301→403 |
+| 重定向 (coda.io/enterprise / templates / ai / api) | 4 | 301 redirect |
+| 404 (coda.io/automations / buttons / tables / press / announcements) | 5 | 404 |
+| 主流媒体 paywall (Fast Company / Axios / CNBC / Bloomberg / Crunchbase) | 5+ | 403 / paywall |
+
+总计 source_urls: 55，全部实链可达或说明状态
+
+### 产品定位（严格遵循 P26 任务要求）
+
+- Coda 是 **被 Grammarly 收购** 的 **私人生产力 / doc-as-app 产品**（不是公开公司）
+- 当前定位: AI productivity / doc-database / app-doc / Grammarly-Superhuman productivity suite doc engine
+- 高风险事实默认 partial（融资 / 估值 / 收购金额 / 用户数 / ARR / Superhuman 整合效果）
+- 唯一双源验证的: Grammarly 收购事实 (coda.io blog primary + Wikipedia reference)
+
+### validator 验证结果
+
+```
+$ python3 scripts/verify_ai_analysis_index.py
+PASS: AI analysis index consistency verified
+- analyses found: 11
+- reviewed: 10
+- draft: 1
+- partial: 11
+- verified: 0
+```
+
+初跑发现 1 项真实错误（index.yml 中 review_status 字段冒号被解析为 YAML key），已修复。
+
+### 未修改文件
+
+- scripts/verify_ai_analysis_index.py — 未动
+- 旧 10 篇 AI 辅助分析文章 — 未动
+- 旧人工分析文章 — 未动
+- pic/ / templates/ — 未动
+- .github/workflows/ai-analysis-index-check.yml — 未动
+- docs/* — 未动
+
+### CI 状态
+
+- P25 GitHub Actions CI 仍正常
+- 此次 Coda 文章中 `review_status: draft` + `source_url_verification_status: partial` 是 AI-assisted draft 标志，不是 failure
+
 ## P25 - AI Analysis Index Validation CI
 
 **日期：** 2026-07-02

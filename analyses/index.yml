@@ -1,5 +1,5 @@
 version: 1
-updated_at: 2026-07-01
+updated_at: 2026-07-02
 analyses:
 - product: Perplexity
   file: analyses/ai-assisted/2026-07-01-perplexity.md
@@ -222,15 +222,42 @@ analyses:
       verified 200) 支撑 (Inc URL 403)。数据库删除事件 2025-07 由 Wikipedia + 404 Media + SaaStr 多源 verified 200 支撑。AI Darwin Awards
       提名 2025 由 Wikipedia + 404 Media 双源 verified 200 支撑。P22.1 已修复 YAML 重复 source_quality_notes key；P23 验证 yaml.safe_load
       OK + review_status / source_quality_notes 都是单 key。中文 Replit MVP / Agent 真实可用性属判断。
+- product: Coda
+  file: analyses/ai-assisted/2026-07-01-coda.md
+  category: doc-database
+  analysis_type: ai-assisted
+  created_at: 2026-07-01
+  review_status: draft
+  reviewed_at: null
+  source_url_verification_status: partial
+  tags:
+  - productivity
+  - docs
+  - database
+  - workflow
+  - automation
+  - ai-productivity
+  one_line_insight: Coda 将文档、表格、公式、按钮、自动化和应用集成组合成同一个 doc-as-app 工作台，把团队协作从“文档记录”重构为“可操作的业务应用”。
+  quality_notes:
+    product_mechanism: verified
+    high_risk_facts: partial
+    reason: P26 初稿：55 个 YAML source_urls (coda.io 45 + grammarly.com 7 + Wikipedia 2 + coda.io templates/packs 间接 1) verified
+      200。主体产品机制 verified 高可信度 (doc / table / formula / button / automation / Packs / Coda AI / 600+ integrations / Pricing / Security
+      / Trust / Compare)。Grammarly 收购事实 (2024-12 all-stock deal，金额未披露，Mehrotra 任合并公司 CEO) 由 coda.io/blog/about-coda/grammarly-acquires-coda
+      primary-source verified 200。融资 / 估值 / ARR / 用户量 / Superhuman rebrand 仍 partial — Wikipedia 二手记载 2021 $100M @ $1.4B
+      估值 + 2017 前 $60M + 2020 $80M，但 Forbes / Fast Company / TechCrunch / Axios / CNBC 主要媒体 paywall (403 / 401 / 404) 不能直接 verified。Coda
+      Brain 产品页 coda.io/product/coda-brain 301→ 403 Cloudflare protected。Coda 是私人公司 / 被 Grammarly 收购 / 无 SEC filings。800+ integrations
+      (coda.io/blog) vs 600+ integrations (coda.io/product/ai) 官方数字不一致需进一步核实。中文 Coda MVP / Coda Brain 真实可用性属判断。P27
+      下一步人工复核 review_status draft → reviewed。
 summary:
-  total: 10
+  total: 11
   reviewed: 10
-  draft: 0
+  draft: 1
   verified: 0
-  partial: 10
+  partial: 11
   legacy_manual_analyses: 9
   legacy_今日复盘: 1
-  p_reports_total: 16
+  p_reports_total: 17
 status_transitions:
 - from: draft
   to: reviewed
@@ -283,6 +310,9 @@ by_category:
 - category: ai-cloud-development
   products:
   - Replit
+- category: doc-database
+  products:
+  - Coda
 reading_paths:
   ai_product_path:
   - Perplexity
@@ -307,3 +337,6 @@ reading_paths:
   ai_app_builder_path:
   - Cursor
   - Replit
+  doc_as_app_path:
+  - Notion
+  - Coda
