@@ -1,5 +1,130 @@
 # Changelog
 
+## P36 - GitHub Pages Static Showcase Site
+
+**日期：** 2026-07-02
+**变更类型：** static showcase / docs-only / public portfolio
+**公开站点目标：** https://conanxin.github.io/Product-Analysis/
+
+### 变更内容
+
+完成 P36 — GitHub Pages 静态展示页。把 Phase 1 包装为可公开浏览的静态网站。
+
+#### 新增
+
+- **`site/index.html`** — 静态首页（15,460 bytes）
+  - Hero（标题 / 副标题 / 6 个 badges / 3 个 CTA 按钮）
+  - Project Snapshot（6 卡片：13 AI 分析 / 13 reviewed / 0 draft / 13 partial / 9 legacy / 22+ P 报告）
+  - Quick Navigation（8 个文档导航卡片）
+  - Product Landscape（6 类分组 / noscript fallback）
+  - Interactive Product Cards（filter buttons + search + JS 渲染 / 静态 fallback 列表）
+  - Source-first Workflow（8 步骤）
+  - Recommended Reading Paths（6 条路径）
+  - Phase 1 Limits（7 条诚实边界）
+
+- **`site/assets/styles.css`** — CSS（12,057 bytes）
+  - GitHub Dark 主题色板（CSS variables）
+  - 响应式 breakpoint 720px / 480px / print
+  - 卡片 / 网格 / 徽章 / 按钮等通用样式
+  - 不使用外部 CDN / 不使用远程字体
+
+- **`site/assets/app.js`** — 原生 JS（6,042 bytes）
+  - 加载 `data/products.json`
+  - 渲染 Product Landscape（6 类分组）
+  - 渲染 Product Cards（13 张）
+  - Filter buttons（All / Search / Coding / Design / Knowledge / Agentic / Command）
+  - Search input（按 name / category / tags）
+  - visible-count 显示
+  - fallback：JS 失败时显示错误信息 + 静态 fallback 列表
+
+- **`site/data/products.json`** — 静态快照（9,128 bytes）
+  - summary（13 reviewed / 13 partial / 6 categories）
+  - products（13 个，含 product / category / category_key / file / one_line / tags / review_status / source_url_verification_status）
+  - landscape（6 类分组）
+  - repo 信息（github_url / blob_base / pages_url）
+
+- **`site/404.html`** — 静态 404 页（1,505 bytes）
+
+- **`site/.nojekyll`** — 禁用 Jekyll（0 bytes — GitHub Pages 不走 Jekyll 处理）
+
+- **`.github/workflows/pages.yml`** — GitHub Pages 部署 workflow（1,258 bytes）
+  - 触发：push 到 master 修改 site/** 或 workflow 本身 + workflow_dispatch
+  - permissions：pages: write / id-token: write
+  - concurrency：pages group / 不取消 in-progress
+  - jobs.build：checkout → configure-pages → 文件存在性测试 → upload artifact
+  - jobs.deploy：deploy-pages@v4
+  - 不修改已有 `.github/workflows/ai-analysis-index-check.yml`
+
+#### 同步
+
+- **README.md** — 3 处更新：
+  - `## 快速入口` 加 GitHub Pages Showcase 链接（指向 conanxin.github.io）
+  - `## 项目定位` 后 Phase 1 状态段加 "如果 GitHub Pages 尚未启用，请以 README / Release Notes 为主；Pages workflow 已准备好"
+  - `## 下一步计划` `[ ] P36` → `[x] P36` + `P37` 改为 "可选增强展示页交互 / 页面内容自动同步" / `P38` 保留
+
+- **CHANGELOG.md** — 顶部新增本 `## P36 - GitHub Pages Static Showcase Site` 章节
+
+#### 验证
+
+```
+$ python3 scripts/verify_ai_analysis_index.py
+
+PASS: AI analysis index consistency verified
+- analyses found: 13
+- reviewed: 13
+- draft: 0
+- partial: 13
+- verified: 0
+```
+
+#### Smoke tests（本地预跑）
+
+```
+✓ site/index.html exists
+✓ site/assets/styles.css exists
+✓ site/assets/app.js exists
+✓ site/data/products.json exists
+✓ site/404.html exists
+✓ site/.nojekyll exists
+✓ .github/workflows/pages.yml exists
+✓ .github/workflows/ai-analysis-index-check.yml (untouched)
+✓ products.json parses; 13 products; all expected names present
+✓ app.js syntax OK (node -c)
+✓ index.html contains all 38 required strings/sections
+✓ data/products.json reference present in app.js
+```
+
+#### Pages 部署状态
+
+`PAGES_STATUS: workflow_added_pending_settings_or_run`
+
+Pages workflow 已添加并 commit 到 master，但：
+1. 仓库 Settings → Pages 可能尚未选择 "GitHub Actions" 作为 source
+2. workflow 第一次运行需要 push 触发或手动 workflow_dispatch
+3. agent 没有强行修改 repo settings
+
+如需启用：
+1. 进入 GitHub repo → Settings → Pages
+2. Source: GitHub Actions
+3. 等待 workflow run 完成后即可访问 https://conanxin.github.io/Product-Analysis/
+
+#### 未修改
+
+- docs/phase-1-release-notes.md
+- docs/ai-product-analysis-phase-1-synthesis.md
+- docs/product-map-navigation.md
+- docs/visual-product-map.md
+- analyses/README.md
+- analyses/index.yml
+- analyses/ai-assisted/*.md
+- scripts/verify_ai_analysis_index.py
+- .github/workflows/ai-analysis-index-check.yml
+- 旧人工分析文章
+- pic/
+- templates/
+
+---
+
 ## P35 - Phase 1 Release and Showcase Polish
 
 **日期：** 2026-07-02

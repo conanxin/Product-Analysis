@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "title": "Product Analysis / AI 产品分析档案",
+    "subtitle": "13 篇 reviewed AI 产品分析 · source-first 工作流 · Phase 1 release",
+    "phase": "Phase 1",
+    "tag": "v1.0.0-phase-1",
+    "total": 13,
+    "reviewed": 13,
+    "draft": 0,
+    "partial": 13,
+    "verified": 0,
+    "legacy_manual_analyses": 9,
+    "p_reports_total": 45,
+    "categories": [
+      "Search / Answer Engine",
+      "Command Layer",
+      "Product Development / Coding",
+      "Design / Visual / Web",
+      "Knowledge / Workspace",
+      "Agentic Workflow"
+    ]
+  },
+  "products": [
+    {
+      "name": "Perplexity",
+      "category": "Search / Answer Engine",
+      "category_key": "search",
+      "file": "analyses/ai-assisted/2026-07-01-perplexity.md",
+      "one_line": "Perplexity 将搜索、引用和对话式答案结合,试图把传统搜索结果页重构为可追问的答案引擎。",
+      "tags": ["ai-search", "search", "answer-engine", "information-retrieval", "llm-product"],
+      "review_status": "reviewed",
+      "source_url_verification_status": "partial"
+    },
+    {
+      "name": "Linear",
+      "category": "Product Development / Coding",
+      "category_key": "coding",
+      "file": "analyses/ai-assisted/2026-07-01-linear.md",
+      "one_line": "Linear 通过极快的交互、清晰的信息架构和面向产品研发团队的工作流设计，把 issue tracking 从\"任务管理工具\"重构为高节奏产品开发系统。",
+      "tags": ["product-development", "issue-tracking", "workflow", "productivity"],
+      "review_status": "reviewed",
+      "source_url_verification_status": "partial"
+    },
+    {
+      "name": "Raycast",
+      "category": "Command Layer",
+      "category_key": "command",
+      "file": "analyses/ai-assisted/2026-07-01-raycast.md",
+      "one_line": "Raycast 把\"启动器\"从系统级工具重构为可扩展的开发者命令面板,并通过 Extensions Store + AI 把工作流本身产品化。",
+      "tags": ["productivity-launcher", "command-palette", "extensions", "developer-tools"],
+      "review_status": "reviewed",
+      "source_url_verification_status": "partial"
+    },
+    {
+      "name": "Cursor",
+      "category": "Product Development / Coding",
+      "category_key": "coding",
+      "file": "analyses/ai-assisted/2026-07-01-cursor.md",
+      "one_line": "Cursor 把代码编辑器、补全、聊天、agentic 多文件编辑和云端 background agent 合并成同一个 IDE,试图把\"写代码\"重构为\"和 AI 协作改代码\"的工作流。",
+      "tags": ["ai-coding", "ide", "code-completion", "agentic", "developer-tools"],
+      "review_status": "reviewed",
+      "source_url_verification_status": "partial"
+    },
+    {
+      "name": "Figma",
+      "category": "Design / Visual / Web",
+      "category_key": "design",
+      "file": "analyses/ai-assisted/2026-07-01-figma.md",
+      "one_line": "Figma 把设计编辑器、实时协作、设计系统、原型、Dev Mode 与 Config 2025/2026 新产品线整合到云端画布,把设计工具从本地文件软件重构为公开公司级的团队协作和产品交付基础设施。",
+      "tags": ["design-collaboration", "cloud-canvas", "design-system", "dev-mode", "ai-design"],
+      "review_status": "reviewed",
+      "source_url_verification_status": "partial"
+    },
+    {
+      "name": "Framer",
+      "category": "Design / Visual / Web",
+      "category_key": "design",
+      "file": "analyses/ai-assisted/2026-07-01-framer.md",
+      "one_line": "Framer 将设计画布、CMS、发布、SEO、模板生态和 AI agent 工作流结合，把网站建设从\"设计稿交付开发\"重构为\"设计即上线\"的 AI 建站平台。",
+      "tags": ["ai-website-builder", "design-canvas", "cms", "seo", "ai-agent"],
+      "review_status": "reviewed",
+      "source_url_verification_status": "partial"
+    },
+    {
+      "name": "Notion",
+      "category": "Knowledge / Workspace",
+      "category_key": "knowledge",
+      "file": "analyses/ai-assisted/2026-07-01-notion.md",
+      "one_line": "Notion 将文档、数据库、知识库、项目管理、日历、邮件和 AI agent 能力整合到同一个 workspace，把个人与团队知识工作从\"文件和工具集合\"重构为可组合的信息操作系统。",
+      "tags": ["ai-workspace", "doc-database", "knowledge-base", "ai-agent", "productivity"],
+      "review_status": "reviewed",
+      "source_url_verification_status": "partial"
+    },
+    {
+      "name": "Canva",
+      "category": "Design / Visual / Web",
+      "category_key": "design",
+      "file": "analyses/ai-assisted/2026-07-01-canva.md",
+      "one_line": "Canva 将模板、设计编辑器、品牌资产、内容生产、协作、企业营销和 AI 生成能力整合到同一个 Visual Suite，把设计从专业软件能力扩展为大众化、组织化的内容生产平台。",
+      "tags": ["design-ai-platform", "templates", "brand-assets", "content-production", "magic-studio"],
+      "review_status": "reviewed",
+      "source_url_verification_status": "partial"
+    },
+    {
+      "name": "Webflow",
+      "category": "Design / Visual / Web",
+      "category_key": "design",
+      "file": "analyses/ai-assisted/2026-07-01-webflow.md",
+      "one_line": "Webflow 将视觉设计、CMS、托管、SEO、AEO、优化、企业协作和 AI 建站能力整合到同一个可视化平台，把网站建设从\"设计稿交付开发\"重构为可视化、可发布、可增长的 Web 生产系统。",
+      "tags": ["visual-web-development", "cms", "seo", "aeo", "ai-website"],
+      "review_status": "reviewed",
+      "source_url_verification_status": "partial"
+    },
+    {
+      "name": "Replit",
+      "category": "Product Development / Coding",
+      "category_key": "coding",
+      "file": "analyses/ai-assisted/2026-07-01-replit.md",
+      "one_line": "Replit 将浏览器 IDE、云端运行环境、部署、数据库、模板社区和 AI Agent 结合到同一个工作台，把软件开发从\"本地编码\"重构为\"用自然语言在云端生成、运行和发布应用\"的工作流。",
+      "tags": ["ai-cloud-development", "browser-ide", "deployments", "ai-agent", "developer-tools"],
+      "review_status": "reviewed",
+      "source_url_verification_status": "partial"
+    },
+    {
+      "name": "Coda",
+      "category": "Knowledge / Workspace",
+      "category_key": "knowledge",
+      "file": "analyses/ai-assisted/2026-07-01-coda.md",
+      "one_line": "Coda 将文档、表格、公式、按钮、自动化和应用集成组合成同一个 doc-as-app 工作台，把团队协作从\"文档记录\"重构为\"可操作的业务应用\"。",
+      "tags": ["doc-database", "doc-as-app", "automation", "packs", "productivity"],
+      "review_status": "reviewed",
+      "source_url_verification_status": "partial"
+    },
+    {
+      "name": "Obsidian",
+      "category": "Knowledge / Workspace",
+      "category_key": "knowledge",
+      "file": "analyses/ai-assisted/2026-07-01-obsidian.md",
+      "one_line": "Obsidian 将本地 Markdown 文件与双向链接、graph view 和插件生态结合，把笔记从\"记录工具\"重构为\"个人知识操作系统\"。",
+      "tags": ["local-first-knowledge-base", "markdown", "graph-view", "plugins", "personal-knowledge-management"],
+      "review_status": "reviewed",
+      "source_url_verification_status": "partial"
+    },
+    {
+      "name": "Tana",
+      "category": "Agentic Workflow",
+      "category_key": "agentic",
+      "file": "analyses/ai-assisted/2026-07-01-tana.md",
+      "one_line": "Tana 把节点式大纲、Supertags、知识图谱、语音/会议输入和 AI agents 结合起来，将笔记从\"记录信息\"推进到\"在上下文中组织、提取并执行工作\"的 agentic 知识工作台；当前 tana.inc 已转向\"agentic meeting platform\"，原 outliner 单独保留为 Tana Outliner。",
+      "tags": ["ai-structured-knowledge-workspace", "supertags", "knowledge-graph", "agentic-meeting", "pkm"],
+      "review_status": "reviewed",
+      "source_url_verification_status": "partial"
+    }
+  ],
+  "landscape": [
+    {
+      "category": "Search / Answer Engine",
+      "category_key": "search",
+      "products": ["Perplexity"]
+    },
+    {
+      "category": "Command Layer",
+      "category_key": "command",
+      "products": ["Raycast"]
+    },
+    {
+      "category": "Product Development / Coding",
+      "category_key": "coding",
+      "products": ["Linear", "Cursor", "Replit"]
+    },
+    {
+      "category": "Design / Visual / Web",
+      "category_key": "design",
+      "products": ["Figma", "Framer", "Canva", "Webflow"]
+    },
+    {
+      "category": "Knowledge / Workspace",
+      "category_key": "knowledge",
+      "products": ["Notion", "Coda", "Obsidian"]
+    },
+    {
+      "category": "Agentic Workflow",
+      "category_key": "agentic",
+      "products": ["Tana"]
+    }
+  ],
+  "repo": {
+    "github_url": "https://github.com/conanxin/Product-Analysis",
+    "blob_base": "https://github.com/conanxin/Product-Analysis/blob/master/",
+    "pages_url": "https://conanxin.github.io/Product-Analysis/"
+  }
+}
