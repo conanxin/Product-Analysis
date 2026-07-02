@@ -1,5 +1,67 @@
 # Changelog
 
+## P35 - Phase 1 Release and Showcase Polish
+
+**日期：** 2026-07-02
+**变更类型：** release / showcase / docs-only
+**可选 tag：** v1.0.0-phase-1
+
+### 变更内容
+
+完成 P35 — Phase 1 Release and Showcase Polish。把仓库从“持续施工中”包装为「第一阶段可公开发布版本」。
+
+#### 新增
+
+- **`docs/phase-1-release-notes.md`** — Phase 1 Release Notes v1.0.0-phase-1
+  - §1 Release Summary
+  - §2 Included Analyses（13 篇表格）
+  - §3 Included Navigation Docs（10 个导航 / 方法论文档）
+  - §4 Quality System（YAML metadata / review_status / source_url_verification_status / source-first / validator / CI / reports 审计链）
+  - §5 Known Limits（7 条诚实边界）
+  - §6 Recommended Reading Order
+  - §7 Next Phase（P36-P38 路线 + P38 判断标准 + 4 个候选方向）
+  - §8 Credits
+
+#### 同步
+
+- **README.md** — 3 处更新：
+  - `## 快速入口` 加 Phase 1 Release Notes 链接
+  - 在早期动机 quote 后、## 快速入口 之前加 "Phase 1 状态" 段落（推荐从 Release Notes 开始）
+  - `## 下一步计划` `[ ] P35` → `[x] P35` + `P36/P37/P38` 三项待选项
+
+- **CHANGELOG.md** — 顶部新增本 `## P35 - Phase 1 Release and Showcase Polish` 章节
+
+#### 验证
+
+```
+$ python3 scripts/verify_ai_analysis_index.py
+
+PASS: AI analysis index consistency verified
+- analyses found: 13
+- reviewed: 13
+- draft: 0
+- partial: 13
+- verified: 0
+```
+
+（与 P34 后保持一致，docs-only / release 任务不改变 index 状态）
+
+#### 未修改
+
+- docs/ai-product-analysis-phase-1-synthesis.md
+- docs/product-map-navigation.md
+- docs/visual-product-map.md
+- analyses/README.md
+- analyses/index.yml
+- analyses/ai-assisted/*.md
+- scripts/verify_ai_analysis_index.py
+- .github/workflows/*
+- 旧人工分析文章
+- pic/
+- templates/
+
+---
+
 ## P34 - Visual Product Map
 
 **日期：** 2026-07-02
