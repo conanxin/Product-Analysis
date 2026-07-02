@@ -105,6 +105,23 @@ Product-Analysis/
 
 ---
 
+## 如何校验索引一致性
+
+```bash
+python3 scripts/verify_ai_analysis_index.py
+```
+
+**说明：**
+- 该脚本会检查 AI 分析文章 YAML、analyses/index.yml、README.md、analyses/README.md 是否一致
+- 新增文章或人工复核后必须运行
+- 脚本退出码：0 = PASS, 1 = FAIL
+- 失败时输出具体错误列表
+- 详细说明见 [docs/index-sync-validation.md](docs/index-sync-validation.md)
+
+**检查项：** YAML front matter / duplicate key / 必备字段 / source_urls 纯 URL / index.yml 一致性 / README 质量状态 / 产品行状态 / summary count。
+
+---
+
 ## 当前质量状态
 
 > 更完整的 AI 分析索引与质量状态见：[analyses/README.md](analyses/README.md) 与 [analyses/index.yml](analyses/index.yml)
@@ -137,10 +154,10 @@ Product-Analysis/
 - [x] P22.1: 修复 Replit YAML 重复 source_quality_notes 字段 (2 → 1)
 - [x] P23: 人工复核 Replit 文章 (draft → reviewed;§17.1 升级;§17.2 解决 $250M Series C vs $400M Series D 轮次字母分歧;§17.3 厘清 source count 口径;YAML review_status / reviewed_at / review_notes 同步)
 - [x] P23.1: 修复 Replit 复核后 README 质量状态漂移 (9 reviewed → 10 reviewed;AI 辅助分析 / reviewed / partial 三项同步;未改其他三处)
-- [x] P24: 新增 AI 分析索引一致性 + YAML 质量检查脚本 (scripts/verify_ai_analysis_index.py + docs/validation-workflow.md;11 大类检查;退出码 0=PASS 1=FAIL;首跑检出 9 项真实问题:3 YAML scan errors + 6 one_line_insight 引号不一致)
+- [x] P24: 新增 AI 分析索引一致性 + YAML 质量检查脚本 (scripts/verify_ai_analysis_index.py + docs/index-sync-validation.md;11 大类检查;首跑 9 项 FAIL 后修复 12 项真实问题后 PASS)
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 
 ---
 
-*最后更新：2026-07-02 (P24 新增 AI 分析索引一致性 + YAML 质量检查脚本;1) scripts/verify_ai_analysis_index.py 新建 — 11 大类检查约 80 子项，检测 front matter 提取/重复 key/必备字段/source_urls 格式/index.yml 解析/article↔index 一致性/summary count/README 质量状态/产品状态行;2) docs/validation-workflow.md 新建 — 描述 4 类常见失败模式 + 新增文章/复核升级/漂移修复 3 种工作流;3) 首次运行报告 9 项 FAIL — 3 项 YAML scan errors (Cursor/Perplexity/Raycast source_quality_notes 未加引号冒号) + 6 项 article↔index one_line_insight 不一致 (双引号 vs 单引号);4) 未修改任何 AI 分析文章正文 / analyses/index.yml / analyses/README.md;5) 仅 P24 任务报告需含 python3 scripts/verify_ai_analysis_index.py 运行结果;6) 后续 P* 任务可选用 scripts/verify_ai_analysis_index.py 作为验收门禁)*
+*最后更新：2026-07-02 (P24 重写一致性校验脚本输出格式 + 同步 docs 为 index-sync-validation.md + 修复 12 项真实问题后 PASS;1) scripts/verify_ai_analysis_index.py 重写为简洁 PASS: / FAIL: 格式 + 错误编号 + 底部统计;2) docs/index-sync-validation.md 新建 - 描述 6 节内容 (为什么需要/检查什么/如何运行/何时运行/失败处理/后续扩展);3) README.md 新增 '如何校验索引一致性' 小节;4) 修复 12 项真实数据问题 - 3 项 YAML scan errors (Cursor/Perplexity/Raycast source_quality_notes+review_notes 加双引号) + 9 项 one_line_insight 引号风格不一致 (index.yml 同步 article);5) 最终 python3 scripts/verify_ai_analysis_index.py 返回 PASS)*

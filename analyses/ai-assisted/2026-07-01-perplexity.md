@@ -44,7 +44,7 @@ review_status: reviewed
 review_notes: Sources strengthened; factual claims reviewed; low-confidence claims marked.
 source_url_verified_at: 2026-07-01
 source_url_verification_status: partial
-source_quality_notes: P4.2 verified source recovery: 3 new verified high-quality media URLs (2 Verge + 1 Business Insider for Comet launch and global free). 2 Reuters URLs (NYT lawsuit + Microsoft Azure deal) are Datadome-protected (URL format matches Reuters pattern, not HTTP-verifiable to bots). The Information is paywalled. 6 P4.1 inferred URLs removed. Perplexity 整体 verification status 仍为 partial (估值与 Chrome 报价事实仍依赖 The Information + 中文转载,未升到 verified)。主体产品与商业模式事实已有 5+ verified 源,部分次要事实仍依赖二手转载。
+source_quality_notes: "P4.2 verified source recovery: 3 new verified high-quality media URLs (2 Verge + 1 Business Insider for Comet launch and global free). 2 Reuters URLs (NYT lawsuit + Microsoft Azure deal) are Datadome-protected (URL format matches Reuters pattern, not HTTP-verifiable to bots). The Information is paywalled. 6 P4.1 inferred URLs removed. Perplexity 整体 verification status 仍为 partial (估值与 Chrome 报价事实仍依赖 The Information + 中文转载,未升到 verified)。主体产品与商业模式事实已有 5+ verified 源,部分次要事实仍依赖二手转载。"
 one_line_insight: Perplexity 将搜索、引用和对话式答案结合,试图把传统搜索结果页重构为可追问的答案引擎。
 ---
 

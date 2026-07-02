@@ -1,5 +1,66 @@
 # Changelog
 
+## P24 (Final) - AI Index and YAML Consistency Validator
+
+**日期：** 2026-07-02
+**变更类型：** tooling / validation / docs-only + data-fix
+
+### 变更内容
+
+P24 (70defde) + P24.1 (db5a5ab) 两轮迭代后，最终重写为简洁输出格式，修复 12 项真实数据问题后 PASS。
+
+#### 脚本 (scripts/verify_ai_analysis_index.py)
+
+- 自定义 SafeLoader 检测重复 key (P22.1 教训)
+- 11 大类检查约 30+ 子项
+- 简洁输出：`PASS: AI analysis index consistency verified` / `FAIL: AI analysis index consistency errors`
+- 错误列表用编号 `1. ... 2. ... 3. ...`
+- 底部统计 `analyses found / reviewed / draft / partial / verified`
+
+#### 文档 (docs/index-sync-validation.md)
+
+- 6 节：为什么需要 / 检查什么 / 如何运行 / 何时运行 / 失败处理 / 后续扩展
+- 表格列出所有检查项 + 常见失败模式 + 修复方法
+
+#### README
+
+- 新增"如何校验索引一致性"小节
+- 添加 todo + 最后更新行
+
+#### 修复的 12 项真实数据问题
+
+| # | 文件 | 问题 | 修复 |
+|---|------|------|------|
+| 1 | cursor.md line 77 | review_notes 未加引号冒号 | 加双引号 |
+| 2 | cursor.md line 80 | source_quality_notes 未加引号冒号 | 加双引号 |
+| 3 | perplexity.md line 47 | source_quality_notes 未加引号冒号 | 加双引号 |
+| 4 | raycast.md line 51 | source_quality_notes 未加引号冒号 | 加双引号 |
+| 5-13 | index.yml × 9 entries | one_line_insight 引号风格不一致 | 从 article 同步 |
+
+### 验证
+
+```
+$ python3 scripts/verify_ai_analysis_index.py
+PASS: AI analysis index consistency verified
+- analyses found: 10
+- reviewed: 10
+- draft: 0
+- partial: 10
+- verified: 0
+```
+
+### 未修改
+
+- analyses/README.md (已正确)
+- pic/ / templates/
+
+### 教训沉淀
+
+- PyYAML yaml.safe_load 会静默覆盖重复 key — 必须自定义 SafeLoader
+- 长 YAML 值 (含冒号 / 方括号 / 复杂标点) 必须加双引号包裹
+- one_line_insight 在 article 和 index.yml 必须严格字符串一致 (引号风格也要统一)
+- 后续 P* 任务报告需含 python3 scripts/verify_ai_analysis_index.py 运行结果
+
 ## P24.1 - Validation Script Output Format Revision
 
 **日期：** 2026-07-02

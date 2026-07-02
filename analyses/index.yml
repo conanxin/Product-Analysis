@@ -1,214 +1,227 @@
 version: 1
 updated_at: 2026-07-01
 analyses:
-  - product: Perplexity
-    file: analyses/ai-assisted/2026-07-01-perplexity.md
-    category: ai-search
-    analysis_type: ai-assisted
-    created_at: 2026-07-01
-    review_status: reviewed
-    reviewed_at: 2026-07-01
-    source_url_verification_status: partial
-    tags:
-      - ai-search
-      - search
-      - answer-engine
-      - information-retrieval
-      - llm-product
-    one_line_insight: "Perplexity 将搜索、引用和对话式答案结合，试图把传统搜索结果页重构为可追问的答案引擎。"
-    quality_notes:
-      product_mechanism: verified
-      high_risk_facts: partial
-      reason: "fast-moving financing/product/legal facts still require direct verified media sources"
-
-  - product: Linear
-    file: analyses/ai-assisted/2026-07-01-linear.md
-    category: product-development
-    analysis_type: ai-assisted
-    created_at: 2026-07-01
-    review_status: reviewed
-    reviewed_at: 2026-07-01
-    source_url_verification_status: partial
-    tags:
-      - issue-tracking
-      - project-management
-      - product-development
-      - b2b-saas
-      - collaboration
-    one_line_insight: "Linear 通过极快的交互、清晰的信息架构和面向产品研发团队的工作流设计，把 issue tracking 从'任务管理工具'重构为高节奏产品开发系统。"
-    quality_notes:
-      product_mechanism: verified
-      high_risk_facts: partial
-      reason: "financing/valuation facts still partly depend on single high-quality media source"
-
-  - product: Raycast
-    file: analyses/ai-assisted/2026-07-01-raycast.md
-    category: productivity-launcher
-    analysis_type: ai-assisted
-    created_at: 2026-07-01
-    review_status: reviewed
-    reviewed_at: 2026-07-01
-    source_url_verification_status: partial
-    tags:
-      - productivity
-      - launcher
-      - keyboard-driven
-      - developer-tools
-      - extensions-platform
-      - ai-product
-    one_line_insight: "Raycast 把'启动器'从系统级工具重构为可扩展的开发者命令面板，并通过 Extensions Store + AI 把工作流本身产品化。"
-    quality_notes:
-      product_mechanism: verified
-      high_risk_facts: partial
-      reason: "financing/valuation facts depend on TechCrunch + official blog, no independent second media source"
-
-  - product: Cursor
-    file: analyses/ai-assisted/2026-07-01-cursor.md
-    category: ai-coding
-    analysis_type: ai-assisted
-    created_at: 2026-07-01
-    review_status: reviewed
-    reviewed_at: 2026-07-01
-    source_url_verification_status: partial
-    tags:
-      - ai-coding
-      - developer-tools
-      - ide
-      - agentic-workflow
-      - productivity
-      - llm-product
-    one_line_insight: "Cursor 把代码编辑器、补全、聊天、agentic 多文件编辑和云端 background agent 合并成同一个 IDE，试图把'写代码'重构为'和 AI 协作改代码'的工作流。"
-    quality_notes:
-      product_mechanism: verified
-      high_risk_facts: partial
-      reason: "high-risk financing/ARR/SpaceX transaction facts remain partial (Series A is now double-sourced after P10; SpaceX pending Q3 2026 close)"
-
-  - product: Figma
-    file: analyses/ai-assisted/2026-07-01-figma.md
-    category: design-collaboration
-    analysis_type: ai-assisted
-    created_at: 2026-07-01
-    review_status: reviewed
-    reviewed_at: 2026-07-01
-    source_url_verification_status: partial
-    tags:
-      - design-tools
-      - collaboration
-      - design-systems
-      - dev-mode
-      - ai-design
-      - b2b-saas
-    one_line_insight: "Figma 把设计编辑器、实时协作、设计系统、原型、Dev Mode、Config 2025 新五大产品线(Make/Sites/Grid/Draw/Buzz)合并为同一协作平台，把设计工具从'设计软件'重构为'产品协作操作系统'。"
-    quality_notes:
-      product_mechanism: verified
-      high_risk_facts: partial
-      reason: "public-company financial facts (NYSE:FIG IPO $33/$65B/+250%/$1.06B revenue, Adobe $20B terminated) still need direct SEC/IR/media dual-source verification (Reuters/CNBC/Bloomberg Datadome 401)"
-
-  - product: Framer
-    file: analyses/ai-assisted/2026-07-01-framer.md
-    category: ai-website-builder
-    analysis_type: ai-assisted
-    created_at: 2026-07-01
-    review_status: reviewed
-    reviewed_at: 2026-07-01
-    source_url_verification_status: partial
-    tags:
-      - website-builder
-      - design-tools
-      - ai-website-builder
-      - cms
-      - no-code
-      - b2b-saas
-    one_line_insight: "Framer 将设计画布、CMS、发布、SEO、模板生态和 AI agent 工作流结合，把网站建设从'设计稿交付开发'重构为'设计即上线'的 AI 建站平台。"
-    quality_notes:
-      product_mechanism: verified
-      high_risk_facts: partial
-      reason: "private-company financing/founder background facts (Series D $100M/$2B, Meritech+Atomico+Accel, Koen Bok + Jorn van Dijk) remain partial; 10+ English primary sources (Meritech/Atomico/Accel/TechCrunch/The Verge/Bloomberg/CNBC/Reuters) returned 401-429/404-405"
-
-  - product: Notion
-    file: analyses/ai-assisted/2026-07-01-notion.md
-    category: ai-workspace
-    analysis_type: ai-assisted
-    created_at: 2026-07-01
-    review_status: reviewed
-    reviewed_at: 2026-07-01
-    source_url_verification_status: partial
-    tags:
-      - productivity
-      - workspace
-      - docs
-      - database
-      - knowledge-management
-      - ai-workspace
-    one_line_insight: "Notion 将文档、数据库、知识库、项目管理、日历、邮件和 AI agent 能力整合到同一个 workspace，把个人与团队知识工作从'文件和工具集合'重构为可组合的信息操作系统。"
-    quality_notes:
-      product_mechanism: verified
-      high_risk_facts: partial
-      reason: "P17 复核后：主体产品机制 32 官方页 + developers.notion.com + thurrott.com + Wikipedia reference 源 verified；Notion 2013 成立 / Series A $50M (2020) / Series C $275M (2021) / Skiff 2024-02 收购 / Notion AI 2022-11-16 发布 等在 Wikipedia 二手记载中双源部分达成；但 CNBC $500M ARR / TechCrunch / Forbes 原报道 URL 404 未 HTTP 验证；主体融资/估值/ARR/收购金额仍 partial"
-
-  - product: Canva
-    file: analyses/ai-assisted/2026-07-01-canva.md
-    category: design-ai-platform
-    analysis_type: ai-assisted
-    created_at: 2026-07-01
-    review_status: reviewed
-    reviewed_at: 2026-07-01
-    source_url_verification_status: partial
-    tags:
-      - design-tools
-      - ai-design
-      - templates
-      - visual-suite
-      - creator-tools
-      - b2b-saas
-    one_line_insight: "Canva 将模板、设计编辑器、品牌资产、内容生产、协作、企业营销和 AI 生成能力整合到同一个 Visual Suite，把设计从专业软件能力扩展为大众化、组织化的内容生产平台。"
-    quality_notes:
-      product_mechanism: partial
-      high_risk_facts: partial
-      reason: "P19 复核后：canva.com 30+ URL 仍 403 Datadome (official-url-access-limited)；主体产品机制来自 Wikipedia (Canva/Affinity/Perkins) reference 源 + Fortune 2025-08-22 + The Verge 2024 verified media；$42B 估值 (Wikipedia + Fortune 单独立媒体 + reference)；Affinity / Leonardo.AI 收购事件部分双源达成中-高；收购金额均未明确披露 → 低-中 partial；2B/220M/5,500 员工数据 Wikipedia 单源 → 低-中 partial；Canva 是私人公司/接近 IPO 候选/未 IPO"
-
-  - product: Webflow
-    file: analyses/ai-assisted/2026-07-01-webflow.md
-    category: visual-web-development
-    analysis_type: ai-assisted
-    created_at: 2026-07-01
-    review_status: reviewed
-    reviewed_at: 2026-07-01
-    source_url_verification_status: partial
-    tags:
-      - website-builder
-      - visual-development
-      - no-code
-      - cms
-      - ai-website-builder
-      - b2b-saas
-    one_line_insight: "Webflow 将视觉设计、CMS、托管、SEO、AEO、优化、企业协作和 AI 建站能力整合到同一个可视化平台，把网站建设从'设计稿交付开发'重构为可视化、可发布、可增长的 Web 生产系统。"
-    quality_notes:
-      product_mechanism: verified
-      high_risk_facts: partial
-      reason: "P21 复核后：42 个 Webflow 官方 URL HTTP-200 verified (39 product pages + 3 blog posts: GSAP/Vidoso.ai/AI site builder) + W3Techs verified 200 + Wikipedia (Webflow) reference 源 verified 200。主体产品机制 verified (高可信度)。融资/估值/ARR/用户数/收购金额 仍 partial — Wikipedia reference cites Forbes/VentureBeat/Axios/TechCrunch，底层媒体原文 URL P21 尝试验证但 404/403/429，未直接 HTTP verified。收购金额均未披露 / undisclosed。Webflow 是私人公司/未 IPO。"
-
-  - product: Replit
-    file: analyses/ai-assisted/2026-07-01-replit.md
-    category: ai-cloud-development
-    analysis_type: ai-assisted
-    created_at: 2026-07-01
-    review_status: reviewed
-    reviewed_at: 2026-07-01
-    source_url_verification_status: partial
-    tags:
-      - ai-coding
-      - cloud-ide
-      - agentic-workflow
-      - app-builder
-      - deployment
-      - b2b-saas
-    one_line_insight: "Replit 将浏览器 IDE、云端运行环境、部署、数据库、模板社区和 AI Agent 结合到同一个工作台，把软件开发从'本地编码'重构为'用自然语言在云端生成、运行和发布应用'的工作流。"
-    quality_notes:
-      product_mechanism: verified
-      high_risk_facts: partial
-      reason: "P23 复核后：75 个 YAML source_urls (replit.com 25 + docs.replit.com 33 + Wikipedia 2 + verified media 15) verified 200。P22 报告数字口径上有混淆 (\"75 source URLs\" vs \"41+33+8+1+1+11=95 HTTP-200 verification\") — P23 厘清：YAML source_urls=75 是实际引用数；HTTP-200 verification 总数 含重定向路径/备份 URL 可超过 75。主体产品机制 verified 高可信度 (Browser IDE / Agent 4 / Pricing / Deployments / Database / Object Storage / Auth / Payments / Teams / Enterprise / MCP / Skills / Figma-to-app / Claude-to-app)。P23 解决 $250M Series C vs $400M Series D 轮次字母分歧：$250M 是 Series C (Pulse 2.0 verified 200 明文)；$400M 是 Series D (Pulse 2.0 verified 200 独立文章)；SaaStr 把 $250M 误标 Series D 是 SaaStr 写作错误。融资/估值/ARR/用户量仍 partial — Pulse 2.0 + SaaStr verified 200 直接英文媒体 + Wikipedia reference，但 Reuters/Forbes/Bloomberg/TechCrunch/Wired/Tom's Hardware 直接 URL 401/403/404。Replit 是私人公司 / 未 IPO。a16z $4.5M seed 2018 由 CNBC verified 200 + Wikipedia reference 双源支撑。Microsoft Azure 合作 2025-07 由 Wikipedia reference (文字 verified 200) 支撑 (Inc URL 403)。数据库删除事件 2025-07 由 Wikipedia + 404 Media + SaaStr 多源 verified 200 支撑。AI Darwin Awards 提名 2025 由 Wikipedia + 404 Media 双源 verified 200 支撑。P22.1 已修复 YAML 重复 source_quality_notes key；P23 验证 yaml.safe_load OK + review_status / source_quality_notes 都是单 key。中文 Replit MVP / Agent 真实可用性属判断。"
-
+- product: Perplexity
+  file: analyses/ai-assisted/2026-07-01-perplexity.md
+  category: ai-search
+  analysis_type: ai-assisted
+  created_at: 2026-07-01
+  review_status: reviewed
+  reviewed_at: 2026-07-01
+  source_url_verification_status: partial
+  tags:
+  - ai-search
+  - search
+  - answer-engine
+  - information-retrieval
+  - llm-product
+  one_line_insight: Perplexity 将搜索、引用和对话式答案结合,试图把传统搜索结果页重构为可追问的答案引擎。
+  quality_notes:
+    product_mechanism: verified
+    high_risk_facts: partial
+    reason: fast-moving financing/product/legal facts still require direct verified media sources
+- product: Linear
+  file: analyses/ai-assisted/2026-07-01-linear.md
+  category: product-development
+  analysis_type: ai-assisted
+  created_at: 2026-07-01
+  review_status: reviewed
+  reviewed_at: 2026-07-01
+  source_url_verification_status: partial
+  tags:
+  - issue-tracking
+  - project-management
+  - product-development
+  - b2b-saas
+  - collaboration
+  one_line_insight: Linear 通过极快的交互、清晰的信息架构和面向产品研发团队的工作流设计，把 issue tracking 从"任务管理工具"重构为高节奏产品开发系统。
+  quality_notes:
+    product_mechanism: verified
+    high_risk_facts: partial
+    reason: financing/valuation facts still partly depend on single high-quality media source
+- product: Raycast
+  file: analyses/ai-assisted/2026-07-01-raycast.md
+  category: productivity-launcher
+  analysis_type: ai-assisted
+  created_at: 2026-07-01
+  review_status: reviewed
+  reviewed_at: 2026-07-01
+  source_url_verification_status: partial
+  tags:
+  - productivity
+  - launcher
+  - keyboard-driven
+  - developer-tools
+  - extensions-platform
+  - ai-product
+  one_line_insight: Raycast 把"启动器"从系统级工具重构为可扩展的开发者命令面板,并通过 Extensions Store + AI 把工作流本身产品化。
+  quality_notes:
+    product_mechanism: verified
+    high_risk_facts: partial
+    reason: financing/valuation facts depend on TechCrunch + official blog, no independent second media source
+- product: Cursor
+  file: analyses/ai-assisted/2026-07-01-cursor.md
+  category: ai-coding
+  analysis_type: ai-assisted
+  created_at: 2026-07-01
+  review_status: reviewed
+  reviewed_at: 2026-07-01
+  source_url_verification_status: partial
+  tags:
+  - ai-coding
+  - developer-tools
+  - ide
+  - agentic-workflow
+  - productivity
+  - llm-product
+  one_line_insight: Cursor 把代码编辑器、补全、聊天、agentic 多文件编辑和云端 background agent 合并成同一个 IDE,试图把"写代码"重构为"和 AI 协作改代码"的工作流。
+  quality_notes:
+    product_mechanism: verified
+    high_risk_facts: partial
+    reason: high-risk financing/ARR/SpaceX transaction facts remain partial (Series A is now double-sourced after P10; SpaceX
+      pending Q3 2026 close)
+- product: Figma
+  file: analyses/ai-assisted/2026-07-01-figma.md
+  category: design-collaboration
+  analysis_type: ai-assisted
+  created_at: 2026-07-01
+  review_status: reviewed
+  reviewed_at: 2026-07-01
+  source_url_verification_status: partial
+  tags:
+  - design-tools
+  - collaboration
+  - design-systems
+  - dev-mode
+  - ai-design
+  - b2b-saas
+  one_line_insight: Figma 把设计编辑器、实时协作、设计系统、原型、Dev Mode、Config 2025 新五大产品线(Make/Sites/Grid/Draw/Buzz)、Config 2026 新五项升级(Code
+    Layers/Figma Motion/Shaders/Generative Plugins/Weave 整合)整合到云端画布,把设计工具从本地文件软件重构为公开公司级的团队协作和产品交付基础设施。
+  quality_notes:
+    product_mechanism: verified
+    high_risk_facts: partial
+    reason: public-company financial facts (NYSE:FIG IPO $33/$65B/+250%/$1.06B revenue, Adobe $20B terminated) still need
+      direct SEC/IR/media dual-source verification (Reuters/CNBC/Bloomberg Datadome 401)
+- product: Framer
+  file: analyses/ai-assisted/2026-07-01-framer.md
+  category: ai-website-builder
+  analysis_type: ai-assisted
+  created_at: 2026-07-01
+  review_status: reviewed
+  reviewed_at: 2026-07-01
+  source_url_verification_status: partial
+  tags:
+  - website-builder
+  - design-tools
+  - ai-website-builder
+  - cms
+  - no-code
+  - b2b-saas
+  one_line_insight: Framer 将设计画布、CMS、发布、SEO、模板生态和 AI agent 工作流结合，把网站建设从"设计稿交付开发"重构为"设计即上线"的 AI 建站平台。
+  quality_notes:
+    product_mechanism: verified
+    high_risk_facts: partial
+    reason: private-company financing/founder background facts (Series D $100M/$2B, Meritech+Atomico+Accel, Koen Bok + Jorn
+      van Dijk) remain partial; 10+ English primary sources (Meritech/Atomico/Accel/TechCrunch/The Verge/Bloomberg/CNBC/Reuters)
+      returned 401-429/404-405
+- product: Notion
+  file: analyses/ai-assisted/2026-07-01-notion.md
+  category: ai-workspace
+  analysis_type: ai-assisted
+  created_at: 2026-07-01
+  review_status: reviewed
+  reviewed_at: 2026-07-01
+  source_url_verification_status: partial
+  tags:
+  - productivity
+  - workspace
+  - docs
+  - database
+  - knowledge-management
+  - ai-workspace
+  one_line_insight: Notion 将文档、数据库、知识库、项目管理、日历、邮件和 AI agent 能力整合到同一个 workspace，把个人与团队知识工作从"文件和工具集合"重构为可组合的信息操作系统。
+  quality_notes:
+    product_mechanism: verified
+    high_risk_facts: partial
+    reason: P17 复核后：主体产品机制 32 官方页 + developers.notion.com + thurrott.com + Wikipedia reference 源 verified；Notion 2013 成立 /
+      Series A $50M (2020) / Series C $275M (2021) / Skiff 2024-02 收购 / Notion AI 2022-11-16 发布 等在 Wikipedia 二手记载中双源部分达成；但
+      CNBC $500M ARR / TechCrunch / Forbes 原报道 URL 404 未 HTTP 验证；主体融资/估值/ARR/收购金额仍 partial
+- product: Canva
+  file: analyses/ai-assisted/2026-07-01-canva.md
+  category: design-ai-platform
+  analysis_type: ai-assisted
+  created_at: 2026-07-01
+  review_status: reviewed
+  reviewed_at: 2026-07-01
+  source_url_verification_status: partial
+  tags:
+  - design-tools
+  - ai-design
+  - templates
+  - visual-suite
+  - creator-tools
+  - b2b-saas
+  one_line_insight: Canva 将模板、设计编辑器、品牌资产、内容生产、协作、企业营销和 AI 生成能力整合到同一个 Visual Suite，把设计从专业软件能力扩展为大众化、组织化的内容生产平台。
+  quality_notes:
+    product_mechanism: partial
+    high_risk_facts: partial
+    reason: P19 复核后：canva.com 30+ URL 仍 403 Datadome (official-url-access-limited)；主体产品机制来自 Wikipedia (Canva/Affinity/Perkins)
+      reference 源 + Fortune 2025-08-22 + The Verge 2024 verified media；$42B 估值 (Wikipedia + Fortune 单独立媒体 + reference)；Affinity
+      / Leonardo.AI 收购事件部分双源达成中-高；收购金额均未明确披露 → 低-中 partial；2B/220M/5,500 员工数据 Wikipedia 单源 → 低-中 partial；Canva 是私人公司/接近 IPO
+      候选/未 IPO
+- product: Webflow
+  file: analyses/ai-assisted/2026-07-01-webflow.md
+  category: visual-web-development
+  analysis_type: ai-assisted
+  created_at: 2026-07-01
+  review_status: reviewed
+  reviewed_at: 2026-07-01
+  source_url_verification_status: partial
+  tags:
+  - website-builder
+  - visual-development
+  - no-code
+  - cms
+  - ai-website-builder
+  - b2b-saas
+  one_line_insight: Webflow 将视觉设计、CMS、托管、SEO、AEO、优化、企业协作和 AI 建站能力整合到同一个可视化平台，把网站建设从"设计稿交付开发"重构为可视化、可发布、可增长的 Web 生产系统。
+  quality_notes:
+    product_mechanism: verified
+    high_risk_facts: partial
+    reason: 'P21 复核后：42 个 Webflow 官方 URL HTTP-200 verified (39 product pages + 3 blog posts: GSAP/Vidoso.ai/AI site builder)
+      + W3Techs verified 200 + Wikipedia (Webflow) reference 源 verified 200。主体产品机制 verified (高可信度)。融资/估值/ARR/用户数/收购金额 仍 partial
+      — Wikipedia reference cites Forbes/VentureBeat/Axios/TechCrunch，底层媒体原文 URL P21 尝试验证但 404/403/429，未直接 HTTP verified。收购金额均未披露
+      / undisclosed。Webflow 是私人公司/未 IPO。'
+- product: Replit
+  file: analyses/ai-assisted/2026-07-01-replit.md
+  category: ai-cloud-development
+  analysis_type: ai-assisted
+  created_at: 2026-07-01
+  review_status: reviewed
+  reviewed_at: 2026-07-01
+  source_url_verification_status: partial
+  tags:
+  - ai-coding
+  - cloud-ide
+  - agentic-workflow
+  - app-builder
+  - deployment
+  - b2b-saas
+  one_line_insight: Replit 将浏览器 IDE、云端运行环境、部署、数据库、模板社区和 AI Agent 结合到同一个工作台，把软件开发从"本地编码"重构为"用自然语言在云端生成、运行和发布应用"的工作流。
+  quality_notes:
+    product_mechanism: verified
+    high_risk_facts: partial
+    reason: P23 复核后：75 个 YAML source_urls (replit.com 25 + docs.replit.com 33 + Wikipedia 2 + verified media 15) verified
+      200。P22 报告数字口径上有混淆 ("75 source URLs" vs "41+33+8+1+1+11=95 HTTP-200 verification") — P23 厘清：YAML source_urls=75 是实际引用数；HTTP-200
+      verification 总数 含重定向路径/备份 URL 可超过 75。主体产品机制 verified 高可信度 (Browser IDE / Agent 4 / Pricing / Deployments / Database
+      / Object Storage / Auth / Payments / Teams / Enterprise / MCP / Skills / Figma-to-app / Claude-to-app)。P23 解决 $250M
+      Series C vs $400M Series D 轮次字母分歧：$250M 是 Series C (Pulse 2.0 verified 200 明文)；$400M 是 Series D (Pulse 2.0 verified
+      200 独立文章)；SaaStr 把 $250M 误标 Series D 是 SaaStr 写作错误。融资/估值/ARR/用户量仍 partial — Pulse 2.0 + SaaStr verified 200 直接英文媒体 +
+      Wikipedia reference，但 Reuters/Forbes/Bloomberg/TechCrunch/Wired/Tom's Hardware 直接 URL 401/403/404。Replit 是私人公司 / 未 IPO。a16z
+      $4.5M seed 2018 由 CNBC verified 200 + Wikipedia reference 双源支撑。Microsoft Azure 合作 2025-07 由 Wikipedia reference (文字
+      verified 200) 支撑 (Inc URL 403)。数据库删除事件 2025-07 由 Wikipedia + 404 Media + SaaStr 多源 verified 200 支撑。AI Darwin Awards
+      提名 2025 由 Wikipedia + 404 Media 双源 verified 200 支撑。P22.1 已修复 YAML 重复 source_quality_notes key；P23 验证 yaml.safe_load
+      OK + review_status / source_quality_notes 都是单 key。中文 Replit MVP / Agent 真实可用性属判断。
 summary:
   total: 10
   reviewed: 10
@@ -218,65 +231,79 @@ summary:
   legacy_manual_analyses: 9
   legacy_今日复盘: 1
   p_reports_total: 16
-
 status_transitions:
-  - from: draft
-    to: reviewed
-    requirement: |
-      YAML 字段完整 + 17 节完整 + §17.1-§17.4 完整
-      + 明显判断已标 [判断] + README 状态同步 + P 报告归档
-  - from: reviewed+partial
-    to: reviewed+verified
-    requirement: |
-      主体 sources HTTP verified
-      + 高风险事实 (融资/估值/收入/收购/IPO/用户量/法律/合作金额/价格/产品发布时间线)
-      + 至少 2 个独立 verified 高质量来源
-      + 不能只靠 Wikipedia / 中文转载 / 公司自述
-      + Sources 表格完整
+- from: draft
+  to: reviewed
+  requirement: 'YAML 字段完整 + 17 节完整 + §17.1-§17.4 完整
 
+    + 明显判断已标 [判断] + README 状态同步 + P 报告归档
+
+    '
+- from: reviewed+partial
+  to: reviewed+verified
+  requirement: '主体 sources HTTP verified
+
+    + 高风险事实 (融资/估值/收入/收购/IPO/用户量/法律/合作金额/价格/产品发布时间线)
+
+    + 至少 2 个独立 verified 高质量来源
+
+    + 不能只靠 Wikipedia / 中文转载 / 公司自述
+
+    + Sources 表格完整
+
+    '
 by_category:
-  - category: ai-search
-    products: [Perplexity]
-  - category: product-development
-    products: [Linear]
-  - category: productivity-launcher
-    products: [Raycast]
-  - category: ai-coding
-    products: [Cursor]
-  - category: design-collaboration
-    products: [Figma]
-  - category: ai-website-builder
-    products: [Framer]
-  - category: ai-workspace
-    products: [Notion]
-  - category: design-ai-platform
-    products: [Canva]
-  - category: visual-web-development
-    products: [Webflow]
-  - category: ai-cloud-development
-    products: [Replit]
-
+- category: ai-search
+  products:
+  - Perplexity
+- category: product-development
+  products:
+  - Linear
+- category: productivity-launcher
+  products:
+  - Raycast
+- category: ai-coding
+  products:
+  - Cursor
+- category: design-collaboration
+  products:
+  - Figma
+- category: ai-website-builder
+  products:
+  - Framer
+- category: ai-workspace
+  products:
+  - Notion
+- category: design-ai-platform
+  products:
+  - Canva
+- category: visual-web-development
+  products:
+  - Webflow
+- category: ai-cloud-development
+  products:
+  - Replit
 reading_paths:
   ai_product_path:
-    - Perplexity
-    - Cursor
+  - Perplexity
+  - Cursor
   product_development_tools_path:
-    - Linear
-    - Raycast
-    - Cursor
+  - Linear
+  - Raycast
+  - Cursor
   design_and_website_path:
-    - Figma
-    - Framer
+  - Figma
+  - Framer
   knowledge_workspace_path:
-    - Notion
+  - Notion
   visual_communication_path:
-    - Canva
-    - Figma
-    - Framer
+  - Canva
+  - Figma
+  - Framer
   web_production_path:
-    - Figma
-    - Framer
-    - Webflow
+  - Figma
+  - Framer
+  - Webflow
   ai_app_builder_path:
-    - Cursor
-    - Replit
+  - Cursor
+  - Replit
