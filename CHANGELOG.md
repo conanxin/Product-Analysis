@@ -1,5 +1,75 @@
 # Changelog
 
+## P25 - AI Analysis Index Validation CI
+
+**日期：** 2026-07-02
+**变更类型：** CI / validation / docs-only
+
+### 变更内容
+
+把 P24 本地验证脚本接入 GitHub Actions CI，提供自动拦截机制。
+
+#### 新增文件
+
+1. **.github/workflows/ai-analysis-index-check.yml** (~600 bytes)
+   - workflow name: AI Analysis Index Check
+   - 触发：push / pull_request / workflow_dispatch
+   - job: verify-ai-analysis-index
+   - runs-on: ubuntu-latest
+   - steps:
+     1. actions/checkout@v4
+     2. actions/setup-python@v5 (python-version: "3.x")
+     3. pip install PyYAML
+     4. python3 scripts/verify_ai_analysis_index.py
+
+2. **reports/P25-ai-index-validation-ci-report.md** (new)
+
+#### 修改文件
+
+1. **docs/index-sync-validation.md** — 新增 §8 GitHub Actions CI 章节
+2. **README.md** — "如何校验索引一致性" 小节增加 CI 说明 + P25 todo + 最后更新
+3. **CHANGELOG.md** — 顶部 prepend P25 记录
+
+### 未修改文件
+
+- scripts/verify_ai_analysis_index.py — 未动
+- analyses/ai-assisted/*.md — 未动
+- analyses/index.yml — 未动
+- analyses/README.md — 未动
+- 旧人工分析文章 — 未动
+- pic/ / templates/ — 未动
+
+### CI 设计原则
+
+- 仓库纯 Markdown + YAML，不需 Node.js / build step
+- 验证纯本地可计算，无需外部网络（不检查 HTTP 200）
+- 快速反馈（CI 运行 < 30 秒）
+- 避免误报（只检查结构性一致性）
+
+### CI 失败处理
+
+1. 查看 workflow log (GitHub Actions 页面)
+2. 本地运行同一命令
+3. 根据错误列表修复:
+   - README.md / analyses/README.md 质量状态表数字
+   - analyses/index.yml summary / entry 字段
+   - 文章 YAML front matter
+4. 重新 push 或重试 workflow
+
+### 验证
+
+```
+$ python3 scripts/verify_ai_analysis_index.py
+PASS: AI analysis index consistency verified
+- analyses found: 10
+- reviewed: 10
+- draft: 0
+- partial: 10
+- verified: 0
+```
+
+workflow YAML 解析 OK (PyYAML yaml.safe_load)。
+
 ## P24 (Final) - AI Index and YAML Consistency Validator
 
 **日期：** 2026-07-02

@@ -120,6 +120,8 @@ python3 scripts/verify_ai_analysis_index.py
 
 **检查项：** YAML front matter / duplicate key / 必备字段 / source_urls 纯 URL / index.yml 一致性 / README 质量状态 / 产品行状态 / summary count。
 
+**GitHub Actions CI：** 本仓库已接入 GitHub Actions：`.github/workflows/ai-analysis-index-check.yml`，每次 push / PR 会自动运行该校验。本地仍建议在提交前运行。
+
 ---
 
 ## 当前质量状态
@@ -155,9 +157,10 @@ python3 scripts/verify_ai_analysis_index.py
 - [x] P23: 人工复核 Replit 文章 (draft → reviewed;§17.1 升级;§17.2 解决 $250M Series C vs $400M Series D 轮次字母分歧;§17.3 厘清 source count 口径;YAML review_status / reviewed_at / review_notes 同步)
 - [x] P23.1: 修复 Replit 复核后 README 质量状态漂移 (9 reviewed → 10 reviewed;AI 辅助分析 / reviewed / partial 三项同步;未改其他三处)
 - [x] P24: 新增 AI 分析索引一致性 + YAML 质量检查脚本 (scripts/verify_ai_analysis_index.py + docs/index-sync-validation.md;11 大类检查;首跑 9 项 FAIL 后修复 12 项真实问题后 PASS)
+- [x] P25: 接入 AI 分析索引一致性 GitHub Actions CI (.github/workflows/ai-analysis-index-check.yml;触发 push/pull_request/workflow_dispatch;安装 PyYAML + 运行脚本;不访问外部 URL)
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 
 ---
 
-*最后更新：2026-07-02 (P24 重写一致性校验脚本输出格式 + 同步 docs 为 index-sync-validation.md + 修复 12 项真实问题后 PASS;1) scripts/verify_ai_analysis_index.py 重写为简洁 PASS: / FAIL: 格式 + 错误编号 + 底部统计;2) docs/index-sync-validation.md 新建 - 描述 6 节内容 (为什么需要/检查什么/如何运行/何时运行/失败处理/后续扩展);3) README.md 新增 '如何校验索引一致性' 小节;4) 修复 12 项真实数据问题 - 3 项 YAML scan errors (Cursor/Perplexity/Raycast source_quality_notes+review_notes 加双引号) + 9 项 one_line_insight 引号风格不一致 (index.yml 同步 article);5) 最终 python3 scripts/verify_ai_analysis_index.py 返回 PASS)*
+*最后更新：2026-07-02 (P25 接入 AI 分析索引一致性 GitHub Actions CI;1) .github/workflows/ai-analysis-index-check.yml 新建 - 触发 push/pull_request/workflow_dispatch;安装 PyYAML + 运行本地脚本;不访问外部 URL;2) docs/index-sync-validation.md 增加 §8 GitHub Actions CI 章节;3) README.md '如何校验索引一致性' 增加 CI 说明 + P25 todo;4) 未修改 scripts/verify_ai_analysis_index.py / analyses/ai-assisted/*.md / analyses/index.yml / analyses/README.md;5) 本地 python3 scripts/verify_ai_analysis_index.py 返回 PASS)*
