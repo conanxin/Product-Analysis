@@ -1,5 +1,58 @@
 # Changelog
 
+## P30.2 - Tana Full Protocol Alignment + Sources Restructure
+
+**日期：** 2026-07-02
+**变更类型：** protocol-alignment + section-extension + sources-restructure + reading-path
+
+### 变更内容
+
+接续 P30 / P30.1,针对用户后续补充的完整 P30 protocol 中尚未覆盖的部分进行补充。
+
+#### 关键变更
+
+1. **§7.0 新增 对象 / 作用 / 层级 / 设计意义 表**：16 个产品实体（Node / Supertag / Field / Daily note / Search·Saved view / Reference·backlink / Knowledge graph / AI command / Meeting / Transcript / Agent / Skill / Integration / MCP·API / Workspace / Permissions·security / Pricing plan），全部以 *对象 / 作用 / 所属层级 / 设计意义* 四列抽出，是 P30 中 Tana 产品语义底层的首次明文抽出。
+2. **§8 补充 Tana vs 其它产品对比三节（§8.1-§8.4）**：
+   - §8.1 Tana vs Notion / Coda “更结构化笔记” — schema-first 而非 doc-first
+   - §8.2 Tana vs Obsidian “更 AI workflow” — 云端 + first-class 而非 本地 + plugin
+   - §8.3 Tana Main vs 普通 AI meeting notes “更 agentic” — 交付件而不是记录 / meeting 是起手势而非总结
+   - §8.4 为什么这种复杂度带来学习成本 — 双学习曲线：抽象门槛 + 信赖门槛
+3. **§14.1 明确产品假设 MVP**：**面向产品研究和项目例会的 AI 结构化会议知识库**，包括 10 个特定功能（meeting transcript / decisions·owners·next actions / source cards / claim cards / product nodes / supertags / review status / automatic report / GitHub issue·Linear task sync / Product-Analysis index sync）。MVP 为什么是产品/项目例会而不是个人 PKM / 创业？*是产品判断，不是事实* — 明文标注。
+4. **§17.3 后续 AI 分析改进 从 8 条 → 16 条**，明确包含 9 个 protocol 必须项：
+   - 产品分叉必须明确 URL / 入口 / 定位差异（P30 案例）
+   - 私人公司 revenue / user·量 / employee / funding / valuation 必须双源
+   - AI agent 能力分 *官方 demo / 真实可用性 / 个人判断*
+   - pricing 依官方页面 third-party-汇总不作为 verified source
+   - security/compliance ETA 按官方文字标注
+   - community 用户评价标 *community source*
+   - 中文化 MVP 明文标 *产品假设，非事实*
+   - 运行 `scripts/verify_ai_analysis_index.py`
+   - index.yml / README.md / analyses/README.md 新增 draft 后同步
+5. **§ Sources 重构成 5 个 protocol 要求的分组**：
+   - Official / Primary Sources（品牌与公司主映射）
+   - Product / Pricing / Documentation（产品主体与价格内容）
+   - Verified Media / Interviews（含官方 self-report 中的对外报道）
+   - Secondary / Community Sources（社区与独立内容）
+   - Unverified / Needs Follow-up Sources（未能 cross-verified）
+   - 13 个竞品 URL 全体 HTTP-200 verified（heptabase.com / anytype.io / capacities.io / circleback.ai / zoom.com / microsoft.com / slack.com）。
+6. **`analyses/index.yml` 与 `analyses/README.md` 同步**：
+   - `index.yml` 新增 `structured_knowledge_path` reading path（Notion → Coda → Obsidian → Tana）
+   - `analyses/README.md` 候选列表移除 Tana / ~~Tana~~（已分析）/ Arc / Claude Code / Lovable / v0 / Adobe Express 留存
+   - `analyses/README.md` 新增 "Structured Knowledge 路线：Notion → Coda → Obsidian → Tana"
+
+#### 文件变更
+
+- `analyses/ai-assisted/2026-07-01-tana.md` — §7.0 对象表 / §8.1-§8.4 对比 / §14.1 MVP 明文 / §17.3 从 8 条→16 条 / § Sources 5 组重构
+- `analyses/index.yml` — 新增 structured_knowledge_path reading path
+- `analyses/README.md` — 移除 Tana from 候选 / ~~Tana~~ / 新增 Structured Knowledge 路线
+- `CHANGELOG.md` — 本节顶部记录
+
+### 验证
+
+- `python3 scripts/verify_ai_analysis_index.py` → PASS（13 / 12 / 1 / 13 / 0）
+
+---
+
 ## P30.1 - Tana Protocol Alignment + Source-Hardening
 
 **日期：** 2026-07-02

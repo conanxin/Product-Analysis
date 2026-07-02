@@ -87,9 +87,8 @@
 | 候选 | 类型 | 优先 | 备注 |
 |------|------|------|------|
 | ~~Replit~~ | AI coding + hosting | 已分析 | ~~私人 AI coding / hosting 公司，有私募融资报道~~ P22 draft |
-| Coda | workspace | 中 | 与 Notion 重叠 |
-| ~~Obsidian~~ | knowledge management | 已分析 | ~~私人 / local-first / markdown / 双向链接 / 插件生态~~ P28 draft → P29 reviewed
-| Tana | knowledge management | 中 | 私人但产品差异化 |
+| ~~Obsidian~~ | knowledge management | 已分析 | ~~私人 / local-first / markdown / 双向链接 / 插件生态~~ P28 draft → P29 reviewed |
+| ~~Tana~~ | ai-structured-knowledge-workspace | 已分析 | ~~私人 / 双线产品（tana.inc agentic meeting + outliner.tana.inc Tana Outliner）/ $25M total funding / SOC2 Q3 2026 / HIPAA Q3 2026~~ P30 draft |
 | Arc | browser | 中 | 私人，浏览器赛道 |
 | Claude Code | ai-coding | 中 | Anthropic 拥有，但与 Cursor 重叠 |
 | Lovable | AI website builder | 中 | 与 Framer 直接竞争 |
@@ -121,6 +120,10 @@
 ### Knowledge Base 路线
 1. **Notion** → **Coda** → **Obsidian**
    - 理解 AI workspace → 理解 doc-as-app → 理解 local-first markdown knowledge base
+
+### Structured Knowledge 路线
+1. **Notion** → **Coda** → **Obsidian** → **Tana**
+   - 理解 AI workspace → 理解 doc-as-app → 理解 local-first markdown knowledge base → 理解 AI 节点 / Supertags / agentic meeting / graph-as-context 中的双产品线 (tana.inc + outliner.tana.inc)
 
 ### Visual Communication 路线
 1. **Canva** → **Figma** → **Framer**

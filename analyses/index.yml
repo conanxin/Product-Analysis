@@ -1,6 +1,7 @@
 version: 1
 updated_at: '2026-07-02'
 # P30 update: added Tana entry, summary 12→13 / draft 0→1 / partial 12→13, new category 'ai-structured-knowledge-workspace', new reading path 'agentic_meeting_path'
+# P30.2 update: added 'structured_knowledge_path' reading path (Notion → Coda → Obsidian → Tana) per protocol §Step 4
 analyses:
 - product: Perplexity
   file: analyses/ai-assisted/2026-07-01-perplexity.md
@@ -441,6 +442,11 @@ reading_paths:
   - Notion
   - Coda
   - Obsidian
+  structured_knowledge_path:
+  - Notion
+  - Coda
+  - Obsidian
+  - Tana
   agentic_meeting_path:
   - Tana
   - Obsidian
