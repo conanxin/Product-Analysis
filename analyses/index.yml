@@ -1,5 +1,5 @@
 version: 1
-updated_at: 2026-07-02
+updated_at: '2026-07-02'
 analyses:
 - product: Perplexity
   file: analyses/ai-assisted/2026-07-01-perplexity.md
@@ -19,7 +19,8 @@ analyses:
   quality_notes:
     product_mechanism: verified
     high_risk_facts: partial
-    reason: fast-moving financing/product/legal facts still require direct verified media sources
+    reason: fast-moving financing/product/legal facts still require direct verified
+      media sources
 - product: Linear
   file: analyses/ai-assisted/2026-07-01-linear.md
   category: product-development
@@ -38,7 +39,8 @@ analyses:
   quality_notes:
     product_mechanism: verified
     high_risk_facts: partial
-    reason: financing/valuation facts still partly depend on single high-quality media source
+    reason: financing/valuation facts still partly depend on single high-quality media
+      source
 - product: Raycast
   file: analyses/ai-assisted/2026-07-01-raycast.md
   category: productivity-launcher
@@ -58,7 +60,8 @@ analyses:
   quality_notes:
     product_mechanism: verified
     high_risk_facts: partial
-    reason: financing/valuation facts depend on TechCrunch + official blog, no independent second media source
+    reason: financing/valuation facts depend on TechCrunch + official blog, no independent
+      second media source
 - product: Cursor
   file: analyses/ai-assisted/2026-07-01-cursor.md
   category: ai-coding
@@ -74,12 +77,13 @@ analyses:
   - agentic-workflow
   - productivity
   - llm-product
-  one_line_insight: Cursor 把代码编辑器、补全、聊天、agentic 多文件编辑和云端 background agent 合并成同一个 IDE,试图把"写代码"重构为"和 AI 协作改代码"的工作流。
+  one_line_insight: Cursor 把代码编辑器、补全、聊天、agentic 多文件编辑和云端 background agent 合并成同一个 IDE,试图把"写代码"重构为"和
+    AI 协作改代码"的工作流。
   quality_notes:
     product_mechanism: verified
     high_risk_facts: partial
-    reason: high-risk financing/ARR/SpaceX transaction facts remain partial (Series A is now double-sourced after P10; SpaceX
-      pending Q3 2026 close)
+    reason: high-risk financing/ARR/SpaceX transaction facts remain partial (Series
+      A is now double-sourced after P10; SpaceX pending Q3 2026 close)
 - product: Figma
   file: analyses/ai-assisted/2026-07-01-figma.md
   category: design-collaboration
@@ -95,13 +99,14 @@ analyses:
   - dev-mode
   - ai-design
   - b2b-saas
-  one_line_insight: Figma 把设计编辑器、实时协作、设计系统、原型、Dev Mode、Config 2025 新五大产品线(Make/Sites/Grid/Draw/Buzz)、Config 2026 新五项升级(Code
-    Layers/Figma Motion/Shaders/Generative Plugins/Weave 整合)整合到云端画布,把设计工具从本地文件软件重构为公开公司级的团队协作和产品交付基础设施。
+  one_line_insight: Figma 把设计编辑器、实时协作、设计系统、原型、Dev Mode、Config 2025 新五大产品线(Make/Sites/Grid/Draw/Buzz)、Config
+    2026 新五项升级(Code Layers/Figma Motion/Shaders/Generative Plugins/Weave 整合)整合到云端画布,把设计工具从本地文件软件重构为公开公司级的团队协作和产品交付基础设施。
   quality_notes:
     product_mechanism: verified
     high_risk_facts: partial
-    reason: public-company financial facts (NYSE:FIG IPO $33/$65B/+250%/$1.06B revenue, Adobe $20B terminated) still need
-      direct SEC/IR/media dual-source verification (Reuters/CNBC/Bloomberg Datadome 401)
+    reason: public-company financial facts (NYSE:FIG IPO $33/$65B/+250%/$1.06B revenue,
+      Adobe $20B terminated) still need direct SEC/IR/media dual-source verification
+      (Reuters/CNBC/Bloomberg Datadome 401)
 - product: Framer
   file: analyses/ai-assisted/2026-07-01-framer.md
   category: ai-website-builder
@@ -117,12 +122,14 @@ analyses:
   - cms
   - no-code
   - b2b-saas
-  one_line_insight: Framer 将设计画布、CMS、发布、SEO、模板生态和 AI agent 工作流结合，把网站建设从"设计稿交付开发"重构为"设计即上线"的 AI 建站平台。
+  one_line_insight: Framer 将设计画布、CMS、发布、SEO、模板生态和 AI agent 工作流结合，把网站建设从"设计稿交付开发"重构为"设计即上线"的
+    AI 建站平台。
   quality_notes:
     product_mechanism: verified
     high_risk_facts: partial
-    reason: private-company financing/founder background facts (Series D $100M/$2B, Meritech+Atomico+Accel, Koen Bok + Jorn
-      van Dijk) remain partial; 10+ English primary sources (Meritech/Atomico/Accel/TechCrunch/The Verge/Bloomberg/CNBC/Reuters)
+    reason: private-company financing/founder background facts (Series D $100M/$2B,
+      Meritech+Atomico+Accel, Koen Bok + Jorn van Dijk) remain partial; 10+ English
+      primary sources (Meritech/Atomico/Accel/TechCrunch/The Verge/Bloomberg/CNBC/Reuters)
       returned 401-429/404-405
 - product: Notion
   file: analyses/ai-assisted/2026-07-01-notion.md
@@ -143,9 +150,11 @@ analyses:
   quality_notes:
     product_mechanism: verified
     high_risk_facts: partial
-    reason: P17 复核后：主体产品机制 32 官方页 + developers.notion.com + thurrott.com + Wikipedia reference 源 verified；Notion 2013 成立 /
-      Series A $50M (2020) / Series C $275M (2021) / Skiff 2024-02 收购 / Notion AI 2022-11-16 发布 等在 Wikipedia 二手记载中双源部分达成；但
-      CNBC $500M ARR / TechCrunch / Forbes 原报道 URL 404 未 HTTP 验证；主体融资/估值/ARR/收购金额仍 partial
+    reason: P17 复核后：主体产品机制 32 官方页 + developers.notion.com + thurrott.com + Wikipedia
+      reference 源 verified；Notion 2013 成立 / Series A $50M (2020) / Series C $275M
+      (2021) / Skiff 2024-02 收购 / Notion AI 2022-11-16 发布 等在 Wikipedia 二手记载中双源部分达成；但
+      CNBC $500M ARR / TechCrunch / Forbes 原报道 URL 404 未 HTTP 验证；主体融资/估值/ARR/收购金额仍
+      partial
 - product: Canva
   file: analyses/ai-assisted/2026-07-01-canva.md
   category: design-ai-platform
@@ -165,10 +174,11 @@ analyses:
   quality_notes:
     product_mechanism: partial
     high_risk_facts: partial
-    reason: P19 复核后：canva.com 30+ URL 仍 403 Datadome (official-url-access-limited)；主体产品机制来自 Wikipedia (Canva/Affinity/Perkins)
-      reference 源 + Fortune 2025-08-22 + The Verge 2024 verified media；$42B 估值 (Wikipedia + Fortune 单独立媒体 + reference)；Affinity
-      / Leonardo.AI 收购事件部分双源达成中-高；收购金额均未明确披露 → 低-中 partial；2B/220M/5,500 员工数据 Wikipedia 单源 → 低-中 partial；Canva 是私人公司/接近 IPO
-      候选/未 IPO
+    reason: P19 复核后：canva.com 30+ URL 仍 403 Datadome (official-url-access-limited)；主体产品机制来自
+      Wikipedia (Canva/Affinity/Perkins) reference 源 + Fortune 2025-08-22 + The Verge
+      2024 verified media；$42B 估值 (Wikipedia + Fortune 单独立媒体 + reference)；Affinity
+      / Leonardo.AI 收购事件部分双源达成中-高；收购金额均未明确披露 → 低-中 partial；2B/220M/5,500 员工数据 Wikipedia
+      单源 → 低-中 partial；Canva 是私人公司/接近 IPO 候选/未 IPO
 - product: Webflow
   file: analyses/ai-assisted/2026-07-01-webflow.md
   category: visual-web-development
@@ -184,14 +194,16 @@ analyses:
   - cms
   - ai-website-builder
   - b2b-saas
-  one_line_insight: Webflow 将视觉设计、CMS、托管、SEO、AEO、优化、企业协作和 AI 建站能力整合到同一个可视化平台，把网站建设从"设计稿交付开发"重构为可视化、可发布、可增长的 Web 生产系统。
+  one_line_insight: Webflow 将视觉设计、CMS、托管、SEO、AEO、优化、企业协作和 AI 建站能力整合到同一个可视化平台，把网站建设从"设计稿交付开发"重构为可视化、可发布、可增长的
+    Web 生产系统。
   quality_notes:
     product_mechanism: verified
     high_risk_facts: partial
-    reason: 'P21 复核后：42 个 Webflow 官方 URL HTTP-200 verified (39 product pages + 3 blog posts: GSAP/Vidoso.ai/AI site builder)
-      + W3Techs verified 200 + Wikipedia (Webflow) reference 源 verified 200。主体产品机制 verified (高可信度)。融资/估值/ARR/用户数/收购金额 仍 partial
-      — Wikipedia reference cites Forbes/VentureBeat/Axios/TechCrunch，底层媒体原文 URL P21 尝试验证但 404/403/429，未直接 HTTP verified。收购金额均未披露
-      / undisclosed。Webflow 是私人公司/未 IPO。'
+    reason: 'P21 复核后：42 个 Webflow 官方 URL HTTP-200 verified (39 product pages + 3 blog
+      posts: GSAP/Vidoso.ai/AI site builder) + W3Techs verified 200 + Wikipedia (Webflow)
+      reference 源 verified 200。主体产品机制 verified (高可信度)。融资/估值/ARR/用户数/收购金额 仍 partial
+      — Wikipedia reference cites Forbes/VentureBeat/Axios/TechCrunch，底层媒体原文 URL P21
+      尝试验证但 404/403/429，未直接 HTTP verified。收购金额均未披露 / undisclosed。Webflow 是私人公司/未 IPO。'
 - product: Replit
   file: analyses/ai-assisted/2026-07-01-replit.md
   category: ai-cloud-development
@@ -211,16 +223,20 @@ analyses:
   quality_notes:
     product_mechanism: verified
     high_risk_facts: partial
-    reason: P23 复核后：75 个 YAML source_urls (replit.com 25 + docs.replit.com 33 + Wikipedia 2 + verified media 15) verified
-      200。P22 报告数字口径上有混淆 ("75 source URLs" vs "41+33+8+1+1+11=95 HTTP-200 verification") — P23 厘清：YAML source_urls=75 是实际引用数；HTTP-200
-      verification 总数 含重定向路径/备份 URL 可超过 75。主体产品机制 verified 高可信度 (Browser IDE / Agent 4 / Pricing / Deployments / Database
-      / Object Storage / Auth / Payments / Teams / Enterprise / MCP / Skills / Figma-to-app / Claude-to-app)。P23 解决 $250M
-      Series C vs $400M Series D 轮次字母分歧：$250M 是 Series C (Pulse 2.0 verified 200 明文)；$400M 是 Series D (Pulse 2.0 verified
-      200 独立文章)；SaaStr 把 $250M 误标 Series D 是 SaaStr 写作错误。融资/估值/ARR/用户量仍 partial — Pulse 2.0 + SaaStr verified 200 直接英文媒体 +
-      Wikipedia reference，但 Reuters/Forbes/Bloomberg/TechCrunch/Wired/Tom's Hardware 直接 URL 401/403/404。Replit 是私人公司 / 未 IPO。a16z
-      $4.5M seed 2018 由 CNBC verified 200 + Wikipedia reference 双源支撑。Microsoft Azure 合作 2025-07 由 Wikipedia reference (文字
-      verified 200) 支撑 (Inc URL 403)。数据库删除事件 2025-07 由 Wikipedia + 404 Media + SaaStr 多源 verified 200 支撑。AI Darwin Awards
-      提名 2025 由 Wikipedia + 404 Media 双源 verified 200 支撑。P22.1 已修复 YAML 重复 source_quality_notes key；P23 验证 yaml.safe_load
+    reason: P23 复核后：75 个 YAML source_urls (replit.com 25 + docs.replit.com 33 + Wikipedia
+      2 + verified media 15) verified 200。P22 报告数字口径上有混淆 ("75 source URLs" vs "41+33+8+1+1+11=95
+      HTTP-200 verification") — P23 厘清：YAML source_urls=75 是实际引用数；HTTP-200 verification
+      总数 含重定向路径/备份 URL 可超过 75。主体产品机制 verified 高可信度 (Browser IDE / Agent 4 / Pricing
+      / Deployments / Database / Object Storage / Auth / Payments / Teams / Enterprise
+      / MCP / Skills / Figma-to-app / Claude-to-app)。P23 解决 $250M Series C vs $400M
+      Series D 轮次字母分歧：$250M 是 Series C (Pulse 2.0 verified 200 明文)；$400M 是 Series
+      D (Pulse 2.0 verified 200 独立文章)；SaaStr 把 $250M 误标 Series D 是 SaaStr 写作错误。融资/估值/ARR/用户量仍
+      partial — Pulse 2.0 + SaaStr verified 200 直接英文媒体 + Wikipedia reference，但 Reuters/Forbes/Bloomberg/TechCrunch/Wired/Tom's
+      Hardware 直接 URL 401/403/404。Replit 是私人公司 / 未 IPO。a16z $4.5M seed 2018 由 CNBC
+      verified 200 + Wikipedia reference 双源支撑。Microsoft Azure 合作 2025-07 由 Wikipedia
+      reference (文字 verified 200) 支撑 (Inc URL 403)。数据库删除事件 2025-07 由 Wikipedia + 404
+      Media + SaaStr 多源 verified 200 支撑。AI Darwin Awards 提名 2025 由 Wikipedia + 404
+      Media 双源 verified 200 支撑。P22.1 已修复 YAML 重复 source_quality_notes key；P23 验证 yaml.safe_load
       OK + review_status / source_quality_notes 都是单 key。中文 Replit MVP / Agent 真实可用性属判断。
 - product: Coda
   file: analyses/ai-assisted/2026-07-01-coda.md
@@ -241,23 +257,61 @@ analyses:
   quality_notes:
     product_mechanism: verified
     high_risk_facts: partial
-    reason: P26 初稿：55 个 YAML source_urls (coda.io 45 + grammarly.com 7 + Wikipedia 2 + coda.io templates/packs 间接 1) verified
-      200。主体产品机制 verified 高可信度 (doc / table / formula / button / automation / Packs / Coda AI / 600+ integrations / Pricing / Security
-      / Trust / Compare)。Grammarly 收购事实 (2024-12 all-stock deal，金额未披露，Mehrotra 任合并公司 CEO) 由 coda.io/blog/about-coda/grammarly-acquires-coda
-      primary-source verified 200。融资 / 估值 / ARR / 用户量 / Superhuman rebrand 仍 partial — Wikipedia 二手记载 2021 $100M @ $1.4B
-      估值 + 2017 前 $60M + 2020 $80M，但 Forbes / Fast Company / TechCrunch / Axios / CNBC 主要媒体 paywall (403 / 401 / 404) 不能直接 verified。Coda
-      Brain 产品页 coda.io/product/coda-brain 301→ 403 Cloudflare protected。Coda 是私人公司 / 被 Grammarly 收购 / 无 SEC filings。800+ integrations
-      (coda.io/blog) vs 600+ integrations (coda.io/product/ai) 官方数字不一致需进一步核实。中文 Coda MVP / Coda Brain 真实可用性属判断。P27
-      下一步人工复核 review_status draft → reviewed。P27 已完成 source-hardening：新増 16 个 HTTP-200 验证 URL (superhuman.com × 8 + grammarly.com/blog/company × 3 + grammarly.com/press × 1 + blog.superhuman.com × 2 + coda.io × 4) 将 Oct 2025 Superhuman rebrand 从 partial 升级为 verified-primary (grammarly.com/press + rebrand blog 2025-10-29 + superhuman.com/ 产品 hub 三源交叉验证)。Dec 2024 all-stock acquisition 仍为 verified-primary (coda.io/blog 2024-12-17 + Wikipedia)。Funding $60M-$80M-$100M / $1.4B 2021 valuation / 收购金额 / 800+ vs 600+ integrations / Coda Brain (coda.io/product/coda-brain 301→ 403 Cloudflare) / 具体 pricing 金额 / 50,000+ teams / 40M Grammarly users 仍 partial — Forbes / Fast Company / TechCrunch / Axios / CNBC / Bloomberg / Crunchbase 主流媒体 paywall (403 / 401 / 404) 不能直接 verified。Coda 是私人公司 / 被 Grammarly 收购 / 2025-10 后为 Superhuman Suite 组成部分 / 无 SEC filings。中文 Coda MVP / Coda Brain 真实可用性属判断。
+    reason: P26 初稿：55 个 YAML source_urls (coda.io 45 + grammarly.com 7 + Wikipedia
+      2 + coda.io templates/packs 间接 1) verified 200。主体产品机制 verified 高可信度 (doc / table
+      / formula / button / automation / Packs / Coda AI / 600+ integrations / Pricing
+      / Security / Trust / Compare)。Grammarly 收购事实 (2024-12 all-stock deal，金额未披露，Mehrotra
+      任合并公司 CEO) 由 coda.io/blog/about-coda/grammarly-acquires-coda primary-source
+      verified 200。融资 / 估值 / ARR / 用户量 / Superhuman rebrand 仍 partial — Wikipedia
+      二手记载 2021 $100M @ $1.4B 估值 + 2017 前 $60M + 2020 $80M，但 Forbes / Fast Company
+      / TechCrunch / Axios / CNBC 主要媒体 paywall (403 / 401 / 404) 不能直接 verified。Coda
+      Brain 产品页 coda.io/product/coda-brain 301→ 403 Cloudflare protected。Coda 是私人公司
+      / 被 Grammarly 收购 / 无 SEC filings。800+ integrations (coda.io/blog) vs 600+ integrations
+      (coda.io/product/ai) 官方数字不一致需进一步核实。中文 Coda MVP / Coda Brain 真实可用性属判断。P27 下一步人工复核
+      review_status draft → reviewed。P27 已完成 source-hardening：新増 16 个 HTTP-200 验证
+      URL (superhuman.com × 8 + grammarly.com/blog/company × 3 + grammarly.com/press
+      × 1 + blog.superhuman.com × 2 + coda.io × 4) 将 Oct 2025 Superhuman rebrand 从
+      partial 升级为 verified-primary (grammarly.com/press + rebrand blog 2025-10-29
+      + superhuman.com/ 产品 hub 三源交叉验证)。Dec 2024 all-stock acquisition 仍为 verified-primary
+      (coda.io/blog 2024-12-17 + Wikipedia)。Funding $60M-$80M-$100M / $1.4B 2021 valuation
+      / 收购金额 / 800+ vs 600+ integrations / Coda Brain (coda.io/product/coda-brain
+      301→ 403 Cloudflare) / 具体 pricing 金额 / 50,000+ teams / 40M Grammarly users 仍
+      partial — Forbes / Fast Company / TechCrunch / Axios / CNBC / Bloomberg / Crunchbase
+      主流媒体 paywall (403 / 401 / 404) 不能直接 verified。Coda 是私人公司 / 被 Grammarly 收购 / 2025-10
+      后为 Superhuman Suite 组成部分 / 无 SEC filings。中文 Coda MVP / Coda Brain 真实可用性属判断。
+- product: Obsidian
+  file: analyses/ai-assisted/2026-07-01-obsidian.md
+  category: knowledge-management
+  analysis_type: ai-assisted
+  created_at: '2026-07-01'
+  review_status: draft
+  reviewed_at: null
+  source_url_verification_status: partial
+  tags:
+  - local-first
+  - markdown
+  - note-taking
+  - personal-knowledge-base
+  - bidirectional-links
+  - plugin-ecosystem
+  - extensible-notes-app
+  one_line_insight: Obsidian 将本地 Markdown 文件与双向链接、graph view 和插件生态结合，把笔记从"记录工具"重构为"个人知识操作系统"。
+  quality_notes:
+    product_mechanism: verified
+    high_risk_facts: partial
+    reason: P28 初稿：主体产品机制 verified — obsidian.md 官网 25+ 页面 HTTP-200；官方 blog future-of-plugins
+      (2026-05-12) verified — 4000+ plugins / 120M downloads；官方 blog cure53-tob-sync-audits
+      (2026-05-13) verified — Sync 2020 launch / 安全审计。创始人 / 收入 / ARR / 融资 / 估值 / 用户量
+      partial — 私人公司无公开数据 / 主流媒体 paywall。
 summary:
-  total: 11
+  total: 12
   reviewed: 11
-  draft: 0
+  draft: 1
   verified: 0
-  partial: 11
+  partial: 12
   legacy_manual_analyses: 9
   legacy_今日复盘: 1
-  p_reports_total: 18
+  p_reports_total: 19
 status_transitions:
 - from: draft
   to: reviewed
@@ -313,6 +367,9 @@ by_category:
 - category: doc-database
   products:
   - Coda
+- category: knowledge-management
+  products:
+  - Obsidian
 reading_paths:
   ai_product_path:
   - Perplexity
@@ -326,6 +383,7 @@ reading_paths:
   - Framer
   knowledge_workspace_path:
   - Notion
+  - Obsidian
   visual_communication_path:
   - Canva
   - Figma
@@ -340,3 +398,4 @@ reading_paths:
   doc_as_app_path:
   - Notion
   - Coda
+  - Obsidian
