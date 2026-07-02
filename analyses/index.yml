@@ -298,12 +298,15 @@ analyses:
   quality_notes:
     product_mechanism: verified
     high_risk_facts: partial
-    reason: P29 人工复核完成：主体产品机制 verified — obsidian.md 官网 25+ 页面 HTTP-200；官方 blog future-of-plugins
-      (2026-05-12) verified — 4000+ plugins / 120M downloads；官方 blog cure53-tob-sync-audits
-      (2026-05-13) verified — Sync 2020 launch / 安全审计；P29 补充 cnblogs ForestYe (2020-06-15)
-      二手支撑创始人身份。创始人 / 收入 / ARR / 融资 / 估值 / 员工数 / 用户总量 partial — 私人公司无公开数据；Wikipedia
-      被 blocking 策略拦截；主流媒体（The Verge / Wired / Ars Technica / TechCrunch）未在 P29 阶段找到独立
-      verified 报道。Obsidian 是私人公司 / bootstrapped / 无 SEC filings。
+    reason: P29 人工复核完成 + P29.1 source-hardening：主体产品机制 verified — obsidian.md 官网 25+
+      页面 HTTP-200；官方 blog future-of-plugins (2026-05-12) verified — 4000+ plugins
+      / 120M downloads；官方 blog cure53-tob-sync-audits (2026-05-13) verified — Sync
+      2020 launch / 安全审计；P29.1 新增 Wikipedia (curl HTTP-200) — 创始人 Shida Li / Erica
+      Xu / University of Waterloo / Dynalist / beta 2020-03-30 / 1.0.0 2022-10-13
+      / ~1M users (Fast Company 2023) / Steph Ango CEO 2023-02-06；Pricing 精确提取 — Catalyst
+      $25 one-time / Commercial $50/user/year / Sync $4-5/user/month / Publish $8-10/site/month。收入
+      / ARR / 融资 / 估值 / 员工数 partial — 私人公司无公开数据；Obsidian 是私人公司 / bootstrapped / 非
+      IPO。
   review_notes: Obsidian draft reviewed in P29; product claims checked against Obsidian
     official pages, pricing, Sync, Publish, Canvas, Web Clipper, CLI, mobile, roadmap,
     security/privacy/terms/license, docs/help, community plugins/themes, official

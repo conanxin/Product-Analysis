@@ -1,5 +1,34 @@
 # Changelog
 
+## P29.1 - Obsidian Source-Hardening & Pricing Correction
+
+**日期：** 2026-07-02
+**变更类型：** source-hardening + pricing-correction + article-update
+
+### 变更内容
+
+P29.1 在 P29 基础上执行深度来源补强，发现并修正关键 pricing 错误。
+
+#### 关键发现
+
+1. **Wikipedia HTTP-200 verified (via curl)**：P28/P29 因 web_fetch blocking 策略标注 "Wikipedia blocked"，P29.1 改用 curl 成功访问 en.wikipedia.org/wiki/Obsidian_(software)
+2. **Pricing 错误修正**：P28 写 "Standard $25 一次性 / Commercial $50 一次性" 有误；实际 Catalyst $25 one-time / Commercial $50/user/year / Sync $4-5/user/month / Publish $8-10/site/month
+3. **Wikipedia 引用 Fast Company (2023)**：确认 ~1M users / Discord 110K+ / Reddit 94.6K — high-quality-media-verified
+4. **Wikipedia 确认创始人**：Shida Li + Erica Xu / University of Waterloo / Dynalist — 可信度从中低升至中高
+5. **Wikipedia 确认关键日期**：beta 2020-03-30 / 1.0.0 2022-10-13 / Canvas 2022-12
+6. **Wikipedia 确认 Steph Ango** 2023-02-06 加入 Obsidian as CEO
+
+#### 文件变更
+
+- `analyses/ai-assisted/2026-07-01-obsidian.md` — Pricing 修正 + Wikipedia 来源补充 + §17 更新 + source_urls 32
+- `analyses/index.yml` — Obsidian quality_notes 更新
+
+### 验证
+
+- `python3 scripts/verify_ai_analysis_index.py` → PASS (12 / 12 / 0 / 12 / 0)
+
+---
+
 ## P29 - Obsidian Review and Index Status Sync
 
 **日期：** 2026-07-02
