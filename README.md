@@ -137,9 +137,10 @@ Product-Analysis/
 - [x] P22.1: 修复 Replit YAML 重复 source_quality_notes 字段 (2 → 1)
 - [x] P23: 人工复核 Replit 文章 (draft → reviewed;§17.1 升级;§17.2 解决 $250M Series C vs $400M Series D 轮次字母分歧;§17.3 厘清 source count 口径;YAML review_status / reviewed_at / review_notes 同步)
 - [x] P23.1: 修复 Replit 复核后 README 质量状态漂移 (9 reviewed → 10 reviewed;AI 辅助分析 / reviewed / partial 三项同步;未改其他三处)
+- [x] P24: 新增 AI 分析索引一致性 + YAML 质量检查脚本 (scripts/verify_ai_analysis_index.py + docs/validation-workflow.md;检查 front matter 提取 / 重复 key / 必备字段 / source_urls 格式 / index.yml 解析 / article↔index 一致性 / summary count / README 质量状态 / 产品状态行;11 大类 ~80 子项;退出码 0=PASS 1=FAIL)
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 
 ---
 
-*最后更新：2026-07-01 (P23.1 修复 Replit 复核后 README 质量状态漂移;1) 同步根 README 当前质量状态:AI 辅助分析 9→10 / reviewed 9→10 / partial 9→10;2) Replit 行已在 P23 改为 reviewed|partial，本次仅同步质量状态表;3) analyses/README.md / analyses/index.yml / Replit 文章 YAML 未变;4) YAML 无重复 key)*
+*最后更新：2026-07-02 (P24 新增 AI 分析索引一致性 + YAML 质量检查脚本;1) scripts/verify_ai_analysis_index.py 新建 — 11 大类检查约 80 子项，检测 front matter 提取/重复 key/必备字段/source_urls 格式/index.yml 解析/article↔index 一致性/summary count/README 质量状态/产品状态行;2) docs/validation-workflow.md 新建 — 描述 4 类常见失败模式 + 新增文章/复核升级/漂移修复 3 种工作流;3) 首次运行报告 9 项 FAIL — 3 项 YAML scan errors (Cursor/Perplexity/Raycast source_quality_notes 未加引号冒号) + 6 项 article↔index one_line_insight 不一致 (双引号 vs 单引号);4) 未修改任何 AI 分析文章正文 / analyses/index.yml / analyses/README.md;5) 仅 P24 任务报告需含 python3 scripts/verify_ai_analysis_index.py 运行结果;6) 后续 P* 任务可选用 scripts/verify_ai_analysis_index.py 作为验收门禁)*

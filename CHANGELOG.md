@@ -1,5 +1,78 @@
 # Changelog
 
+## P24 - AI Analysis Index Validation Script
+
+**日期：** 2026-07-02
+**变更类型：** automation / validation / docs-only
+**变更范围：** scripts/ + docs/validation-workflow.md + README.md + reports/P24-*
+
+### 变更内容
+
+新增 Product-Analysis 仓库的本地可运行验证脚本，统一检查 AI 辅助分析文章的索引一致性 + YAML 质量。
+
+#### 新增文件
+
+1. **scripts/verify_ai_analysis_index.py** (~22 KB)
+   - Python 3.10+ 标准库 + PyYAML 依赖
+   - 退出码：0 = PASS / 1 = FAIL
+   - 11 大类检查，约 80 子项：
+     1. YAML 依赖检查 (PyYAML 安装)
+     2. Front matter 提取 (analyses/ai-assisted/YYYY-MM-DD-*.md 扫描)
+     3. 重复 YAML key 检测 (自实现 top-level key 计数器，P22.1 教训)
+     4. YAML 解析 + 11 必备字段 (product / category / tags / source_urls / analysis_type / created_at / review_status / source_url_verified_at / source_url_verification_status / source_quality_notes / one_line_insight)
+     5. source_urls 格式检查 (list / string / http(s):// 前缀 / markdown 分隔符 / inline annotation)
+     6. analyses/index.yml 解析 (analyses list + summary + 10 字段 entry)
+     7. summary count 一致性 (动态计算 vs summary 字段)
+     8. article YAML ↔ index.yml 一致性 (8 字段: product / category / analysis_type / review_status / source_url_verification_status / one_line_insight / tags / reviewed_at)
+     9. README.md 当前质量状态检查 (动态期望值 vs 表格实际值)
+     10. analyses/README.md 当前质量状态检查 (同上，小节标题 `## 3. 当前质量状态`)
+     11. 产品状态行一致性 (README.md AI 索引 + analyses/README.md AI 总览)
+
+2. **docs/validation-workflow.md** (~5 KB)
+   - 工作流文档
+   - 4 类常见失败模式与修复方法
+   - 新增文章 / 复核升级 / 漂移修复 3 种工作流
+   - 后续 P* 报告应引用 `python3 scripts/verify_ai_analysis_index.py` 运行结果
+
+3. **reports/P24-ai-analysis-index-validation-script-report.md**
+   - P24 任务报告
+
+4. **README.md** (顶部 todo + 最后更新)
+   - todo: P24 记录
+   - 最后更新: P24 描述
+
+### 首次运行结果
+
+P24 首跑 `python3 scripts/verify_ai_analysis_index.py` 共检查 84 项，通过 75 项，失败 9 项：
+
+- **3 项 YAML scan errors** (Cursor / Perplexity / Raycast): `source_quality_notes` 或 `review_notes` 包含未加引号的冒号 `:` 造成 PyYAML 解析失败
+- **6 项 article↔index one_line_insight 不一致** (Figma / Framer / Linear / Notion / Replit / Webflow): 文章内为双引号 `"..."`，index.yml 为单引号 `'...'`
+
+### 未修改的文件
+
+- analyses/ai-assisted/*.md — 未动 (包含 Cursor/Perplexity/Raycast YAML 错误，留给后续 P* 修复)
+- analyses/index.yml — 未动 (包含 6 个 one_line_insight 引号不一致)
+- analyses/README.md — 未动
+- 旧人工分析文章 — 未动
+- pic/ — 未动
+- templates/ — 未动
+
+### 教训沉淀
+
+- P24 验证脚本不能代替修复：脚本能检出问题，修复仍需后续 P24.1 / P24.2 任务
+- 关键检查点:
+  1. 写 YAML 文本值（含冒号/方括号）必须加引号或转义
+  2. one_line_insight 在文章和 index.yml 必须严格一致
+  3. 同步索引时不仅要改 article YAML / index.yml / analyses/README.md / README.md 4 处，所有引用同一数据 (reviewed count) 的统计表格也要同步
+
+### 后续 P24.x 候选
+
+- P24.1: 修复 Cursor / Perplexity / Raycast YAML scan errors (加引号)
+- P24.2: 修复 6 个 one_line_insight 双引号 vs 单引号不一致
+- P24.3: 把 `python3 scripts/verify_ai_analysis_index.py` 接入 GitHub Actions 作为 CI 门禁
+
+---
+
 ## P23.1 - Replit README Quality Status Drift Fix
 
 **日期：** 2026-07-01
