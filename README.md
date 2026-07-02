@@ -2,11 +2,22 @@
 
 ## 项目定位
 
-这是一个**产品设计观察与分析项目**。
+这是一个从早期人工产品观察发展而来的 **AI 辅助产品分析档案库**。第一阶段已完成 13 篇 reviewed AI 产品分析，覆盖 AI 搜索、编程、设计、建站、知识工作台、云端开发、local-first 知识库和 agentic meeting workflow 等方向。项目采用 **source-first** 工作流：每篇分析保留 YAML metadata、来源验证、`review_status` 和 `source_url_verification_status`。
 
-早期内容来自人工分析（2015年前后），以"特点 / 问题 / 设想"结构记录对各类互联网产品的观察笔记。后续计划逐步加入 **AI 辅助分析**，通过结构化模板持续沉淀对产品的深度分析。
+当前质量状态：**13 篇 AI 辅助分析 · 全部 reviewed · source URL 验证状态全部 partial**。`partial` 不是失败，而是严格 source-first 标准下的诚实状态——主体产品机制通常可由官方源 verified，但融资 / 估值 / ARR / 用户数 / 客户数等高风险事实需要 ≥ 2 个独立高质量媒体才能 verified，在私人公司为主的状态下诚实地说"主体 verified 高风险 partial"是正确状态机结果。
 
 > "因为想要做一些东西，但是不知道如何下手。最近想清楚了，可以先快速学习一下原型的制作。"——早期动机
+
+---
+
+## 快速入口
+
+- [AI Product Analysis Phase 1 Synthesis](docs/ai-product-analysis-phase-1-synthesis.md) — 13 篇综合、14 条 AI 产品设计规律、source-first 方法论
+- [Product Map Navigation](docs/product-map-navigation.md) — 按类型、问题、阅读路径导航 13 篇 AI 产品分析
+- [AI 辅助分析索引](analyses/README.md) — 13 篇产品分析的目录、状态、阅读路径
+- [机器可读索引](analyses/index.yml) — 程序可解析的 YAML 索引（含 reading_paths）
+- [Source-first 质量标准](docs/review-status-guide.md) — `review_status` / `source_url_verification_status` 状态机
+- [索引一致性校验](docs/index-sync-validation.md) — validator 工作原理
 
 ## 项目目标
 
@@ -103,6 +114,11 @@ Product-Analysis/
   - 汇总第一阶段 13 篇 AI 产品分析（Perplexity / Linear / Raycast / Cursor / Figma / Framer / Notion / Canva / Webflow / Replit / Coda / Obsidian / Tana）；
   - 提炼产品谱系、6 层类型分层、4 张横向对照矩阵、14 条 AI 产品设计规律、source-first 方法论；
   - 建议下一阶段先做公开展示、导航整理和产品地图，而不是继续无限新增产品。
+- [Product Map Navigation](docs/product-map-navigation.md)
+  - 用于按类型、问题和阅读路线阅读 13 篇 AI 产品分析；
+  - 6 条推荐阅读路径（基础路线 / 设计到发布 / 知识工作台 / 工具到 Agent / 产品研究方法 / AI 矩阵路线）；
+  - 8 个横向对照研究问题；
+  - 第二阶段路线图（P33-P35）。
 
 ---
 
@@ -178,6 +194,9 @@ python3 scripts/verify_ai_analysis_index.py
 - [x] P32: 完成 AI Product Analysis Phase 1 Synthesis (docs/ai-product-analysis-phase-1-synthesis.md);13 篇 reviewed AI 辅助分析的综合文档 — 产品谱系 / 类型分层 6 层 / 4 张横向对照矩阵 (cloud vs local / doc-db-graph-agent / creator vs operator / human-in-the-loop vs agent-first) / 14 条 AI 产品设计规律 / source-first 方法论沉淀 / 第二阶段是否继续扩展的判断标准;未修改任何 ai-assisted/*.md 或 index.yml;validator PASS (13/13/0/13/0 不变)
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
+- [x] P33: 完成公开展示 README cleanup 与产品地图导航（新增 docs/product-map-navigation.md；README 增加 `## 快速入口`、项目定位更新为现在时、`## 阶段性综合报告` 加 product-map 链接；analyses/README.md 加 Product Map Navigation 入口；validator PASS 不变）
+- [ ] P34: 生成视觉产品地图（Mermaid 图谱 + 可视化）
+- [ ] P35: 仅在有明确空白时新增产品（候选：Arc / Dia / Claude Code / Lovable / v0）
 
 ---
 

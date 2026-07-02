@@ -28,6 +28,14 @@
   - 13 篇 reviewed AI 产品分析的阶段性综合报告
   - 包含产品谱系、类型分层、横向对照矩阵、AI 产品设计规律（14 条）、source-first 方法论沉淀、第二阶段建议
 
+### Product Map Navigation 产品地图导航
+
+- [Product Map Navigation](../docs/product-map-navigation.md)
+  - 按类型、问题和阅读路径导航 13 篇 AI 产品分析
+  - 6 条推荐阅读路径（AI 产品基础 / 设计到发布 / 知识工作台 / 工具到 Agent / 产品研究方法 / AI 矩阵路线）
+  - 8 个横向对照研究问题
+  - 适合第一次进入项目的读者
+
 ### AI Search / Answer Engine
 - **Perplexity** — 搜索 + 引用 + 对话式答案
 

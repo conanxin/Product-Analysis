@@ -1,5 +1,60 @@
 # Changelog
 
+## P33 - Public README Cleanup and Product Map Navigation
+
+**日期：** 2026-07-02
+**变更类型：** public-facing docs / navigation / README cleanup
+
+### 变更内容
+
+完成 P33 — 公开展示 README 调整 + 产品地图导航文档。协议进入"整理与展示"阶段。
+
+#### 变更
+
+- **新增 `docs/product-map-navigation.md`** — Product Map Navigation v1.0：
+  - §1 适用读者说明
+  - §2 13 篇产品总览表（产品 / 类别 / 推荐阅读场景 / 对照产品）
+  - §3 按问题阅读（AI search / AI coding / 设计与视觉生产 / 知识工作台 / agentic workflow / source-first 方法，6 个子节）
+  - §4 6 条推荐阅读路径（AI 基础 / 设计发布 / 知识工作台 / 工具到 Agent / 研究方法 / AI 矩阵路线）
+  - §5 8 个横向对照研究问题
+  - §6 第二阶段路线图（P33 已完成 / P34 视觉地图 / P35 候选 4 个方向）
+
+- **README.md 主要变更：**
+  - `## 项目定位` 由"项目是产品设计观察项目，后续计划逐步加入 AI 辅助分析"改为"AI 辅助产品分析档案库；第一阶段已完成 13 篇 reviewed AI 辅助分析；source-first 工作流" — 并明确 partial 不是失败而是严格 source-first 标准下的诚实状态。
+  - 在 `## 项目定位` 与 `## 项目目标` 之间新增 `## 快速入口` 节，含 6 条导航链接（synthesis / product map / ai-assisted index / index.yml / review-status / index-sync-validation）。
+  - `## 阶段性综合报告` 节增加 `[Product Map Navigation]` 子条目（链接 + 6 条路线 + 8 个研究问题要点）。
+  - `## 下一步计划` 表增加 `[x] P33` / `[ ] P34` / `[ ] P35` 三项。
+
+- **analyses/README.md** 在 `### Phase 1 Synthesis` 后加 `### Product Map Navigation` 子节，含文档链接 + 要点。
+
+#### 验证
+
+```
+$ python3 scripts/verify_ai_analysis_index.py
+
+PASS: AI analysis index consistency verified
+- analyses found: 13
+- reviewed: 13
+- draft: 0
+- partial: 13
+- verified: 0
+```
+
+（与 P32.1 后保持一致，因为本任务不改变 index 状态）
+
+#### 未修改
+
+- docs/ai-product-analysis-phase-1-synthesis.md
+- analyses/ai-assisted/*.md
+- analyses/index.yml
+- scripts/verify_ai_analysis_index.py
+- .github/workflows/*
+- 旧人工分析文章
+- pic/
+- templates/
+
+---
+
 ## P32.1 - README Synthesis Entry and Footer Cleanup
 
 **日期：** 2026-07-02
