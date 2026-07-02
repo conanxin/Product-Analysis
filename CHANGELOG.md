@@ -1,5 +1,100 @@
 # Changelog
 
+## P36.1 - GitHub Pages Live Verification
+
+**日期：** 2026-07-02
+**变更类型：** live verification / status sync / docs-only
+
+### 验证结果：✅ LIVE
+
+#### Step 0：validator
+```
+$ python3 scripts/verify_ai_analysis_index.py
+PASS: AI analysis index consistency verified
+- analyses found: 13
+- reviewed: 13
+- draft: 0
+- partial: 13
+- verified: 0
+```
+
+#### Step 1：Pages workflow 文件
+- ✓ .github/workflows/pages.yml 存在
+- ✓ site/index.html 存在
+- ✓ site/data/products.json 存在
+
+#### Step 2：gh CLI workflow run check
+```
+$ gh run list --workflow "Deploy static showcase to GitHub Pages" --limit 5 --repo conanxin/Product-Analysis
+completed  success  P36: add GitHub Pages static showcase site  Deploy static showcase to GitHub Pages  master  push  28596247203  4m51s  2026-07-02T14:09:09Z
+```
+
+- **WORKFLOW_STATUS: success**
+- databaseId: 28596247203
+- status: completed
+- conclusion: success
+- headSha: 57d18637748d1fb9b41e5fecf2107055a2fae82a (= P36 commit)
+- duration: 4m51s
+- createdAt: 2026-07-02T14:05:10Z
+- updatedAt: 2026-07-02T14:14:00Z
+- url: https://github.com/conanxin/Product-Analysis/actions/runs/28596247203
+
+#### Step 3：HTTP 验证
+
+**homepage：**
+- URL: https://conanxin.github.io/Product-Analysis/
+- HTTP/2 200 ✅
+- content-type: text/html; charset=utf-8
+- server: GitHub.com
+- last-modified: Thu, 02 Jul 2026 14:13:57 GMT
+- size: 15460 bytes
+
+**关键字检查：**
+- ✓ 'Product Analysis' 命中
+- ✓ '13 reviewed' 命中
+- ✓ 'Phase 1' 命中
+
+**products.json：**
+- URL: https://conanxin.github.io/Product-Analysis/data/products.json
+- HTTP/2 200 ✅
+- content-type: application/json; charset=utf-8
+- size: 9128 bytes
+- total: 13
+- products: 13
+- all reviewed: True
+- all partial: True
+
+**PAGES_STATUS: deployed_200**
+**LIVE_URL: https://conanxin.github.io/Product-Analysis/**
+
+#### Step 4：README 状态同步
+
+- ✓ `## 项目定位` Phase 1 状态段： pending fallback → "当前 GitHub Pages Showcase 已 Live（HTTP 200 verified）" + 直接访问链接
+- ✓ `## 下一步计划`：增加 `[x] P36.1: GitHub Pages Live Verification` 包含 gh run ID + HTTP 验证 + PAGES_STATUS + LIVE_URL
+
+#### Step 7：validator post-modification
+```
+$ python3 scripts/verify_ai_analysis_index.py
+PASS: AI analysis index consistency verified
+- analyses found: 13
+- reviewed: 13
+- draft: 0
+- partial: 13
+- verified: 0
+```
+
+#### 未修改
+
+- site/index.html / site/assets/styles.css / site/assets/app.js / site/data/products.json / site/404.html / site/.nojekyll
+- docs/phase-1-release-notes.md / docs/ai-product-analysis-phase-1-synthesis.md / docs/product-map-navigation.md / docs/visual-product-map.md
+- analyses/README.md / analyses/index.yml / analyses/ai-assisted/*.md
+- scripts/verify_ai_analysis_index.py
+- .github/workflows/ai-analysis-index-check.yml / .github/workflows/pages.yml (无语法错误)
+- 旧人工分析文章 / pic/ / templates/
+- tag v1.0.0-phase-1 (保留 / 未覆盖 / 未 force push)
+
+---
+
 ## P36 - GitHub Pages Static Showcase Site
 
 **日期：** 2026-07-02

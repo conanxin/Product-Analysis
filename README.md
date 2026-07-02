@@ -8,7 +8,7 @@
 
 > "因为想要做一些东西，但是不知道如何下手。最近想清楚了，可以先快速学习一下原型的制作。"——早期动机
 
-**Phase 1 状态：** 已完成第一阶段发布收口。当前版本可作为公开产品研究作品集阅读；建议从 [Release Notes](docs/phase-1-release-notes.md)、[Product Map Navigation](docs/product-map-navigation.md) 和 [Visual Product Map](docs/visual-product-map.md) 开始。如果 GitHub Pages 尚未启用，请以 README / Release Notes 为主；Pages workflow 已准备好。
+**Phase 1 状态：** 已完成第一阶段发布收口，当前 GitHub Pages Showcase 已 Live（HTTP 200 verified）。当前版本可作为公开产品研究作品集阅读；建议从 [Release Notes](docs/phase-1-release-notes.md)、[Product Map Navigation](docs/product-map-navigation.md) 和 [Visual Product Map](docs/visual-product-map.md) 开始，或直接访问 [GitHub Pages Showcase](https://conanxin.github.io/Product-Analysis/)。
 
 ---
 
@@ -206,6 +206,7 @@ python3 scripts/verify_ai_analysis_index.py
 - [x] P34: 完成 Visual Product Map / Mermaid 产品图谱（新增 docs/visual-product-map.md，含 8 张 Mermaid 图 + 1 个 ASCII fallback 总图；README `## 快速入口` 与 `## 阶段性综合报告` 加 Visual Product Map 链接；analyses/README.md 加 Visual Product Map 入口；docs/product-map-navigation.md 加 Visual Product Map 链接；validator PASS 不变）
 - [x] P35: 完成 Phase 1 Release Notes 与公开展示收口（新增 docs/phase-1-release-notes.md 含 7 节：发布摘要 / 13 篇表格 / 10 篇导航文档 / 质量系统 / 已知限制 / 推荐阅读顺序 / 下一阶段；README `## 快速入口` 加 Release Notes 链接 + `## 项目定位` 后加 Phase 1 状态段；下一步计划加 P35/P36/P37/P38 四项；validator PASS 不变）
 - [x] P36: 新增 GitHub Pages 静态展示页（新增 site/ 目录含 index.html / assets/styles.css / assets/app.js / data/products.json / 404.html / .nojekyll；新增 .github/workflows/pages.yml；README `## 快速入口` + GitHub Pages Showcase 链接 + Phase 1 状态段加 Pages 未启用 fallback 说明；下一步计划 [x] P36 + [ ] P37/P38；validator PASS 不变）
+- [x] P36.1: GitHub Pages Live Verification（gh run #28596247203 completed/success on commit 57d1863；homepage HTTP 200 + 关键字命中 + products.json HTTP 200 + 13 reviewed/partial 全部命中；PAGES_STATUS=deployed_200，LIVE_URL=https://conanxin.github.io/Product-Analysis/）
 - [ ] P37: 可选增强展示页交互 / 页面内容自动同步
 - [ ] P38: 仅在有明确 taxonomy 空白时新增产品（候选：Arc / Dia / Claude Code / Lovable / v0）
 
