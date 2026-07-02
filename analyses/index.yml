@@ -193,8 +193,8 @@ analyses:
     category: ai-cloud-development
     analysis_type: ai-assisted
     created_at: 2026-07-01
-    review_status: draft
-    reviewed_at: null
+    review_status: reviewed
+    reviewed_at: 2026-07-01
     source_url_verification_status: partial
     tags:
       - ai-coding
@@ -207,17 +207,17 @@ analyses:
     quality_notes:
       product_mechanism: verified
       high_risk_facts: partial
-      reason: "P22 source-first workflow：75 个 source URLs verified 200 (41 Replit 官方主站 + 33 docs.replit.com + 8 replit.com/blog + 1 Wikipedia 主体 + 1 Amjad Masad + 11 英文媒体含 Pulse 2.0 + SaaStr)。主体产品机制 verified 高可信度（Browser IDE / Agent 4 / Pricing / Deployments / Database / Object Storage / Auth / Payments / Teams / Enterprise / MCP / Skills / Figma-to-app / Claude-to-app）。融资/估值/ARR/用户量 partial — Pulse 2.0 + SaaStr verified 200 直接英文媒体 + Wikipedia reference，但 Reuters/Forbes/Bloomberg/TechCrunch/Wired/Tom's Hardware 直接 URL 401/403/404，无法双独立主流媒体 verified。$250M Series C vs Series D 在 Pulse 2.0 vs SaaStr 存在轮次字母分歧。Replit 是私人公司 / 未 IPO。ARR $2.8M → $150M 来自 Pulse 2.0 + SaaStr 二次引用公司方说法。a16z $4.5M seed 2018 由 CNBC verified 200 + Wikipedia reference 双源支撑。Microsoft Azure 合作 2025-07 由 Wikipedia reference (文字 verified 200) 支撑。数据库删除事件 2025-07 由 Wikipedia + 404 Media + SaaStr 多源 verified 200 支撑。AI Darwin Awards 提名 2025 由 Wikipedia + 404 Media 双源 verified 200 支撑。中文 Replit MVP / Agent 真实可用性属判断。"
+      reason: "P23 复核后：75 个 YAML source_urls (replit.com 25 + docs.replit.com 33 + Wikipedia 2 + verified media 15) verified 200。P22 报告数字口径上有混淆 (\"75 source URLs\" vs \"41+33+8+1+1+11=95 HTTP-200 verification\") — P23 厘清：YAML source_urls=75 是实际引用数；HTTP-200 verification 总数 含重定向路径/备份 URL 可超过 75。主体产品机制 verified 高可信度 (Browser IDE / Agent 4 / Pricing / Deployments / Database / Object Storage / Auth / Payments / Teams / Enterprise / MCP / Skills / Figma-to-app / Claude-to-app)。P23 解决 $250M Series C vs $400M Series D 轮次字母分歧：$250M 是 Series C (Pulse 2.0 verified 200 明文)；$400M 是 Series D (Pulse 2.0 verified 200 独立文章)；SaaStr 把 $250M 误标 Series D 是 SaaStr 写作错误。融资/估值/ARR/用户量仍 partial — Pulse 2.0 + SaaStr verified 200 直接英文媒体 + Wikipedia reference，但 Reuters/Forbes/Bloomberg/TechCrunch/Wired/Tom's Hardware 直接 URL 401/403/404。Replit 是私人公司 / 未 IPO。a16z $4.5M seed 2018 由 CNBC verified 200 + Wikipedia reference 双源支撑。Microsoft Azure 合作 2025-07 由 Wikipedia reference (文字 verified 200) 支撑 (Inc URL 403)。数据库删除事件 2025-07 由 Wikipedia + 404 Media + SaaStr 多源 verified 200 支撑。AI Darwin Awards 提名 2025 由 Wikipedia + 404 Media 双源 verified 200 支撑。P22.1 已修复 YAML 重复 source_quality_notes key；P23 验证 yaml.safe_load OK + review_status / source_quality_notes 都是单 key。中文 Replit MVP / Agent 真实可用性属判断。"
 
 summary:
   total: 10
-  reviewed: 9
-  draft: 1
+  reviewed: 10
+  draft: 0
   verified: 0
   partial: 10
   legacy_manual_analyses: 9
   legacy_今日复盘: 1
-  p_reports_total: 15
+  p_reports_total: 16
 
 status_transitions:
   - from: draft

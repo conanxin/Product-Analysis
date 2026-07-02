@@ -83,7 +83,7 @@ Product-Analysis/
 | 2026-07-01 | Notion | `analyses/ai-assisted/2026-07-01-notion.md` | AI 辅助 | productivity、workspace、docs、database、knowledge-management、ai-workspace | 将文档、数据库、知识库、项目管理、日历、邮件和 AI agent 能力整合为可组合的信息工作台 | reviewed | partial |
 | 2026-07-01 | Canva | `analyses/ai-assisted/2026-07-01-canva.md` | AI 辅助 | design-tools、ai-design、templates、visual-suite、creator-tools、b2b-saas | 将模板、视觉编辑器、品牌资产、企业协作和 AI 生成能力整合为大众化内容生产平台 | reviewed | partial |
 | 2026-07-01 | Webflow | `analyses/ai-assisted/2026-07-01-webflow.md` | AI 辅助 | website-builder、visual-development、no-code、cms、ai-website-builder、b2b-saas | 将视觉设计、CMS、托管、SEO/AEO、优化和 AI 建站能力整合为可视化 Web 生产系统 | reviewed | partial |
-| 2026-07-01 | Replit | `analyses/ai-assisted/2026-07-01-replit.md` | AI 辅助 | ai-coding、cloud-ide、agentic-workflow、app-builder、deployment、b2b-saas | 将浏览器 IDE、云端运行环境、部署和 AI Agent 结合为从想法到上线的云端应用工作台 | draft | partial |
+| 2026-07-01 | Replit | `analyses/ai-assisted/2026-07-01-replit.md` | AI 辅助 | ai-coding、cloud-ide、agentic-workflow、app-builder、deployment、b2b-saas | 将浏览器 IDE、云端运行环境、部署和 AI Agent 结合为从想法到上线的云端应用工作台 | reviewed | partial |
 
 ---
 
@@ -134,9 +134,11 @@ Product-Analysis/
 - [x] P19.1: 修复 P19 索引漂移 (Canva 行状态对齐 - draft → reviewed;当前质量状态 7→8 reviewed)
 - [x] P21: 人工复核 Webflow 文章 (draft → reviewed;新增 3 个 Webflow official blog posts + 1 个 W3Techs verified;修正 Wikipedia reference vs direct verified media 边界;收购金额未披露 / undisclosed)
 - [x] P22: 新增 Replit AI 辅助分析 (第十篇 AI 分析;75 个 source URLs verified 200;主体产品机制 verified;融资/估值/ARR/用户量 partial — 私人公司/未 IPO/主流媒体 paywall)
+- [x] P22.1: 修复 Replit YAML 重复 source_quality_notes 字段 (2 → 1)
+- [x] P23: 人工复核 Replit 文章 (draft → reviewed;§17.1 升级;§17.2 解决 $250M Series C vs $400M Series D 轮次字母分歧;§17.3 厘清 source count 口径;YAML review_status / reviewed_at / review_notes 同步)
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 
 ---
 
-*最后更新：2026-07-01 (P22 新增第十篇 AI 辅助产品分析 — Replit，status: draft | partial;75 个 source URLs verified 200 — 41 Replit 官方 + 33 docs.replit.com + 8 blog + 1 Wikipedia 主体 + 1 Amjad Masad + 11 英文媒体;主体产品机制 verified;融资/估值/ARR/用户量 partial — Pulse 2.0 + SaaStr 英文 verified 200 但属次主流;Reuters/Forbes/Bloomberg/TechCrunch/Wired/Tom's Hardware 直接 URL 401/403/404;Replit 是私人公司/未 IPO;9 → 10 篇 AI 辅助分析)*
+*最后更新：2026-07-01 (P23 人工复核 Replit 文章 — draft → reviewed;1) §17.2 解决 $250M Series C vs $400M Series D 轮次字母分歧 — Pulse 2.0 verified 200 有独立文章区分,$250M=Series C / $400M=Series D;SaaStr "$250M Series D" 是 SaaStr 写作错误;2) §17.3 厘清 source count 口径 — YAML source_urls=75 vs P22 报告 HTTP-200 verification=95;3) YAML review_status/reviewed_at/review_notes 同步;YAML 无重复 key;4) Replit 私人公司/未 IPO 未变;5) 10 篇 AI 辅助分析 — 10 reviewed + 0 draft)*

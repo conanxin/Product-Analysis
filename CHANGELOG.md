@@ -1,5 +1,60 @@
 # Changelog
 
+## P23 - Replit Review and Index Status Sync
+
+**日期：** 2026-07-01
+**变更类型：** review / source-credibility-grading / index-sync
+**变更范围：** analyses/ai-assisted/2026-07-01-replit.md (修订) + README + analyses/README.md + analyses/index.yml + CHANGELOG + P23 报告
+
+### 变更内容
+
+对 Replit AI 辅助分析进行 P23 人工复核，将 review_status 从 draft 升为 reviewed；修正轮次字母不一致事实问题；厘清 source count 口径。
+
+#### P23 复核
+
+**YAML 状态升级：**
+- `review_status`: draft → reviewed
+- `reviewed_at`: null → 2026-07-01
+- `review_notes`: null → "Replit draft reviewed in P23; product claims checked against Replit official pages, docs, pricing, Agent 4, deployments, database/storage/auth/payments, Microsoft/Fabric integration, Wikipedia reference sources, and accessible verified media. Product mechanism is strongly supported by official sources; financing, valuation, revenue, Agent adoption, security incident frequency, and company-scale claims remain partial unless independently verified by at least two high-quality sources."
+- `source_url_verification_status`: partial (未变 — 主流媒体 paywall 未变, 未达到 strict verified 标准)
+
+**§17.2 轮次字母 — P23 解决：**
+- `$250M / $3B / Series C 融资 2025-09` — Pulse 2.0 verified 200 文章正文明文 "secured $250 million in Series C funding, tripling its valuation to $3 billion"
+- `$400M / $9B / Series D 融资 2026-03` — Pulse 2.0 verified 200 独立文章明文 "Series D"
+- 原始 P22 提到 SaaStr 将 $250M 误标 "Series D" — P23 核实 SaaStr 为媒体错误:Pulse 2.0 有 2 篇独立文章区分 ($250M Series C vs $400M Series D)
+
+**§17.3 source count 口径 — P23 厘清：**
+- P22 报告将 "75 source URLs" 与 "41+33+8+1+1+11=95 HTTP-200 verification" 掎犬
+- P23 厘清：YAML source_urls = 75 个 (replit.com 25 + docs.replit.com 33 + Wikipedia 2 + verified media 15);HTTP-200 verification 总数 含重定向/备份 URL 可达 95+, 两者不是同一口径, 后续 P* 报告需明确区分
+
+**Body 手动复核事实校正 (minimal):**
+- §17.1 升级: draft → reviewed;补充 P22.1 YAML 修复已完成 / P23 解决轮次不一致 / 仍为 partial
+- §17.2 轮次字母中加入 P23 核实备注
+- §17.3 加入 P22.1 修复 YAML 重复 key 反馈 + P23 厘清 source count + Series C vs D 轮次核实备注
+
+#### 索引同步
+
+- README AI 辅助分析索引: Replit 行 draft|partial → reviewed|partial
+- README 顶部状态: P23 已记录
+- README 最后更新: P22.1 → P23 描述 (10 reviewed + 0 draft)
+- analyses/README.md 总览表: Replit 行 draft|partial → reviewed|partial
+- analyses/README.md 质量状态表: draft 1 → 0;reviewed 9 → 10
+- analyses/index.yml Replit entry: draft / reviewed_at null → reviewed / reviewed_at 2026-07-01
+- analyses/index.yml summary: reviewed 9 → 10;draft 1 → 0;p_reports_total 15 → 16
+- analyses/index.yml Replit quality_notes.reason 已更新 (P23 核实备注, Series C/D 解决, source count 厘清)
+- yaml.safe_load 验证通过: Replit 文章 + index.yml 都可解析,无重复 key
+- 仅 prepend, 未整文件覆盖;P22.1/P22/P21/P20/P19.1 历史未动
+
+#### Replit 事实校正 (信源级别)
+
+| 事实 | 校正前 | P23 校正 |
+|------|--------|---------|
+| $250M 轮次字母 | Pulse 2.0 标 Series C / SaaStr 标 Series D — 分歧 | Series C (Pulse 2.0 有独立文章明文) |
+| $400M 轮次字母 | Pulse 2.0 标 Series D + 多元 — 同一 | Series D (Pulse 2.0 独立文章明文) |
+| source count 口径 | 75 source URLs vs 95 HTTP-200 verification 冲突 | 厘清: YAML=75 / verification=http 包括重定向&备份 |
+| YAML review_status | draft | reviewed |
+| YAML reviewed_at | null | 2026-07-01 |
+
 ## P22.1 - Replit YAML Duplicate Key Fix
 
 **日期：** 2026-07-01
