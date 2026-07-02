@@ -36,6 +36,13 @@
   - 8 个横向对照研究问题
   - 适合第一次进入项目的读者
 
+### Visual Product Map 产品视觉图谱
+
+- [Visual Product Map](../docs/visual-product-map.md)
+  - 用 Mermaid 图谱和 ASCII fallback 可视化 13 篇 AI 产品分析之间的关系
+  - 包含产品总览图、Tool → Agent 演化图、Cloud vs Local 象限图、Document/Database/Graph/Agent 矩阵、Design-to-Publish、AI Coding/App Builder、Knowledge Workspace、Source-first workflow 等 8 张图
+  - 适合快速理解产品谱系和阅读路径
+
 ### AI Search / Answer Engine
 - **Perplexity** — 搜索 + 引用 + 对话式答案
 

@@ -1,5 +1,64 @@
 # Changelog
 
+## P34 - Visual Product Map
+
+**日期：** 2026-07-02
+**变更类型：** visual docs / navigation / synthesis
+
+### 变更内容
+
+完成 P34 — Visual Product Map / Mermaid 产品图谱。这是 P33 navigation cleanup 之后的可视化阶段。
+
+#### 新增
+
+- **`docs/visual-product-map.md`** — Visual Product Map v1.0：
+  - §1 产品图谱总览（Mermaid `graph TD` — 6 类下含 13 篇产品，Agentic 是穿透型层）
+  - §2 Tool → Agent 演化图（Mermaid `flowchart LR` — 5 阶段 + 13 个产品对应阶段 + Product-Analysis 作为 goal）
+  - §3 Cloud-first vs Local-first 地图（Mermaid `quadrantChart` + ASCII fallback 13 行表格）
+  - §4 Document / Database / Graph / Agent 矩阵（7 行带 ✓ △ — 图例）
+  - §5 Design-to-Publish 工作流图（Mermaid `flowchart LR`，Figma / Framer / Webflow / Canva 4 路线）
+  - §6 AI Coding / App Builder 工作流图（Mermaid `flowchart LR`，含 P35 候选 Claude Code / Lovable / v0 的 dashed 标注）
+  - §7 Knowledge Workspace 路线图（Mermaid `flowchart LR`，Notion → Coda → Obsidian → Tana）
+  - §8 Source-first 研究流程图（Mermaid `flowchart TD`，收集 → 实链 → YAML → 17 节 → 复核 → 同步 → validator → CI）
+  - §9 ASCII fallback 总图（纯文本树形图，覆盖 13 个产品 + Agentic 穿透型层）
+  - §10 如何使用这张图（7 条使用指南）
+  - §11 关联文件（指向 synthesis / product-map / index / reviews-status / index-sync）
+
+#### 同步
+
+- **README.md** — `## 快速入口` 增加 `Visual Product Map` 链接；`## 阶段性综合报告` 增加 Visual Product Map 子条目；`## 下一步计划` `[ ] P34` → `[x] P34` + 新增完整任务说明。
+- **analyses/README.md** — 在 `### Product Map Navigation` 后新增 `### Visual Product Map` 子节，含文档链接 + 8 张图说明。
+- **docs/product-map-navigation.md** — 顶部关联区增加 Visual Product Map 链接 + 简要导航指引。
+- **CHANGELOG.md** — 顶部新增本 `## P34 - Visual Product Map` 章节。
+
+#### 验证
+
+```
+$ python3 scripts/verify_ai_analysis_index.py
+
+PASS: AI analysis index consistency verified
+- analyses found: 13
+- reviewed: 13
+- draft: 0
+- partial: 13
+- verified: 0
+```
+
+（与 P33 后保持一致，docs-only / navigation 任务不改变 index 状态）
+
+#### 未修改
+
+- docs/ai-product-analysis-phase-1-synthesis.md
+- analyses/ai-assisted/*.md
+- analyses/index.yml
+- scripts/verify_ai_analysis_index.py
+- .github/workflows/*
+- 旧人工分析文章
+- pic/
+- templates/
+
+---
+
 ## P33 - Public README Cleanup and Product Map Navigation
 
 **日期：** 2026-07-02

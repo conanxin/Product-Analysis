@@ -1,7 +1,9 @@
 # Product Map Navigation / 产品地图导航
 
 **日期：** 2026-07-02
-**关联：** [AI Product Analysis Phase 1 Synthesis](ai-product-analysis-phase-1-synthesis.md) · [AI 辅助分析索引](../analyses/README.md) · [README](../README.md)
+**关联：** [AI Product Analysis Phase 1 Synthesis](ai-product-analysis-phase-1-synthesis.md) · [Visual Product Map](visual-product-map.md) · [AI 辅助分析索引](../analyses/README.md) · [README](../README.md)
+
+> 想先看图谱版导航，可以从 [Visual Product Map](visual-product-map.md) 开始；本文继续承担按问题/路径阅读的文字导航。
 
 ---
 

@@ -13,6 +13,7 @@
 ## 快速入口
 
 - [AI Product Analysis Phase 1 Synthesis](docs/ai-product-analysis-phase-1-synthesis.md) — 13 篇综合、14 条 AI 产品设计规律、source-first 方法论
+- [Visual Product Map](docs/visual-product-map.md) — Mermaid 产品图谱 + ASCII fallback
 - [Product Map Navigation](docs/product-map-navigation.md) — 按类型、问题、阅读路径导航 13 篇 AI 产品分析
 - [AI 辅助分析索引](analyses/README.md) — 13 篇产品分析的目录、状态、阅读路径
 - [机器可读索引](analyses/index.yml) — 程序可解析的 YAML 索引（含 reading_paths）
@@ -114,6 +115,9 @@ Product-Analysis/
   - 汇总第一阶段 13 篇 AI 产品分析（Perplexity / Linear / Raycast / Cursor / Figma / Framer / Notion / Canva / Webflow / Replit / Coda / Obsidian / Tana）；
   - 提炼产品谱系、6 层类型分层、4 张横向对照矩阵、14 条 AI 产品设计规律、source-first 方法论；
   - 建议下一阶段先做公开展示、导航整理和产品地图，而不是继续无限新增产品。
+- [Visual Product Map](docs/visual-product-map.md)
+  - Mermaid 图谱 + ASCII fallback 可视化 13 篇 AI 产品之间的关系；
+  - 包含产品总览图、Tool → Agent 演化图、Cloud vs Local 象限图、Document/Database/Graph/Agent 矩阵、Design-to-Publish、AI Coding/App Builder、Knowledge Workspace、Source-first workflow 等。
 - [Product Map Navigation](docs/product-map-navigation.md)
   - 用于按类型、问题和阅读路线阅读 13 篇 AI 产品分析；
   - 6 条推荐阅读路径（基础路线 / 设计到发布 / 知识工作台 / 工具到 Agent / 产品研究方法 / AI 矩阵路线）；
@@ -195,7 +199,7 @@ python3 scripts/verify_ai_analysis_index.py
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 - [x] P33: 完成公开展示 README cleanup 与产品地图导航（新增 docs/product-map-navigation.md；README 增加 `## 快速入口`、项目定位更新为现在时、`## 阶段性综合报告` 加 product-map 链接；analyses/README.md 加 Product Map Navigation 入口；validator PASS 不变）
-- [ ] P34: 生成视觉产品地图（Mermaid 图谱 + 可视化）
+- [x] P34: 完成 Visual Product Map / Mermaid 产品图谱（新增 docs/visual-product-map.md，含 8 张 Mermaid 图 + 1 个 ASCII fallback 总图；README `## 快速入口` 与 `## 阶段性综合报告` 加 Visual Product Map 链接；analyses/README.md 加 Visual Product Map 入口；docs/product-map-navigation.md 加 Visual Product Map 链接；validator PASS 不变）
 - [ ] P35: 仅在有明确空白时新增产品（候选：Arc / Dia / Claude Code / Lovable / v0）
 
 ---
