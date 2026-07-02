@@ -22,6 +22,12 @@
 
 ## 2. 按产品类型分组
 
+### Phase 1 Synthesis 阶段性综合报告
+
+- [AI Product Analysis Phase 1 Synthesis](../docs/ai-product-analysis-phase-1-synthesis.md)
+  - 13 篇 reviewed AI 产品分析的阶段性综合报告
+  - 包含产品谱系、类型分层、横向对照矩阵、AI 产品设计规律（14 条）、source-first 方法论沉淀、第二阶段建议
+
 ### AI Search / Answer Engine
 - **Perplexity** — 搜索 + 引用 + 对话式答案
 
