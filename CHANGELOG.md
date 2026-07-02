@@ -1,5 +1,55 @@
 # Changelog
 
+## P30 - Tana AI Assisted Analysis & Index Sync
+
+**日期：** 2026-07-02
+**变更类型：** article-new + index-sync + validation
+
+### 变更内容
+
+完成 P30 — 第十三篇 AI 辅助产品分析（Tana）的初稿发表，并同步所有索引。
+
+#### 关键发现
+
+1. **Tana 是双线产品**：tana.inc（agentic meeting platform）+ outliner.tana.inc（Tana Outliner，原 outliner 重命名）。两个站点均明确互相声明 "separate product"。
+2. **Tana Outliner 是 4 年沉淀 outliner**：Supertags / nodes / views / AI / voice memos / meeting notetaker / Tana Publish / AI image generation / MCP — 27 installable templates，月度 live sessions ("Tana Outliner Systems Lab")，社区成长 "from tight-knit handful to thousands"。
+3. **tana.inc 是新的 agentic meeting platform（2026-03-31 推出）**：native video calls + Meeting Agent + AI agents + Skills + MCP/API + integrations（GitHub / Slack / HubSpot / Linear / Jira / Pipedrive / Google Calendar / Outlook / Claude Code / Codex / Cursor / Lovable）。原文："graph is the context, conversations are your prompts" / "From a second brain... to a company brain."
+4. **创始人**：Olav S. Kriken（CEO）/ Grim H. Iversen（CAIO）/ Tarjei M. Vassbotn（CIO）。outliner.tana.inc/company 列出 ~25 个 team names。
+5. **融资（verified via 官方 blog）**：$14M Series A 2025-02-03 (lead by Tola Capital + follow-on Lightspeed / Northzone / Alliance VC / firstminute)；Total $25M。个人投资人：Lars Rasmussen（Google Maps / Wave founder）/ Olivier Pomel（Datadog founder）/ Arash Ferdowsi（Dropbox co-founder）/ Siqi Chen（Runway）/ Ali Abdaal / Phil Morle + Holly Branson + Aksel Lund Svindal 等。
+6. **Product of the Year on Product Hunt 2026-02-03**：outliner.tana.inc/blog 官方 self-claim；Product Hunt 直接页面 Cloudflare 403 未 cross-verified。
+7. **Stealth 160,000+ waitlist / 80% of Fortune 500 employees / 24,000+ Tanarians**：Series A blog self-claim。
+8. **Hacker News 历史**（hn.algolia.com API verified 4 个 launch posts）：2022-10-05 / 2022-12-26 / 2025-02-03 / 2023-02-20。
+9. **Pricing 精确提取**：
+   - **tana.inc 主线**：Free $0（5 meetings/mo, 50 AI queries）/ Pro $30/yr (early bird $20) (unlimited meetings + Zoom/Teams/Meet botless + MCP) / Max $120/yr (early bird $80) (unlimited agents/skills/types) / Business Custom (SAML SSO + advanced security)
+   - **outliner.tana.inc**：Free $0（500 AI credits/月）/ Plus $8/mo (academic $5/$48 yr) (2000 credits) / Pro $14/mo (academic $9/$84 yr) (5000 credits + Readwise + Input API + Publish templates)
+10. **SOC2 / GDPR / HIPAA 合规状态**：GDPR Compliant / SOC2 Compliant (ETA Q3 2026) / HIPAA Compliant (ETA Q3 2026) / LLM agnostic / Always-on pentesting / SSO / custom DPA / data residency。
+
+#### 文件变更
+
+- `analyses/ai-assisted/2026-07-01-tana.md` — 新增（draft | partial）；31 个 verified source URLs；17 节 + Sources；71,017 bytes
+- `analyses/index.yml` — 新增 Tana entry + 升级 summary 12→13 / draft 0→1 / partial 12→13 / p_reports_total 20→21 + 新增 category `ai-structured-knowledge-workspace` + 新增 reading path `agentic_meeting_path`
+- `README.md` — AI 辅助分析表新增 Tana 行（draft | partial）+ 质量状态 reviewed 12→12 / draft 0→1 / partial 12→13 + P30 task 标记 +下一步计划
+- `analyses/README.md` — AI 辅助分析总览新增 Tana 行 + 按类型分组新增 "AI Structured Knowledge Workspace / Agentic Meeting" 类别 + 当前质量状态 reviewed 12→12 / draft 0→1 / partial 12→13 + P 报告累计 20→21
+- `CHANGELOG.md` — 本节顶部记录
+- `reports/P30-tana-ai-assisted-analysis-report.md` — 新增 P30 任务报告
+
+#### unverified / partial source 限制
+
+- **Tola Capital / Lightspeed / Northzone 等 VC portfolio 页面**直接抓取 Cloudflare 403 — 融资事实主体依赖 Tana 官方 blog "$14M Series A led by Tola Capital" self-claim + tana.inc/company 投资人组合 listing 互相印证，未独立媒体 cross-verified
+- **Product Hunt 直接 launch 页面** Cloudflare 403 — Product of the Year 2026-02-03 事实由 outliner.tana.inc/blog 官方 self-claim 强支撑但 PH 直接页面无法 verified
+- **Wikipedia en.wikipedia.org/wiki/Tana_(software)** 404 — 无独立 Wikipedia 词条
+- **TechCrunch / Reuters / Forbes / The Information** — web_search 2026-07-02 未能 surface Tana Series A 直接主线报道
+- **LinkedIn 创始人个人 profile URL** rate-limited 999 — 仅公司主页 verified，个人 profile 通过 company page 间接印证
+- **私人公司 → 默认 partial**：收入 / ARR / 估值 / 员工总数 / 付费用户数 / 企业客户数 / 收购传言 / 市场份额对比 — 无 SEC / IR / 主流媒体主线报道
+- **AI agents / Skills / meeting agent / MCP / agentic workflow** 是产品判断而非事实事实，需贯穿 [判断] 标记
+
+### 验证
+
+- `python3 scripts/verify_ai_analysis_index.py` → PASS（13 analyses / 12 reviewed / 1 draft / 13 partial / 0 verified）
+- source URLs 全部 HTTP-200 verified（或 301 redirect verified）：tana.inc 13 + outliner.tana.inc 13 + social 5
+
+---
+
 ## P29.1 - Obsidian Source-Hardening & Pricing Correction
 
 **日期：** 2026-07-02

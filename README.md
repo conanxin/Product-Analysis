@@ -86,6 +86,7 @@ Product-Analysis/
 | 2026-07-01 | Replit | `analyses/ai-assisted/2026-07-01-replit.md` | AI 辅助 | ai-coding、cloud-ide、agentic-workflow、app-builder、deployment、b2b-saas | 将浏览器 IDE、云端运行环境、部署和 AI Agent 结合为从想法到上线的云端应用工作台 | reviewed | partial |
 | 2026-07-01 | Coda | `analyses/ai-assisted/2026-07-01-coda.md` | AI 辅助 | productivity、docs、database、workflow、automation、ai-productivity | 将文档、表格、公式、按钮和自动化组合为可操作的 doc-as-app 工作台 | reviewed | partial |
 | 2026-07-01 | Obsidian | `analyses/ai-assisted/2026-07-01-obsidian.md` | AI 辅助 | local-first、markdown、note-taking、personal-knowledge-base、bidirectional-links、plugin-ecosystem | 将本地 Markdown 文件与双向链接、graph view 和插件生态结合，把笔记从"记录工具"重构为"个人知识操作系统" | reviewed | partial |
+| 2026-07-01 | Tana | `analyses/ai-assisted/2026-07-01-tana.md` | AI 辅助 | note-taking、knowledge-management、outliner、supertags、ai-agents、meeting-workflow、knowledge-graph、agentic-platform | Tana 把节点式大纲、Supertags、知识图谱、语音/会议输入和 AI agents 结合起来，将笔记从"记录信息"推进到"在上下文中组织、提取并执行工作"的 agentic 知识工作台；当前 tana.inc 已转向"agentic meeting platform"，原 outliner 单独保留为 Tana Outliner | draft | partial |
 
 ---
 
@@ -134,11 +135,11 @@ python3 scripts/verify_ai_analysis_index.py
 |------|---:|------|
 | 旧人工分析 (legacy) | 9 | legacy-note（根目录） |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
-| AI 辅助分析 | 12 | 12 reviewed + 0 draft |
+| AI 辅助分析 | 13 | 12 reviewed + 1 draft |
 | - reviewed | 12 | 人工复核完成 |
-| - draft | 0 | — |
+| - draft | 1 | — |
 | - verified | 0 | 严格标准下未达成 |
-| - partial | 12 | 主体产品功能 verified；高风险事实 partial |
+| - partial | 13 | 主体产品功能 verified；高风险事实 partial |
 
 **说明**：partial 是严格质量标准下的合理结果，不是失败。详细评判标准见 [docs/review-status-guide.md](docs/review-status-guide.md)。
 
@@ -163,6 +164,7 @@ python3 scripts/verify_ai_analysis_index.py
 - [x] P26: 新增 Coda AI 辅助分析 (第十一篇 AI 分析;55 个 source URLs 实链验证;主体产品机制 verified;Grammarly 收购 primary-source verified;融资/估值/Superhuman rebrand partial — 私人公司/未 IPO/主流媒体 paywall/800+/600+ 数字不一致)
 - [x] P27: Coda 人工复核 + source-hardening (draft → reviewed;新增 16 个 HTTP-200 URL — superhuman.com 8 + grammarly.com/blog/company 3 + grammarly.com/press 1 + blog.superhuman.com 2 + coda.io 4;Oct 2025 Superhuman rebrand 从 partial 升级 verified-primary — grammarly.com/press + rebrand blog 2025-10-29 + superhuman.com/ 三源交叉;Superhuman Suite (Mail / Grammarly / Coda / Go) verified-primary;其余高风险事实仍 partial — 私人公司 / 主流媒体 paywall)
 - [x] P28: 新增 Obsidian AI 辅助分析 (第十二篇 AI 分析;30 个 source URLs verified 25+;主体产品机制 verified — local-first / markdown / 双向链接 / graph view / plugin ecosystem / Sync 2020 launch / 4000+ plugins 120M downloads 官方 blog verified;创始人 / 收入 / ARR / 融资 / 估值 / 用户量 partial — 私人公司无公开数据 / 主流媒体 paywall)
+- [x] P30: 新增 Tana AI 辅助分析 (第十三篇 AI 分析;31 个 source URLs HTTP-200 verified;主体产品机制 verified — tana.inc agentic meeting platform / outliner.tana.inc Tana Outliner 双线分离 / Supertags / Knowledge graph / AI agents / Meeting notetaker / Tana Publish;6 个官方 blog posts verified — Series A $14M 2025-02-03 / Next Chapter 2026-03-31 / Product of Year 2026-02-03 / API+MCP 2026-01-30 / Desktop 2023-10-10 / Text Selection Toolbar 2023-11-08;Pricing 精确提取 — 主线 Free $0 / Pro $30 ($20 early bird) / Max $120 ($80 early bird) / Business Custom;Outliner Free $0 / Plus $8/mo / Pro $14/mo;Total $25M funding / 融资 / 估值 / ARR / 员工数 / 用户数 / 企业客户数 / 收购传言 partial — 私人公司无 SEC / Tola Capital portfolio Cloudflare 403 / Product Hunt 直接页面 403 / HN Algolia API verified 4 个 launch posts;中文 / 主流媒体主线报道无法 found;Wikipedia Tana 不存在)
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 

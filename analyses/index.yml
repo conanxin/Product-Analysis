@@ -1,5 +1,6 @@
 version: 1
 updated_at: '2026-07-02'
+# P30 update: added Tana entry, summary 12→13 / draft 0→1 / partial 12→13, new category 'ai-structured-knowledge-workspace', new reading path 'agentic_meeting_path'
 analyses:
 - product: Perplexity
   file: analyses/ai-assisted/2026-07-01-perplexity.md
@@ -315,15 +316,37 @@ analyses:
     ARR, financing, valuation, employee count, total user count, and broader community-scale
     claims remain partial unless independently verified by at least two high-quality
     sources.
+- product: Tana
+  file: analyses/ai-assisted/2026-07-01-tana.md
+  category: ai-structured-knowledge-workspace
+  analysis_type: ai-assisted
+  created_at: '2026-07-01'
+  review_status: draft
+  reviewed_at: null
+  source_url_verification_status: partial
+  tags:
+  - note-taking
+  - knowledge-management
+  - outliner
+  - supertags
+  - ai-agents
+  - meeting-workflow
+  - knowledge-graph
+  - agentic-platform
+  one_line_insight: Tana 把节点式大纲、Supertags、知识图谱、语音/会议输入和 AI agents 结合起来，将笔记从"记录信息"推进到"在上下文中组织、提取并执行工作"的 agentic 知识工作台；当前 tana.inc 已转向"agentic meeting platform"，原 outliner 单独保留为 Tana Outliner。
+  quality_notes:
+    product_mechanism: verified
+    high_risk_facts: partial
+    reason: P30 初稿：31 个 YAML source_urls (tana.inc 13 + outliner.tana.inc 13 + social 5) HTTP-200 verified。主体产品机制 verified 高可信度 — tana.inc / outliner.tana.inc 双首页明文 "separate product from Tana / agentic meeting platform"。6 个官方 blog posts verified (Series A 2025-02-03 $14M / Next Chapter 2026-03-31 / Product of Year 2026-02-03 / API+MCP 2026-01-30 / Desktop 2023-10-10 / Text Selection Toolbar 2023-11-08)。Pricing 精确提取 — 主线 Free $0 / Pro $30 early bird $20 / Max $120 early bird $80 / Business Custom；Outliner Free $0 / Plus $8/mo (academic $5/$48 yearly) / Pro $14/mo (academic $9/$84 yearly)。社交 verified — X / GitHub / YouTube / LinkedIn / Reddit。HN 4 个 launch post 通过 hn.algolia.com API verified (HN 33102495 / 34139296 / 42920010 / 34874156)。融资 $14M Series A / $25M total 仍 partial — Tola Capital / Lightspeed / Northzone / Alliance VC / Firstminute 官方 portfolio 页面 Cloudflare 403 未直接 HTTP verified；官方 blog self-claim 单源支撑。Product of the Year 2026-02-03 仍 partial — Product Hunt 直接页面 Cloudflare 403 未直接 HTTP verified；官方 self-claim 强但 PH 独立页面未 cross-verified。Stealth 160K waitlist / 80% F500 / 24K+ Tanarians 数字 partial — 官方 self-claim 单源。私人公司 → 收入 / ARR / 估值 / 员工总数 / 付费用户数 / 企业客户数 / 收购传言 仍 partial — 无 SEC / IR / 主流 media 主线报道 (web_search 2026-07-02 未能 surface TechCrunch / Reuters / Forbes 对 Tana Series A 的直接 verified 报道)。Wikipedia en.wikipedia.org/wiki/Tana_(software) 404 (无 Tana 词条)。LinkedIn 个人 URL 999 rate-limit。中文 / 中国市场份额 partial。无来源。Agentic workspace / meeting-as-work-surface / supAI agents 是判断而非事实，需贯穿 [判断] 标记。
 summary:
-  total: 12
+  total: 13
   reviewed: 12
-  draft: 0
+  draft: 1
   verified: 0
-  partial: 12
+  partial: 13
   legacy_manual_analyses: 9
   legacy_今日复盘: 1
-  p_reports_total: 20
+  p_reports_total: 21
 status_transitions:
 - from: draft
   to: reviewed
@@ -382,6 +405,9 @@ by_category:
 - category: local-first-knowledge-base
   products:
   - Obsidian
+- category: ai-structured-knowledge-workspace
+  products:
+  - Tana
 reading_paths:
   ai_product_path:
   - Perplexity
@@ -414,4 +440,7 @@ reading_paths:
   knowledge_base_path:
   - Notion
   - Coda
+  - Obsidian
+  agentic_meeting_path:
+  - Tana
   - Obsidian
