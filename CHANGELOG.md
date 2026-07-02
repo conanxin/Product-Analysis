@@ -1,5 +1,52 @@
 # Changelog
 
+## P32.1 - README Synthesis Entry and Footer Cleanup
+
+**日期：** 2026-07-02
+**变更类型：** README cleanup / docs-only
+
+### 变更内容
+
+修复 P32 提交时 README.md 未补齐的两个细节。
+
+#### 修复
+
+- **README.md 缺少独立的 `## 阶段性综合报告` 小节。** P32 commit 6c210b5 仅在下一步计划表中加 P32 行；未在 README 顶部至中部插入独立的 synthesis 入口。本次 P32.1 在 `## 如何新增一篇 AI 产品分析` 之前补上独立小节，含 `docs/ai-product-analysis-phase-1-synthesis.md` 链接 + 13 篇产品列表 + 3 条要点说明。
+- **README.md 末尾 `最后更新` 行被旧任务串接污染。** 单行从 1 月份累计以来已被 P29 / P27 任务详情串接超过 600 字符；本次替换为 P32 简洁版本（70 字符内），保留一行格式，只描述最新任务事实（13 篇 reviewed / 新增 synthesis doc / validator PASS / 下一阶段建议）。
+
+#### 验证
+
+```
+$ python3 scripts/verify_ai_analysis_index.py
+
+PASS: AI analysis index consistency verified
+- analyses found: 13
+- reviewed: 13
+- draft: 0
+- partial: 13
+- verified: 0
+```
+
+（与 P32 后保持一致，README cleanup 不改变 index 状态。）
+
+#### 未修改
+
+- docs/ai-product-analysis-phase-1-synthesis.md
+- analyses/README.md
+- analyses/index.yml
+- analyses/ai-assisted/*.md
+- scripts/verify_ai_analysis_index.py
+- .github/workflows/*
+- 旧人工分析文章
+- pic/
+- templates/
+
+#### 教训记录
+
+P32 提交声称"新增 ## 阶段性综合报告 入口"和"压缩"清理，但 `git show 6c210b5 -- README.md` 显示只加入了 2 行 `[x] P31 / P32`，未触及目录结构和末尾行。这次 P32.1 是对 P32 提交完整性的补正。下一次提交必须先 `git show` 验证声称的变更实际落地，再发报告。
+
+---
+
 ## P32 - AI Product Analysis Phase 1 Synthesis
 
 **日期：** 2026-07-02
