@@ -1,5 +1,112 @@
 # Changelog
 
+## P27 - Coda Review and Index Status Sync
+
+**日期：** 2026-07-02
+**变更类型：** review + source-hardening + index-sync + validation
+
+### 变更内容
+
+完成 P26 Coda draft 人工复核，升级 status draft → reviewed，并同步所有索引。
+
+#### 主要升级
+
+**P27 source-hardening 新增 16 个 HTTP-200 验证 URL：**
+1. superhuman.com × 8
+2. grammarly.com/blog/company × 3
+3. grammarly.com/press × 1
+4. blog.superhuman.com × 2
+5. coda.io × 4（learn / use-cases / solutions / case-studies）
+
+**两顶关键事实从 partial 升级为 verified-primary：**
+1. **Oct 2025 Grammarly → Superhuman rebrand**：
+   - grammarly.com/press (Superhuman Newsroom) — 列出 "Grammarly Rebrands Company as Superhuman"
+   - grammarly.com/blog/company/announcing-company-rebrand-to-superhuman — article:published_time 2025-10-29
+   - superhuman.com/ — 新产品 hub 包含 Mail / Grammarly / Coda / Go / Agent Store
+2. **Superhuman Suite 组成**：Mail / Grammarly / Coda / Go 由 superhuman.com/ + superhuman.com/products/* 官方产品页多源 verified
+
+**仍为 partial 的高风险事实（说明受限于媒体 paywall）：**
+- $60M / $80M / $100M funding rounds（Wikipedia 二手，未独立验证）
+- $1.4B 2021 valuation（Forbes paywall）
+- Dec 2024 acquisition amount（primary source 明确 "金额未披露"）
+- 800+ vs 600+ integrations（官方源数字不一致）
+- Coda Brain 产品页（coda.io/product/coda-brain 301→ 403 Cloudflare）
+- coda.io/pricing 具体金额（200 但抓取未含）
+- 50,000+ teams / 40M Grammarly users（单一官方源，未独立验证）
+
+#### 修改文件
+
+1. **analyses/ai-assisted/2026-07-01-coda.md**
+   - YAML front matter:
+     - review_status: draft → reviewed
+     - reviewed_at: null → 2026-07-01
+     - review_notes: 升级为 P27 reviewed 正式版本（引用源增加 16 个）
+     - source_quality_notes: 升级为 P27 source-hardening 版本
+     - source_urls: 55 → 71（新增 16 个 verified URL）
+   - §1 一句话定位：新增 [事实] P27 source-hardening 验证段
+   - §16 今日复盘：新增第 3 条 P27 source-hardening 教训
+   - §17.1 当前状态：升级为 P27 reviewed
+   - §17.2 可信度分级：新增 3 行 verified-primary（rebrand / Superhuman suite / rebrand partial→verified）
+   - §17.4 Sources 实链验证表：新增 5 行 Official/Primary + 13 行 Verified Partner/Acquirer（Superhuman + Grammarly blog + press + product hub）
+
+2. **README.md**
+   - AI 辅助分析索引：Coda 行 status draft → reviewed
+   - 当前质量状态：AI 辅助分析 11 → 11 (全部 reviewed) / reviewed 10 → 11 / draft 1 → 0 / partial 11 → 11
+
+3. **analyses/README.md**
+   - AI 辅助分析总览：Coda 行 status draft → reviewed + 一句话洞察更新（添加 "2025-10 Superhuman rebrand"）
+   - 当前质量状态：同步 reviewed 10 → 11 / draft 1 → 0 / P 报告累计 17 → 18
+
+4. **analyses/index.yml**
+   - updated_at: 2026-07-01 → 2026-07-02（保持）
+   - Coda 条目：review_status draft → reviewed / reviewed_at null → 2026-07-01
+   - quality_notes 升级：P27 source-hardening 详细说明
+   - summary: total 11 / reviewed 10 → 11 / draft 1 → 0 / partial 11 → 11 / p_reports_total 17 → 18
+
+5. **CHANGELOG.md** — 顶部 prepend P27 记录
+
+6. **reports/P27-coda-review-and-index-status-sync-report.md** (new)
+
+#### 验证结果
+
+```
+$ python3 scripts/verify_ai_analysis_index.py
+初跑 FAIL (8 项):
+ 1. index.yml summary.reviewed expected 11, got 10
+ 2. index.yml summary.draft expected 0, got 1
+ 3. 2026-07-01-coda.md field 'review_status': article='reviewed' != index='draft'
+ 4. 2026-07-01-coda.md reviewed_at: article='2026-07-01' != index=None
+ 5. README.md 质量状态表 reviewed expected 11, got 10
+ 6. README.md 质量状态表 draft expected 0, got 1
+ 7. analyses/README.md 质量状态表 reviewed expected 11, got 10
+ 8. analyses/README.md 质量状态表 draft expected 0, got 1
+
+原因：article YAML 已升级但 index files 仍为 draft。修复后复跑：
+
+$ python3 scripts/verify_ai_analysis_index.py
+PASS: AI analysis index consistency verified
+- analyses found: 11
+- reviewed: 11
+- draft: 0
+- partial: 11
+- verified: 0
+```
+
+P27 验证了 P24/P25 的核心机制：**validator 自动发现状态漂移**，防止 review 状态未同步问题。
+
+#### 未修改文件
+
+- scripts/verify_ai_analysis_index.py — 未动
+- 旧 10 篇 AI 辅助分析文章 — 未动
+- 旧人工分析文章 — 未动
+- pic/ / templates/ — 未动
+- .github/workflows/ai-analysis-index-check.yml — 未动
+- docs/* — 未动
+
+#### CHANGELOG 历史记录保留
+
+P27 不覆盖 P26 / P25 / P24 / P23.1 / P23 / P22.1 / P22 历史记录。完整 changelog 包含 17+ 项 P 任务记录。
+
 ## P26 - Coda AI-Assisted Product Analysis
 
 **日期：** 2026-07-02

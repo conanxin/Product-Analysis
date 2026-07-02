@@ -16,7 +16,7 @@
 | Canva | design-ai-platform | [2026-07-01-canva.md](ai-assisted/2026-07-01-canva.md) | reviewed | partial | 模板 + 视觉编辑器 + 品牌资产 + 企业协作 + AI 生成整合为大众化内容生产平台 |
 | Webflow | visual-web-development | [2026-07-01-webflow.md](ai-assisted/2026-07-01-webflow.md) | reviewed | partial | 视觉设计 + CMS + 托管 + SEO/AEO + 优化 + AI 建站整合为可视化 Web 生产系统 |
 | Replit | ai-cloud-development | [2026-07-01-replit.md](ai-assisted/2026-07-01-replit.md) | reviewed | partial | 浏览器 IDE + 云端运行时 + 部署 + 数据库 + AI Agent 结合为从想法到上线的云端应用工作台 |
-| Coda | doc-database | [2026-07-01-coda.md](ai-assisted/2026-07-01-coda.md) | draft | partial | 文档 + 表格 + 公式 + 按钮 + 自动化 + Packs + AI 整合为 doc-as-app 工作台（被 Grammarly 收购） |
+| Coda | doc-database | [2026-07-01-coda.md](ai-assisted/2026-07-01-coda.md) | reviewed | partial | 文档 + 表格 + 公式 + 按钮 + 自动化 + Packs + AI 整合为 doc-as-app 工作台（被 Grammarly 收购，2025-10 Superhuman rebrand） |
 
 ## 2. 按产品类型分组
 
@@ -57,14 +57,14 @@
 
 | 维度 | 数值 | 说明 |
 |------|------|------|
-| AI 辅助分析 | 11 | 10 reviewed + 1 draft |
-| reviewed | 10 | 人工复核完成 |
-| draft | 1 | Coda（P26 初稿） |
+| AI 辅助分析 | 11 | 全部 reviewed |
+| reviewed | 11 | 人工复核完成 |
+| draft | 0 | — |
 | verified | 0 | 严格标准下未达成 |
 | partial | 11 | 主体产品机制 verified；高风险事实 partial |
 | 旧人工分析 (legacy) | 9 | 根目录 legacy notes |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
-| P 报告累计 | 17 | 1 legacy + 9 AI + 1 索引 + 2 review + 1 P21 review + 1 P24 + 1 P25 + 1 P26 |
+| P 报告累计 | 18 | 1 legacy + 9 AI + 1 索引 + 2 review + 1 P21 review + 1 P24 + 1 P25 + 1 P26 + 1 P27 |
 
 **说明**：
 - `partial` 不是失败，而是表示部分**高风险事实**（融资、估值、收入、收购、IPO、用户量、合作金额、价格变化、发布时间线、法律诉讼）仍未达到双源 verified 标准。
