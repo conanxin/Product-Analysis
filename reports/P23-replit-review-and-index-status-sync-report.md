@@ -222,6 +222,73 @@ P23 仅做轻量补充验证,未做大规模重验证:
 
 ---
 
+## P23 厘清 Source Count 口径 (避免 P22 口径冲突)
+
+P22 报告中 source count 有冲突 ("41+33+14+2+15 = 95" vs "75 source_urls"),P23 明确不同口径:
+
+| 口径 | 计数 | 说明 |
+|------|------|------|
+| YAML source_urls | **75** | replit.com 25 + docs.replit.com 33 + Wikipedia 2 + verified media 15 |
+| HTTP-200 verification (P22) | **>= 81** | 含 主站 17 + 博客 14 + docs 33 + Wikipedia 2 + media 15 |
+| YAML replit.com 分解 | 25 | 17 主站 + 8 博客文章 |
+| YAML docs.replit.com 分解 | 33 | build/ 12 + billing/ 11 + references/publishing/ 6 + references/agent/ 2 + core-concepts/agent/ 1 + references/data-and-storage/ 2 + updates/ 1 |
+| HTTP-200 verified 博客 (未入 YAML) | 6 | vibecon / replit-claude / package-firewall / databricksjune2026 / custom-skills / app-monitoring |
+| Wikipedia reference (二手) | 2 | en.wikipedia.org/wiki/Replit + /Amjad_Masad |
+| Verified media (次主流二线) | 15 | CNBC 1 + The Decoder 2 + 404 Media 1 + Pulse 2.0 3 + SaaStr 8 |
+| Backup/重定向 URL | 3+ | The Decoder 2 个备份 URL + $250M / $400M Pulse 2.0 都是同文章但不同轮次 |
+| Unverified 主流英文媒体 | ~12 | Reuters / Forbes / Bloomberg / TechCrunch / Wired / Tom's Hardware / The Verge / Business Insider / Crunchbase / Fortune / GeekWire / Inc 均 401/403/404 |
+| Replit 官方 404/重定向 | ~25 | /press, /newsroom, /media, /dashboard, /contact-sales, /docs, /database, /education, /trust 等 3xx 重定向 |
+
+P23 §17.4 已同步包含 source count 口径汇总表。
+
+---
+
+## Speculative Claims Marked (主体 §中验证)
+
+| 声明 | 在文中位置 | 标注 |
+|------|------------|------|
+| "云端应用工作台" | §1、§2 | [判断] |
+| "AI app builder platform" | §1、§4、§11 | [判断] |
+| "从想法到上线" | §1、§15 | [判断] |
+| "Replit = IDE + runtime + deployments + database + AI Agent" | §4 | [判断] |
+| Agent 真实采用率 / 是否主导增长 | §12、§13 | partial |
+| 中文 Replit MVP | §14、§15 | [判断] (产品假设) |
+| Agent 事故 = Replit Agent 普遍问题 | §13 | 未泛化 (仅个别案例) |
+
+---
+
+## Pricing Final Wording (保留 P22 §10 + P23 review 复核)
+
+- 仅用 docs.replit.com/billing/* verified 200 (不含第三方汇总)
+- Starter / Core / Pro / Teams / Enterprise 5 档 明示
+- usage-based billing (Compute / Storage / Object Storage / Database) + AI billing + Deployment pricing 明示
+- "AI Credits" / "Agent Credits" 按 published docs 描述
+
+---
+
+## Funding / Valuation / Revenue Final Wording
+
+| 事实 | 可信度 | 价信源 |
+|------|--------|--------|
+| $4.5M seed 2018 | 高 | CNBC verified 200 + Wikipedia reference |
+| $97.4M / $1.16B (前一轮) | 低-中 | Pulse 2.0 verified 200 (单源) |
+| $250M Series C 2025-09 / $3B | 中 | Pulse 2.0 verified 200 + Wikipedia reference |
+| $400M Series D 2026-03 / $9B | 中 | Pulse 2.0 verified 200 + 中文 |
+| $150M annualized revenue | 中 (二次引用公司方) | Pulse 2.0 + SaaStr |
+| $2.8M ARR 起点 | 中 (二次引用公司方) | Pulse 2.0 + SaaStr |
+| 40M+ users | 低-中 (中文二手) | 中文转载 + Wikipedia 未给数字 |
+| Microsoft Azure 合作 2025-07 | 中 | Wikipedia reference + Inc URL 403 |
+
+---
+
+## Agent / Safety Incident Final Wording
+
+- **事件事实** (高): 2025-07 Jason Lemkin (SaaStr 创始人) 个案 + 404 Media 报道 + Wikipedia reference + SaaStr 事后追访
+- **官方治理** (高): replit.com/blog/security-center + auto-protect + secure-more-apps + package-firewall + app-monitoring
+- **不泛化**: 仅限于个别案例;不能作为 Replit Agent 产品普遍问题表述
+
+---
+
 ## Final Report
 
 ```

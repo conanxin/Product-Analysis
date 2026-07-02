@@ -2,6 +2,45 @@
 
 ## P23 - Replit Review and Index Status Sync
 
+**日期：** 2026-07-01 (second-pass refinement 跟进 P22.1 / P23)
+**变更类型：** review / source-credibility-grading / index-sync (second-pass P23 refinement)
+**变更范围：** analyses/ai-assisted/2026-07-01-replit.md (补充 §17.3 + §17.4 source count 口径) + reports/P23-replit-review-and-index-status-sync-report.md (扩充 Speculative / Pricing / Funding / Agent safety final wording)
+
+### 变更内容 (P23 second-pass)
+
+补充 P22 与 P23 后续任务明确点：在 P23 a4cb31f 已完成 status 升级的基础上，补充 P23 task 明确要求的 §17.3 / §17.4 / P23 报告 detail:
+
+#### §17.3 补充 P23 教训 (在原文 §17.3 中整合)
+
+- YAML duplicate key 必须自动检查 (P22.1 教训)
+- PyYAML safe_load 会静默覆盖重复 key (P22.1 教训)
+- source count 必须分口径统计 (P23 厘清 — YAML source_urls 计数 vs HTTP-200 verification 总数)
+- Wikipedia reference 和 media direct verified 必须分开 (P23 修订)
+- Pulse 2.0 / SaaStr 属可访问二线媒体，不能等同 Reuters / Forbes / Bloomberg / TechCrunch / WSJ / Business Insider
+- Agent 事故必须区分个案事实、系统风险、设计启发 (不泛化)
+- index.yml 必须随 review_status 状态同步更新
+- 新增文章后必须检查 README / analyses/README / index.yml / article YAML 四处一致性
+
+#### §17.4 source count 口径汇总表
+
+- 补充 YAML source_urls (75) vs HTTP-200 verification (≥81) 口径区别表
+- 补充备份/重定向 URL 计数
+- 明确 Unverified 主流媒体列表
+- 明确 Replit 官方 404/重定向列表
+
+#### P23 报告 (second-pass) 扩充
+
+- Speculative Claims Marked 表 (云端应用工作台 / AI app builder platform / 从想法到上线 / Agent 采用率 / 中文 MVP / Agent 事故泛化 — 均标 [判断] / partial)
+- Pricing Final Wording (仅 docs.replit.com/billing/* verified 200;5 档明示;usage-based + AI billing 明示)
+- Funding / Valuation / Revenue Final Wording ($4.5M seed 高 / $97.4M 低-中 / $250M Series C 中 / $400M Series D 中 / $150M ARR 中 / 40M+ users 低-中 / Microsoft Azure 中)
+- Agent / Safety Incident Final Wording (事件事实高 / 官方治理高 / 不泛化)
+
+### P23 合并状态保留
+
+a4cb31f P23: review Replit analysis and sync index status — 主含:review_status 升级 + Series C/D 解决 + 4 文件同步 + 主章 body 修订。本 second-pass 扩充 P23 报告验证细节 + §17.3 教训 + §17.4 source count 表。
+
+
+
 **日期：** 2026-07-01
 **变更类型：** review / source-credibility-grading / index-sync
 **变更范围：** analyses/ai-assisted/2026-07-01-replit.md (修订) + README + analyses/README.md + analyses/index.yml + CHANGELOG + P23 报告
