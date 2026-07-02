@@ -1,5 +1,58 @@
 # Changelog
 
+## P23.1 - Replit README Quality Status Drift Fix
+
+**日期：** 2026-07-01
+**变更类型：** index-fix / docs-only
+**变更范围：** README.md (质量状态表 + P23.1 todo + 最后更新)
+
+### 变更内容
+
+修复 P23 后 README.md 当前质量状态仍停留在 9 reviewed / 9 partial 的索引漂移。
+
+#### 修复前 vs 修复后
+
+| 项目 | 修复前 | 修复后 | 变更 |
+|------|--------|--------|------|
+| Replit 文章 YAML | reviewed\|partial | reviewed\|partial | 未变 |
+| analyses/README.md Replit 行 | reviewed\|partial | reviewed\|partial | 未变 |
+| analyses/README.md 质量状态 | 10/10/0/10 | 10/10/0/10 | 未变 |
+| analyses/index.yml Replit entry | reviewed\|partial | reviewed\|partial | 未变 |
+| analyses/index.yml summary | 10/10/0/10 | 10/10/0/10 | 未变 |
+| **README.md Replit 行** | reviewed\|partial | reviewed\|partial | 未变 (P23 已改) |
+| **README.md 当前质量状态** | **9/9/0/9 (错误)** | **10/10/0/10 (正确)** | **P23.1 修复** |
+
+#### P23.1 修改的具体位置 (README.md)
+
+1. "当前质量状态" 表格：
+   - `| AI 辅助分析 | 9 | 9 reviewed |` → `| AI 辅助分析 | 10 | 全部 reviewed |`
+   - `| - reviewed | 9 | 人工复核完成 |` → `| - reviewed | 10 | 人工复核完成 |`
+   - `| - partial | 9 | 主体产品功能 verified；高风险事实 partial |` → `| - partial | 10 | 主体产品功能 verified；高风险事实 partial |`
+
+2. 下一步计划 (todo list):
+   - 新增 `[x] P23.1: 修复 Replit 复核后 README 质量状态漂移...`
+
+3. 最后更新行:
+   - 替换为 P23.1 描述
+
+#### 未修改的文件
+
+- analyses/ai-assisted/2026-07-01-replit.md — 已为 reviewed\|partial
+- analyses/README.md — 已是正确状态
+- analyses/index.yml — 已是正确状态
+- 其他 AI 分析文章 — 未动
+- 旧人工分析文章 — 未动
+- pic/ — 未动
+- templates/ — 未动
+
+#### 教训沉淀
+
+- P23 同步四文件时只改了 README.md 的"Replit 行"和最后更新，未改"当前质量状态"统计表
+- 后续 P* 任务必须同时检查: 行状态 / 质量状态统计 / 文章 YAML / 索引文件 / 报告路径 五处一致性
+- 教程: 同步索引时不仅改单行,需同步该处所有引用同一数据的统计 / 计数表格
+
+---
+
 ## P23 - Replit Review and Index Status Sync
 
 **日期：** 2026-07-01 (second-pass refinement 跟进 P22.1 / P23)

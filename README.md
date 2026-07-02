@@ -113,11 +113,11 @@ Product-Analysis/
 |------|---:|------|
 | 旧人工分析 (legacy) | 9 | legacy-note（根目录） |
 | 旧文今日复盘 | 1 | Product Hunt (P2) reviewed |
-| AI 辅助分析 | 9 | 9 reviewed |
-| - reviewed | 9 | 人工复核完成 |
+| AI 辅助分析 | 10 | 全部 reviewed |
+| - reviewed | 10 | 人工复核完成 |
 | - draft | 0 | — |
 | - verified | 0 | 严格标准下未达成 |
-| - partial | 9 | 主体产品功能 verified；高风险事实 partial |
+| - partial | 10 | 主体产品功能 verified；高风险事实 partial |
 
 **说明**：partial 是严格质量标准下的合理结果，不是失败。详细评判标准见 [docs/review-status-guide.md](docs/review-status-guide.md)。
 
@@ -136,9 +136,10 @@ Product-Analysis/
 - [x] P22: 新增 Replit AI 辅助分析 (第十篇 AI 分析;75 个 source URLs verified 200;主体产品机制 verified;融资/估值/ARR/用户量 partial — 私人公司/未 IPO/主流媒体 paywall)
 - [x] P22.1: 修复 Replit YAML 重复 source_quality_notes 字段 (2 → 1)
 - [x] P23: 人工复核 Replit 文章 (draft → reviewed;§17.1 升级;§17.2 解决 $250M Series C vs $400M Series D 轮次字母分歧;§17.3 厘清 source count 口径;YAML review_status / reviewed_at / review_notes 同步)
+- [x] P23.1: 修复 Replit 复核后 README 质量状态漂移 (9 reviewed → 10 reviewed;AI 辅助分析 / reviewed / partial 三项同步;未改其他三处)
 - [ ] 未来可升级为 GitHub Pages 产品分析站
 - [ ] 长期：逐步把部分 AI 辅助分析从 partial 升级为 verified（不强求）
 
 ---
 
-*最后更新：2026-07-01 (P23 人工复核 Replit 文章 — draft → reviewed;1) §17.2 解决 $250M Series C vs $400M Series D 轮次字母分歧 — Pulse 2.0 verified 200 有独立文章区分,$250M=Series C / $400M=Series D;SaaStr "$250M Series D" 是 SaaStr 写作错误;2) §17.3 厘清 source count 口径 — YAML source_urls=75 vs P22 报告 HTTP-200 verification=95;3) YAML review_status/reviewed_at/review_notes 同步;YAML 无重复 key;4) Replit 私人公司/未 IPO 未变;5) 10 篇 AI 辅助分析 — 10 reviewed + 0 draft)*
+*最后更新：2026-07-01 (P23.1 修复 Replit 复核后 README 质量状态漂移;1) 同步根 README 当前质量状态:AI 辅助分析 9→10 / reviewed 9→10 / partial 9→10;2) Replit 行已在 P23 改为 reviewed|partial，本次仅同步质量状态表;3) analyses/README.md / analyses/index.yml / Replit 文章 YAML 未变;4) YAML 无重复 key)*
